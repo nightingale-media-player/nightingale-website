@@ -19,6 +19,8 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link type="text/plain" rel="author" href="http://domain/humans.txt" />
+  
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
 
 </head>
 
@@ -39,9 +41,20 @@
 				<li>Last.fm rocks, because it's last.fm. And it has Audioscrobblerz</li>
 				<li>Perfectly integrated into linux with its package system</li>
 			</ul>
-			<div id="button">
-				<img src="img/Tux.png" alt="Icon"><div id="buttontext">Download<br><div id="small">Linux | 32-Bit</div></div>
+			<div id="hint">Choose the button for your operating system (you disabled javascript).</div>
+			<div class="button" id="linux">
+				<div class="arrow"><div class="arrowshaft"></div><div class="arrow-down"></div></div>
+				<div class="buttontext">Download<br><div class="small">Linux | 32-Bit</div></div>
 			</div>
+			<div class="button" id="windows">
+				<div class="arrow"><div class="arrowshaft"></div><div class="arrow-down"></div></div>
+				<div class="buttontext">Download<br><div class="small">Windows | 32-Bit</div></div>
+			</div>
+			<div class="button" id="mac">
+				<div class="arrow"><div class="arrowshaft"></div><div class="arrow-down"></div></div>
+				<div class="buttontext">Download<br><div class="small">MacOS X | 32-Bit</div></div>
+			</div>
+			<a id="others" href="javascript:allOS()">other OS</a>
 		   </div>
 		</div>
 	</div>

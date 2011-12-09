@@ -214,7 +214,6 @@ td { vertical-align: top; }
 body {
 	background-image: url('/ngale/img/gradent.png');
 	background-repeat:repeat-x;
-	overflow: hidden;
 }
    
 #container {
@@ -222,7 +221,6 @@ body {
 	margin-top: 100px;
 	width: 1024px;
 	margin: 0 auto;
-	overflow: hidden;
 }
 
 a:link {
@@ -262,18 +260,19 @@ header img {
 #main {
 	clear: both;
 	width: 100%;
-	overflow: hidden;
+	padding-bottom: 120px;
+	position: relative;
 }
 
 #screen {
 	width: 100%;
 	height: 150px;
 	z-index: 2;
-	position: relative;
-	top: 0;
-	left:0;
 	overflow: hidden;
 	box-shadow: 0 6px 4px -3px black;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 #screen img {
@@ -281,17 +280,11 @@ header img {
 	z-index: 0;
 }
 
-#screen:hover {
-	height: 100%;
-	box-shadow: none;
-}
-
 #spec {
 	position: relative;
 	left: 0;
-	top: 10px;
+	top: 160px;
 	width: 100%;
-	overflow: visible;
 }
 
 #centr {
@@ -331,7 +324,11 @@ h1 {
 	border-right: none;
 }
 
-#button {
+.js #hint {
+	display: none;
+}
+
+.button {
 	background: rgb(50,50,50); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(50,50,50,1) 0%, rgba(34,34,34,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(50,50,50,1)), color-stop(100%,rgba(34,34,34,1))); /* Chrome,Safari4+ */
@@ -341,14 +338,13 @@ h1 {
 	background: linear-gradient(top,  rgba(50,50,50,1) 0%,rgba(34,34,34,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#323232', endColorstr='#222222',GradientType=0 ); /* IE6-9 */
 	
-	margin: 20px auto;
+	margin: 20px auto 5px;
 	border-top: 1px solid #515151;
 	border-bottom: 5px solid #000;
 	color: white;
 	border-radius: 5px;
 	font-size: 30px;
 	padding: 10px;
-	/*margin: 8px 8px 8px 0;*/
 	text-shadow: -1px -1px #000;
 	cursor: pointer;
 	width: 200px;
@@ -356,12 +352,31 @@ h1 {
 	text-align: left;
 }
 
-#button img {
-	height: 50px;
-	margin: 0;
+.arrow {
+	float: left;
+	margin-top: 5px;
 }
 
-#button:active {
+.arrowshaft {
+	width: 15px;
+	height: 25px;
+	background-color: #00F218;
+	margin: 0 auto;
+	z-index: 10;
+}
+
+.arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+		z-index: 20;
+		
+        border-top: 20px solid #00F218;
+}
+
+
+.button:active {
 	background: rgb(50,50,50); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(34,34,34,1) 0%, rgba(50,50,50,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(34,34,34,1)), color-stop(100%,rgba(50,50,50,1))); /* Chrome,Safari4+ */
@@ -374,12 +389,11 @@ h1 {
 	margin-top: 22px;
 }
 
-#buttontext {
+.buttontext {
 	margin-left: 50px;
-	margin-top: -50px;
 }
 
-#small {
+.small {
 	font-size: 9px;
 	color: #3244E9;
 	text-shadow: none;
@@ -387,7 +401,7 @@ h1 {
 }
 
 footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	left: -10px;
 	text-align: center;
@@ -404,7 +418,7 @@ footer {
 }
 
 #buttons {
-	position: absolute;
+	position: fixed;
 	right: 9px;
 	bottom: 69px;
 	height: 52px;	
