@@ -259,13 +259,11 @@ header img {
 
 #main {
 	clear: both;
-	width: 100%;
 	padding-bottom: 120px;
 	position: relative;
 }
 
 #screen {
-	width: 100%;
 	height: 150px;
 	z-index: 2;
 	overflow: hidden;
@@ -282,15 +280,14 @@ header img {
 
 #spec {
 	position: relative;
-	left: 0;
 	top: 160px;
-	width: 100%;
 }
 
 #centr {
 	width: 70%;
 	margin: 0 auto;
 	text-align: center;
+	position: static;
 }
 
 h1 {
@@ -407,7 +404,7 @@ footer {
 	text-align: center;
 	clear: both;
 	float: none;
-	color: #575757;
+	color: #666666;
 	height: 100px;
 	padding: 10px;
 	width: 100%;
