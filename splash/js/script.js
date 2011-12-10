@@ -18,7 +18,7 @@ $(document).ready(function() {
 	});
 	
 	$("#screen").mouseover(function() {
-		if(!breaker) {
+		if(!breaker&&!menu) {
 			breaker= true;
 			$(this).animate({'height':$("#screen img").outerHeight()+'px'},200,function() {breaker=false;});
 		}
