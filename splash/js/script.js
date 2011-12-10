@@ -10,6 +10,13 @@ $(document).ready(function() {
 	//hyphenation
 	Hyphenator.run();
 	
+	// disable selection
+	
+	$(".button").disableTextSelect();
+	$("#screen").disableTextSelect();
+	$("#ngalebutton").disableTextSelect();
+	$("#buttons").disableTextSelect();
+	
 	// hover social buttons effect
 	
 	$("#buttons img").mouseover(function() {
@@ -53,7 +60,6 @@ $(document).ready(function() {
 		e.preventDefault();
 		return false;
 	});
-	
 	
 	//hide unused buttons
 	hideOS(0);
