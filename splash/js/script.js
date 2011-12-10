@@ -4,6 +4,7 @@
 
 var visible;
 var breaker = false;
+var menu = false;
 
 $(document).ready(function() {
 	Hyphenator.run();
@@ -28,6 +29,24 @@ $(document).ready(function() {
 			breaker= true;
 			$(this).animate({'height':'150px'},200,function() {breaker=false;});
 		}
+	});
+	
+	$("#menu li").click(function(e) {
+		if($(this).children("a").length != 0)
+			window.location.href = $(this).children("a").attr('href');
+		else {
+			if(!menu)
+				$("#menu").animate({'marginTop':'0px'},function(){menu=true;});
+			else
+				$("#menu").animate({'marginTop':'-183px'},function(){menu=false;});
+		}
+		e.preventDefault();
+		return false;
+	});
+	
+	$(".button").click(function(e) {
+		e.preventDefault();
+		return false;
 	});
 	
 	hideOS(0);
