@@ -299,17 +299,17 @@ h1 {
 	margin: 0 auto;
 	width: 662px;
 	display: block;
+	text-align: justify;
+	word-wrap: break-word;
 }
 
 #features li {
 	float: left;
 	list-style: none;
-	clear: right;
 	width: 200px;
 	border-right: 1px solid #999999;
 	padding: 0 10px;
 	margin: 0;
-	text-align: center;
 	color: #666;
 	font-size: 17px;
 	height: 70px;
@@ -375,6 +375,7 @@ h1 {
 
 .button img {
 	margin-top: -7px;
+	margin-left: -3px;
 }
 
 .button:active {
@@ -420,7 +421,7 @@ footer {
 }
 
 #buttons {
-	position: fixed;
+	position: absolute;
 	right: 9px;
 	bottom: 69px;
 	height: 52px;	

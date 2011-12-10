@@ -6,6 +6,8 @@ var visible;
 var breaker = false;
 
 $(document).ready(function() {
+	Hyphenator.run();
+	
 	$("#buttons img").mouseover(function() {
 		$(this).attr('src','img/'+$(this).attr('alt')+'_bg.png');
 	});
