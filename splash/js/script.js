@@ -23,7 +23,7 @@ $(document).ready(function() {
 	//screen rolldown
 	
 	$("#screen").mouseover(function() {
-		if(!breaker&&!menu) {
+		if(!breaker&&!window.menu) {
 			breaker= true;
 			$("#hoverme").hide();
 			$(this).animate({'height':$("#screen img").outerHeight()+'px'},200,function() {

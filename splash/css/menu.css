@@ -4,16 +4,22 @@
 	font-size: 30px;
 	color: white;
 	margin-bottom: 20px;
+	margin-right: 20px;
 	width: 240px;
 	cursor: pointer;
 	float: right;
 	height: 60px;
 	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
+	line-height: 1.231;
+	text-align: left;
 }
 
 #menu li:last-child img {
 	height: 50px;
 	margin: -5px 0 0;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle;
 }
 
 #menu {
@@ -23,11 +29,13 @@
 	margin-top: -183px;
 	position: absolute;
 	z-index: 5;
+	outline: white;
 }
 
 #menu li {
 	padding: 10px;
 	border-bottom: 1px solid black;
+	margin: 0;
 	height: 40px;
 	color: #fff;
 	width: 240px;
@@ -42,8 +50,8 @@
 	background-color: rgb(81,81,81);
 }
 
-menu li a:hover {
-	text-decoration: none;
+#menu li a:hover {
+	text-decoration: none !important;
 }
 
 #menu li:last-child{
