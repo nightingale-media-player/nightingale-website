@@ -260,6 +260,7 @@ header img {
 #main {
 	clear: both;
 	padding-bottom: 120px;
+	z-index: 0;
 	position: relative;
 }
 
@@ -269,25 +270,22 @@ header img {
 	overflow: hidden;
 	box-shadow: 0 6px 4px -3px black;
 	position: absolute;
-	top: 0;
-	left: 0;
 }
 
 #screen img {
 	width: 100%;
-	z-index: 0;
+	z-index: 2;
 }
 
 #spec {
-	position: relative;
 	top: 160px;
-}
-
-#centr {
-	width: 70%;
-	margin: 0 auto;
+	z-index: 1;
 	text-align: center;
-	position: static;
+	width: 700px;
+	left: 162px;
+	top: 170px;
+	padding-bottom: 170px;
+	position: relative;
 }
 
 h1 {
@@ -317,7 +315,7 @@ h1 {
 	height: 70px;
 }
 
-#features li:nth-child(3) {
+#features li:last-child {
 	border-right: none;
 }
 
@@ -348,7 +346,7 @@ h1 {
 	height: 50px;
 	text-align: left;
 }
-
+/* CSS arrow
 .arrow {
 	float: left;
 	margin-top: 5px;
@@ -371,7 +369,13 @@ h1 {
 		
         border-top: 20px solid #00F218;
 }
+*/
 
+/*img*/
+
+.button img {
+	margin-top: -7px;
+}
 
 .button:active {
 	background: rgb(50,50,50); /* Old browsers */
@@ -388,12 +392,13 @@ h1 {
 
 .buttontext {
 	margin-left: 50px;
+	margin-top: -60px;
 }
 
 .small {
 	font-size: 9px;
 	color: #3244E9;
-	text-shadow: none;
+	text-shadow: -1px -1px #009;
 	line-height: 9px;
 }
 

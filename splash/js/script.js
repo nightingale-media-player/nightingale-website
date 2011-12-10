@@ -18,14 +18,12 @@ $(document).ready(function() {
 		if(!breaker) {
 			breaker= true;
 			$(this).animate({'height':$("#screen img").outerHeight()+'px'},200,function() {breaker=false;});
-			$("#spec").hide();
 		}
 	});
 	
 	$("#screen").mouseout(function() {
 		if(!breaker) {
 			breaker= true;
-			$("#spec").show();
 			$(this).animate({'height':'150px'},200,function() {breaker=false;});
 		}
 	});
