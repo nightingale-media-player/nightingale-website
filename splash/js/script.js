@@ -65,7 +65,7 @@ function getOS() {
 	var OSName="Unknown OS";
 	if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
 	if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
-	if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+	if (navigator.platform.indexOf("Linux")!=-1) OSName="Linux";
 	
 	return OSName;
 }
@@ -74,7 +74,7 @@ function getOS() {
 
 function getArchitecture() {
 	var arch = 32;
-	if(navigator.plattform.indexOf("Win64"))
+	if(navigator.plattform.indexOf("64")!=-1)
 		arch=64;
 	return arch;
 }
