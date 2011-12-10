@@ -15,6 +15,7 @@ $(document).ready(function() {
 	$(".button").disableTextSelect();
 	$("#screen").disableTextSelect();
 	$("#ngalebutton").disableTextSelect();
+	$("#menu").disableTextSelect();
 	$("#buttons").disableTextSelect();
 	
 	// hover social buttons effect
