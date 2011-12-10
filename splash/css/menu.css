@@ -8,6 +8,7 @@
 	cursor: pointer;
 	float: right;
 	height: 60px;
+	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
 }
 
 #menu li:last-child img {
@@ -39,6 +40,10 @@
 
 #menu li:hover {
 	background-color: rgb(81,81,81);
+}
+
+menu li a:hover {
+	text-decoration: none;
 }
 
 #menu li:last-child{
