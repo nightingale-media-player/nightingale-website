@@ -20,6 +20,7 @@ $(document).ready(function() {
 	$("#screen").mouseover(function() {
 		if(!breaker&&!menu) {
 			breaker= true;
+			$("#hoverme").hide();
 			$(this).animate({'height':$("#screen img").outerHeight()+'px'},200,function() {breaker=false;});
 		}
 	});
@@ -27,7 +28,7 @@ $(document).ready(function() {
 	$("#screen").mouseout(function() {
 		if(!breaker) {
 			breaker= true;
-			$(this).animate({'height':'150px'},200,function() {breaker=false;});
+			$(this).animate({'height':'150px'},200,function() {breaker=false;$("#hoverme").show();});
 		}
 	});
 	

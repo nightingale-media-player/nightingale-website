@@ -266,7 +266,7 @@ header {
 	height: 40px;
 	color: #fff;
 	width: 240px;
-	background: rgb(50,50,50);
+	background-color: rgb(50,50,50);
 }
 
 #menu li a {
@@ -274,7 +274,7 @@ header {
 }
 
 #menu li:hover {
-	background: rgb(81,81,81);
+	background-color: rgb(81,81,81);
 }
 
 #menu li:last-child{
@@ -304,6 +304,17 @@ header {
 #screen img {
 	width: 100%;
 	z-index: 2;
+}
+
+#hoverme {
+	position: absolute;
+	bottom: 0;
+	left: 182px;
+	padding: 3px;
+	font-size: 12px;
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 3px 3px 0 0;
 }
 
 /* style of the main content */
