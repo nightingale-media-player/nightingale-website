@@ -221,7 +221,7 @@ body {
 #page {
 	font-size: 15px;
 	margin-top: 100px;
-	width: 1024px;
+	width: 950px;
 	margin: 0 auto;
 }
 
@@ -253,7 +253,7 @@ a:visited ,a:active,a:hover{
 #hoverme {
 	position: absolute;
 	bottom: 0;
-	left: 182px;
+	left: 145px;
 	padding: 3px;
 	font-size: 12px;
 	color: white;
@@ -275,7 +275,7 @@ a:visited ,a:active,a:hover{
 	z-index: 1;
 	text-align: center;
 	width: 700px;
-	left: 162px;
+	left: 125px;
 	top: 170px;
 	padding-bottom: 170px;
 	position: relative;
