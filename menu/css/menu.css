@@ -46,8 +46,8 @@
 	color: #fff;
 }
 
-#menu li:hover {
-	background-color: rgb(81,81,81);
+#menu li:hover, .actual {
+	background-color: rgb(81,81,81) !important;
 }
 
 #menu li a:hover {
