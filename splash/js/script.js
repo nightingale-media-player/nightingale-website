@@ -4,6 +4,7 @@
 
 var visible;
 var breaker = false;
+var mouseover = false;
 var menu = false;
 
 $(document).ready(function() {
@@ -21,8 +22,17 @@ $(document).ready(function() {
 		if(!breaker&&!menu) {
 			breaker= true;
 			$("#hoverme").hide();
-			$(this).animate({'height':$("#screen img").outerHeight()+'px'},200,function() {breaker=false;});
+			$(this).animate({'height':$("#screen img").outerHeight()+'px'},200,function() {
+				breaker=false;
+				if(!mouseover) {
+					$(this).animate({'height':'150px'},200,function() {
+						breaker=false;
+						$("#hoverme").show();
+					});
+				}
+			});
 		}
+		mouseover=true;
 	});
 	
 	$("#screen").mouseout(function() {
@@ -30,6 +40,7 @@ $(document).ready(function() {
 			breaker= true;
 			$(this).animate({'height':'150px'},200,function() {breaker=false;$("#hoverme").show();});
 		}
+		mouseover=false;
 	});
 	
 	$("#menu li").dblclick(function(e) {
