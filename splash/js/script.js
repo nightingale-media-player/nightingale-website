@@ -1,14 +1,16 @@
-/* Author: Martin Giger
-   Some GNU GPL License :D
+/* Author:  Martin Giger
+   License: Some GNU GPL License :D
 */
 
 var visible;
 var breaker = false;
 var mouseover = false;
-var menu = false;
 
 $(document).ready(function() {
+	//hyphenation
 	Hyphenator.run();
+	
+	// hover social buttons effect
 	
 	$("#buttons img").mouseover(function() {
 		$(this).attr('src','img/'+$(this).attr('alt')+'_bg.png');
@@ -17,6 +19,8 @@ $(document).ready(function() {
 	$("#buttons img").mouseout(function() {
 		$(this).attr('src','img/'+$(this).attr('alt')+'.png');
 	});
+	
+	//screen rolldown
 	
 	$("#screen").mouseover(function() {
 		if(!breaker&&!menu) {
@@ -43,38 +47,19 @@ $(document).ready(function() {
 		mouseover=false;
 	});
 	
-	$("#menu li").dblclick(function(e) {
-		if($(this).children("a").length != 0)
-			window.open(window.location.pathname+$(this).children("a").attr('href'));
-		e.preventDefault();
-		return false;
-	});
-	
-	$("#menu li").mousedown(function(e) {
-		if(e.which==1) {
-			if($(this).children("a").length != 0)
-				window.location.href = $(this).children("a").attr('href');
-			else {
-				if(!menu)
-					$("#menu").animate({'marginTop':'0px'},function(){menu=true;});
-				else
-					$("#menu").animate({'marginTop':'-183px'},function(){menu=false;});
-			}
-		}
-		else if(e.which==2&&$(this).children("a").length != 0) {
-				window.open(window.location.pathname+$(this).children("a").attr('href'));
-		}
-		e.preventDefault();
-		return false;
-	});
+	//downloadbutton stuffz
 	
 	$(".button").click(function(e) {
 		e.preventDefault();
 		return false;
 	});
 	
+	
+	//hide unused buttons
 	hideOS(0);
 });
+
+// detect OS
 
 function getOS() {
 	var OSName="Unknown OS";
@@ -85,6 +70,17 @@ function getOS() {
 	return OSName;
 }
 
+// Detect 64bit OSes
+
+function getArchitecture() {
+	var arch = 32;
+	if(navigator.plattform.indexOf("Win64"))
+		arch=64;
+	return arch;
+}
+
+
+//show all OS buttons
 function allOS() {
 	if(!visible) {
 		$("#linux").fadeIn();
@@ -97,6 +93,8 @@ function allOS() {
 		hideOS();
 }
 
+
+//hide unwanted OS buttons
 function hideOS(t) {
 	switch(getOS()) {
 	case "Windows":
