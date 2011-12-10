@@ -28,7 +28,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	hideOS();
+	hideOS(0);
 });
 
 function getOS() {
@@ -52,19 +52,19 @@ function allOS() {
 		hideOS();
 }
 
-function hideOS() {
+function hideOS(t) {
 	switch(getOS()) {
 	case "Windows":
-		$("#linux").fadeOut();
-		$("#mac").fadeOut();
+		$("#linux").fadeOut(t);
+		$("#mac").fadeOut(t);
 		break;
 	case "Linux":
-		$("#windows").fadeOut();
-		$("#mac").fadeOut();
+		$("#windows").fadeOut(t);
+		$("#mac").fadeOut(t);
 		break;
 	case "MacOS":
-		$("#linux").fadeOut();
-		$("#windows").fadeOut();
+		$("#linux").fadeOut(t);
+		$("#windows").fadeOut(t);
 		break;
 	}
 	$("#others").text("other OS");
