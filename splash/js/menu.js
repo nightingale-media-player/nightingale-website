@@ -4,29 +4,29 @@
 
 var menu = false;
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
 
 // anchor imitation&animation of li in #menu
-	$("#menu li").dblclick(function(e) {
-		if($(this).children("a").length != 0)
-			window.open(window.location.pathname+$(this).children("a").attr('href'));
+	jQuery("#menu li").dblclick(function(e) {
+		if(jQuery(this).children("a").length != 0)
+			window.open(window.location.pathname+jQuery(this).children("a").attr('href'));
 		e.preventDefault();
 		return false;
 	});
 	
-	$("#menu li").mousedown(function(e) {
+	jQuery("#menu li").mousedown(function(e) {
 		if(e.which==1) {
-			if($(this).children("a").length != 0)
-				window.location.href = $(this).children("a").attr('href');
+			if(jQuery(this).children("a").length != 0)
+				window.location.href = jQuery(this).children("a").attr('href');
 			else {
 				if(!menu)
-					$("#menu").animate({'marginTop':'0px'},function(){menu=true;});
+					jQuery("#menu").animate({'marginTop':'0px'},function(){menu=true;});
 				else
-					$("#menu").animate({'marginTop':'-183px'},function(){menu=false;});
+					jQuery("#menu").animate({'marginTop':'-183px'},function(){menu=false;});
 			}
 		}
-		else if(e.which==2&&$(this).children("a").length != 0) {
-				window.open(window.location.pathname+$(this).children("a").attr('href'));
+		else if(e.which==2&&jQuery(this).children("a").length != 0) {
+				window.open(window.location.pathname+jQuery(this).children("a").attr('href'));
 		}
 		e.preventDefault();
 		return false;
