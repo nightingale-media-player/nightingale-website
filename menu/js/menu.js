@@ -35,13 +35,12 @@ jQuery(document).ready(function() {
 				window.location.href = jQuery(this).children("a").attr('href');
 			else {
 				if(!window.menu) {
-					jQuery("#menu").animate({'marginTop':'0px'},function(){window.menu=true;});
+					jQuery("#menu").animate({'marginTop':'0px'});
 					jQuery("#menu #mtext").text("Menu");
+					window.menu=true;
 				}
 				else {
-					jQuery("#menu").animate({'marginTop':jQuery("#menu li a").length*-61+"px"},function(){window.menu=false;});
-					if(!hover)
-						jQuery("#menu #mtext").text("Nightingale");
+					jQuery("#menu").animate({'marginTop':jQuery("#menu li a").length*-61+"px"},function(){window.menu=false;if(!hover){jQuery("#menu #mtext").text("Nightingale");}});
 				}
 			}
 		}
