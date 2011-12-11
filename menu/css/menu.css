@@ -4,7 +4,7 @@
 	font-size: 30px;
 	color: white;
 	margin-bottom: 20px;
-	width: 290px;
+	width: 283px;
 	cursor: pointer;
 	float: right;
 	height: 60px;
@@ -17,15 +17,15 @@
 
 #menu li:last-child img {
 	height: 50px;
-	margin: -5px 0 0;
+	margin: -4px 8px 0;
 	border: 0;
 	-ms-interpolation-mode: bicubic;
 	vertical-align: middle;
 }
 
 #menu li:last-child span img {
-	height: 30px;
-	margin: -5px 0 0;
+	height: 15px;
+	margin: 0;
 }
 
 #menu {
@@ -47,7 +47,7 @@
 	font-size: 20px;
 	height: 25px;
 	color: #000;
-	width: 270px;
+	width: 263px;
 	background-color: rgb(221,221,221);
 }
 
