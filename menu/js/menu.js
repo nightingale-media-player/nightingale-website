@@ -43,5 +43,5 @@ jQuery(document).ready(function() {
 });
 
 jQuery.fn.menuItem = function(path,name,relative) {
-	this.children("#menu").prepend('<li'+(window.location.pathname.search((relative?'/':'')+path)!=-1?' class="actual"':'')+'><a href="'+(window.location.pathname.search((relative?'/':'')+path)!=-1?'#':path)+'">'+name+'</a></li>')
+	this.children("#menu").prepend('<li'+(window.location.pathname.search((relative?'/':'')+path)!=-1?' class="actual"':'')+'><a href="'+(window.location.pathname.search((relative?'/':'')+path)!=-1?'#':path)+'">'+name+'</a></li>');
 };
