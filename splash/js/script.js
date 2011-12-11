@@ -56,10 +56,16 @@ $(document).ready(function() {
 	});
 	
 	//downloadbutton stuffz
-	
+
 	$(".button").click(function(e) {
 		e.preventDefault();
 		return false;
+	});
+	
+	$(".button").hover(function() {
+		$(this).fadeTo(300,1);
+	},function() {
+		$(this).fadeTo(300,0.9);
 	});
 	
 	//hide unused buttons
@@ -91,7 +97,8 @@ function getArchitecture() {
 //show all OS buttons
 function allOS() {
 	if(!visible) {
-		$("#linux").fadeIn();
+		$("#linux_32").fadeIn();
+		$("#linux_64").fadeIn();
 		$("#mac").fadeIn();
 		$("#windows").fadeIn();
 		$("#others").text("hide other OS");
@@ -106,15 +113,23 @@ function allOS() {
 function hideOS(t) {
 	switch(getOS()) {
 	case "Windows":
-		$("#linux").fadeOut(t);
+		$("#linux_32").fadeOut(t);
+		$("#linux_64").fadeOut(t);
 		$("#mac").fadeOut(t);
 		break;
 	case "Linux":
 		$("#windows").fadeOut(t);
 		$("#mac").fadeOut(t);
+		if(getArchitecture()==32) {
+			$("#linux_64").fadeOut(t);
+		}
+		else {
+			$("#linux_32").fadeOut(t);
+		}
 		break;
 	case "MacOS":
-		$("#linux").fadeOut(t);
+		$("#linux_32").fadeOut(t);
+		$("#linux_64").fadeOut(t);
 		$("#windows").fadeOut(t);
 		break;
 	}

@@ -332,9 +332,12 @@ h1 {
 	background: linear-gradient(top,  rgba(50,50,50,1) 0%,rgba(34,34,34,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#323232', endColorstr='#222222',GradientType=0 ); /* IE6-9 */
 	
-	margin: 20px auto 5px;
+	margin: 0 auto 5px;
+	display: block;
+	
+	box-shadow: 0 5px 0 #000;
+	
 	border-top: 1px solid #515151;
-	border-bottom: 5px solid #000;
 	color: white;
 	border-radius: 5px;
 	font-size: 30px;
@@ -344,6 +347,11 @@ h1 {
 	width: 200px;
 	height: 50px;
 	text-align: left;
+	opacity: .9;
+}
+
+.no-js .button:hover {
+	opacity: 1;
 }
 /* CSS arrow
 .arrow {
@@ -372,6 +380,11 @@ h1 {
 
 /*img*/
 
+.buttonpadder {
+	padding-top: 15px;
+	padding-bottom: 0px;
+}
+
 .button img {
 	margin-top: -7px;
 	margin-left: -3px;
@@ -386,13 +399,16 @@ h1 {
 	background: -ms-linear-gradient(top,  rgba(34,34,34,1) 0%,rgba(50,50,50,1) 100%); /* IE10+ */
 	background: linear-gradient(top,  rgba(34,34,34,1) 0%,rgba(50,50,50,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#323232',GradientType=0 ); /* IE6-9 */
-	border-bottom: 3px solid #000;
-	margin-top: 22px;
+	box-shadow: 0 3px 0 #000;
+	margin: 2px auto 3px;
+	opacity: 1;
 }
 
 .buttontext {
 	margin-left: 50px;
 	margin-top: -60px;
+	display: block;
+	color: #fff;
 }
 
 .small {
@@ -400,6 +416,7 @@ h1 {
 	color: #3244E9;
 	text-shadow: -1px -1px #009;
 	line-height: 9px;
+	display: block;
 }
 
 /* footer styles */
