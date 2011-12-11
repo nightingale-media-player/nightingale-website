@@ -312,6 +312,10 @@ h1 {
 	border-right: none;
 }
 
+.more {
+	float: right;
+}
+
 .js #hint {
 	display: none;
 }

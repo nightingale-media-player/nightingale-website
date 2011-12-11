@@ -4,13 +4,15 @@
 	font-size: 30px;
 	color: white;
 	margin-bottom: 20px;
-	width: 260px;
+	width: 290px;
 	cursor: pointer;
 	float: right;
 	height: 60px;
 	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
 	line-height: 1.231;
 	text-align: left;
+	
+	border-radius:0 0 5px 5px;
 }
 
 #menu li:last-child img {
@@ -21,6 +23,11 @@
 	vertical-align: middle;
 }
 
+#menu li:last-child span img {
+	height: 30px;
+	margin: -5px 0 0;
+}
+
 #menu {
 	list-style: none;
 	padding: 0;
@@ -28,24 +35,28 @@
 	position: absolute;
 	z-index: 5;
 	outline: white;
+	
+	box-shadow: 0px 0px 5px black;
+	border-radius:0 0 5px 5px;
 }
 
 #menu li {
 	padding: 10px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid rgb(50,50,50);
 	margin: 0;
-	height: 40px;
-	color: #fff;
-	width: 240px;
-	background-color: rgb(50,50,50);
+	font-size: 20px;
+	height: 25px;
+	color: #000;
+	width: 270px;
+	background-color: rgb(221,221,221);
 }
 
 #menu li a {
-	color: #fff;
+	color: #000;
 }
 
 #menu li:hover, .actual {
-	background-color: rgb(81,81,81) !important;
+	background-color: rgb(173,173,173) !important;
 }
 
 #menu li a:hover {
@@ -64,4 +75,7 @@
 	border-radius:0 0 5px 5px;
 	
 	border: none;
+	height: 40px !important;
+	font-size: 30px !important;
+	color: #fff;
 }
