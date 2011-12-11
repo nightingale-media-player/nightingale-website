@@ -88,8 +88,8 @@ function getOS() {
 
 function getArchitecture() {
 	var arch = 32;
-	if(navigator.plattform.indexOf("64")!=-1)
-		arch=64;
+	if(navigator.platform.indexOf("64")!=-1)
+		arch = 64;
 	return arch;
 }
 
@@ -97,8 +97,8 @@ function getArchitecture() {
 //show all OS buttons
 function allOS() {
 	if(!visible) {
-		$("#linux_32").fadeIn();
-		$("#linux_64").fadeIn();
+		$("#linuxt").fadeIn();
+		$("#linuxs").fadeIn();
 		$("#mac").fadeIn();
 		$("#windows").fadeIn();
 		$("#others").text("hide other OS");
@@ -113,23 +113,21 @@ function allOS() {
 function hideOS(t) {
 	switch(getOS()) {
 	case "Windows":
-		$("#linux_32").fadeOut(t);
-		$("#linux_64").fadeOut(t);
+		$("#linuxt").fadeOut(t);
+		$("#linuxs").fadeOut(t);
 		$("#mac").fadeOut(t);
 		break;
 	case "Linux":
 		$("#windows").fadeOut(t);
 		$("#mac").fadeOut(t);
-		if(getArchitecture()==32) {
-			$("#linux_64").fadeOut(t);
-		}
-		else {
-			$("#linux_32").fadeOut(t);
-		}
+		if(getArchitecture()!=32)
+			$("#linuxt").fadeOut(t);
+		else
+			$("#linuxs").fadeOut(t);
 		break;
 	case "MacOS":
-		$("#linux_32").fadeOut(t);
-		$("#linux_64").fadeOut(t);
+		$("#linuxt").fadeOut(t);
+		$("#linuxs").fadeOut(t);
 		$("#windows").fadeOut(t);
 		break;
 	}
