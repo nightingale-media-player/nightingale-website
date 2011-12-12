@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
 	var arrow = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sMCxMYGCnLMWoAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAKNJREFUKM/t0b0JwmAUheEgFloGMkJwhgzgArqGhW6ijWNkAq3dQR0hoJ1NCI+FVwgaf0oLD3zNPe+5XL6TYOWmNfrJB6EfLCwT9FDGYIP0TTjFNtgSvbsxxC6MPUYd4VF4gh08AhmOAZwwbnljnMM7IHt1Yo4qwBqzeHXMKuSfPqnAxbMuKJJvhCmaVrjB5BXcWSMWrQXzf40/XeObJZ01PuoKPqbeLj+W/IQAAAAASUVORK5CYII=';
 	var s = jQuery('<div id="ngalebutton"><ul id="menu"><li><img src="'+img+'" alt="Nightingale"> <span id="mtext">Nightingale <img src="'+arrow+'" alt="Arrow down"></span></li></ul></div>');
 	s.menuItem('//wiki.getnightingale.com','Wiki');
-	s.menuItem('forum','Forum',true);
+	s.menuItem('//forum.getnightingale.com','Forum');
 	s.menuItem('//addons.getnightingale.com','Addons');
 	s.menuItem('blog','Blog',true);
 	
