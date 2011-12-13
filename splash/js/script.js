@@ -6,10 +6,7 @@ var visible;
 var breaker = false;
 var mouseover = false;
 
-$(document).ready(function() {
-	//hyphenation
-	Hyphenator.run();
-	
+$(document).ready(function() {	
 	// disable selection
 	
 	$(".button").disableTextSelect();
@@ -28,44 +25,15 @@ $(document).ready(function() {
 		$(this).attr('src','img/'+$(this).attr('alt')+'.png');
 	});
 	
-	//screen rolldown
-	
-	$("#screen").mouseover(function() {
-		if(!breaker&&!window.menu) {
-			breaker= true;
-			$("#hoverme").hide();
-			$(this).animate({'height':$("#screen img").outerHeight()+'px'},200,function() {
-				breaker=false;
-				if(!mouseover) {
-					$(this).animate({'height':'150px'},200,function() {
-						breaker=false;
-						$("#hoverme").show();
-					});
-				}
-			});
-		}
-		mouseover=true;
-	});
-	
-	$("#screen").mouseout(function() {
-		if(!breaker) {
-			breaker= true;
-			$(this).animate({'height':'150px'},200,function() {breaker=false;$("#hoverme").show();});
-		}
-		mouseover=false;
-	});
+	//screen box
+
+	//do some fancybox like effect
 	
 	//downloadbutton stuffz
 
 	$(".button").click(function(e) {
 		e.preventDefault();
 		return false;
-	});
-	
-	$(".button").hover(function() {
-		$(this).fadeTo(300,1);
-	},function() {
-		$(this).fadeTo(300,0.9);
 	});
 	
 	//hide unused buttons
@@ -95,18 +63,6 @@ function getArchitecture() {
 
 
 //show all OS buttons
-function allOS() {
-	if(!visible) {
-		$("#linuxt").fadeIn();
-		$("#linuxs").fadeIn();
-		$("#mac").fadeIn();
-		$("#windows").fadeIn();
-		$("#others").text("hide other OS");
-		visible=true;
-	}
-	else
-		hideOS();
-}
 
 
 //hide unwanted OS buttons

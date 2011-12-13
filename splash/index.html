@@ -28,59 +28,66 @@
     <div id="main" role="main">
 		<div id="screen">
 			<img src="img/ngale-screen_fade.png" alt="Screenshot"><!-- need better screenshot! -->
-			<div id="hoverme">hover me!</div>
 		</div>
 		<div id="messageh">
-			<h1>Nightingale has been released!</h1>
-			<span>A powerful &amp; good looking media player. Some more text could go here.</span>
+			<h1>Nightingale chirps your favorite tunes!</h1>
+			<span>A powerful &amp; good looking media player. Some more text could go here. Lorem ipsum, dolor sit amet, curum epit flemun gerdam efkat ledis. Berdaf mergu terklit. Epometis getal nurkwat.</span>
 		</div>
+		<div id="hint">We are sorry, we couldn't detect your OS. Please choose the best installer for you from the <a href="all-systems.php">download page</a>.</div>
+		<div class="buttonpadder" id="linuxt">
+			<a class="button">
+				<div class="play"></div>
+				<span class="buttontext">Play now!<br><span class="small">Download Nightingale</span></span>
+			</a>
+		</div>
+		<div class="buttonpadder" id="linuxs">
+			<a class="button">
+				<div class="play"></div>
+				<span class="buttontext">Play now!<br><span class="small">Download Nightingale</span></span>
+			</a>
+		</div>
+		<div class="buttonpadder" id="windows">
+			<a class="button">
+				<div class="play"></div>
+				<span class="buttontext">Play now!<br><span class="small">Download Nightingale</span></span>
+			</a>
+		</div>
+		<div class="buttonpadder" id="mac">
+			<a class="button">
+				<div class="play"></div>
+				<span class="buttontext">Play now!<br><span class="small">Download Nightingale</span></span>
+			</a>
+		</div>
+		<span id="other">We automatically chose the perfect installer for you. <a href="all-systems.php">Other systems</a></span>
 		<div id="spec">
-			<ul id="features" class="hyphenate">
-				<li>Addons to provide the one feature you are missing in Nightingale. <a href="//addons.getnightingale.com" class="more">Show Addons &gt;</a></li>
-				<li>Last.fm rocks, because it's last.fm. And it has Audioscrobblerz</li>
-				<li>It's built to use the system wide gstreamer (Linux only).</li>
+			<ul id="features" class="clearfix">
+				<li><div id="someimg"></div>Addons to provide the one feature you are missing in Nightingale. Chuck ham hock flank cow, turducken pastrami sirloin short loin turkey strip steak biltong corned beef. Andouille capicola frankfurter turkey, chicken boudin ham hock shankle turducken sirloin kielbasa tail. Jerky pig strip steak pancetta, ribeye pastrami rump ground round chicken fatback tri-tip. <a href="//addons.getnightingale.com" class="more">Show Addons &gt;</a></li>
+				<li><div id="someimg"></div>Last.fm rocks, because it's last.fm. And it has Audioscrobblerz. Chuck ham hock flank cow, turducken pastrami sirloin short loin turkey strip steak biltong corned beef. Andouille capicola frankfurter turkey, chicken boudin ham hock shankle turducken sirloin kielbasa tail. Jerky pig strip steak pancetta, ribeye pastrami rump ground round chicken fatback tri-tip.</li>
+				<li><div id="someimg"></div>It's built to use the system wide gstreamer (Linux only). Tenderloin leberkäse short loin, ball tip pork belly jerky pork meatloaf pork loin. Short loin beef ribs kielbasa, swine shoulder filet mignon turkey spare ribs pig jerky beef corned beef. Biltong tongue pastrami, short loin jerky fatback sausage bresaola tail shankle drumstick turducken rump.</li>
 			</ul>
-			<div id="hint">Choose the button for your operating system (you disabled javascript).</div>
-			<div class="buttonpadder" id="linuxt">
-				<a class="button">
-					<img src="img/arrow.png" alt="arrow">
-					<span class="buttontext">Download<br><span class="small">Linux | 32-Bit</span></span>
-				</a>
-			</div>
-			<div class="buttonpadder" id="linuxs">
-				<a class="button">
-					<img src="img/arrow.png" alt="arrow">
-					<span class="buttontext">Download<br><span class="small">Linux | 64-Bit</span></span>
-				</a>
-			</div>
-			<div class="buttonpadder" id="windows">
-				<a class="button">
-					<img src="img/arrow.png" alt="arrow">
-					<span class="buttontext">Download<br><span class="small">Windows | 32-Bit</span></span>
-				</a>
-			</div>
-			<div class="buttonpadder" id="mac">
-				<a class="button">
-					<img src="img/arrow.png" alt="arrow">
-					<span class="buttontext">Download<br><span class="small">MacOS X | 32-Bit</span></span>
-				</a>
-			</div>
-			<a id="others" href="javascript:allOS()">other OS</a>
 		</div>
 	</div>
+  </div>
 	<footer>
 	  <div id="lgradient"></div>
 	  <div id="footerwrapper">
 		  <img src="img/footergale.png" alt="Nightingale logo" id="outlinedngale">
-		  <a href="blog">Blog</a>&nbsp;&#8226;&nbsp;<a href="//forum.nightingale.com">Forums</a>&nbsp;&#8226;&nbsp;<a href="#">Wiki</a><br>
+		  <div id="license">
+		  Site content licensed under the GNU GPL. More info in a 
+		  </div>
+		  <nav>
+			  <ul id="links">
+				<li><a href="blog">Blog</a></li>
+				<li><a href="//forum.nightingale.com">Forums</a></li>
+				<li><a href="#">Wiki</a></li>
+				<li><a href="https://github.com/nightingale-media-player" title="GitHub">Source Code</a></li>
+			  </ul>
+		  </nav>
 		  <div id="buttons">
 			<a href="https://twitter.com/getnightingale" title="Nightingale on twitter"><img alt="Twitter" src="img/Twitter.png"></a>
 			<a href="https://www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on facebook"><img alt="Facebook" src="img/Facebook.png"></a>
-			<a href="https://github.com/nightingale-media-player" title="Nightingale on github"><img alt="Github" src="img/Github.png"></a></div>
-		  Site content licensed under the GNU GPL
 	  </div>
     </footer>
-  </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
