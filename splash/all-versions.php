@@ -89,7 +89,7 @@
 		</ul>
     </footer>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="//static.getnightingale.com/js/jquery-1.7.1.min.js"></script>
 
   <script defer src="js/plugins.js"></script>
   <script defer src="js/script.js"></script>
