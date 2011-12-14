@@ -1536,7 +1536,6 @@ td .star_rating {
 			{$lang_select}
 			<ul class="menu bottom_links">
 				<li><a href="{$mybb->settings['contactlink']}">{$lang->bottomlinks_contactus}</a></li>
-				<li><a href="{$mybb->settings['homeurl']}">{$mybb->settings['homename']}</a></li>
 				<li><a href="#top">{$lang->bottomlinks_returntop}</a></li>
 				<li><a href="<archive_url>">{$lang->bottomlinks_litemode}</a></li>
 				<li><a href="{$mybb->settings['bburl']}/misc.php?action=syndication">{$lang->bottomlinks_syndication}</a></li>
@@ -1618,10 +1617,10 @@ td .star_rating {
 		<a name="top" id="top"></a>
 		<div id="header">
 			<div id="mainhead" class="clearfix">
-				<a href="/" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
+				<a href="//getnightingale.com" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 				<div id="pagenav">
 				<ul class="clearfix">
-					<li><a href="/" title="Home">Home</li>
+					<li><a href="//getnightingale.com" title="Home">Home</li>
 					<li><a href="//forum.getnightingale.com" title="Nightingale Forum" class="actual">Forum</a></li>
 					<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
 					<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
