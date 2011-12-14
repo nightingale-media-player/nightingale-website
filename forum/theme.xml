@@ -175,7 +175,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	border-radius: 5px;
 	margin:0 auto;
 	padding: 0 10px;
-	width:980px;
+	width:970px;
 }
 
 /* Header */
