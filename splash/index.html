@@ -33,7 +33,7 @@
 			<h1>Nightingale chirps your favorite tunes!</h1>
 			<span>A powerful &amp; good looking media player. Some more text could go here. Lorem ipsum, dolor sit amet, curum epit flemun gerdam efkat ledis. Berdaf mergu terklit. Epometis getal nurkwat.</span>
 		</div>
-		<div id="hint">We are sorry, we couldn't detect your OS. Please choose the best installer for you from the <a href="all-systems.php">download page</a>.</div>
+		<div id="hint">We are sorry, we couldn't detect your OS. Please choose the best installer for you from the <a href="all-systems.php" title="all downloads">download page</a>.</div>
 		<div class="buttonpadder" id="linuxt">
 			<a class="button">
 				<div class="play"></div>
@@ -58,7 +58,7 @@
 				<span class="buttontext">Play now!<br><span class="small">Download Nightingale</span></span>
 			</a>
 		</div>
-		<span id="other">We automatically chose the perfect installer for you. <a href="all-systems.php">Other systems</a></span>
+		<span id="other">We automatically chose the perfect installer for you. <a href="all-systems.php" title="all downloads">Other systems</a></span>
 		<div id="spec">
 			<ul id="features" class="clearfix">
 				<li><div id="someimg"></div>Addons to provide the one feature you are missing in Nightingale. Chuck ham hock flank cow, turducken pastrami sirloin short loin turkey strip steak biltong corned beef. Andouille capicola frankfurter turkey, chicken boudin ham hock shankle turducken sirloin kielbasa tail. Jerky pig strip steak pancetta, ribeye pastrami rump ground round chicken fatback tri-tip. <a href="//addons.getnightingale.com" class="more">Show Addons &gt;</a></li>
@@ -70,23 +70,39 @@
   </div>
 	<footer>
 	  <div id="lgradient"></div>
-	  <div id="footerwrapper">
-		  <img src="img/footergale.png" alt="Nightingale logo" id="outlinedngale">
-		  <div id="license">
-		  Site content licensed under the GNU GPL. More info in a 
-		  </div>
-		  <nav>
+		<ul id="footerwrapper" class="clearfix">
+			<li><img src="img/footergale.png" alt="Nightingale logo" id="outlinedngale">
+			  <div id="license">
+			  <b>License</b><br>
+			  Site content licensed under the GNU GPL. More info on the <a href="//wiki.getnightingale.com" title="license">licenses page</a>.
+			  </div></li>
+			<li><nav>
+			<ul id="double" class="clearfix">
+			  <li><b>Content</b>
 			  <ul id="links">
-				<li><a href="blog">Blog</a></li>
-				<li><a href="//forum.nightingale.com">Forums</a></li>
-				<li><a href="#">Wiki</a></li>
+				<li><a href="blog" title="Development Blog">Blog</a></li>
+				<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
+				<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
+			  </ul></li>
+			  <li><b>Developer</b>
+			  <ul>
+				<li><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
+				<li><a href="//locales.getnightingale.com" title="Translate Nightingale">Translate</a></li>
 				<li><a href="https://github.com/nightingale-media-player" title="GitHub">Source Code</a></li>
+				<li><a href="//bugs.getnightingale.com" title="Bugzilla">Bugs</a></li>
+			  </ul></li>
+			</ul>
+		  </nav></li>
+			<li id="buttons">
+			<nav>
+			  <b>Social</b>
+			  <ul>
+				<li><a href="//twitter.com/getnightingale" title="Nightingale on twitter">Follow @getnightingale on Twitter</a></li>
+				<li><a href="//www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on facebook">Like Nightingale on Facebook</a></li>
 			  </ul>
-		  </nav>
-		  <div id="buttons">
-			<a href="https://twitter.com/getnightingale" title="Nightingale on twitter"><img alt="Twitter" src="img/Twitter.png"></a>
-			<a href="https://www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on facebook"><img alt="Facebook" src="img/Facebook.png"></a>
-	  </div>
+			</nav>
+			</li>
+		</ul>
     </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>

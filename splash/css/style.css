@@ -306,7 +306,7 @@ h1 {
 	margin: 20px auto 10px;
 	width: 950px;
 	display: block;
-	text-align: justify;
+	text-align: left;
 	word-wrap: break-word;
 }
 
@@ -339,11 +339,13 @@ h1 {
 /* download buttons style */
 
 .js #hint {
-	display: none;
+	display: none !important;
+	visibility: hidden;
 }
 
 .no-js .button {
-	display: none;
+	display: none !important;
+	visibility: hidden;
 }
 
 .button {
@@ -469,15 +471,17 @@ h1 {
 
 footer {
 	color: #fff;
-	height: 147px;
 	width: 100%;
 	background-color: #666;
 	z-index: 500;
 	margin: 0;
+	padding-bottom: 10px;
+	font-size: 14px;
 }
 
 footer a:link, footer a:visited {
-	color: white;
+	color: #fff;
+	text-decoration: underline;
 }
 
 footer a:hover {
@@ -507,9 +511,50 @@ footer a:active {
 	margin-bottom: 10px;
 }
 
+footer img {
+	margin-top: 3px;
+	margin-right: 5px;
+}
+
+#license {
+	height: 120px;
+}
+
+footer nav {
+	height: 120px;
+}
+
 #footerwrapper {
 	width: 950px;
 	margin: 10px auto;
+	list-style: none;
+	padding: 0;
+}
+
+#footerwrapper li {
+	float: left;
+	display: block;
+	width: 296.6px;
+	padding: 0 30px 0 0;
+	margin: 0;
+}
+
+#double {
+	margin: 0;
+	padding: 0;
+}
+
+#double li {
+	float: left;
+	width: 133.3px;
+}
+
+#double li:first-child {
+	padding-right: 30px;
+}
+
+#footerwrapper li:last-child {
+	padding-right: 0;
 }
 
 #outlinedngale {
@@ -517,16 +562,12 @@ footer a:active {
 	display: block;
 }
 
-#buttons {
-	float: right;
-	vertical-align: top;
-	margin-right: -10px;
-	margin-top: -90px;
-}
-
 #buttons img {
+	float: right;
 	cursor: pointer;
 	vertical-align: top;
+	margin-right: -10px;
+	margin-top: -10px;
 }
 
 /* ==|== non-semantic helper classes ========================================
