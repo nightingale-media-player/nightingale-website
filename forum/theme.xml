@@ -1622,7 +1622,7 @@ td .star_rating {
 				<div id="pagenav">
 				<ul class="clearfix">
 					<li><a href="//getnightingale.com" title="Home">Home</li>
-					<li><a href="//forum.getnightingale.com" title="Nightingale Forum" class="actual">Forum</a></li>
+					<li class="actual"><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 					<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
 					<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
 					<li><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
