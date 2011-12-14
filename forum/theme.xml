@@ -131,6 +131,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
 	#mainhead {
 		margin-bottom: 1em;
+		font-size: 15px;
 	}
 
 	#headlogo {
