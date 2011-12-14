@@ -140,7 +140,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
 	/* nav*/
 	
-	#mainhea #pagenav {
+	#mainhead #pagenav {
 		float: right;
 		margin-top: 1em;
 	}
