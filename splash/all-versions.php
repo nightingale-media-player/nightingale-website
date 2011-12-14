@@ -9,7 +9,7 @@
 
   <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
 
-  <title>Nightingale</title>
+  <title>Nightingale - Downloads</title>
   <meta name="description" content="Nightingale is a free and powerfull music player for Linux, Windows and Mac">
   <meta name="author" content="Martin Giger">
 
