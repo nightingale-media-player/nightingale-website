@@ -116,7 +116,7 @@ a:hover, a:active {
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+#pagenav ul, #pagenav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
 .navigation a {
@@ -291,8 +291,25 @@ color:#555;
 	padding: 20px 10px;
 }
 
+#panel {
+	/* get those gradients coppery on 1.10 */
+	background: #4e8eb5; /* Old browsers */
+	background: -moz-linear-gradient(top, #4e8eb5 0%, #496b8e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4e8eb5), color-stop(100%,#496b8e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* IE10+ */
+	background: linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e8eb5', endColorstr='#496b8e',GradientType=0 ); /* IE6-9 */
+	
+	text-align: left;
+	color: #fff; /*222*/
+	
+	border: 2px solid #4673AA;
+}
+
 #panel a {
- color: #DDD;
+ color: #fff;
 }
 
 #panel a:hover {
