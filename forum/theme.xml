@@ -116,6 +116,9 @@ a:hover, a:active {
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
 .navigation a {
 	color: #AAA;
 }
