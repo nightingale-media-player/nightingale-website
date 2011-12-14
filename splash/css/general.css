@@ -40,7 +40,6 @@ a:visited ,a:active,a:hover{
 		float: left;
 		padding:.8em;
 		background-color: #333333;
-		color: white;
 	}
 	
 	header nav li a:link, header nav li a:hover, header nav li a:active, header nav li a:visited {

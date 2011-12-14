@@ -245,7 +245,6 @@ td { vertical-align: top; }
 	clear: both;
 	padding-bottom: 20px;
 	z-index: 0;
-	text-align: center;
 }
 
 #spec {
@@ -302,12 +301,12 @@ td { vertical-align: top; }
 	text-align: center;
 }
 
-#messageh a:link, #messageh a:visited {
+#other a:link, #other a:visited {
 	color: white;
 	text-decoration: underline;
 }
 
-#messageh a:hover,#messageh a:active {
+#other a:hover,#other a:active {
 	color: #ccc;
 }
 
@@ -401,8 +400,6 @@ h1 {
 	height: 40px;
 	text-align: left;
 }
-
-/*img*/
 
 .buttonpadder {
 	padding-top: 15px;

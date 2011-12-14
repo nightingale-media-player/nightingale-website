@@ -27,10 +27,10 @@
   <div id="page">
   <!-- Use this as header -->
 	<header class="clearfix">
-		<img src="img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours.">
+		<a href="/" title="Home"><img src="img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 		<nav>
 		<ul class="clearfix">
-			<li><a href="/ngale" title="Home">Home</li>
+			<li><a href="/" title="Home">Home</li>
 			<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 			<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
 			<li><a href="blog" title="Development Blog">Blog</a></li>
