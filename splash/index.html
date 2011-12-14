@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/general.css">
   <link type="text/plain" rel="author" href="http://domain/humans.txt" />
   
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
@@ -25,45 +25,57 @@
 
 <body>
   <div id="page">
+	<header class="clearfix">
+		<img src="img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours.">
+		<nav>
+		<ul class="clearfix">
+			<li class="actual"><a href="/ngale" title="Home">Home</li>
+			<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
+			<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
+			<li><a href="blog" title="Development Blog">Blog</a></li>
+			<li><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
+		</ul>
+		</nav>
+	</header>
     <div id="main" role="main">
-		<div id="screen">
-			<img src="img/ngale-screen_fade.png" alt="Screenshot"><!-- need better screenshot! -->
-		</div>
 		<div id="messageh">
 			<h1>Nightingale chirps your favorite tunes!</h1>
-			<span>A powerful &amp; good looking media player. Some more text could go here. Lorem ipsum, dolor sit amet, curum epit flemun gerdam efkat ledis. Berdaf mergu terklit. Epometis getal nurkwat.</span>
-		</div>
-		<div id="hint">We are sorry, we couldn't detect your OS. Please choose the best installer for you from the <a href="all-systems.php" title="all downloads">download page</a>.</div>
+			<span>A beautiful interface with a wide range of supported audioformats and even multiplattformsupport, thats Nightingale.</span>
+			<div id="hint">We are sorry, we couldn't detect your OS. Please choose the best installer for you from the <a href="all-systems.html" title="all downloads">download page</a>.</div>
 		<div class="buttonpadder" id="linuxt">
 			<a class="button">
 				<div class="play"></div>
-				<span class="buttontext">Play now!<br><span class="small">Download Nightingale</span></span>
+				<span class="buttontext">Download<br><span class="small">Linux | 32-Bit</span></span>
 			</a>
 		</div>
 		<div class="buttonpadder" id="linuxs">
 			<a class="button">
 				<div class="play"></div>
-				<span class="buttontext">Play now!<br><span class="small">Download Nightingale</span></span>
+				<span class="buttontext">Download<br><span class="small">Linux | 64-Bit</span></span>
 			</a>
 		</div>
 		<div class="buttonpadder" id="windows">
 			<a class="button">
 				<div class="play"></div>
-				<span class="buttontext">Play now!<br><span class="small">Download Nightingale</span></span>
+				<span class="buttontext">Download<br><span class="small">Windows | 32-Bit</span></span>
 			</a>
 		</div>
 		<div class="buttonpadder" id="mac">
 			<a class="button">
 				<div class="play"></div>
-				<span class="buttontext">Play now!<br><span class="small">Download Nightingale</span></span>
+				<span class="buttontext">Download<br><span class="small">Mac OS X | 32-Bit</span></span>
 			</a>
 		</div>
-		<span id="other">We automatically chose the perfect installer for you. <a href="all-systems.php" title="all downloads">Other systems</a></span>
+		<span id="other">We tried to detect the optimal installer for you. <a href="all-systems.html" title="all downloads">Other&nbsp;systems</a></span>
+		</div>
+		<div id="screen">
+			<img src="img/ngale_sc.png" alt="Screenshot">
+		</div>
 		<div id="spec">
 			<ul id="features" class="clearfix">
-				<li><div id="someimg"></div>Addons to provide the one feature you are missing in Nightingale. Chuck ham hock flank cow, turducken pastrami sirloin short loin turkey strip steak biltong corned beef. Andouille capicola frankfurter turkey, chicken boudin ham hock shankle turducken sirloin kielbasa tail. Jerky pig strip steak pancetta, ribeye pastrami rump ground round chicken fatback tri-tip. <a href="//addons.getnightingale.com" class="more">Show Addons &gt;</a></li>
-				<li><div id="someimg"></div>Last.fm rocks, because it's last.fm. And it has Audioscrobblerz. Chuck ham hock flank cow, turducken pastrami sirloin short loin turkey strip steak biltong corned beef. Andouille capicola frankfurter turkey, chicken boudin ham hock shankle turducken sirloin kielbasa tail. Jerky pig strip steak pancetta, ribeye pastrami rump ground round chicken fatback tri-tip.</li>
-				<li><div id="someimg"></div>It's built to use the system wide gstreamer (Linux only). Tenderloin leberkäse short loin, ball tip pork belly jerky pork meatloaf pork loin. Short loin beef ribs kielbasa, swine shoulder filet mignon turkey spare ribs pig jerky beef corned beef. Biltong tongue pastrami, short loin jerky fatback sausage bresaola tail shankle drumstick turducken rump.</li>
+				<li><div id="someimg"></div>You miss a feature in Nighingale? An Addon will surely provide your wished functionality (lie :P). <a href="//addons.getnightingale.com" class="more">Show Addons &gt;</a></li>
+				<li><div id="someimg"></div>Whatever is cool :D</li>
+				<li><div id="someimg"></div>And some other cool feature</li>
 			</ul>
 		</div>
 	</div>
@@ -73,7 +85,7 @@
 		<ul id="footerwrapper" class="clearfix">
 			<li><img src="img/footergale.png" alt="Nightingale logo" id="outlinedngale">
 			  <div id="license">
-			  <b>License</b><br>
+			  <b>License</b>
 			  Site content licensed under the GNU GPL. More info on the <a href="//wiki.getnightingale.com" title="license">licenses page</a>.
 			  </div></li>
 			<li><nav>
@@ -108,7 +120,6 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
   <script defer src="js/plugins.js"></script>
-  <script defer src="js/menu.js"></script>
   <script defer src="js/script.js"></script>
   <script>
     window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
