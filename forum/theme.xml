@@ -1592,7 +1592,7 @@ td .star_rating {
 			  <li><b>Developer</b>
 			  <ul>
 				<li><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
-				<li><a href="//locales.getnightingale.com" title="Translate Nightingale">Translate</a></li>
+				<li><a href="//wiki.getnightingale.com/doku.php?id=ngale-locales" title="Translate Nightingale">Translate</a></li>
 				<li><a href="https://github.com/nightingale-media-player" title="GitHub">Source Code</a></li>
 				<li><a href="//bugs.getnightingale.com" title="Bugzilla">Bugs</a></li>
 			  </ul></li>
