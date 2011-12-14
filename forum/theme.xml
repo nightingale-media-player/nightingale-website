@@ -106,7 +106,7 @@ a:link, a:visited {
 	text-decoration: none;
 }
 
-a:hover, a:active {
+#panel a:hover,#panel a:active, #content a:hover,#content a:active{
 	color: #888;
 	text-decoration: underline;
 }
@@ -264,8 +264,6 @@ clear:both;
 
 .wrapper {
 	width: 950px;
-	min-width: 970px;
-	max-width: 1500px;
 	margin: auto auto;
 }
 
