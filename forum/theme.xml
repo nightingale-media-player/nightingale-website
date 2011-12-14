@@ -306,6 +306,7 @@ color:#555;
 	color: #fff; /*222*/
 	
 	border: 2px solid #4673AA;
+	border-radius: 5px;	
 }
 
 #panel a {
