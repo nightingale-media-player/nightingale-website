@@ -3,7 +3,7 @@
    ========================================================================== */
 /* General styles */  
 body {
-	background-image: url('/ngale/img/gradent.png');
+	background-image: url('//static.getnightingale.com/img/gradent.png');
 	background-repeat:repeat-x;
 	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
 }

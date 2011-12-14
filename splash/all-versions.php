@@ -27,13 +27,13 @@
   <div id="page">
   <!-- Use this as header -->
 	<header class="clearfix">
-		<a href="/" title="Home"><img src="img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
+		<a href="/" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 		<nav>
 		<ul class="clearfix">
 			<li><a href="/" title="Home">Home</li>
 			<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 			<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-			<li><a href="blog" title="Development Blog">Blog</a></li>
+			<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
 			<li><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
 		</ul>
 		</nav>
@@ -54,7 +54,7 @@
 	<footer>
 	  <div id="lgradient"></div>
 		<ul id="footerwrapper" class="clearfix">
-			<li><img src="img/footergale.png" alt="Nightingale logo" id="outlinedngale">
+			<li><img src="//static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">
 			  <div id="license">
 			  <b>License</b>
 			  Site content licensed under the GNU GPL. More info on the <a href="//wiki.getnightingale.com" title="license">licenses page</a>.
@@ -63,7 +63,7 @@
 			<ul id="double" class="clearfix">
 			  <li><b>Content</b>
 			  <ul id="links">
-				<li><a href="blog" title="Development Blog">Blog</a></li>
+				<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
 				<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 				<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
 				<li><a href="all-versions.php" title="Download Nightingale">Download</a></li>
