@@ -7,14 +7,18 @@
   Site: http://humanoidsbepage.ch.vu
   Twitter: @freaktechnik
   Location: Switzerland
+  
+  Lead Designer: Janek Bevendorff
+  Site: http://www.refining-linux.org/
+  Twitter: @reflinux
+  Location: Germany
 
 /* THANKS */
   Names (& URL): Xeloader (http://xeloader.deviantart.com)
-				 rsjtdrjgfuzkfg
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery, Hyphenator, .disableTextSelect
+  Components: Modernizr, jQuery, .disableTextSelect
   Software:
   
 

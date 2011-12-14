@@ -14,9 +14,9 @@
   <meta name="author" content="Martin Giger">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <link rel="stylesheet" href="css/style.css">
+  
   <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/style.css">
   <link type="text/plain" rel="author" href="http://domain/humans.txt" />
   
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
@@ -30,7 +30,7 @@
 		<img src="img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours.">
 		<nav>
 		<ul class="clearfix">
-			<li class="actual"><a href="/ngale" title="Home">Home</li>
+			<li><a href="/ngale" title="Home">Home</li>
 			<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 			<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
 			<li><a href="blog" title="Development Blog">Blog</a></li>
@@ -40,47 +40,16 @@
 	</header>
 	<!-- end of header -->
     <div id="main" role="main">
-		<div id="messageh">
-			<h1>Nightingale chirps your favorite tunes!</h1>
-			<span>A beautiful interface with a wide range of supported audioformats and even multiplattformsupport, thats Nightingale.</span>
-			<div id="hint">We are sorry, we couldn't detect your OS. Please choose the best installer for you from the <a href="all-versions.php" title="all downloads">download page</a>.</div>
-		<div class="buttonpadder" id="linuxt">
-			<a class="button" href="all-versions.php?linux=32">
-				<div class="play"></div>
-				<span class="buttontext">Download<br><span class="small">Linux | 32-Bit</span></span>
-			</a>
+		<div id="headtitle">
+			<h1>All Nightingale downloads</h1>
 		</div>
-		<div class="buttonpadder" id="linuxs">
-			<a class="button" href="all-versions.php?linux=64">
-				<div class="play"></div>
-				<span class="buttontext">Download<br><span class="small">Linux | 64-Bit</span></span>
-			</a>
-		</div>
-		<div class="buttonpadder" id="windows">
-			<a class="button">
-				<div class="play"></div>
-				<span class="buttontext">Download<br><span class="small">Windows | 32-Bit</span></span>
-			</a>
-		</div>
-		<div class="buttonpadder" id="mac">
-			<a class="button">
-				<div class="play"></div>
-				<span class="buttontext">Download<br><span class="small">Mac OS X | 32-Bit</span></span>
-			</a>
-		</div>
-		<span id="other">We tried to detect the optimal installer for you. <a href="all-versions.php" title="all downloads">Other&nbsp;systems</a></span>
-		</div>
-		<div id="screen">
-			<img src="img/ngale_sc.png" alt="Screenshot">
-		</div>
-		<div id="spec">
-			<ul id="features" class="clearfix">
-				<li><div id="someimg"></div>You miss a feature in Nighingale? An Addon will surely provide your wished functionality (lie :P). <a href="//addons.getnightingale.com" class="more">Show Addons &gt;</a></li>
-				<li><div id="someimg"></div>Whatever is cool :D</li>
-				<li><div id="someimg"></div>And some other cool feature</li>
-			</ul>
-		</div>
-	</div>
+		<ul id="downloadlist" style="text-align:left;">
+			<?php if($_GET['linux']!=64) { echo '<li><a href="">Ubunu/Debian installer (.deb) | 32-Bit</a></li>';}?>
+			<?php if($_GET['linux']!=32) { echo '<li><a href="">Ubunu/Debian installer (.deb) | 64-Bit</a></li>';}?>
+			<li><a href="https://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.8">Linux (.tar.gz) | 64/32-Bit</a></li>
+			<?php if(!$_GET['linux']) { echo '<li><a href="">Windows Installer (.exe) | 32-Bit</a></li><li><a href="">Mac OS X (.app) | 32-Bit</a></li>';}?>
+		</ul>
+	  </div>
   </div>
 	<footer>
 	  <div id="lgradient"></div>
