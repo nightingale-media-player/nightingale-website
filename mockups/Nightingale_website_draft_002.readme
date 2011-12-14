@@ -9,7 +9,9 @@ The download button itself has got a bright “shadow” which improves
 the visual contrast so that it's more in focus.
 
 The PayPal button as been removed as well. It looks ugly and we already
-have a Donate link in the footer. It's not so visible there but for the product it is also not so important. But if you think, we should position such a button at a prominent position anyways, that would be fine too.
+have a Donate link in the footer. It's not so visible there but for the
+product it is also not so important. But if you think, we should position
+such a button at a prominent position anyways, that would be fine too.
 
 I also removed the green ECO button. It's not important at all, I don't
 know whether the current server is really “green” and it's also quite ugly.
