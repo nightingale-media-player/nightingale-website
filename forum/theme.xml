@@ -163,9 +163,10 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 		border-radius:0 5px 5px 0;
 	}
 	
-	#mainhead #pagenav .actual, header nav li:hover {
+	#mainhead #pagenav .actual, #mainhead #pagenav li:hover {
 		border-bottom: .4em solid #B55029;
 		padding-bottom: .4em;
+		text-decoration: none;
 	}
 
 #header {
@@ -1615,19 +1616,19 @@ td .star_rating {
 </div>]]></template>
 		<template name="header" version="1600"><![CDATA[<div id="container">
 		<a name="top" id="top"></a>
-		<div id="mainhead" class="clearfix">
-			<a href="/" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
-			<div id="pagenav">
-			<ul class="clearfix">
-				<li><a href="/" title="Home">Home</li>
-				<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
-				<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-				<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
-				<li><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
-			</ul>
-			</div>
-		</div>
 		<div id="header">
+			<div id="mainhead" class="clearfix">
+				<a href="/" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
+				<div id="pagenav">
+				<ul class="clearfix">
+					<li><a href="/" title="Home">Home</li>
+					<li><a href="//forum.getnightingale.com" title="Nightingale Forum" class="actual">Forum</a></li>
+					<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
+					<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
+					<li><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
+				</ul>
+				</div>
+			</div>
 			<div id="logo">
 				<div class="wrapper">
 					<a href="{$mybb->settings['bburl']}/index.php"><img src="{$theme['logo']}" alt="{$mybb->settings['bbname']}" title="{$mybb->settings['bbname']}" /></a>
