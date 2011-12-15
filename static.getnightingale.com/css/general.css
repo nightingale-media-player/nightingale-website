@@ -40,7 +40,6 @@ body {
 	
 	#ngalemainhead nav li {
 		float: left;
-		padding:.8em;
 		background-color: #333333;
 		list-style: none;
 	}
@@ -49,20 +48,27 @@ body {
 		color: #fff !important;
 		text-decoration: none !important;
 		background-color: transparent !important;
+		display: block;
+		padding:.8em;
 	}
 	
-	#ngalemainhead nav li:first-child {
+	#ngalemainhead nav li:first-child a,#ngalemainhead nav li:last-child  {
 		border-radius: 5px 0 0 5px;
 		-moz-border-radius: 5px 0 0 5px;
 	}
 	
-	#ngalemainhead nav li:last-child {
+	#ngalemainhead nav li:last-child  a,#ngalemainhead nav li:last-child{
 		border-radius:0 5px 5px 0;
 		-moz-border-radius:0 5px 5px 0;
 	}
 	
-	#ngalemainhead nav .actual, header nav li:hover {
+	#ngalemainhead nav .actual {
 		border-bottom: .4em solid #B55029 !important;
+		padding-bottom: .4em !important;
+	}
+	
+	header nav li:hover {
+		border-bottom: .4em solid #fff !important;
 		padding-bottom: .4em !important;
 	}
 
