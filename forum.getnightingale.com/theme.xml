@@ -181,79 +181,8 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	width:950px;
 }
 
-/* Header */
-.header {
- background: url(/user/themes/nightingale/img/nav-bg.png) no-repeat top center;
- font-size: 15px;
- height: 30px;
- margin:0 auto;
- margin-bottom: 20px;
- padding: 12px;
- padding-bottom:15px;
- padding-top:9px;
- text-align:left;
- text-shadow: 1px 1px 5px #111;
- width: 1000px;
-}
-
-.header a {
- color: #FFF;
- text-decoration: none;
-}
-
-.header a:hover {
-color:#CCC;
-}
-
-.header h2 {
- display: inline;
- font-size: 25px;
- font-weight: normal;
- margin-right: 20px;
- padding-left: 5px;
-}
-
-.header ul {
- display: inline;
- font-size: 19px;
-}
-
-.header ul li {
- display:inline;
- margin-right:10px;
-}
-
-.header ul li a {
-color:#CCC;
-}
-
-.header ul li a:hover {
-color:#FFF;
-}
-
-.header p {
-margin:0;padding-top:7px;
-}
-
-.header p a {
- font-size: 15px;
- font-weight: bold;
-}
-
-.header small {
-color: #CCC;font-size: 10px;font-weight: normal;
-}
-
-.header .left {
-float:left;
-}
-
-.header .right {
-float:right;
-}
-
-.header .clear {
-clear:both;
+#navwrap {
+	width: 930px;
 }
 
 #container {
@@ -273,8 +202,8 @@ clear:both;
 
 #content .wrapper {
 	border-radius: 5px;
-	width: 980px;
-	padding: 10px;
+	width: 950px;
+	padding: 10px 0;
 }
 
 #content .wrapper table a:link, #content .wrapper table a:visited {
@@ -1638,7 +1567,7 @@ td .star_rating {
 			</div>
 			<div id="panel">
 				<div class="upper"><!-- This div(class="upper") is closed in the header_welcomeblock_member and header_welcomeblock_guest templates -->
-					<div class="wrapper">
+					<div class="wrapper" id="navwrap">
 						<ul class="menu top_links">
 							<li><a href="{$mybb->settings['bburl']}/search.php" class="search">{$lang->toplinks_search}</a></li>
 							<li><a href="{$mybb->settings['bburl']}/memberlist.php" class="memberlist">{$lang->toplinks_memberlist}</a></li>
