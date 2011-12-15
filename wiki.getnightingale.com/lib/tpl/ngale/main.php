@@ -33,142 +33,8 @@ if (!defined('DOKU_INC')) die();
 
   <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
 </head>
-
+<link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
 <style>
-body{
-  background-image: url('//static.getnightingale.com/img/gradent.png');
-  background-repeat:repeat-x;
-}
-
-  /* header/nav */
-#mainhead {
-		margin-bottom: 1em;
-		font-size: 15px;
-	width: 950px;
-	margin: 0 auto;    
-
-}
-
-#headlogo {
-		height: 100px;
-		margin-top: .8em;
-}
-
-/* nav*/
-#mainhead #pagenav {
-		float: right;
-		margin-top: 1em;
-}
-
-#mainhead #pagenav li {
-		float: left;
-		padding:.8em;
-		background-color: #333333;
-}
-
-#mainhead #pagenav li a:link, #mainhead #pagenav li a:hover, #mainhead #pagenav li a:active, #mainhead #pagenav li a:visited {
-		color: white;
-}
-
-#mainhead #pagenav li:first-child {
-		border-radius: 5px 0 0 5px;
-}
-
-#mainhead #pagenav li:last-child {
-		border-radius:0 5px 5px 0;
-}
-
-#mainhead #pagenav .actual, #mainhead #pagenav li:hover {
-		border-bottom: .4em solid #B55029;
-		padding-bottom: .4em;
-		text-decoration: none;
-}
-
-  .clearfix {
-  list-style-type:none;
-  }
-  
-/* footer */
-/* footer styles */
-footer {
-	color: #fff;
-	width: 100%;
-	background-color: #666;
-	z-index: 500;
-	margin: 0;
-	padding-bottom: 10px;
-	font-size: 14px;
-  height: 160px;
-}
-
-footer b {
-	padding-bottom: 5px;
-	display: block;
-}
-
-footer a:link, footer a:visited {
-	color: #fff;
-}
-
-footer #license a:link, footer #license a :visited {
-	text-decoration: underline;
-}
-
-footer a:hover {
-	color: #EDEDED;
-	text-decoration: underline;
-}
-
-footer a:active {
-	color: #ccc;
-	text-decoration: underline;
-}
-
-#lgradient {
-	height: 14px;
-	border-top: 2px solid #333333;
-	width: 100%;
-	
-	background: #414141; /* Old browsers */
-	background: -moz-linear-gradient(top,  #414141 0%, #373737 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#414141), color-stop(100%,#373737)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #414141 0%,#373737 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #414141 0%,#373737 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #414141 0%,#373737 100%); /* IE10+ */
-	background: linear-gradient(top,  #414141 0%,#373737 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414141', endColorstr='#373737',GradientType=0 ); /* IE6-9 */
-	
-	margin-bottom: 10px;
-}
-
-footer img {
-	margin-top: 3px;
-	margin-right: 5px;
-}
-
-#license {
-	height: 120px;
-}
-
-footer nav {
-	height: 120px;
-}
-
-#footerwrapper {
-	width: 950px;
-	margin: 10px auto;
-	list-style: none;
-	padding: 0;
-}
-
-#footerwrapper li {
-	float: left;
-	display: block;
-	width: 296.6px;
-	padding: 0 30px 0 0;
-	margin: 0;
-}
-
 #double {
 	margin: 0;
 	padding: 0;
@@ -225,19 +91,18 @@ footer nav {
 
 <body>
 <?php /*old includehook*/ @include(dirname(__FILE__).'/topheader.html')?>
-			<div id="mainhead" class="clearfix">
-				<a href="//getnightingale.com" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
-				<div id="pagenav">
-				<ul class="clearfix">
-					<li><a href="//getnightingale.com" title="Home">Home</li>
-					<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
-					<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-
-					<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
-					<li class="actual"><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
-				</ul>
-				</div>
-			</div>
+			<header>
+		<a href="/" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
+		<nav>
+		<ul class="menu">
+			<li class="actual"><a href="/" title="Home">Home</a></li>
+			<li><a href="http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
+			<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
+			<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
+			<li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
+		</ul>
+		</nav>
+	</header>
 <div class="dokuwiki">
   <?php html_msgarea()?>
 
@@ -340,29 +205,26 @@ footer nav {
 <footer>
 	  <div id="lgradient"></div>
 		<ul id="footerwrapper" class="clearfix">
-			<li><img src="//static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">
+			<li><img src="http://static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">
 			  <div id="license">
 			  <b>License</b>
-			  Site content licensed under the GNU GPL. More info on the <a href="//wiki.getnightingale.com" title="license">licenses page</a>.
+			  Site content licensed under the <a target="_blank" href="http://www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
 			  </div></li>
-
 			<li><nav>
 			<ul id="double" class="clearfix">
 			  <li><b>Content</b>
 			  <ul id="links">
-				<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
-				<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
-				<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-
+				<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
+				<li><a href="http:http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
+				<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
 				<li><a href="all-versions.php" title="Download Nightingale">Download</a></li>
 			  </ul></li>
 			  <li><b>Developer</b>
 			  <ul>
-				<li><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
-				<li><a href="//locales.getnightingale.com" title="Translate Nightingale">Translate</a></li>
+				<li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
+				<li><a href="http://wiki.getnightingale.com/doku.php?id=ngale-locales" title="Translate Nightingale">Translate</a></li>
 				<li><a href="https://github.com/nightingale-media-player" title="GitHub">Source Code</a></li>
-
-				<li><a href="//bugs.getnightingale.com" title="Bugzilla">Bugs</a></li>
+				<li><a href="http://bugs.getnightingale.com" title="Bugzilla">Bugs</a></li>
 			  </ul></li>
 			</ul>
 		  </nav></li>
@@ -370,9 +232,8 @@ footer nav {
 			<nav>
 			  <b>Social</b>
 			  <ul>
-
-				<li><a href="//twitter.com/getnightingale" title="Nightingale on twitter">Follow @getnightingale on Twitter</a></li>
-				<li><a href="//www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on facebook">Like Nightingale on Facebook</a></li>
+				<li><a href="http://twitter.com/getnightingale" title="Nightingale on twitter">Follow @getnightingale on Twitter</a></li>
+				<li><a href="http://www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on facebook">Like Nightingale on Facebook</a></li>
 			  </ul>
 			</nav>
 			</li>
