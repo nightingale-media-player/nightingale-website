@@ -358,6 +358,14 @@ h1 {
 	margin-bottom: 15px;
 }
 
+#lastfm {
+	background-image: url('//static.getnightingale.com/img/scrobbler.png');
+	background-position: 0px 0px;
+	width: 296px;
+	height: 150px;
+	margin-bottom: 15px;
+}
+
 .more {
 	float: right;
 }
@@ -407,7 +415,7 @@ h1 {
 }
 
 .play {
-	background-image: url('/ngale/img/button-play-pause.png');
+	background-image: url('//static.getnightingale.com/img/button-play-pause.png');
 	background-position: 0px 0px;
 	overflow: hidden;
 	height: 40px;

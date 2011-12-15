@@ -15,11 +15,11 @@ $(document).ready(function() {
 	// hover social buttons effect
 	
 	$("#buttons img").mouseover(function() {
-		$(this).attr('src','img/'+$(this).attr('alt')+'_bg.png');
+		$(this).attr('src','//static.getnightingale.com/img/'+$(this).attr('alt')+'_bg.png');
 	});
 	
 	$("#buttons img").mouseout(function() {
-		$(this).attr('src','img/'+$(this).attr('alt')+'.png');
+		$(this).attr('src','//static.getnightingale.com/img/'+$(this).attr('alt')+'.png');
 	});
 	
 	//screen box
