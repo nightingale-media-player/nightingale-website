@@ -1,15 +1,29 @@
 /* Author:  Martin Giger
    License: Some GNU GPL License :D
 */
-
 var visible;
 var breaker = false;
 var mouseover = false;
 
-var download= {'systems':[{'name':'Linux','architecture':32,'link':'https://github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-i686.tar.gz'},
-{'name':'Linux','architecture':64,'link':'http://github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-x86_64.tar.gz'},
-{'name':'Windows','architecture':32,'link':'https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe'}
-]};
+var download = {
+	'systems': [
+		{
+			'name': 'Linux',
+			'architecture': 32,
+			'link': 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-i686.tar.gz'
+		},
+		{
+			'name': 'Linux',
+			'architecture': 64,
+			'link': 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-x86_64.tar.bz2'
+		},
+		{
+			'name': 'Windows',
+			'architecture': 32,
+			'link': 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe'
+		}
+	]
+};
 
 $(document).ready(function() {	
 	// disable selection
@@ -69,31 +83,11 @@ function optimizeOS(OS,arch) {
 	var a=0;
 	do {
 		a++;
-	}while(download.systems[a].name!=OS&&a<download.systems.length&&download.systems[a].architecture==arch);
+		console.log(OS, download.systems[a].name);
+	} while (download.systems[a].name != OS && a < download.systems.length && download.systems[a].architecture == arch);
 	$('.button a').attr('href',download.systems[a].link);
 	$('.button .small').text(OS+" | "+arch);
 	$('.button').click(function() {
 		window.location = download.systems[a].link;
 	});
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
