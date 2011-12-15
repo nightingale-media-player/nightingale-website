@@ -4,7 +4,7 @@
 var visible;
 var breaker = false;
 var mouseover = false;
-
+console.log('x');
 var download = {
 	'systems': [
 		{
@@ -67,12 +67,14 @@ $(document).ready(function() {
 
 function getOS() {
 	var OSName="Unknown OS";
-	var pc = navigator.platform
+	var ua = navigator.userAgent;
 	
-	if (pc.indexOf("Win")!=-1) OSName="Windows";
-	return OSName;
-	
-	if (pc.indexOf("Linux")!=-1) OSName="Linux";
+	if (ua.indexOf("Win") != -1) {
+		OSName="Windows"; 
+	}
+	if (ua.indexOf("Linux") != -1) {
+		OSName="Linux";
+	}
 	return OSName;
 }
 
@@ -80,7 +82,7 @@ function getOS() {
 
 function getArchitecture() {
 	var arch = 32;
-	if(navigator.platform.indexOf("64")!=-1)
+	if(navigator.userAgent.indexOf("64")!=-1)
 		arch = 64;
 	return arch;
 }
