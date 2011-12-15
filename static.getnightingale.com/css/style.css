@@ -507,9 +507,7 @@ h1 {
 .clearfix { zoom: 1; }
 
 /* MENU ONLY! */
-.menu { list-style-type:none; }
-.menu { zoom: 1; }
-.menu { list-style-type:none; }
+.menu { list-style-type:none; -webkit-margin-after:0; }
 
 /* ==|== print styles =======================================================
    Print styles.

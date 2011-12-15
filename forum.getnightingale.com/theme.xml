@@ -137,6 +137,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	#mainhead {
 		margin-bottom: 1em;
 		font-size: 15px;
+		line-height: 1.231em;
 	}
 
 	#headlogo {
@@ -265,6 +266,7 @@ clear:both;
 	
 	font-family: Tahoma, Verdana, Arial, Sans-Serif;
 	font-size: 13px;
+	color: #000;
 }
 
 .wrapper {
@@ -512,6 +514,7 @@ footer {
 	margin: 0;
 	padding-bottom: 10px;
 	font-size: 14px;
+	display: block;
 }
 
 footer b {
