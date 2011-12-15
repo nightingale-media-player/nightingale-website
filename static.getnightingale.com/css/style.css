@@ -356,19 +356,21 @@ h1 {
 	border-radius: 5px 0 0 0;
 }
 
-#someimg {
+#features-addons, #features-lastfm, #features-devsneeded {
+	background-image: url('//static.getnightingale.com/img/addons.png');
+	background-position: 0px 0px;
 	width: 296.6px;
 	height: 150px;
 	background: grey;
 	margin-bottom: 15px;
 }
 
-#lastfm {
+#features-lastfm {
 	background-image: url('//static.getnightingale.com/img/scrobbler.png');
-	background-position: 0px 0px;
-	width: 296px;
-	height: 150px;
-	margin-bottom: 15px;
+}
+
+#features-devsneeded {
+	background-image: url('//static.getnightingale.com/img/devsneeded.png');
 }
 
 .more {

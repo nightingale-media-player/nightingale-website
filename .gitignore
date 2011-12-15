@@ -1,0 +1,16 @@
+# Don't commit source PSD OR AI files
+*.psd
+*.ai
+
+# Don't commit OS-specific files
+Thumbs.db
+desktop.ini
+.DS_Store
+.directory
+
+# No VIM swap files
+*.swp
+
+# No Komodo project files
+*.komodoproject
+.komodotools
