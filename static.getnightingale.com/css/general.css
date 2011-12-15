@@ -80,6 +80,7 @@ footer b {
 
 footer a:link, footer a:visited {
 	color: #fff;
+	text-decoration: none;
 }
 
 footer #license a:link, footer #license a :visited {
@@ -171,3 +172,12 @@ footer nav {
 	margin-right: -10px;
 	margin-top: -10px;
 }
+
+/* Contain floats: h5bp.com/q */ 
+.clearfix { list-style-type:none; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* MENU ONLY! */
+.menu { list-style-type:none; -webkit-margin-after:0; }
