@@ -87,7 +87,7 @@ function optimizeOS(OS,arch) {
 	do {
 		a++;
 	} while (download.systems[a].name != OS && a < download.systems.length && download.systems[a].architecture == arch);
-	$('.button a').attr('href',download.systems[a].link);
+	$('.button').attr('href',download.systems[a].link);
 	$('.button .small').text(OS+" | "+arch);
 	$('.button').click(function() {
 		window.location = download.systems[a].link;
