@@ -43,9 +43,20 @@ $(document).ready(function() {
 	*/
 	//screen box
 
-	/*$("#screen").click(function() {
-		var overlay = $('<div style="height:100%;width:100%;position: fixed;top:0;left:0;background:rgba(0,0,0,0.8);">');
-	}*/
+	$("#screen").click(function(e) {
+		var overlay = $('<div id="overlay" style="height:100%;width:100%;position: fixed;top:0;left:0;background:rgba(0,0,0,0.8);cursor:pointer;display:none;"><img style="margin: 10px auto;display:block;" src="'+$("#screen a").attr('href')+'"></div>');
+		
+		$('body').prepend(overlay);
+		$('#overlay').fadeIn();
+		$('#overlay').click('fast',function() {
+			$('#overlay').fadeOut('fast',function() {
+				$('#overlay').remove();
+			});
+		});
+		
+		e.preventDefault();
+		return false;
+	});
 	
 	//downloadbutton stuffz
 
