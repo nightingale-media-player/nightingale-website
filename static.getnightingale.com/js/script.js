@@ -21,11 +21,6 @@ var download = {
 			'name': 'Windows',
 			'architecture': 32,
 			'link': 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe'
-		},
-		{
-			'name': 'Windows',
-			'architecture': 64,
-			'link': 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe'
 		}
 	]
 };
@@ -82,7 +77,7 @@ function getOS() {
 
 function getArchitecture() {
 	var arch = 32;
-	if(navigator.userAgent.indexOf("64")!=-1)
+	if(navigator.userAgent.indexOf("64")!=-1 && getOS() != "Windows")
 		arch = 64;
 	return arch;
 }
