@@ -55,9 +55,9 @@ a:visited ,a:active,a:hover{
 	}
 	
 	#ngalemainhead nav li a:link, header nav li a:hover, header nav li a:active, header nav li a:visited {
-		color: white;
+		color: #fff !important;
 		text-decoration: none !important;
-		background: transparent;
+		background-color: transparent !important;
 	}
 	
 	#ngalemainhead nav li:first-child {
