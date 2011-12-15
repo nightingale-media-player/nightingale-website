@@ -182,3 +182,7 @@ footer nav {
 
 /* MENU ONLY! */
 .menu { list-style-type:none; -webkit-margin-after:0; }
+
+
+/* nav menu fix */
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
