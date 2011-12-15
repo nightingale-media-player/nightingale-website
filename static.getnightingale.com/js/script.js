@@ -95,7 +95,7 @@ function getArchitecture() {
 
 function optimizeOS(OS,arch) {
 	var a=0;
-	while (download.systems[a].name != OS && a < download.systems.length && download.systems[a].architecture == arch); {
+	while (download.systems[a].name != OS && a < download.systems.length && download.systems[a].architecture == arch) {
 		a++;
 	}
 	$('.button').attr('href',download.systems[a].link);
