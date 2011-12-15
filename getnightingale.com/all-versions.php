@@ -47,7 +47,7 @@
 		<h2>Linux:</h2>
 		<ul class="downloadlist" style="text-align:left;">
 			<li><a href="//github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-i686.tar.gz">Linux Tarball (.tar.gz) | 32-Bit</a></li>
-			<li><a href="//github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-x86_64.tar.gz">Linux Tarball (.tar.gz)  | 64-Bit</a></li>
+			<li><a href="//github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-x86_64.tar.bz2">Linux Tarball (.tar.gz)  | 64-Bit</a></li>
 		</ul>
 		<h2>Windows:</h2>
 		<ul class="downloadlist" style="text-align:left;">
