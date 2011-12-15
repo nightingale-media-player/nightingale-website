@@ -60,7 +60,7 @@
 		<h2>Source:</h2>
 		<ul class="downloadlist" style="text-align:left;">
 			<li><a href="//github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.8-PRERELEASE">Tarball</a></li>
-			<li><a href="git://github.com/nightingale-media-player/nightingale-website.git">Git Repo (right click and copy URL, then clone)</a></li>	
+			<li><a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Git Repo (right click and copy URL, then clone)</a></li>	
 		</ul>
 		<h2>Linux Distro Specific:</h2>
 		<ul class="downloadlist" style="text-align:left;">
