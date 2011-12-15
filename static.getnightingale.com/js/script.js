@@ -21,6 +21,11 @@ var download = {
 			'name': 'Windows',
 			'architecture': 32,
 			'link': 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe'
+		},
+		{
+			'name': 'Windows',
+			'architecture': 64,
+			'link': 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe'
 		}
 	]
 };
@@ -83,7 +88,6 @@ function optimizeOS(OS,arch) {
 	var a=0;
 	do {
 		a++;
-		console.log(OS, download.systems[a].name);
 	} while (download.systems[a].name != OS && a < download.systems.length && download.systems[a].architecture == arch);
 	$('.button a').attr('href',download.systems[a].link);
 	$('.button .small').text(OS+" | "+arch);
