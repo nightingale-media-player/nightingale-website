@@ -218,9 +218,10 @@ td { vertical-align: top; }
 	overflow: hidden;
 	
 	margin-top: -466px;
-	padding-left: 326.6px;
+	margin-left: 326.6px;
 	
 	border-radius: 5px 0 0 5px;	
+	-moz-border-radius: 5px 0 0 5px;	
 	/*box-shadow: 0 6px 4px -3px black;*/
 }
 
@@ -264,13 +265,16 @@ td { vertical-align: top; }
 	height: 462px;
 
 	border-radius: 5px 0 0 5px;	
+	-moz-border-radius: 5px 0 0 5px;	
 	
 	padding:0 35px 0 10px;
 }
 
 #headtitle {
 	width:100%;
+	
 	border-radius:5px;
+	-moz-border-radius:5px;
 	
 	background: #4e8eb5; /* Old browsers */
 	background: -moz-linear-gradient(top, #4e8eb5 0%, #496b8e 100%); /* FF3.6+ */
@@ -339,10 +343,12 @@ h1 {
 #features li:last-child {
 	padding-right: 0;
 	border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
 }
 
 #features li:first-child {
 	border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
 }
 
 #features-addons, #features-lastfm, #features-devsneeded {
@@ -381,10 +387,12 @@ h1 {
 	display: block;
 	
 	box-shadow: 0 5px 0 #000;
+	-moz-box-shadow: 0 5px 0 #000;
 	
 	border-top: 1px solid #515151;
 	color: white;
 	border-radius: 5px;
+	-moz-border-radius: 5px;
 	font-size: 30px;
 	padding: 10px;
 	text-shadow: -1px -1px #000;
@@ -428,6 +436,8 @@ h1 {
 
 .button:active {
 	box-shadow: 0 3px 0 #000;
+	-moz-box-shadow: 0 3px 0 #000;
+	
 	margin: 12px auto 8px;
 	opacity: 1;
 	

@@ -108,7 +108,7 @@
 		</ul>
     </footer>
 
-  <script src="//static.getnightingale.com/js/jquery-1.7.1.min.js"></script>
+  <script src="//static.getnightingale.com/js/jquery.min.js"></script>
 
   <script defer src="//static.getnightingale.com/js/plugins.js"></script>
   <script defer src="//static.getnightingale.com/js/script.js"></script>

@@ -59,10 +59,12 @@ a:visited ,a:active,a:hover{
 	
 	header nav li:first-child {
 		border-radius: 5px 0 0 5px;
+		-moz-border-radius: 5px 0 0 5px;
 	}
 	
 	header nav li:last-child {
 		border-radius:0 5px 5px 0;
+		-moz-border-radius:0 5px 5px 0;
 	}
 	
 	header nav .actual, header nav li:hover {
