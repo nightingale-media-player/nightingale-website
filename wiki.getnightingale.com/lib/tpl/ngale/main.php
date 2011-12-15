@@ -195,8 +195,6 @@ if (!defined('DOKU_INC')) die();
 
   </div>
 
-  <?php tpl_license(false);?>
-
 </div>
 <?php /*old includehook*/ @include(dirname(__FILE__).'/footer.html')?>
 
@@ -208,7 +206,7 @@ if (!defined('DOKU_INC')) die();
 			<li><img src="http://static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">
 			  <div id="license">
 			  <b>License</b>
-			  Site content licensed under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
+			 Except where otherwise noted, content on this wiki is licensed under the following license: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC Attribution-Share Alike 3.0 Unported</a>.
 			  </div></li>
 			<li><nav>
 			<ul id="double" class="clearfix">

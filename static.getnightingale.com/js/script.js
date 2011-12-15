@@ -100,7 +100,7 @@ function optimizeOS(OS,arch) {
 		if (download.systems[i].name == OS && download.systems[i].architecture == arch) {
 	
 			$('.button').attr('href',download.systems[i].link);
-			$('.button .small').text(OS+" | "+arch);
+			$('.button .small').text(OS+" | "+arch+"-Bit");
 			break;
 		}
 	}
