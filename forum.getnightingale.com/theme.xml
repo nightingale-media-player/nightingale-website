@@ -1512,8 +1512,7 @@ td .star_rating {
 			<li><img src="//static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">
 			  <div id="license">
 			  <b>License</b>
-			   Site content licensed under the <a target="_blank" href="//www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
-			   Site content licensed under the <a target="_blank" href="//www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
+			   Site content licensed under the <a href="//www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
 			  </div></li>
 			<li><nav>
 			<ul id="double" class="clearfix">

@@ -208,7 +208,7 @@ if (!defined('DOKU_INC')) die();
 			<li><img src="http://static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">
 			  <div id="license">
 			  <b>License</b>
-			  Site content licensed under the <a target="_blank" href="http://www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
+			  Site content licensed under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
 			  </div></li>
 			<li><nav>
 			<ul id="double" class="clearfix">
