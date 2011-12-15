@@ -96,18 +96,12 @@ function getArchitecture() {
 }
 
 function optimizeOS(OS,arch) {
-	var a = 0;
+	for (i = 0; i < download.systems.length; ++i) {
+		if (download.systems[i].name == OS && download.systems[i].architecture == arch) {
 	
-	while (download.systems[a].name != OS && a < download.systems.length && download.systems[a].architecture == arch) {
-		a++;
+			$('.button').attr('href',download.systems[i].link);
+			$('.button .small').text(OS+" | "+arch);
+			break;
+		}
 	}
-	
-	$('.button').attr('href',download.systems[a].link);
-	$('.button .small').text(OS+" | "+arch);
-	
-	$('.button').click(function(e) {
-		window.location = download.systems[a].link;
-		e.preventDefault();
-		return false;
-	});
 }
