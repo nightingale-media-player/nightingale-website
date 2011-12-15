@@ -93,7 +93,7 @@ if (!defined('DOKU_INC')) die();
 <?php /*old includehook*/ @include(dirname(__FILE__).'/topheader.html')?>
 <div class="dokuwiki">
 <header id="ngalemainhead">
-		<a href="/" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
+		<a href="//getnightingale.com/" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 		<nav>
 		<ul class="menu">
 			<li><a href="//getnightingale.com/" title="Home">Home</a></li>
