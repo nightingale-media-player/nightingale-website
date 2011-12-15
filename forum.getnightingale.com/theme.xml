@@ -91,7 +91,7 @@ body {
 	background-color: #fff;
 	background-image: url('//static.getnightingale.com/img/gradent.png');
 	background-repeat:repeat-x;
-	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;) no-repeat top center;
+	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
 	color: #FFF;
 	text-align: center;
 	line-height: 1.4;
