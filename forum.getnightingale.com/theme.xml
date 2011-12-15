@@ -1465,7 +1465,7 @@ td .star_rating {
 </div>
 <div id="footer">
 	<div class="upper">
-		<div class="wrapper">
+		<div class="innerwrap">
 			{$lang_select}
 			<ul class="menu bottom_links">
 				<li><a href="{$mybb->settings['contactlink']}">{$lang->bottomlinks_contactus}</a></li>
@@ -1512,6 +1512,7 @@ td .star_rating {
 			<li><img src="//static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">
 			  <div id="license">
 			  <b>License</b>
+			   Site content licensed under the <a target="_blank" href="//www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
 			   Site content licensed under the <a target="_blank" href="//www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
 			  </div></li>
 			<li><nav>
