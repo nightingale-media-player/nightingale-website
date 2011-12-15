@@ -1586,7 +1586,7 @@ td .star_rating {
 			<li><img src="//static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">
 			  <div id="license">
 			  <b>License</b>
-			  Site content licensed under the GNU GPL. More info on the <a href="//wiki.getnightingale.com" title="license">licenses page</a>.
+			   Site content licensed under the <a target="_blank" href="//www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
 			  </div></li>
 			<li><nav>
 			<ul id="double" class="clearfix">
@@ -1595,7 +1595,7 @@ td .star_rating {
 				<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
 				<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 				<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-				<li><a href="all-versions.php" title="Download Nightingale">Download</a></li>
+				<li><a href="//getnightingale.com/all-versions.php" title="Download Nightingale">Download</a></li>
 			  </ul></li>
 			  <li><b>Developer</b>
 			  <ul>
