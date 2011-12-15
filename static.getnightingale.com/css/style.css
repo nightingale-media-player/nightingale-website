@@ -412,6 +412,10 @@ h1 {
 	text-align: left;
 }
 
+.button a:link {
+	text-decoration: none !important;
+}
+
 .buttonpadder {
 	padding-top: 15px;
 	padding-bottom: 0px;
