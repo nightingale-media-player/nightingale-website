@@ -91,8 +91,8 @@
 
   <script src="//static.getnightingale.com/js/jquery-1.7.1.min.js"></script>
 
-  <script defer src="js/plugins.js"></script>
-  <script defer src="js/script.js"></script>
+  <script defer src="//static.getnightingale.com/js/plugins.js"></script>
+  <script defer src="//static.getnightingale.com/js/script.js"></script>
   <script>
     window._gaq = [['_setAccount','UA-27679277-1'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
