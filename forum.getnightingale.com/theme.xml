@@ -96,8 +96,7 @@ body {
 	text-align: center;
 	line-height: 1.4;
 	margin: 0;
-	
-	font-family: Sans-Serif;
+
 	font-size: 13px;
 }
 
@@ -190,7 +189,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	line-height: 1.4;
 	margin: 0;
 	
-	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	/*font-family: Tahoma, Verdana, Arial, Sans-Serif;*/
 	font-size: 13px;
 	color: #000;
 }
