@@ -62,7 +62,7 @@ body {
 	
 	#ngalemainhead nav .actual, header nav li:hover {
 		border-bottom: .4em solid #B55029 !important;
-		padding-bottom: .4em;
+		padding-bottom: .4em !important;
 	}
 
 /* footer styles */
@@ -91,6 +91,7 @@ body {
 	color: #fff;
 	text-decoration: none !important;
 	background: transparent !important;
+	font-weight: normal;
 }
 
 #ngalemainfooter #license a:link, #ngalemainfooter #license a :visited {
