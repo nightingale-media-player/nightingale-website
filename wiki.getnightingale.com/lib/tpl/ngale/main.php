@@ -91,7 +91,8 @@ if (!defined('DOKU_INC')) die();
 
 <body>
 <?php /*old includehook*/ @include(dirname(__FILE__).'/topheader.html')?>
-			<header id="ngalemainhead">
+<div class="dokuwiki">
+<header id="ngalemainhead">
 		<a href="/" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 		<nav>
 		<ul class="menu">
@@ -103,7 +104,6 @@ if (!defined('DOKU_INC')) die();
 		</ul>
 		</nav>
 	</header>
-<div class="dokuwiki">
   <?php html_msgarea()?>
 
   <div class="stylehead">
