@@ -1623,7 +1623,7 @@ td .star_rating {
 		<template name="header" version="1600"><![CDATA[<div id="container">
 		<a name="top" id="top"></a>
 		<div id="header">
-			<div id="mainhead" class="menu">
+			<div id="mainhead">
 				<a href="//getnightingale.com" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 				<div id="pagenav">
 				<ul class="menu">

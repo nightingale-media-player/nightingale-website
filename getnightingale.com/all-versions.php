@@ -17,7 +17,8 @@
   
   <link rel="stylesheet" href="//static.getnightingale.com/css/general.css">
   <link rel="stylesheet" href="//static.getnightingale.com/css/style.css">
-  <link type="text/plain" rel="author" href="humans.txt" />
+  <link type="text/plain" rel="author" href="humans.txt" >
+  <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="favicon.ico" >
   
   <script src="//static.getnightingale.com/js/libs/modernizr-2.0.6.min.js"></script>
 
@@ -26,10 +27,10 @@
 <body>
   <div id="page">
   <!-- Use this as header -->
-	<header class="clearfix">
+	<header>
 		<a href="/" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 		<nav>
-		<ul class="clearfix">
+		<ul class="menu">
 			<li><a href="/" title="Home">Home</a></li>
 			<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 			<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
