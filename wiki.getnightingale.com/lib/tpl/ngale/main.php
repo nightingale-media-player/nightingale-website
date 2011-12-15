@@ -202,7 +202,7 @@ if (!defined('DOKU_INC')) die();
 
 <div class="no"><?php /* provide DokuWiki housekeeping, required in all templates */ tpl_indexerWebBug()?></div>
 
-<footer>
+<footer id="ngalemainfooter">
 	  <div id="lgradient"></div>
 		<ul id="footerwrapper" class="clearfix">
 			<li><img src="http://static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">

@@ -70,7 +70,7 @@
 		</ul>
 	  </div>
   </div>
-	<footer>
+	<footer id="ngalemainfooter">
 	  <div id="lgradient"></div>
 		<ul id="footerwrapper" class="clearfix">
 			<li><img src="//static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">

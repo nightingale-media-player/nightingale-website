@@ -29,9 +29,10 @@ a:visited ,a:active,a:hover{
 
 /* header/nav */
 
-	header:first-child {
+	#ngalemainhead{
 		margin-bottom: 1em;
 		font-size: 15px;
+		font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
 	}
 
 	#headlogo {
@@ -76,7 +77,7 @@ a:visited ,a:active,a:hover{
 
 /* footer styles */
 
-footer {
+#ngalemainfooter {
 	color: #fff;
 	width: 100%;
 	background-color: #666;
@@ -87,28 +88,30 @@ footer {
 	text-align: left;
 	
 	display: block;
+	
+	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
 }
 
-footer b {
+#ngalemainfooter b {
 	padding-bottom: 5px;
 	display: block;
 }
 
-footer a:link, footer a:visited {
+#ngalemainfooter a:link, #ngalemainfooter a:visited {
 	color: #fff;
 	text-decoration: none !important;
 }
 
-footer #license a:link, footer #license a :visited {
+#ngalemainfooter #license a:link, #ngalemainfooter #license a :visited {
 	text-decoration: underline;
 }
 
-footer a:hover {
+#ngalemainfooter a:hover {
 	color: #EDEDED;
 	text-decoration: underline;
 }
 
-footer a:active {
+#ngalemainfooter a:active {
 	color: #ccc;
 	text-decoration: underline;
 }
@@ -130,7 +133,7 @@ footer a:active {
 	margin-bottom: 10px;
 }
 
-footer img {
+#ngalemainfooter img {
 	margin-top: 3px;
 	margin-right: 5px;
 }
@@ -139,7 +142,7 @@ footer img {
 	height: 120px;
 }
 
-footer nav {
+#ngalemainfooter nav {
 	height: 120px;
 }
 
@@ -200,4 +203,4 @@ footer nav {
 
 
 /* nav menu fix */
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+nav ul, nav ul { list-style: none; list-style-image: none; margin: 0; padding: 0; }
