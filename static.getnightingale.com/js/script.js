@@ -68,10 +68,11 @@ $(document).ready(function() {
 function getOS() {
 	var OSName="Unknown OS";
 	var pc = navigator.platform
-	if (pc.indexOf("Win")!=-1) OSName="Windows";
-	//if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
-	if (pc.indexOf("Linux")!=-1) OSName="Linux";
 	
+	if (pc.indexOf("Win")!=-1) OSName="Windows";
+	return OSName;
+	
+	if (pc.indexOf("Linux")!=-1) OSName="Linux";
 	return OSName;
 }
 
