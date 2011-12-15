@@ -27,7 +27,7 @@
 <body>
   <div id="page">
   <!-- Use this as header -->
-	<header>
+	<header id="ngalemainhead">
 		<a href="/" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 		<nav>
 		<ul class="menu">

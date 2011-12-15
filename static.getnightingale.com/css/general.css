@@ -41,35 +41,35 @@ a:visited ,a:active,a:hover{
 
 	/* nav*/
 	
-	header:first-child nav {
+	#ngalemainhead nav {
 		float: right;
 		margin-top: 1em;
 	}
 	
-	header:first-child nav li {
+	#ngalemainhead nav li {
 		float: left;
 		padding:.8em;
 		background-color: #333333;
 		list-style: none;
 	}
 	
-	header:first-child nav li a:link, header nav li a:hover, header nav li a:active, header nav li a:visited {
+	#ngalemainhead nav li a:link, header nav li a:hover, header nav li a:active, header nav li a:visited {
 		color: white;
 		text-decoration: none !important;
 		background: transparent;
 	}
 	
-	header:first-child nav li:first-child {
+	#ngalemainhead nav li:first-child {
 		border-radius: 5px 0 0 5px;
 		-moz-border-radius: 5px 0 0 5px;
 	}
 	
-	header:first-child nav li:last-child {
+	#ngalemainhead nav li:last-child {
 		border-radius:0 5px 5px 0;
 		-moz-border-radius:0 5px 5px 0;
 	}
 	
-	header:first-child nav .actual, header nav li:hover {
+	#ngalemainhead nav .actual, header nav li:hover {
 		border-bottom: .4em solid #B55029;
 		padding-bottom: .4em;
 	}
