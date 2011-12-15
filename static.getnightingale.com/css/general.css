@@ -54,6 +54,7 @@ a:visited ,a:active,a:hover{
 	
 	header nav li a:link, header nav li a:hover, header nav li a:active, header nav li a:visited {
 		color: white;
+		text-decoration: none !important;
 	}
 	
 	header nav li:first-child {
@@ -90,7 +91,7 @@ footer b {
 
 footer a:link, footer a:visited {
 	color: #fff;
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 footer #license a:link, footer #license a :visited {
