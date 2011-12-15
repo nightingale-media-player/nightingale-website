@@ -5,6 +5,8 @@ var visible;
 var breaker = false;
 var mouseover = false;
 
+
+// download button link list
 var download = {
 	'systems': [
 		{
@@ -44,10 +46,15 @@ $(document).ready(function() {
 	//screen box
 
 	$("#screen").click(function(e) {
+		//Overlay elemnt code
 		var overlay = $('<div id="overlay" style="height:100%;width:100%;position: fixed;top:0;left:0;background:rgba(0,0,0,0.8);cursor:pointer;display:none;"><img style="margin: 10px auto;display:block;" src="'+$("#screen a").attr('href')+'"></div>');
 		
+		
+		//initialize overlade and fade it in
 		$('body').prepend(overlay);
 		$('#overlay').fadeIn();
+		
+		//closing overlay trigger
 		$('#overlay').click('fast',function() {
 			$('#overlay').fadeOut('fast',function() {
 				$('#overlay').remove();
@@ -58,14 +65,7 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	//downloadbutton stuffz
-
-	$(".button").click(function(e) {
-		e.preventDefault();
-		return false;
-	});
-	
-	// change to right os
+	// change button to right os
 	optimizeOS(getOS(),getArchitecture());
 });
 
@@ -81,6 +81,7 @@ function getOS() {
 	if (ua.indexOf("Linux") != -1) {
 		OSName="Linux";
 	}
+	
 	return OSName;
 }
 
@@ -88,18 +89,22 @@ function getOS() {
 
 function getArchitecture() {
 	var arch = 32;
+	
 	if(navigator.userAgent.indexOf("64")!=-1 && getOS() != "Windows")
 		arch = 64;
 	return arch;
 }
 
 function optimizeOS(OS,arch) {
-	var a=0;
+	var a = 0;
+	
 	while (download.systems[a].name != OS && a < download.systems.length && download.systems[a].architecture == arch) {
 		a++;
 	}
+	
 	$('.button').attr('href',download.systems[a].link);
 	$('.button .small').text(OS+" | "+arch);
+	
 	$('.button').click(function() {
 		window.location = download.systems[a].link;
 	});
