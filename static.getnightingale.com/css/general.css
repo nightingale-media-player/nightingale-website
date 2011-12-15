@@ -17,16 +17,6 @@ body {
 	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
 }
 
-a:link {
-	text-decoration: none;
-	color: #3244E9;
-}
-
-a:visited ,a:active,a:hover{
-	text-decoration: none;
-	color: #505CC9;
-}
-
 /* header/nav */
 
 	#ngalemainhead{
@@ -71,7 +61,7 @@ a:visited ,a:active,a:hover{
 	}
 	
 	#ngalemainhead nav .actual, header nav li:hover {
-		border-bottom: .4em solid #B55029;
+		border-bottom: .4em solid #B55029 !important;
 		padding-bottom: .4em;
 	}
 
