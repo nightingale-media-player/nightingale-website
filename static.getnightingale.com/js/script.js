@@ -6,6 +6,11 @@ var visible;
 var breaker = false;
 var mouseover = false;
 
+var download= {'systems':[{'name':'Linux','architecture':32,'link':'https://github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-i686.tar.gz'},
+{'name':'Linux','architecture':64,'link':'http://github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-x86_64.tar.gz'},
+{'name':'Windows','architecture':32,'link':'https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe'}
+]};
+
 $(document).ready(function() {	
 	// disable selection
 	
@@ -13,7 +18,7 @@ $(document).ready(function() {
 	$("#screen").disableTextSelect();
 	
 	// hover social buttons effect
-	
+	/*
 	$("#buttons img").mouseover(function() {
 		$(this).attr('src','//static.getnightingale.com/img/'+$(this).attr('alt')+'_bg.png');
 	});
@@ -21,10 +26,12 @@ $(document).ready(function() {
 	$("#buttons img").mouseout(function() {
 		$(this).attr('src','//static.getnightingale.com/img/'+$(this).attr('alt')+'.png');
 	});
-	
+	*/
 	//screen box
 
-	//do some fancybox like effect
+	/*$("#screen").click(function() {
+		var overlay = $('<div style="height:100%;width:100%;position: fixed;top:0;left:0;background:rgba(0,0,0,0.8);">');
+	}*/
 	
 	//downloadbutton stuffz
 
@@ -33,8 +40,8 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	//hide unused buttons
-	hideOS(0);
+	// change to right os
+	optimizeOS(getOS(),getArchitecture());
 });
 
 // detect OS
@@ -43,7 +50,7 @@ function getOS() {
 	var OSName="Unknown OS";
 	var pc = navigator.platform
 	if (pc.indexOf("Win")!=-1) OSName="Windows";
-	if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+	//if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
 	if (pc.indexOf("Linux")!=-1) OSName="Linux";
 	
 	return OSName;
@@ -58,34 +65,16 @@ function getArchitecture() {
 	return arch;
 }
 
-
-//show all OS buttons
-
-
-//hide unwanted OS buttons
-function hideOS(t) {
-	switch(getOS()) {
-	case "Windows":
-		$("#linuxt").fadeOut(t);
-		$("#linuxs").fadeOut(t);
-		$("#mac").fadeOut(t);
-		break;
-	case "Linux":
-		$("#windows").fadeOut(t);
-		$("#mac").fadeOut(t);
-		if(getArchitecture()!=32)
-			$("#linuxt").fadeOut(t);
-		else
-			$("#linuxs").fadeOut(t);
-		break;
-	case "MacOS":
-		$("#linuxt").fadeOut(t);
-		$("#linuxs").fadeOut(t);
-		$("#windows").fadeOut(t);
-		break;
-	}
-	$("#others").text("other OS");
-	visible=false;
+function optimizeOS(OS,arch) {
+	var a=0;
+	do {
+		a++;
+	}while(download.systems[a].name!=OS&&a<download.systems.length&&download.systems[a].architecture==arch);
+	$('.button a').attr('href',download.systems[a].link);
+	$('.button .small').text(OS+" | "+arch);
+	$('.button').click(function() {
+		window.location = download.systems[a].link;
+	});
 }
 
 

@@ -367,16 +367,6 @@ h1 {
 
 /* download buttons style */
 
-.js #hint {
-	display: none !important;
-	visibility: hidden;
-}
-
-.no-js .button {
-	display: none !important;
-	visibility: hidden;
-}
-
 .button {
 	background: rgb(50,50,50); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(50,50,50,1) 0%, rgba(34,34,34,1) 100%); /* FF3.6+ */

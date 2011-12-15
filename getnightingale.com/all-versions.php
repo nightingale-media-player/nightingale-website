@@ -51,7 +51,7 @@
 		</ul>
 		<h2>Windows:</h2>
 		<ul class="downloadlist" style="text-align:left;">
-			<li><a onClick="javascript:window.location = 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe';"  href="">Windows Installer (.exe) | 32-Bit</a></li>
+			<li><a href="https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe">Windows Installer (.exe) | 32-Bit</a></li>
 		</ul>
 		<h2>Mac:</h2>
 		<ul class="downloadlist" style="text-align:left;">
