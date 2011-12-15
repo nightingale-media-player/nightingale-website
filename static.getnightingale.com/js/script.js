@@ -4,7 +4,7 @@
 var visible;
 var breaker = false;
 var mouseover = false;
-console.log('x');
+
 var download = {
 	'systems': [
 		{
