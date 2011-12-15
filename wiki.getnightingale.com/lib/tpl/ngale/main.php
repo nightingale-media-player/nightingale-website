@@ -95,7 +95,7 @@ if (!defined('DOKU_INC')) die();
 		<a href="/" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 		<nav>
 		<ul class="menu">
-			<li class="actual"><a href="/" title="Home">Home</a></li>
+			<li class="actual"><a href="//getnightingale.com/" title="Home">Home</a></li>
 			<li><a href="http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 			<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
 			<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
@@ -217,7 +217,7 @@ if (!defined('DOKU_INC')) die();
 				<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
 				<li><a href="http:http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 				<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-				<li><a href="all-versions.php" title="Download Nightingale">Download</a></li>
+				<li><a href="//getnightingale.com/all-versions.php" title="Download Nightingale">Download</a></li>
 			  </ul></li>
 			  <li><b>Developer</b>
 			  <ul>
