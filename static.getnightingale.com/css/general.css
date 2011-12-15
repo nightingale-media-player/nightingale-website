@@ -22,6 +22,7 @@ body {
 	#ngalemainhead{
 		margin-bottom: 1em;
 		font-size: 15px;
+		line-height: 1.231em;
 		font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
 	}
 
@@ -76,6 +77,7 @@ body {
 	padding-bottom: 10px;
 	font-size: 14px;
 	text-align: left;
+	line-height: 1.231em;
 	
 	display: block;
 	
