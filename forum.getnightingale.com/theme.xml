@@ -180,7 +180,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	width:950px;
 }
 
-#navwrap {
+.innerwrap {
 	width: 930px;
 }
 
@@ -1477,7 +1477,7 @@ td .star_rating {
 		</div>
 	</div>
 	<div class="lower">
-		<div class="wrapper">
+		<div class="innerwrap">
 			<span id="current_time">{$lang->welcome_current_time}</span>
 			<span id="copyright">
 				<!-- MyBB is free software developed and maintained by a volunteer community. 
@@ -1568,7 +1568,7 @@ td .star_rating {
 			</div>
 			<div id="panel">
 				<div class="upper"><!-- This div(class="upper") is closed in the header_welcomeblock_member and header_welcomeblock_guest templates -->
-					<div class="wrapper" id="navwrap">
+					<div class="innerwrap">
 						<ul class="menu top_links">
 							<li><a href="{$mybb->settings['bburl']}/search.php" class="search">{$lang->toplinks_search}</a></li>
 							<li><a href="{$mybb->settings['bburl']}/memberlist.php" class="memberlist">{$lang->toplinks_memberlist}</a></li>
