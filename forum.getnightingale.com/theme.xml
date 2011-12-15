@@ -177,11 +177,8 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	}
 
 #header {
-	background: url(/user/themes/nightingale/img/content-bg.png);
-	border-radius: 5px;
 	margin:0 auto;
-	padding: 0 10px;
-	width:970px;
+	width:950px;
 }
 
 /* Header */
@@ -275,7 +272,6 @@ clear:both;
 }
 
 #content .wrapper {
-	background: url(/user/themes/nightingale/img/content-bg.png);
 	border-radius: 5px;
 	width: 980px;
 	padding: 10px;
