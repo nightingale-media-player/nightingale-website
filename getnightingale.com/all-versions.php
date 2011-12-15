@@ -48,7 +48,6 @@
 			<li><a href="">Linux Tarball (.tar.gz) | 32-Bit</a></li>
 			<li><a href="//github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-x86_64.tar.gz">Linux Tarball (.tar.gz)  | 64-Bit</a></li>
 		</ul>
-		
 		<h2>Windows:</h2>
 		<ul class="downloadlist" style="text-align:left;">
 			<li><a href="">Windows Installer (.exe) | 32-Bit</a></li>
@@ -65,6 +64,8 @@
 		<h2>Linux Distro Specific:</h2>
 		<ul class="downloadlist" style="text-align:left;">
 			<li><a target="_blank" href="https://aur.archlinux.org/packages.php?ID=52721">Archlinux PKGBUILD</a></li>
+			<li>Ubuntu/Debian PPA Wanted - feel free to make one and we'll put it here!</li>
+			<li>Other distros: let us know and we'll post your Nightingale links here!</li>
 		</ul>
 	  </div>
   </div>
