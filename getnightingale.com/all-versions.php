@@ -15,11 +15,11 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   
-  <link rel="stylesheet" href="css/general.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link type="text/plain" rel="author" href="http://getnightingale.com/humans.txt" />
+  <link rel="stylesheet" href="//static.getnightingale.com/css/general.css">
+  <link rel="stylesheet" href="//static.getnightingale.com/css/style.css">
+  <link type="text/plain" rel="author" href="humans.txt" />
   
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  <script src="//static.getnightingale.com/js/libs/modernizr-2.0.6.min.js"></script>
 
 </head>
 
@@ -94,7 +94,7 @@
   <script defer src="js/plugins.js"></script>
   <script defer src="js/script.js"></script>
   <script>
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    window._gaq = [['_setAccount','UA-27679277-1'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
     });
