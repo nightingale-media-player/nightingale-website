@@ -62,12 +62,12 @@ body {
 		-moz-border-radius:0 5px 5px 0;
 	}
 	
-	#ngalemainhead nav .actual {
+	#ngalemainhead nav .actual a {
 		border-bottom: .4em solid #B55029 !important;
 		padding-bottom: .4em !important;
 	}
 	
-	header nav li:hover {
+	header nav li a:hover {
 		border-bottom: .4em solid #fff !important;
 		padding-bottom: .4em !important;
 	}
