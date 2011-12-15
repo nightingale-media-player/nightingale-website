@@ -301,6 +301,11 @@ td { vertical-align: top; }
 	text-align: center;
 }
 
+#mainmsg a:link, #mainmsg a:visited {
+	color: white;
+	text-decoration: underline;
+}
+
 #other a:link, #other a:visited {
 	color: white;
 	text-decoration: underline;
