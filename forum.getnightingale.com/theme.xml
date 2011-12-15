@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Freaktechnik's Nightingale Forum Theme v7" version="1605">
+<theme name="Freaktechnik's Nightingale Forum Theme v8" version="1605">
 	<properties>
 		<templateset><![CDATA[2]]></templateset>
 		<editortheme><![CDATA[default]]></editortheme>
@@ -115,6 +115,11 @@ a:link, a:visited {
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
+
+/* MENU ONLY! */
+.menu { list-style-type:none; }
+.menu { zoom: 1; }
+.menu { list-style-type:none; }
 
 #pagenav ul, #pagenav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
@@ -1615,10 +1620,10 @@ td .star_rating {
 		<template name="header" version="1600"><![CDATA[<div id="container">
 		<a name="top" id="top"></a>
 		<div id="header">
-			<div id="mainhead" class="clearfix">
+			<div id="mainhead" class="menu">
 				<a href="//getnightingale.com" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 				<div id="pagenav">
-				<ul class="clearfix">
+				<ul class="menu">
 					<li><a href="//getnightingale.com" title="Home">Home</li>
 					<li class="actual"><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 					<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
