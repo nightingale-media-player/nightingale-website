@@ -17,7 +17,7 @@
   
   <link rel="stylesheet" href="css/general.css">
   <link rel="stylesheet" href="css/style.css">
-  <link type="text/plain" rel="author" href="http://domain/humans.txt" />
+  <link type="text/plain" rel="author" href="http://getnightingale.com/humans.txt" />
   
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
 
@@ -44,9 +44,9 @@
 			<h1>All Nightingale downloads</h1>
 		</div>
 		<ul id="downloadlist" style="text-align:left;">
-			<?php if($_GET['linux']!=64) { echo '<li><a href="">Ubunu/Debian installer (.deb) | 32-Bit</a></li>';}?>
-			<?php if($_GET['linux']!=32) { echo '<li><a href="">Ubunu/Debian installer (.deb) | 64-Bit</a></li>';}?>
-			<li><a href="https://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.8">Linux (.tar.gz) | 64/32-Bit</a></li>
+			<?php if($_GET['linux']!=64) { echo '<li><a href="">Linux Tarball (.tar.gz) | 32-Bit</a></li>';}?>
+			<?php if($_GET['linux']!=32) { echo '<li><a href="//github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-x86_64.tar.gz">Linux Tarball (.tar.gz)  | 64-Bit</a></li>';}?>
+			<li><a href="//github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.8-PRERELEASE">Linux (.tar.gz) | Source</a></li>
 			<?php if(!$_GET['linux']) { echo '<li><a href="">Windows Installer (.exe) | 32-Bit</a></li><li><a href="">Mac OS X (.app) | 32-Bit</a></li>';}?>
 		</ul>
 	  </div>
