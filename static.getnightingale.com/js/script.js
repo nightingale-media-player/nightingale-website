@@ -105,7 +105,9 @@ function optimizeOS(OS,arch) {
 	$('.button').attr('href',download.systems[a].link);
 	$('.button .small').text(OS+" | "+arch);
 	
-	$('.button').click(function() {
+	$('.button').click(function(e) {
 		window.location = download.systems[a].link;
+		e.preventDefault();
+		return false;
 	});
 }
