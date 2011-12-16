@@ -153,7 +153,6 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	
 	#mainhead #pagenav li {
 		float: left;
-		padding:.8em;
 		background-color: #333333;
 	}
 	
@@ -169,10 +168,14 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 		border-radius:0 5px 5px 0;
 	}
 	
-	#mainhead #pagenav .actual, #mainhead #pagenav li:hover {
+	#mainhead #pagenav .actual {
 		border-bottom: .4em solid #B55029;
 		padding-bottom: .4em;
 		text-decoration: none;
+	}
+	#mainhead #pagenav li:hover, #mainhead #pagenav li.actual:hover {
+		border-bottom: 0.4em solid #fff;
+		padding-bottom: .4em;
 	}
 
 #header {
