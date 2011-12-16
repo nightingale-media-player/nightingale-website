@@ -154,32 +154,79 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	#mainhead #pagenav li {
 		float: left;
 		background-color: #333333;
-		padding:.8em;
+		list-style: none;
 	}
 	
 	#mainhead #pagenav li a:link, #mainhead #pagenav li a:hover, #mainhead #pagenav li a:active, #mainhead #pagenav li a:visited {
-		color: white;
+		color: #fff !important;
+		text-decoration: none !important;
+		background-color: transparent !important;
+		display: block;
 		padding:.8em;
 	}
 	
-	#mainhead #pagenav li:first-child a,#mainhead #pagenav li:first-child {
+	#mainhead #pagenav li:first-child a,#mainhead #pagenav li:first-child  {
 		border-radius: 5px 0 0 5px;
+		-moz-border-radius: 5px 0 0 5px;
 	}
 	
-	#mainhead #pagenav li:last-child a,#mainhead #pagenav li:last-child {
+	#mainhead #pagenav li:last-child  a,#mainhead #pagenav li:last-child{
 		border-radius:0 5px 5px 0;
+		-moz-border-radius:0 5px 5px 0;
 	}
 	
 	#mainhead #pagenav .actual a {
-		border-bottom: .4em solid #B55029;
+		border-bottom: .4em solid #B55029 !important;
 		padding-bottom: .4em !important;
-		text-decoration: none;
 	}
-	#mainhead #pagenav li a:hover,#mainhead #pagenav .actual a:hover {
-		border-bottom: 0.4em solid #fff;
-		padding-bottom: .4em;
-		text-decoration: none;
+	#mainhead #pagenav li a:hover,
+	#mainhead #pagenav .actual a:hover {
+		border-bottom: .4em solid #fff !important;
+		padding-bottom: .4em !important;
 	}
+
+/* footer styles */
+
+#ngalemainfooter {
+	color: #fff;
+	width: 100%;
+	background-color: #666;
+	z-index: 500;
+	margin: 0;
+	padding-bottom: 10px;
+	font-size: 14px;
+	text-align: left;
+	line-height: 1.231em !important;
+	
+	display: block;
+	
+	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
+}
+
+#ngalemainfooter b {
+	padding-bottom: 5px;
+	display: block;
+}
+
+#ngalemainfooter a:link, #ngalemainfooter a:visited {
+	color: #fff;
+	text-decoration: none !important;
+	font-weight: normal;
+}
+
+#ngalemainfooter #license a:link, #ngalemainfooter #license a :visited {
+	text-decoration: underline;
+}
+
+#ngalemainfooter a:hover {
+	color: #EDEDED;
+	text-decoration: underline;
+}
+
+#ngalemainfooter a:active {
+	color: #ccc;
+	text-decoration: underline;
+}
 
 #header {
 	margin:0 auto;
