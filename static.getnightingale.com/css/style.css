@@ -209,6 +209,16 @@ td { vertical-align: top; }
 	margin: 0 auto;
 }
 
+a:link {
+	text-decoration: none;
+	color: #3244E9;
+}
+
+a:visited ,a:active,a:hover{
+	text-decoration: none;
+	color: #505CC9;
+}
+
 /* screenshot style */
 
 #screen {
@@ -400,6 +410,10 @@ h1 {
 	width: 200px;
 	height: 40px;
 	text-align: left;
+}
+
+.button a:link {
+	text-decoration: none !important;
 }
 
 .buttonpadder {

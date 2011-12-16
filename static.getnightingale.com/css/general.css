@@ -17,21 +17,12 @@ body {
 	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
 }
 
-a:link {
-	text-decoration: none;
-	color: #3244E9;
-}
-
-a:visited ,a:active,a:hover{
-	text-decoration: none;
-	color: #505CC9;
-}
-
 /* header/nav */
 
 	#ngalemainhead{
 		margin-bottom: 1em;
 		font-size: 15px;
+		line-height: 1.231 !important;
 		font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
 	}
 
@@ -49,30 +40,36 @@ a:visited ,a:active,a:hover{
 	
 	#ngalemainhead nav li {
 		float: left;
-		padding:.8em;
 		background-color: #333333;
 		list-style: none;
 	}
 	
 	#ngalemainhead nav li a:link, header nav li a:hover, header nav li a:active, header nav li a:visited {
-		color: white;
+		color: #fff !important;
 		text-decoration: none !important;
-		background: transparent;
+		background-color: transparent !important;
+		display: block;
+		padding:.8em;
 	}
 	
-	#ngalemainhead nav li:first-child {
+	#ngalemainhead nav li:first-child a,#ngalemainhead nav li:first-child  {
 		border-radius: 5px 0 0 5px;
 		-moz-border-radius: 5px 0 0 5px;
 	}
 	
-	#ngalemainhead nav li:last-child {
+	#ngalemainhead nav li:last-child  a,#ngalemainhead nav li:last-child{
 		border-radius:0 5px 5px 0;
 		-moz-border-radius:0 5px 5px 0;
 	}
 	
-	#ngalemainhead nav .actual, header nav li:hover {
-		border-bottom: .4em solid #B55029;
-		padding-bottom: .4em;
+	#ngalemainhead nav .actual a {
+		border-bottom: .4em solid #B55029 !important;
+		padding-bottom: .4em !important;
+	}
+	#ngalemainhead nav li a:hover,
+	#ngalemainhead nav .actual a:hover {
+		border-bottom: .4em solid #fff !important;
+		padding-bottom: .4em !important;
 	}
 
 /* footer styles */
@@ -86,6 +83,7 @@ a:visited ,a:active,a:hover{
 	padding-bottom: 10px;
 	font-size: 14px;
 	text-align: left;
+	line-height: 1.231em !important;
 	
 	display: block;
 	
@@ -100,7 +98,7 @@ a:visited ,a:active,a:hover{
 #ngalemainfooter a:link, #ngalemainfooter a:visited {
 	color: #fff;
 	text-decoration: none !important;
-	background: transparent !important;
+	font-weight: normal;
 }
 
 #ngalemainfooter #license a:link, #ngalemainfooter #license a :visited {
@@ -204,4 +202,11 @@ a:visited ,a:active,a:hover{
 
 
 /* nav menu fix */
-nav ul, nav ul { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+nav ul, nav ul,
+#ngalemainhead nav ul, #ngalemainhead nav ul {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1.231em;
+}

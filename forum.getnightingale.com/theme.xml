@@ -153,26 +153,30 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	
 	#mainhead #pagenav li {
 		float: left;
-		padding:.8em;
 		background-color: #333333;
 	}
 	
 	#mainhead #pagenav li a:link, #mainhead #pagenav li a:hover, #mainhead #pagenav li a:active, #mainhead #pagenav li a:visited {
 		color: white;
+		padding:.8em;
 	}
 	
-	#mainhead #pagenav li:first-child {
+	#mainhead #pagenav li:first-child a,#mainhead #pagenav li:first-child {
 		border-radius: 5px 0 0 5px;
 	}
 	
-	#mainhead #pagenav li:last-child {
+	#mainhead #pagenav li:last-child a,#mainhead #pagenav li:last-child a {
 		border-radius:0 5px 5px 0;
 	}
 	
-	#mainhead #pagenav .actual, #mainhead #pagenav li:hover {
+	#mainhead #pagenav .actual a {
 		border-bottom: .4em solid #B55029;
 		padding-bottom: .4em;
 		text-decoration: none;
+	}
+	#mainhead #pagenav li a:hover,#mainhead #pagenav .actual a:hover {
+		border-bottom: 0.4em solid #fff;
+		padding-bottom: .4em;
 	}
 
 #header {
@@ -182,6 +186,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
 .innerwrap {
 	width: 930px;
+	margin: 0 auto;
 }
 
 #container {
@@ -450,18 +455,12 @@ footer a:link, footer a:visited {
 	color: #fff;
 }
 
-footer #license a:link, footer #license a :visited {
-	text-decoration: underline;
-}
-
 footer a:hover {
 	color: #EDEDED;
-	text-decoration: underline;
 }
 
 footer a:active {
 	color: #ccc;
-	text-decoration: underline;
 }
 
 #lgradient {
@@ -1538,6 +1537,7 @@ td .star_rating {
 			  <ul>
 				<li><a href="//twitter.com/getnightingale" title="Nightingale on twitter">Follow @getnightingale on Twitter</a></li>
 				<li><a href="//www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on facebook">Like Nightingale on Facebook</a></li>
+				<li><a href="https://plus.google.com/103377471329459083108/posts" title="Nightingale on Google+">Follow Nightingale on Google+</a></li>
 			  </ul>
 			</nav>
 			</li>

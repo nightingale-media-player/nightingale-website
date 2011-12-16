@@ -30,77 +30,21 @@ if (!defined('DOKU_INC')) die();
   <?php tpl_metaheaders()?>
 
   <link rel="shortcut icon" href="<?php echo tpl_getFavicon() ?>" />
-
+  <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
   <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
 </head>
-<link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
-<style>
-#double {
-	margin: 0;
-	padding: 0;
-}
-
-#double li {
-	float: left;
-	width: 133.3px;
-}
-
-#double li:first-child {
-	padding-right: 30px;
-}
-
-#footerwrapper li:last-child {
-	padding-right: 0;
-}
-
-#outlinedngale {
-	float: left;
-	display: block;
-}
-
-#buttons img {
-	float: right;
-	cursor: pointer;
-	vertical-align: top;
-	margin-right: -10px;
-	margin-top: -10px;
-.menu {
- list-style-type:none;
-}
-
-.menu {
- zoom: 1;
-}
-
-.menu {
- list-style-type:none;
-}
-
-
-.menu {
- zoom: 1;
-}
-
-.menu {
- list-style-type:none;
-}
-
-
-
-</style>
-
 <body>
 <?php /*old includehook*/ @include(dirname(__FILE__).'/topheader.html')?>
 <div class="dokuwiki">
 <header id="ngalemainhead">
-		<a href="/" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
+		<a href="//getnightingale.com/" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 		<nav>
 		<ul class="menu">
-			<li class="actual"><a href="//getnightingale.com/" title="Home">Home</a></li>
+			<li><a href="//getnightingale.com/" title="Home">Home</a></li>
 			<li><a href="http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 			<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
 			<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
-			<li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
+			<li class="actual"><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
 		</ul>
 		</nav>
 	</header>
@@ -208,7 +152,7 @@ if (!defined('DOKU_INC')) die();
 			<li><img src="http://static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">
 			  <div id="license">
 			  <b>License</b>
-			  Site content licensed under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU GPL</a>.
+			 Except where otherwise noted, content on this wiki is licensed under the following license: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC Attribution-Share Alike 3.0 Unported</a>.
 			  </div></li>
 			<li><nav>
 			<ul id="double" class="clearfix">
@@ -234,6 +178,7 @@ if (!defined('DOKU_INC')) die();
 			  <ul>
 				<li><a href="http://twitter.com/getnightingale" title="Nightingale on twitter">Follow @getnightingale on Twitter</a></li>
 				<li><a href="http://www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on facebook">Like Nightingale on Facebook</a></li>
+				<li><a href="https://plus.google.com/103377471329459083108/posts" title="Nightingale on Google+">Follow Nightingale on Google+</a></li>
 			  </ul>
 			</nav>
 			</li>
