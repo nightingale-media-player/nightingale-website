@@ -29,7 +29,7 @@ if (!defined('DOKU_INC')) die();
 
   <?php tpl_metaheaders()?>
 
-  <link rel="shortcut icon" href="<?php echo tpl_getFavicon() ?>" />
+  <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
   <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
   <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
 </head>

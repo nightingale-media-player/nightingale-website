@@ -1434,6 +1434,7 @@ td .star_rating {
 		<template name="showthread" version="1600"><![CDATA[<html>
 <head>
 <title>{$thread['subject']}</title>
+<link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
 {$headerinclude}
 <script type="text/javascript">
 <!--
@@ -1713,6 +1714,7 @@ td .star_rating {
 </table>]]></template>
 		<template name="member_register" version="1605"><![CDATA[<html>
 <head>
+<link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
 <title>{$mybb->settings['bbname']} - {$lang->registration}</title>
 {$headerinclude}
 <script type="text/javascript" src="jscripts/validator.js"></script>
