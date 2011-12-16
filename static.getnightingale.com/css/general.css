@@ -202,4 +202,10 @@ body {
 
 
 /* nav menu fix */
-nav ul, nav ul { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+#ngalemainhead nav ul, #ngalemainhead nav ul {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1.231em;
+}
