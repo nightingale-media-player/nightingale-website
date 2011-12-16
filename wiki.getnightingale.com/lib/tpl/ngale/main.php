@@ -30,65 +30,9 @@ if (!defined('DOKU_INC')) die();
   <?php tpl_metaheaders()?>
 
   <link rel="shortcut icon" href="<?php echo tpl_getFavicon() ?>" />
-
+  <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
   <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
 </head>
-<link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
-<style>
-#double {
-	margin: 0;
-	padding: 0;
-}
-
-#double li {
-	float: left;
-	width: 133.3px;
-}
-
-#double li:first-child {
-	padding-right: 30px;
-}
-
-#footerwrapper li:last-child {
-	padding-right: 0;
-}
-
-#outlinedngale {
-	float: left;
-	display: block;
-}
-
-#buttons img {
-	float: right;
-	cursor: pointer;
-	vertical-align: top;
-	margin-right: -10px;
-	margin-top: -10px;
-.menu {
- list-style-type:none;
-}
-
-.menu {
- zoom: 1;
-}
-
-.menu {
- list-style-type:none;
-}
-
-
-.menu {
- zoom: 1;
-}
-
-.menu {
- list-style-type:none;
-}
-
-
-
-</style>
-
 <body>
 <?php /*old includehook*/ @include(dirname(__FILE__).'/topheader.html')?>
 <div class="dokuwiki">
