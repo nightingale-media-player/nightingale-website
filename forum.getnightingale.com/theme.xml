@@ -154,6 +154,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	#mainhead #pagenav li {
 		float: left;
 		background-color: #333333;
+		padding:.8em;
 	}
 	
 	#mainhead #pagenav li a:link, #mainhead #pagenav li a:hover, #mainhead #pagenav li a:active, #mainhead #pagenav li a:visited {
@@ -165,18 +166,19 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 		border-radius: 5px 0 0 5px;
 	}
 	
-	#mainhead #pagenav li:last-child a,#mainhead #pagenav li:last-child a {
+	#mainhead #pagenav li:last-child a,#mainhead #pagenav li:last-child {
 		border-radius:0 5px 5px 0;
 	}
 	
 	#mainhead #pagenav .actual a {
 		border-bottom: .4em solid #B55029;
-		padding-bottom: .4em;
+		padding-bottom: .4em !important;
 		text-decoration: none;
 	}
 	#mainhead #pagenav li a:hover,#mainhead #pagenav .actual a:hover {
 		border-bottom: 0.4em solid #fff;
 		padding-bottom: .4em;
+		text-decoration: none;
 	}
 
 #header {
@@ -1553,7 +1555,7 @@ td .star_rating {
 				<a href="//getnightingale.com" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 				<div id="pagenav">
 				<ul class="menu">
-					<li><a href="//getnightingale.com" title="Home">Home</li>
+					<li><a href="//getnightingale.com" title="Home">Home</a></li>
 					<li class="actual"><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 					<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
 					<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
