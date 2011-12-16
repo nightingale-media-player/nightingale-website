@@ -234,6 +234,7 @@ if (!defined('DOKU_INC')) die();
 			  <ul>
 				<li><a href="http://twitter.com/getnightingale" title="Nightingale on twitter">Follow @getnightingale on Twitter</a></li>
 				<li><a href="http://www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on facebook">Like Nightingale on Facebook</a></li>
+				<li><a href="https://plus.google.com/103377471329459083108/posts" title="Nightingale on Google+">Follow Nightingale on Google+</a></li>
 			  </ul>
 			</nav>
 			</li>
