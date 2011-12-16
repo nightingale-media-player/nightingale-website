@@ -202,6 +202,7 @@ body {
 
 
 /* nav menu fix */
+nav ul, nav ul,
 #ngalemainhead nav ul, #ngalemainhead nav ul {
 	list-style: none;
 	list-style-image: none;
