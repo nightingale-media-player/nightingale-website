@@ -91,7 +91,7 @@ body {
 	background-color: #fff;
 	background-image: url('//static.getnightingale.com/img/gradent.png');
 	background-repeat:repeat-x;
-	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #FFF;
 	text-align: center;
 	line-height: 1.4;
@@ -200,7 +200,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	
 	display: block;
 	
-	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 #ngalemainfooter b {
@@ -243,7 +243,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	line-height: 1.4;
 	margin: 0;
 	
-	/*font-family: Tahoma, Verdana, Arial, Sans-Serif;*/
+	/*font-family: 'Open Sans', sans-serif;*/
 	font-size: 13px;
 	color: #000;
 }
@@ -751,7 +751,7 @@ input.textbox {
 	border: 1px solid #ccc;
 	padding: 3px;
 	
-	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 textarea {
@@ -761,7 +761,7 @@ textarea {
 	padding: 2px;
 	line-height: 1.4;
 	
-	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 }
 
@@ -770,13 +770,13 @@ select {
 	padding: 3px;
 	border: 1px solid #ccc;
 	
-	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 input.button {
 	padding: 2px;
 	cursor: pointer;
-	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .editor {

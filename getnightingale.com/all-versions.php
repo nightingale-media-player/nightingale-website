@@ -9,15 +9,20 @@
 
   <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
 
+  <!-- Info -->
   <title>Nightingale - Downloads</title>
   <meta name="description" content="Nightingale is a free and powerfull music player for Linux, Windows and Mac">
   <meta name="author" content="Martin Giger">
+  <link type="text/plain" rel="author" href="humans.txt" >
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   
+  <!-- css -->
   <link rel="stylesheet" href="//static.getnightingale.com/css/general.css">
   <link rel="stylesheet" href="//static.getnightingale.com/css/style.css">
-  <link type="text/plain" rel="author" href="humans.txt" >
+  
+  <!-- favicon -->
   <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="favicon.ico" >
   
   <script src="//static.getnightingale.com/js/libs/modernizr-2.0.6.min.js"></script>
@@ -102,6 +107,7 @@
 			  <ul>
 				<li><a href="//twitter.com/getnightingale" title="Nightingale on twitter">Follow @getnightingale on Twitter</a></li>
 				<li><a href="//www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on facebook">Like Nightingale on Facebook</a></li>
+				<li><a href="https://plus.google.com/103377471329459083108/posts" title="Nightingale on Google+">Follow Nightingale on Google+</a></li>
 			  </ul>
 			</nav>
 			</li>

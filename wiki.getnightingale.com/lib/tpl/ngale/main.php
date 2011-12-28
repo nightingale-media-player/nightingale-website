@@ -26,11 +26,15 @@ if (!defined('DOKU_INC')) die();
     <?php echo strip_tags($conf['title'])?> Wiki -
     <?php tpl_pagetitle()?>
   </title>
+  
+  <!-- css -->
+  <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
+  
+  <!-- favicon -->
+  <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
 
   <?php tpl_metaheaders()?>
 
-  <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
-  <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
   <?php /*old includehook*/ @include(dirname(__FILE__).'/meta.html')?>
 </head>
 <body>

@@ -11,10 +11,14 @@ audio:not([controls]) { display: none; }
    Author: Martin Giger
    ========================================================================== */
 /* General styles */  
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans); /* load font */
+
 body {
 	background-image: url('//static.getnightingale.com/img/gradent.png');
 	background-repeat:repeat-x;
-	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
+	font-family: 'Open Sans', sans-serif;
+	/* alternative to @import:<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> */
 }
 
 /* header/nav */
@@ -23,7 +27,7 @@ body {
 		margin-bottom: 1em;
 		font-size: 15px;
 		line-height: 1.231 !important;
-		font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
+		font-family: 'Open Sans', sans-serif;
 	}
 
 	#headlogo {
@@ -87,7 +91,7 @@ body {
 	
 	display: block;
 	
-	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Helvetica,Arial,Sans-Serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 #ngalemainfooter b {
