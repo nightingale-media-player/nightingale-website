@@ -12,13 +12,10 @@ audio:not([controls]) { display: none; }
    ========================================================================== */
 /* General styles */  
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans); /* load font */
-
 body {
 	background-image: url('//static.getnightingale.com/img/gradent.png');
 	background-repeat:repeat-x;
 	font-family: 'Open Sans', sans-serif;
-	/* alternative to @import:<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> */
 }
 
 /* header/nav */
@@ -213,4 +210,13 @@ nav ul, nav ul,
 	margin: 0;
 	padding: 0;
 	line-height: 1.231em;
+}
+
+/* Font */
+
+@font-face { 
+font-family: 'Open Sans'; 
+font-style: normal; 
+font-weight: normal;
+src: url(//static.nightingale.com/font/OpenSans-Regular.ttf);
 }
