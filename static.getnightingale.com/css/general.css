@@ -13,7 +13,7 @@ audio:not([controls]) { display: none; }
 /* General styles */  
 
 body {
-	background-image: url('//static.getnightingale.com/img/gradent.png');
+	background-image: url('http://static.getnightingale.com/img/gradent.png');
 	background-repeat:repeat-x;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -218,5 +218,5 @@ nav ul, nav ul,
 font-family: 'Open Sans'; 
 font-style: normal; 
 font-weight: normal;
-src: url(//static.nightingale.com/font/OpenSans-Regular.ttf);
+src: url(http://static.nightingale.com/font/OpenSans-Regular.ttf);
 }
