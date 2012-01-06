@@ -1,15 +1,13 @@
 <?php
-if ($_COOKIE["nightingale_installed"] == "yes") {
-}
-else {
+if (!($_COOKIE["nightingale_installed"] == "yes")) {
   if ($_POST['have'] == yes) {
-  if ( setcookie("nightingale_installed", 'yes', time()+315360000, "/", "getnightingale.com", false, true)) {
-  //if (setcookie("nightingale_installed", $value, time()+315360000)) {
-    header('Location:index.php?url='.$_POST['url']);
-  }
-    else {
-      echo "failed";
-    }
+	  if ( setcookie("nightingale_installed", 'yes', time()+315360000, "/", "getnightingale.com", false, true)) {
+	  //if (setcookie("nightingale_installed", $value, time()+315360000)) {
+		header('Location:index.php?url='.$_POST['url']);
+	  }
+      else {
+		echo "failed";
+	  }
   }
 }
 ?>
@@ -22,17 +20,24 @@ if ($_COOKIE["nightingale_installed"] == "yes") {
   <title>Launching Nightingale</title>
 	<script type='text/javascript'>
 		function nightingaleOpen(stay) {
-			var url = 'nightingale:open?url=".$_GET['url']."';
-			setTimeout(function() {
-				window.location.href = url;
-				if (!stay) {
-					if (window.history.length < 2)
-						setTimeout('window.close()', 100);
-					else
-						setTimeout('window.history.back()', 100);
-				}
-				return true;
-			}, 1);
+			var gotourl = ".$_GET['url'].";
+			if(gotourl=='') {
+				var url = 'nightingale:open?url='+gotourl;
+				setTimeout(function() {
+					window.location.href = url;
+					if (!stay) {
+						if (window.history.length < 2))
+							setTimeout('window.close()', 100);
+						else {
+							setTimeout('window.history.back()', 100);
+						}
+					}
+					return true;
+				}, 1);
+			}
+			else {
+				return false;
+			}
 		}
 	</script>  ";
   }
@@ -81,7 +86,7 @@ if ($_COOKIE["nightingale_installed"] == "yes") {
           <form action='http://" . $_SERVER["HTTP_HOST"].$_SERVER["SCRIPT_NAME"] . "' method='POST'>
             <input type='hidden' name='have' value='yes' />
             <input type='hidden' name='url' value='".$_GET['url']."' />
-            <input type='submit' value='I have Nightingale' />
+            <input type='submit' value='I have Nightingale'".($_GET['url']==''?" disabled='true'":'')." />
           </form>
           <form action='http://getnightingale.com/' method='GET'>
             <input type='submit' value='Download Nightingale' />
