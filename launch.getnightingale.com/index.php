@@ -21,7 +21,7 @@ if ($_COOKIE["nightingale_installed"] == "yes") {
 	<script type='text/javascript'>
 		function nightingaleOpen(stay) {
 			var gotourl = ".$_GET['url'].";
-			if(gotourl=='') {
+			if(gotourl!='') {
 				var url = 'nightingale:open?url='+gotourl;
 				setTimeout(function() {
 					window.location.href = url;
@@ -36,7 +36,7 @@ if ($_COOKIE["nightingale_installed"] == "yes") {
 				}, 1);
 			}
 			else {
-				return false;
+				setTimeout('window.close()', 100);
 			}
 		}
 	</script>  ";
