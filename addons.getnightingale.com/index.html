@@ -49,46 +49,61 @@
 	<!-- end of header -->
     <div id="main" role="main">
 		<!-- category navigation, always visible -->
-		
-		<div id="filterhead">
-			<table>
-				<tr>
-					<td><a href="http://addons.getnightingale.com/?category=featured">Featured Addons</a></td>
-					<td><a href="http://addons.getnightingale.com/?category=all">All</a></td>
-					<td class="actual"><a href="http://addons.getnightingale.com/?category=appearance">Appearance</a></td>
-					<td><a href="http://addons.getnightingale.com/?category=web">Web Browser</a></td>
-					<td><a href="http://addons.getnightingale.com/?category=content">Content & Discovery</a></td>
-					<td><a href="http://addons.getnightingale.com/?category=tools">Tools</a></td>
-				</tr>
-			</table>
-		</div>
+		<header id="headtitle">
+			<nav>
+				<ul>
+					<li><a href="http://addons.getnightingale.com/category/featured">Featured Addons</a></li>
+					<li class="current"><a href="http://addons.getnightingale.com/category/all">All</a></li>
+					<li><a href="http://addons.getnightingale.com/category/appareance">Appearance</a></li>
+					<li><a href="http://addons.getnightingale.com/category/webbrowser">Web Browser</a></li>
+					<li><a href="http://addons.getnightingale.com/category/contentdiscovery">Content & Discovery</a></li>
+					<li><a href="http://addons.getnightingale.com/category/tools">Tools</a></li>
+				</ul>
+			</nav>
+		</header>
 		<!-- end of category navigation -->
 		
 		<div id="list">
 		<!-- Filterbar, only visible in addon lists-->
 		<div id="filterbar">
 			<span class="filterlabel">Languages:</span><select class="filterselect"></select><span class="filterlabel">Order by:</span><select class="filterselect"></select> <form action="GET" id="search"><input type="text" id="searchfield"><input type="submit" value="Search" class="button" id="searchbutton"></form>
-			</div>
+		</div>
 		<!-- end of filterbar -->
 		
 		<!-- Addons list, only on addon lists-->
 		<section id="addonslist">
-			<ul>
-				<li>
-					<table border="0">
-						<tr>
-							<td>
-								<img class="addonimg" alt="FooBar" title="FooBar" src="img/dummy.png">
-							</td>
-							<td>
-								<div class="addontitle">FooBar</div>
-								<div class="addoncategory">In Category <a href="http://addons.getnightingale.com/?category=foobar">Foobar</a></div>
-								<div class="addondescription">Here goes the description...<br />Newline</div>
-							</td>
-						</tr>
-					</table>
-				</li>
-			</ul>
+			<table border="0">
+			  <tbody>
+				<tr class="addon">
+					<td>
+						<img class="img" alt="FooBar" title="FooBar" src="img/dummy.png">
+					</td>
+					<td>
+						<h2 class="title">FooBar</h2>
+						<span class="category">Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 1</a></span>
+						<p class="description">Here goes the description...<br>Newline</p>
+						<form action="GET" class="download"><input type="submit" value="Install" class="button"></form>
+					</td>
+					<td>
+						<div class="rating"></div>
+					</td>
+				</tr>
+				<tr class="addon">
+					<td>
+						<img class="img" alt="FooBar" title="FooBar" src="img/dummy.png">
+					</td>
+					<td>
+						<h2 class="title">FooBar</h2>
+						<span class="category">Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 2</a></span>
+						<p class="description">Here goes the description...asodf askjasdfklj aödfjköaskjf löasdflökasdjflkajfj laskj nafkasd jsdjfl kasdjsdkjfkasjf vmkasdjfawiefjaweioj jfkajl fkjasdkjfln vklasjöjv askjfk aej lkasdjklvalökjekav nakljöiejvk aj kd vngjvajfhdbafjdkl vhaeiuhwiuaehuignvaluhzefiu hvaueh ivbabfbv abnxk,aieuh byxncbuih jlsdny,rjlau ihf adjfh kajhfruehn ycnb jeauih vba<,ejkpriweiopqruiejdnfmxyn ioertal afjdkj fjljfiej sdklfjeijf afasf asdf asdf asdfasdfjkflöaskjkjsdlö kjlfkklöajwioj akvmydf,j eioj g,cmxn.kjelöi gn.yxmnvkjcyg lasrjhg klajbnxcynhrasgukn.xcvjnl ydgulgv,fjk aslb,.vmb,cma f,.vnykl,jkm,la,sjtrh,yscn rjfh sj,fhsklajz aiuzgruig hamcvnb,ajseztuitbgfrakbgm,ncbhyflukxgf vuilyrhtvag<ysjkdvfgsdfbnjkreukac yv fneksdycgibhxkydsgiy ceiwl xi vfkldf grfivbcklxbv fdnkb jklsel L.HA,MN KLJHAJ,BJLAKH	ak fgjkahkl jafasdmknf jkdhJKLHHF  hajlöshf KL dfh afgfajkf adjsh  eh ajklh fdja FJ J rjhajksdfjaf aadfjaö a adfhaäA Df FASHJFdsdfa djsjasdh adhasjfh jasd jLJ JAJAJA J ajjdfasdj dashnvy,bvioasfu,lba .</p>
+						<form action="GET" class="download"><input type="submit" value="Install" class="button"></form>
+					</td>
+					<td>
+						<div class="rating"></div>
+					</td>
+				</tr>
+			  </tbody>
+			</table>
 		</section>
 		<!-- end of addons list -->
 		</div>
