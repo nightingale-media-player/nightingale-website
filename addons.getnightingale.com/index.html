@@ -49,18 +49,19 @@
 	<!-- end of header -->
     <div id="main" role="main">
 		<!-- category navigation, always visible -->
-		<header id="headtitle">
-			<nav>
-				<ul>
-					<li><a href="http://addons.getnightingale.com/?category=featured">Featured Addons</a></li>
-					<li>All</li>
-					<li>Appearance</li>
-					<li>Web Browser</li>
-					<li>Content & Discovery</li>
-					<li>Tools</li>
-				</ul>
-			</nav>
-		</header>
+		
+		<div id="filterhead">
+			<table>
+				<tr>
+					<td><a href="http://addons.getnightingale.com/?category=featured">Featured Addons</a></td>
+					<td><a href="http://addons.getnightingale.com/?category=all">All</a></td>
+					<td class="actual"><a href="http://addons.getnightingale.com/?category=appearance">Appearance</a></td>
+					<td><a href="http://addons.getnightingale.com/?category=web">Web Browser</a></td>
+					<td><a href="http://addons.getnightingale.com/?category=content">Content & Discovery</a></td>
+					<td><a href="http://addons.getnightingale.com/?category=tools">Tools</a></td>
+				</tr>
+			</table>
+		</div>
 		<!-- end of category navigation -->
 		
 		<div id="list">
@@ -74,7 +75,18 @@
 		<section id="addonslist">
 			<ul>
 				<li>
-					<img src="" class="addonimg">
+					<table border="0">
+						<tr>
+							<td>
+								<img class="addonimg" alt="FooBar" title="FooBar" src="img/dummy.png">
+							</td>
+							<td>
+								<div class="addontitle">FooBar</div>
+								<div class="addoncategory">In Category <a href="http://addons.getnightingale.com/?category=foobar">Foobar</a></div>
+								<div class="addondescription">Here goes the description...<br />Newline</div>
+							</td>
+						</tr>
+					</table>
 				</li>
 			</ul>
 		</section>

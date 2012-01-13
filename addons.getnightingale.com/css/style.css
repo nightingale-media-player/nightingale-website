@@ -103,24 +103,51 @@ a:visited ,a:active,a:hover{
    
 /* category navigation */
 
-#headtitle ul {
-	margin:21px 20px;
+#headtitle .headmenu {
+	float: center;
+	width: 100%;
+	text-align: center;
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
 }
 
-#headtitle ul li {
+#headtitle .headmenu .headmenuitem {
 	float: left;
 	font-size: 18px;
 	font-weight: bold;
-	margin:0 20px 0 0;
+	margin: 0;
+	padding: 0;
 	cursor: pointer;
 }
 
-#headtitle a:link {
-	color: white;
+#headtitle .headmenuitem a:link, #headtitle .headmenuitem a:hover, #headtitle .headmenuitem a:active, #headtitle .headmenuitem a:visited {
+	color: #fff !important;
+	text-decoration: none !important;
+	background-color: transparent !important;
+	display: block;
+	padding:.8em;
 }
-#headtitle a:hover, #headtitle a:active, #headtitle a:visited{
-	padding: 0;
-	margin: 0;
+
+#headtitle .headmenuitem:first-child a,#headtitle .headmenuitem:first-child  {
+	/*border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;*/
+}
+
+#headtitle .headmenuitem:last-child  a,#headtitle .headmenuitem:last-child{
+	/*border-radius:0 5px 5px 0;
+	-moz-border-radius:0 5px 5px 0;*/
+}
+
+#headtitle .actual a {
+	border-bottom: .4em solid #333 !important;
+	padding-bottom: .4em !important;
+}
+#headtitle .headmenuitem a:hover,
+#headtitle .actual a:hover {
+	border-bottom: .4em solid #fff !important;
+	padding-bottom: .4em !important;
 }
 
 #headtitle {
@@ -138,14 +165,68 @@ a:visited ,a:active,a:hover{
 	background: linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e8eb5', endColorstr='#496b8e',GradientType=0 ); /* IE6-9 */
 	
-	text-align: left;
+	text-align: center;
 	color: #fff; /*222*/
 	
 	border: 2px solid #4673AA;
 	
-	height: 61px;
+	height: 49px;
 
-	text-align: left;
+	text-align: center;
+}
+
+#filterhead{
+	width:100%;
+	
+	border-radius:5px;
+	-moz-border-radius:5px;
+	
+	background: #4e8eb5; /* Old browsers */
+	background: -moz-linear-gradient(top, #4e8eb5 0%, #496b8e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4e8eb5), color-stop(100%,#496b8e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* IE10+ */
+	background: linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e8eb5', endColorstr='#496b8e',GradientType=0 ); /* IE6-9 */
+	
+	text-align: center;
+}
+
+#filterhead table{
+	border: 1;
+	margin: 0;
+	padding: 0;
+	border-spacing: 0px;
+}
+
+#filterhead td a:link, #filterhead td a:hover, #filterhead td a:active, #filterhead td a:visited {
+	color: #fff;
+	text-decoration: none !important;
+	background-color: transparent !important;
+	display: block;
+	padding:.8em;
+}
+
+#filterhead .actual a {
+	color: #B55029 !important;
+	/*border-bottom: .4em solid #B55029 !important;
+	padding-bottom: .4em !important;*/
+}
+
+#filterhead td a:hover,
+#filterhead .actual a:hover {
+	color: #333 !important;
+	/*border-bottom: .4em solid #fff !important;
+	padding-bottom: .4em !important;*/
+}
+
+#filterhead td {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
 }
 
 /* filterbar */
@@ -188,6 +269,16 @@ a:visited ,a:active,a:hover{
 
 #addonslist {
 	margin-top: 41px;
+	color: ;
+}
+
+#addonslist table {
+	width: 100%;
+}
+
+#addonslist td:last-child {
+	width: 100%;
+	vertical-align: top;
 }
 
 #addonslist ul {
@@ -202,6 +293,27 @@ a:visited ,a:active,a:hover{
 }
 
 .addonimg {
-	height: 123px;
 	width: 190px;
+	max-height: 123px;
+	margin-right: 50px;
+}
+
+.addontitle {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.addoncategory {
+	color: gray;
+	font-size: 12px;
+	padding-bottom: 5px;
+}
+
+.addoncategory a:link, .addoncategory a:hover, .addoncategory a:active, .addoncategory a:visited {
+	color: gray;
+	text-decoration: underline !important;
+}
+
+.addondescription {
+	
 }
