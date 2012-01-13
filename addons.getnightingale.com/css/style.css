@@ -276,6 +276,10 @@ a:visited ,a:active,a:hover{
 	width: 100%;
 }
 
+#addonslist td {
+	vertical-align: top;
+}
+
 #addonslist td:last-child {
 	width: 100%;
 	vertical-align: top;

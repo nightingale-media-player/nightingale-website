@@ -13,7 +13,7 @@
   <title>Nightingale</title>
   <meta name="description" content="Nightingale is a free and powerfull music player for Linux, Windows and Mac">
   <meta name="tags" content="Nightingale free powerfull music video browser Firefox Gecko Songbird player Linux Windows Mac">
-  <meta name="author" content="Martin Giger">
+  <meta name="author" content="Martin Giger, Malte Heinzelmann">
   <link type="text/plain" rel="author" href="humans.txt" >
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -28,7 +28,13 @@
   <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="favicon.ico" >
   
   <script src="http://static.getnightingale.com/js/libs/modernizr-2.0.6.min.js"></script>
-
+  <!--
+  Comment out if files uploaded to server
+  <script src="http://static.getnightingale.com/js/jquery-1.7.1.min.js"></script>
+  <script src="http://static.getnightingale.com/js/libs/jquery.raty.min.js"></script>
+  -->
+  <script src="js/jquery-1.7.1.min.js"></script>
+  <script src="js/jquery.raty.min.js"></script>
 </head>
 
 <body>
@@ -72,6 +78,9 @@
 		<!-- end of filterbar -->
 		
 		<!-- Addons list, only on addon lists-->
+		<br />
+		<div id="stars"></div>
+		<br />
 		<section id="addonslist">
 			<ul>
 				<li>
@@ -80,16 +89,47 @@
 							<td>
 								<img class="addonimg" alt="FooBar" title="FooBar" src="img/dummy.png">
 							</td>
-							<td>
+							<td width="100%">
 								<div class="addontitle">FooBar</div>
 								<div class="addoncategory">In Category <a href="http://addons.getnightingale.com/?category=foobar">Foobar</a></div>
 								<div class="addondescription">Here goes the description...<br />Newline</div>
+								<div class="button-install"></div>
+							</td>
+							<td>
+								<div class="star" id="star-foobar"></div>
+								<div class="hint" id="hint-foobar"></div>
 							</td>
 						</tr>
 					</table>
 				</li>
 			</ul>
 		</section>
+		<script type="text/javascript">
+			$('.star').each(function() {
+				var id = $(this).attr('id');
+				var name = id.substring(id.indexOf("-")+1);
+				alert(name);
+				$(this).raty({
+					target:		'#hint-'+name,
+					targetKeep:	true,
+					targetType: 'number',
+					half:       true,
+					precision:  true,
+					path :		'img/raty/',
+					/*path :		'http://static.getnightingale.com/img/raty/',*/
+		  			number:		5,
+		  			hintList:	['bad', 'poor', 'regular', 'good', 'gorgeous'],
+					click:		function(score) {
+						alert('ID: ' + $(this).attr('id') + '\nscore: ' + parseFloat(score).toFixed(1));
+					}
+				});
+			});
+			/**
+			 * Need to add every start rating wiht PHP
+			**/
+			$('#star-foobar').raty('start', 1.26);
+			
+		</script>
 		<!-- end of addons list -->
 		</div>
 	</div>
