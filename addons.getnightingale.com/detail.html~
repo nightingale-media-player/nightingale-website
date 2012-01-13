@@ -95,7 +95,7 @@
 					<td>
 						<h2 class="title">FooBar</h2>
 						<span class="category">Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 2</a></span>
-						<p class="description">Here goes the description...Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+						<p class="description">Here goes the description...asodf askjasdfklj aödfjköaskjf löasdflökasdjflkajfj laskj nafkasd jsdjfl kasdjsdkjfkasjf vmkasdjfawiefjaweioj jfkajl fkjasdkjfln vklasjöjv askjfk aej lkasdjklvalökjekav nakljöiejvk aj kd vngjvajfhdbafjdkl vhaeiuhwiuaehuignvaluhzefiu hvaueh ivbabfbv abnxk,aieuh byxncbuih jlsdny,rjlau ihf adjfh kajhfruehn ycnb jeauih vba<,ejkpriweiopqruiejdnfmxyn ioertal afjdkj fjljfiej sdklfjeijf afasf asdf asdf asdfasdfjkflöaskjkjsdlö kjlfkklöajwioj akvmydf,j eioj g,cmxn.kjelöi gn.yxmnvkjcyg lasrjhg klajbnxcynhrasgukn.xcvjnl ydgulgv,fjk aslb,.vmb,cma f,.vnykl,jkm,la,sjtrh,yscn rjfh sj,fhsklajz aiuzgruig hamcvnb,ajseztuitbgfrakbgm,ncbhyflukxgf vuilyrhtvag<ysjkdvfgsdfbnjkreukac yv fneksdycgibhxkydsgiy ceiwl xi vfkldf grfivbcklxbv fdnkb jklsel L.HA,MN KLJHAJ,BJLAKH	ak fgjkahkl jafasdmknf jkdhJKLHHF  hajlöshf KL dfh afgfajkf adjsh  eh ajklh fdja FJ J rjhajksdfjaf aadfjaö a adfhaäA Df FASHJFdsdfa djsjasdh adhasjfh jasd jLJ JAJAJA J ajjdfasdj dashnvy,bvioasfu,lba .</p>
 						<form action="GET" class="download"><input type="submit" value="Install" class="button"></form>
 					</td>
 					<td>
@@ -107,33 +107,11 @@
 		</section>
 		<!-- end of addons list -->
 		</div>
-		<div class="details" id="details">
+		<div id="details">
 		<!-- Details page-->
 		<section id="addondetail">
-			<div id="content-top">
-				<h2 class="title">FooBar</h2>
-				<span class="category">Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 1</a></span>
-			</div>
-			<div id="content-left">
-				<div class="detailimages">
-					<div id="left">
-						<img alt="FooBar" title="FooBar" src="img/dummy.png">
-					</div>
-					<div id="right">
-						<img alt="FooBar" title="FooBar" src="img/dummy.png">
-						<img alt="FooBar" title="FooBar" src="img/dummy.png">
-						<img alt="FooBar" title="FooBar" src="img/dummy.png">
-					</div>
-				</div>
-				<div class="clear"></div>
-				<p class="description">Here goes the description...<br>Newline</p>
-				
-			</div>
-			<div id="content-right">
-				<center><form action="GET" class="download"><input type="submit" value="Install" class="button"></form></center>
-				<hr />
-			</div>
-			<div class="clear"></div>
+			<div id="content-left"></div>
+			<div id="content-right"></div>
 		</section>
 		<!-- end of addons list -->
 		</div>

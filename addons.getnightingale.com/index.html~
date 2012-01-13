@@ -131,7 +131,7 @@
 			</div>
 			<div id="content-right">
 				<center><form action="GET" class="download"><input type="submit" value="Install" class="button"></form></center>
-				<hr />
+				
 			</div>
 			<div class="clear"></div>
 		</section>
