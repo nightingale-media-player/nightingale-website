@@ -206,12 +206,6 @@ a:visited ,a:active,a:hover{
 	height: 123px;
 }
 
-.addon .rating {
-	background-image: url("img/ratings.png");
-	height: 18px;
-	width: 70px;
-}
-
 .addon td {
 	border-spacing: 0 !important;
 	padding: 0;
@@ -258,4 +252,34 @@ a:visited ,a:active,a:hover{
 	overflow: ellipsis;
 	
 	height: 60px;
+}
+
+/* Rating system will be changed completely later */
+
+.addon .rating {
+	background-image: url("img/ratings.png");
+	background-position: 0px 198px;
+	
+	height: 18px;
+	width: 70px;
+}
+
+.onestar {
+	background-position: 0px 180px;
+}
+
+.twostars {
+	background-position: 0px 144px;
+}
+
+.threestars {
+	background-position: 0px 108px;
+}
+
+.fourstars {
+	background-position: 0px 72px;
+}
+
+.fivestars {
+	background-position: 0px 36px;
 }
