@@ -85,7 +85,7 @@
 						<form action="GET" class="download"><input type="submit" value="Install" class="button"></form>
 					</td>
 					<td>
-						<div class="rating"></div>
+						<div class="rating"></div><!-- Use an unordered list with one star per item for ratings. -->
 					</td>
 				</tr>
 				<tr class="addon">
@@ -99,7 +99,7 @@
 						<form action="GET" class="download"><input type="submit" value="Install" class="button"></form>
 					</td>
 					<td>
-						<div class="rating"></div>
+						<div class="rating"></div><!-- Use an unordered list with one star per item for ratings. -->
 					</td>
 				</tr>
 			  </tbody>
@@ -112,7 +112,7 @@
 		<section id="addondetail">
 			<div id="content-top">
 				<h2 class="title">FooBar</h2>
-				<span class="category">Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 1</a></span>
+				<span class="author">by <a href="http://addons.getnightingale.com/?author=foobar">Foobar</a></span>
 			</div>
 			<div id="content-left">
 				<div class="detailimages">
@@ -131,7 +131,57 @@
 			</div>
 			<div id="content-right">
 				<center><form action="GET" class="download"><input type="submit" value="Install" class="button"></form></center>
+				<br />
+				Average rating (based on xxx votes):
+				<div class="rating"></div>
+				<br />
+				<!-- About this Addon -->
+				<span class="header">About this Addon</span>
 				<hr />
+				<span class="text">Author: <a href="http://addons.getnightingale.com/?author=foobar">Foobar</a></span><br />
+				<span class="text">Version: x.y.z</span><br />
+				<span class="text">Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 1</a></span><br />
+				<span class="text">Tags: <a href="http://addons.getnightingale.com/?tag=foobar">foobar</a>, <a href="http://addons.getnightingale.com/?tag=foo">foo</a>, <a href="http://addons.getnightingale.com/?tag=bar">bar</a></span><br />
+				<br />
+				<span class="text"><a href="http://addons.getnightingale.com/?old-versions">See older versions</a></span><br />
+				<br />
+				<!-- Statistics -->
+				<span class="header">Statistics</span>
+				<hr />
+				<span class="text">Downloads: x</span><br />
+				<span class="text">Images: y</span><br />
+				<span class="text">Comments: z</span><br />
+				<span class="text">Last Updated: n day ago</span><br />
+				<br />
+				<!-- Other Add-ons -->
+				<span class="header">Other Add-ons by FooBar</span>
+				<hr />
+				<!-- A small version of the add-on list -->
+				<section id="addonslist-small">
+					<table border="1">
+					  <tbody>
+						<tr class="addon">
+							<td>
+								<img class="img" alt="FooBar" title="FooBar" src="img/dummy.png">
+							</td>
+							<td>
+								<h2 class="title">FooBar</h2>
+								<div class="rating"></div><!-- Use an unordered list with one star per item for ratings. -->
+							</td>
+						</tr>
+						<tr class="addon">
+							<td>
+								<img class="img" alt="FooBar" title="FooBar" src="img/dummy.png">
+							</td>
+							<td>
+								<h2 class="title">FooBar</h2>
+								<div class="rating"></div><!-- Use an unordered list with one star per item for ratings. -->
+							</td>
+						</tr>
+					  </tbody>
+					</table>
+				</section>
+				<br />
 			</div>
 			<div class="clear"></div>
 		</section>

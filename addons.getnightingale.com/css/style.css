@@ -206,11 +206,11 @@ a:visited ,a:active,a:hover{
 	border-spacing: 0 14px;
 }
 
-.addon {
+#addonslist .addon {
 	height: 123px;
 }
 
-.addon td {
+#addonslist .addon td {
 	border-spacing: 0 !important;
 	padding: 0;
 	border: none;
@@ -228,10 +228,52 @@ a:visited ,a:active,a:hover{
 	padding-right: 70px;
 }
 
-.addon .img {
+#addonslist .addon .img {
 	width: 190px;
 	height: 123px;
 }
+
+/* Small Addons list */
+
+#addonslist-small {
+	color: black;
+	font-size: 12px;
+}
+
+#addonslist-small table {
+	width: 100%;
+	border: none;
+	border-spacing: 0 14px;
+}
+
+#addonslist-small .addon {
+	height: 90px;
+}
+
+#addonslist-small .addon td {
+	border-spacing: 0 !important;
+	padding: 0;
+	border: none;
+	margin: 0;
+	vertical-align: top;
+	text-align: left;
+}
+
+#addonslist-small td:last-child {
+	width: 100%;
+}
+
+#addonslist-small td:first-child {
+	width: 90px;
+	padding-right: 10px;
+}
+
+#addonslist-small .addon .img {
+	width: 90px;
+	height: 90px;
+}
+
+/* All Addons lists */
 
 .addon .title {
 	font-size: 16px;
@@ -280,11 +322,20 @@ a:visited ,a:active,a:hover{
 	margin: 0;
 }
 
-.details .category {
+.details .header {
+	color: black;
+	font-size: 110%;
+	font-weight: bold;
+}
+
+.details .text {
 	color: gray;
 }
 
-.details .category a:link, .details .category a:hover, .details .category a:active, .details .category a:visited {
+.details .text a:link,
+.details .text a:hover,
+.details .text a:active,
+.details .text a:visited {
 	color: gray;
 	text-decoration: underline !important;
 }
@@ -329,6 +380,8 @@ a:visited ,a:active,a:hover{
 .detailimages #right img:last-child {
 	margin-bottom: 0px;
 }
+
+
 
 /* Rating system will be changed completely later */
 
