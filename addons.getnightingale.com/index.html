@@ -82,7 +82,7 @@
 						<h2 class="title">FooBar</h2>
 						<span class="category">Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 1</a></span>
 						<p class="description">Here goes the description...<br>Newline</p>
-						<form action="GET" class="download"><input type="submit" value="Install" class="button"></form>
+						<form action="GET"><input type="submit" value="Install" class="install"></form>
 					</td>
 					<td>
 						<div class="rating"></div><!-- Use an unordered list with one star per item for ratings. -->
@@ -96,7 +96,7 @@
 						<h2 class="title">FooBar</h2>
 						<span class="category">Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 2</a></span>
 						<p class="description">Here goes the description...Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-						<form action="GET" class="download"><input type="submit" value="Install" class="button"></form>
+						<form action="GET"><input type="submit" value="Install" class="install"></form>
 					</td>
 					<td>
 						<div class="rating"></div><!-- Use an unordered list with one star per item for ratings. -->
@@ -128,9 +128,36 @@
 				<div class="clear"></div>
 				<p class="description">Here goes the description...<br>Newline</p>
 				
+				<div class="title">Comments (2)</div>
+				<section class="commentslist">
+					<table border="1">
+					  <tbody>
+						<tr class="comment">
+							<td>
+								<img class="img" alt="FooBar" title="FooBar" src="img/dummy.png">
+							</td>
+							<td>
+								<div class="header">FooBar</div>
+								<div class="info">n minutes ago</div>
+								<div class="text">Awesome Add-On</div>
+							</td>
+						</tr>
+						<tr class="comment">
+							<td>
+								<img class="img" alt="BarFoo" title="BarFoo" src="img/dummy.png">
+							</td>
+							<td>
+								<div class="header">BarFoo</div>
+								<div class="info">n hours ago</div>
+								<div class="text">Keep on the good work<br />Thanks</div>
+							</td>
+						</tr>
+					  </tbody>
+					</table>
+				</section>
 			</div>
 			<div id="content-right">
-				<center><form action="GET" class="download"><input type="submit" value="Install" class="button"></form></center>
+				<form action="GET"><input type="submit" value="Install" class="install"></form>
 				<br />
 				Average rating (based on xxx votes):
 				<div class="rating"></div>
@@ -151,14 +178,14 @@
 				<span class="text">Downloads: x</span><br />
 				<span class="text">Images: y</span><br />
 				<span class="text">Comments: z</span><br />
-				<span class="text">Last Updated: n day ago</span><br />
+				<span class="text">Last Updated: n days ago</span><br />
 				<br />
 				<!-- Other Add-ons -->
 				<span class="header">Other Add-ons by FooBar</span>
 				<hr />
 				<!-- A small version of the add-on list -->
 				<section id="addonslist-small">
-					<table border="1">
+					<table border="0">
 					  <tbody>
 						<tr class="addon">
 							<td>

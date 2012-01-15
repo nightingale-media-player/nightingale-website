@@ -10,6 +10,8 @@ desktop.ini
 
 # No VIM swap files
 *.swp
+
+# No temp files from eg. gedit
 *~
 
 # No Komodo project files
