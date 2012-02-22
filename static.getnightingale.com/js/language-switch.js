@@ -4,13 +4,16 @@ var link = document.getElementById("forumhelplink");
 window.onload = function() {
 	switch(lang) {
 		case "de":	link.href = "http://forum.getnightingale.com/forum-16.html";
-					link.innerHTML = link.title = "Hilfe";
+					link.innerHTML = "Hilfe";
+					link.title = "Hilfe";
 		break;
 		case "fr":	link.href = "http://forum.getnightingale.com/forum-17.html";
-					link.innerHTML = link.title = "Aide";
+					link.innerHTML = "Aide";
+					link.title = "Aide";
 		break;
 		case "it":	link.href = "http://forum.getnightingale.com/forum-18.html";
-					link.innerHTML = link.title = link.title = "Aiuto";
+					link.innerHTML = "Aiuto";
+					link.title = "Aiuto";
 		break;
 		default: link.href = "http://forum.getnightingale.com/forum-13.html";
 	}
