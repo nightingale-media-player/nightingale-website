@@ -5,7 +5,7 @@
 			  <div id="license">
 			  <b>License</b>
 			  <?php if($_GET['wiki']=="true") { echo tpl_license(false); } else { echo
-			  "Site content licensed under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU GPL</a>."; } ?>
+			  "Site content licensed under the <a href='http://www.gnu.org/copyleft/gpl.html'>GNU GPL</a>."; } ?>
 			  </div></li>
 			<li><nav>
 			<ul id="double" class="clearfix">
@@ -37,5 +37,5 @@
 			</nav>
 			</li>
 		</ul>
-    </footer>
-	<script src="http://static.getnightingale.com/js/language-switch.js" type="text/javascript"></script>
+</footer>
+<script src="http://static.getnightingale.com/js/language-switch.js" type="text/javascript"></script>
