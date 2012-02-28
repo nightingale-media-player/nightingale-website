@@ -19,13 +19,13 @@
 
   
   <!-- css -->
-  <link rel="stylesheet" href="//static.getnightingale.com/css/general.css">
-  <link rel="stylesheet" href="//static.getnightingale.com/css/style.css">
+  <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
+  <link rel="stylesheet" href="http://static.getnightingale.com/css/style.css">
   
   <!-- favicon -->
   <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="favicon.ico" >
   
-  <script src="//static.getnightingale.com/js/libs/modernizr-2.0.6.min.js"></script>
+  <script src="http://static.getnightingale.com/js/libs/modernizr-2.0.6.min.js"></script>
 
 </head>
 
@@ -37,10 +37,10 @@
 		<nav>
 		<ul class="menu">
 			<li><a href="/" title="Home">Home</a></li>
-			<li><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
-			<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-			<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
-			<li><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
+			<li><a href="http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
+			<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
+			<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
+			<li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
 		</ul>
 		</nav>
 	</header>
@@ -51,20 +51,20 @@
 		</div>
 		<h2>Linux:</h2>
 		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="//github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-i686.tar.gz">Linux Tarball (.tar.gz) | 32-Bit</a></li>
-			<li><a href="//github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-x86_64.tar.bz2">Linux Tarball (.tar.gz)  | 64-Bit</a></li>
+			<li><a href="http://github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-i686.tar.gz">Linux Tarball (.tar.gz) | 32-Bit</a></li> <!-- here goes the linux 32bit tarball -->
+			<li><a href="http://github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-x86_64.tar.bz2">Linux Tarball (.tar.gz)  | 64-Bit</a></li> <!-- and here its 64bit twin -->
 		</ul>
 		<h2>Windows:</h2>
 		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe">Windows Installer (.exe) | 32-Bit</a></li>
+			<li><a href="https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe">Windows Installer (.exe) | 32-Bit</a></li> <!-- this link here offcourse refers to the windows installer.-->
 		</ul>
 		<h2>Mac:</h2>
 		<ul class="downloadlist" style="text-align:left;">
-			<li>Mac builds coming in the next version (stable)</li>
+			<li><a href="thisisanonworkingmacdownloadlink">Mac runnable | 32-Bit</a></li>
 		</ul>
 		<h2>Source:</h2>
 		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="//github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.8-PRERELEASE">Tarball</a></li>
+			<li><a href="http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.8-PRERELEASE">Tarball</a></li> <!-- Tarball link here! -->
 			<li><a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Git Repo</a> - right click and copy URL, then "git clone --depth=1 [url]" followed by "git checkout nightingale-1.8"</li>	
 		</ul>
 		<h2>Linux Distro Specific:</h2>
@@ -77,10 +77,10 @@
   </div>
 	<?php include("http://static.getnightingale.com/footer.php"); ?>
 
-  <script src="//static.getnightingale.com/js/jquery-1.7.1.min.js"></script>
+  <script src="http://static.getnightingale.com/js/jquery-1.7.1.min.js"></script>
 
-  <script defer src="//static.getnightingale.com/js/plugins.js"></script>
-  <script defer src="//static.getnightingale.com/js/script.js"></script>
+  <script defer src="http://static.getnightingale.com/js/plugins.js"></script>
+  <script defer src="http://static.getnightingale.com/js/script.js"></script>
   <script>
     window._gaq = [['_setAccount','UA-27679277-1'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({

@@ -1,9 +1,10 @@
 /* Author:  Martin Giger
    License: Some GNU GPL License :D
+   
+   If you want to update the download button to a new version, pleace replace the links in the download JSON object.
 */
-var visible;
-var breaker = false;
-var mouseover = false;
+
+//var mouseover = false; unusedè uncomment if you use the social buttons hover thingie
 
 
 // download button link list
@@ -12,17 +13,22 @@ var download = {
 		{
 			'name': 'Linux',
 			'architecture': 32,
-			'link': 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-i686.tar.gz'
+			'link': 'insertlinux32bitlinkhere'
 		},
 		{
 			'name': 'Linux',
 			'architecture': 64,
-			'link': 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/nightingale-1.8.1-ed3358a-linux-x86_64.tar.bz2'
+			'link': 'insertlinux64bitlinkhere'
 		},
 		{
 			'name': 'Windows',
 			'architecture': 32,
-			'link': 'https://github.com/downloads/nightingale-media-player/nightingale-hacking/Nightingale_1.8.1-1863_windows-i686.exe'
+			'link': 'insertwindowslinkhere'
+		}
+		{
+			'name': 'Mac OSX',
+			'architecture': 32,
+			'link': 'insertmaclinkhere'
 		}
 	]
 };
@@ -47,7 +53,7 @@ $(document).ready(function() {
 
 	$("#screen").click(function(e) {
 		//Overlay elemnt code
-		var overlay = $('<div id="overlay" style="height:100%;width:100%;position: fixed;top:0;left:0;background:rgba(0,0,0,0.8);cursor:pointer;display:none;"><img style="margin: 10px auto;display:block;" src="'+$("#screen a").attr('href')+'"></div>');
+		var overlay = $('<div id="overlay" style="height:100%;width:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.8);cursor:pointer;display:none;"><img style="margin: 10px auto;display:block;" src="'+$("#screen a").attr('href')+'"></div>');
 		
 		
 		//initialize overlade and fade it in
@@ -81,6 +87,9 @@ function getOS() {
 	if (ua.indexOf("Linux") != -1) {
 		OSName="Linux";
 	}
+	if(ua.indexOf("Mac") != -1) {
+		OSName="Mac OSX";
+	}
 	
 	return OSName;
 }
@@ -89,8 +98,9 @@ function getOS() {
 
 function getArchitecture() {
 	var arch = 32;
+	var OS = getOS();
 	
-	if(navigator.userAgent.indexOf("64")!=-1 && getOS() != "Windows")
+	if(navigator.userAgent.indexOf("64")!=-1 && (OS != "Windows"||OS != "Mac OSX"))
 		arch = 64;
 	return arch;
 }
@@ -102,6 +112,9 @@ function optimizeOS(OS,arch) {
 			$('.button').attr('href',download.systems[i].link);
 			$('.button .small').text(OS+" | "+arch+"-Bit");
 			break;
+		}
+		else {
+			$('#other').hide(); // hide the "we tried to detect" thing
 		}
 	}
 }

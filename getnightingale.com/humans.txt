@@ -10,7 +10,7 @@
   
   Lead Designer: Janek Bevendorff
   Site: http://www.refining-linux.org/
-  Twitter: @reflinux
+  Twitter: @Manko10
   Location: Germany
 
 /* THANKS */
