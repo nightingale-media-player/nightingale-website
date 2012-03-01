@@ -422,19 +422,19 @@ h1 {
 }
 
 .play {
-	background-image: url('//static.getnightingale.com/img/button-play-pause.png');
-	background-position: 0px 0px;
+	background-image: url('http://static.getnightingale.com/img/button-play-pause.png');
+	background-position: -5px -5px;
 	overflow: hidden;
-	height: 40px;
-	width: 40px;
+	height: 42px;
+	width: 42px;
 }
 
 .button:hover .play {
-	background-position: 0px 40px;
+	background-position: -5px 47px;
 }
 
 .button:active .play {
-	background-position: 0px 80px;
+	background-position: -5px -5px;
 }
 
 .button:hover {
