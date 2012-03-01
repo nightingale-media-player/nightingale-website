@@ -1,1 +1,6 @@
-<SongbirdInstallBundle version="1"/>
+<SongbirdInstallBundle version="2">
+  <XPI description="Publish your playback history to Last.fm and listen to Last.fm Radio" icon="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_lastfm.png" default="true" name="Last.fm" url="" id="audioscrobbler@songbirdnest.com"/>
+  <XPI description="Like your favourite old school mix tape, mix and mash up various web sources for your library enhancing pleasure." icon="http://addons.songbirdnest.com/addon-icons/3290/tape.png" default="true" name="mashTape" url="" id="mashTape@songbirdnest.com"/>
+  <XPI description="Directory of SHOUTcast Internet radio streams" icon="http://addons.songbirdnest.com/addon-icons/3295/shoutcast_icon-32x32.png" default="true" name="SHOUTcast Radio" url="" id="shoutcast-radio@songbirdnest.com"/>
+  <XPI description="Lyrics viewer and editor in the right side pane. " icon="http://wiki.getnightingale.com/lib/exe/fetch.php?media=mlyrics.png" default="true" name="MLyrics" url="" id="mlyrics@songbirdnest.com"/>
+</SongbirdInstallBundle>
