@@ -51,7 +51,7 @@ if($what=="JSON"||$what=="json"||$what=="js") {
 			'architecture': 32,
 			'link': '".$urls[2]."',
 			'screenshot': '".$images[1]."'
-		}
+		},
 		{
 			'name': 'Mac OSX',
 			'architecture': 32,

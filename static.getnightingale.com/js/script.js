@@ -7,7 +7,7 @@
 //var mouseover = false; unusedè uncomment if you use the social buttons hover thingie
 
 
-// download button link list is loaded as JS File.
+// download button link list is loaded as JS File (version.php).
 
 
 $(document).ready(function() {	
