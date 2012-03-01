@@ -1,3 +1,5 @@
+<!-- please only use me as template -->
+
 <footer id="ngalemainfooter">
 	  <div id="lgradient"></div>
 		<ul id="footerwrapper" class="clearfix">

@@ -1,37 +1,14 @@
 /* Author:  Martin Giger
    License: Some GNU GPL License :D
    
-   If you want to update the download button to a new version, pleace replace the links in the download JSON object.
+   If you want to update the download button to a new version, pleace replace the links in the version.php file.
 */
 
 //var mouseover = false; unusedè uncomment if you use the social buttons hover thingie
 
 
-// download button link list
-var download = {
-	'systems': [
-		{
-			'name': 'Linux',
-			'architecture': 32,
-			'link': 'insertlinux32bitlinkhere'
-		},
-		{
-			'name': 'Linux',
-			'architecture': 64,
-			'link': 'insertlinux64bitlinkhere'
-		},
-		{
-			'name': 'Windows',
-			'architecture': 32,
-			'link': 'insertwindowslinkhere'
-		}
-		{
-			'name': 'Mac OSX',
-			'architecture': 32,
-			'link': 'insertmaclinkhere'
-		}
-	]
-};
+// download button link list is loaded as JS File.
+
 
 $(document).ready(function() {	
 	// disable selection
@@ -111,6 +88,8 @@ function optimizeOS(OS,arch) {
 	
 			$('.button').attr('href',download.systems[i].link);
 			$('.button .small').text(OS+" | "+arch+"-Bit");
+			$("#screen a").attr('href',download.systems[i].screenshot);
+			$("#screen a img").attr('src',download.systems[i].screenshot);
 			break;
 		}
 		else {
