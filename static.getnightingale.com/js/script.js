@@ -87,7 +87,7 @@ function optimizeOS(OS,arch) {
 		if (download.systems[i].name == OS && download.systems[i].architecture == arch) {
 	
 			$('.button').attr('href',download.systems[i].link);
-			$('.button .small').text(OS+" | "+arch+"-Bit");
+			$('.button .small .os').text(OS+" | "+arch+"-Bit");
 			$("#screen a").attr('href',download.systems[i].fullsize);
 			$("#screen a img").attr('src',download.systems[i].screenshot);
 			break;

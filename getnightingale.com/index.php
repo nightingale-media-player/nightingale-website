@@ -55,7 +55,7 @@
 		<div class="buttonpadder">
 			<a class="button" href="all-versions.php" title="Download Nightingale">
 				<div class="play"></div>
-				<span class="buttontext">Download<br><span class="small">Not detected</span></span>
+				<span class="buttontext">Download<br><span class="small">1.11.0 | <span class="os">Not detected</span></span></span>
 			</a>
 		</div>
 		<span id="other">We tried to detect the optimal installer for you. <a href="all-versions.php" title="all downloads">Other&nbsp;systems</a></span>
