@@ -61,7 +61,7 @@
 		<span id="other">We tried to detect the optimal installer for you. <a href="all-versions.php" title="all downloads">Other&nbsp;systems</a></span>
 		</div>
 		<div id="screen">
-			<a href="<?php include("version.php?as=img"); ?>"><img src="<?php include("version.php?as=img"); ?>" alt="Screenshot"></a>
+			<a href="<?php include("version.php?as=bimg"); ?>"><img src="<?php include("version.php?as=img"); ?>" alt="Screenshot"></a>
 		</div>
 		<div id="spec">
 			<ul id="features" class="clearfix">

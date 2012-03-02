@@ -88,7 +88,7 @@ function optimizeOS(OS,arch) {
 	
 			$('.button').attr('href',download.systems[i].link);
 			$('.button .small').text(OS+" | "+arch+"-Bit");
-			$("#screen a").attr('href',download.systems[i].screenshot);
+			$("#screen a").attr('href',download.systems[i].fullsize);
 			$("#screen a img").attr('src',download.systems[i].screenshot);
 			break;
 		}
