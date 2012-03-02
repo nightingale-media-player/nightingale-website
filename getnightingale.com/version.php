@@ -19,7 +19,7 @@ $urls[2] = ""; // Windows_32 URL
 $urls[3] = ""; // MAC_32 URL
 $urls[4] = ""; // Tarball URL
 
-// Screenshot URLs, please use images in the dimension of 623x466px!
+// Screenshot URLs, please use images in the dimension of 623x466px (thats a resized 640x480 screenshot)
 $images[0] = ""; // Linuxscreenshot
 $images[1] = ""; // Windowsscreenshot
 $images[2] = ""; // Macscreenshot
