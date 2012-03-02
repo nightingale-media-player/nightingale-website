@@ -22,7 +22,7 @@ $urls[4] = ""; // Tarball URL
 // Screenshot URLs, please use images in the dimension of 623x466px (thats a resized 640x480 screenshot)
 $images[0] = ""; // Linuxscreenshot
 $images[1] = ""; // Windowsscreenshot
-$images[2] = ""; // Macscreenshot
+$images[2] = "http://static.getnightingale.com/img/macosx-screenshot.png"; // Macscreenshot
 
 // big screenshots (shown on click on the screenshot)
 $big[0] = ""; // Big Linux screenshot
