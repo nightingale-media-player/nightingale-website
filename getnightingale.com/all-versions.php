@@ -1,4 +1,5 @@
 <!doctype html>
+<?php include("version.php"); ?> 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
@@ -47,24 +48,24 @@
 	<!-- end of header -->
     <div id="main" role="main">
 		<div id="headtitle">
-			<h1>All Nightingale downloads</h1>
+			<h1>All Nightingale <?echo $version ?> downloads</h1>
 		</div>
 		<h2>Linux:</h2>
 		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="<?php include("version.php?as=text"); ?>">Linux Tarball (.tar.gz) | 32-Bit</a></li> <!-- here goes the linux 32bit tarball -->
-			<li><a href="<?php include("version.php?as=text&os=l64"); ?>">Linux Tarball (.tar.gz)  | 64-Bit</a></li> <!-- and here its 64bit twin -->
+			<li><a href="<?php echo $urls[0]; ?>">Linux Tarball (.tar.gz) | 32-Bit</a></li> <!-- here goes the linux 32bit tarball -->
+			<li><a href="<?php echo $urls[1]; ?>">Linux Tarball (.tar.gz)  | 64-Bit</a></li> <!-- and here its 64bit twin -->
 		</ul>
 		<h2>Windows:</h2>
 		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="<?php include("version.php?as=text&os=win"); ?>">Windows Installer (.exe) | 32-Bit</a></li> <!-- this link here offcourse refers to the windows installer.-->
+			<li><a href="<?php echo $urls[2]; ?>">Windows Installer (.exe) | 32-Bit</a></li> <!-- this link here offcourse refers to the windows installer.-->
 		</ul>
 		<h2>Mac:</h2>
 		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="<?php include("version.php?as=text&os=mac"); ?>">Mac runnable | 32-Bit</a></li>
+			<li><a href="<?php echo $urls[3]; ?>">Mac runnable | 32-Bit</a></li>
 		</ul>
 		<h2>Source:</h2>
 		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="<?php include("version.php?as=text&os=tar"); ?>">Tarball</a></li> <!-- Tarball link here! -->
+			<li><a href="<?php echo $urls[4]; ?>">Tarball</a></li> <!-- Tarball link here! -->
 			<li><a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Git Repo</a> - right click and copy URL, then "git clone --depth=1 [url]" followed by "git checkout nightingale-1.8"</li>	
 		</ul>
 		<h2>Linux Distro Specific:</h2>

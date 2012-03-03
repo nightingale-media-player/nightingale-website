@@ -12,6 +12,8 @@ $which = $GET['os'];
 
 // I know, doing this with a DB would be more fun. But this is enought.
 
+$version = "1.11.0"; // actual version number
+
 // Installer / download URLs
 $urls[0] = ""; // Linux_32 URL
 $urls[1] = ""; // Linux_64 URL
@@ -69,6 +71,10 @@ if($what=="JSON"||$what=="json"||$what=="js") {
 		}
 	]
 };";
+}
+
+else if($what=="num") {
+	echo $version;
 }
 
 // plaintext URLS

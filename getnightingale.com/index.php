@@ -1,4 +1,5 @@
 <!doctype html>
+<?php include("version.php"); ?>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
@@ -55,13 +56,13 @@
 		<div class="buttonpadder">
 			<a class="button" href="all-versions.php" title="Download Nightingale">
 				<div class="play"></div>
-				<span class="buttontext">Download<br><span class="small">1.11.0 | <span class="os">Not detected</span></span></span>
+				<span class="buttontext">Download<br><span class="small"><?php echo $version; ?> | <span class="os">Not detected</span></span></span>
 			</a>
 		</div>
 		<span id="other">We tried to detect the optimal installer for you. <a href="all-versions.php" title="all downloads">Other&nbsp;systems</a></span>
 		</div>
 		<div id="screen">
-			<a href="<?php include("version.php?as=bimg"); ?>"><img src="<?php include("version.php?as=img"); ?>" alt="Screenshot"></a>
+			<a href="<?php echo $big[0]; ?>"><img src="<?php echo $images[0]; ?>" alt="Screenshot"></a>
 		</div>
 		<div id="spec">
 			<ul id="features" class="clearfix">
