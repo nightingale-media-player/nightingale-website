@@ -404,11 +404,11 @@ h1 {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	font-size: 30px;
-	padding: 10px;
+	padding: 5px;
 	text-shadow: -1px -1px #000;
 	cursor: pointer;
-	width: 200px;
-	height: 40px;
+	width: 210px;
+	height: 50px;
 	text-align: left;
 }
 
@@ -423,18 +423,18 @@ h1 {
 
 .play {
 	background-image: url('http://static.getnightingale.com/img/button-play-pause.png');
-	background-position: -5px -5px;
+	background-position: 0px 0px;
 	overflow: hidden;
-	height: 42px;
-	width: 42px;
+	height: 52px;
+	width: 52px;
 }
 
 .button:hover .play {
-	background-position: -5px 47px;
+	background-position: 0px -52px;
 }
 
 .button:active .play {
-	background-position: -5px -5px;
+	background-position: 0px -104px;
 }
 
 .button:hover {
@@ -467,7 +467,7 @@ h1 {
 
 .buttontext {
 	margin-left: 50px;
-	margin-top: -45px;
+	margin-top: -52px;
 	display: block;
 	color: #fff;
 }
