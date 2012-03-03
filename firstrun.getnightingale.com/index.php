@@ -60,6 +60,11 @@
 		width: 32py;
 		margin-right: 3px;
 	 }
+	 
+	 .item {
+		color: #000000 !important;
+		display: inline-block;
+	 }
 	</style>
 	
 	<link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
@@ -89,23 +94,22 @@
 			</div>
 			<div id="left">
 				<ul class="flist">
-					<li><img src="http://blogs-images.forbes.com/parmyolson/files/2011/06/ITunes_Logo.png" height="64" style="float:left;"> <b>Need help with importing your old library?</b><br>
-						We know that you want to get your music into Nightingale as fast as possible. For this purpose you can migrate your old itunes library to Nightingale.
-						<a href="http://wiki.getnightingale.com" class="more">Show me how &gt;</a></li>
-					<li>More helpingssss</li>
+					<li><a href="http://wiki.getnightingale.com" class="item"><img src="http://blogs-images.forbes.com/parmyolson/files/2011/06/ITunes_Logo.png" height="64" style="float:left;"> <b>Need help with importing your old library?</b><br>
+						We know that you want to get your music into Nightingale as fast as possible. For this purpose you can migrate your old itunes library to Nightingale.</a></li>
+					<li><a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird" class="item">Are you a former Songbird user? We don't offer direct importing yet, but there is a guide how you can import you songbird library to Nightingale.</a></li>
 				</ul>
 				<a href="http://wiki.getnightingale.com" class="more">Wiki &gt;</a>
 			</div>
 			<div id="right">
 				<p>
-					<img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_generic.png" style="margin-right: 10px; float: left;">
+					<img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_generic.png" style="margin-right: 10px;">
 					Missing a feature? An addon may already do that...<br>
-					otherwise, you can help develop or suggest one!
+					otherwise,&nbsp;you&nbsp;can&nbsp;help&nbsp;develop&nbsp;or&nbsp;suggest&nbsp;one!
 				</p>
 				<h3>Sugested Addons</h3>
 				<ul id="suglist">
-					<li><h4><img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mediaflow.png" class="addonicon" alt="Addon Icon">&nbsp;MediaFlow</h4>MediaFlow expands your experience of the library enormous by adding a flow of all your covers to the top of the library</li>
-					<li><h4><img src="http://code.google.com/p/songbird-livetweeter/logo?cct=1324873978" class="addonicon" alt="LiveTweeter Addon Icon">&nbsp;LiveTweeter</h4>Finally you can spam your skype, MSN, Twitter, Facebook and Google+ friends with the music you are listening to by just listening it. Because LiveTweeter spams for you.</li>
+					<li><h4><a href="" title="Detail page"><img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mediaflow.png" class="addonicon" alt="Addon Icon">MediaFlow</a></h4>MediaFlow expands your experience of the library enormous by adding a flow of all your covers to the top of the library</li>
+					<li><h4><img src="http://code.google.com/p/songbird-livetweeter/logo?cct=1324873978" class="addonicon" alt="LiveTweeter Addon Icon">LiveTweeter</h4>Finally you can spam your skype, MSN, Twitter, Facebook and Google+ friends with the music you are listening to by just listening it. Because LiveTweeter spams for you.</li>
 				</ul>
 				<a href="http://addons.getnightingale.com" class="more">Show more Addons &gt;</a>
 			</div>
