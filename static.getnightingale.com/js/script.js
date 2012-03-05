@@ -77,20 +77,18 @@ function getArchitecture() {
 	var arch = 32;
 	var OS = getOS();
 	
-	if(navigator.userAgent.indexOf("64")!=-1 && (OS != "Windows"||OS != "Mac OSX"))
+	if(navigator.userAgent.indexOf("64")!=-1 && OS != "Windows" && OS != "Mac OSX")
 		arch = 64;
 	return arch;
 }
 
 function optimizeOS(OS,arch) {
-	for (i = 0; i < download.systems.length; ++i) {
+	for (i = 0; i < download.systems.length; i++) {
 		if (download.systems[i].name == OS && download.systems[i].architecture == arch) {
-	
 			$('.button').attr('href',download.systems[i].link);
 			$('.button .small .os').text(OS+" | "+arch+"-Bit");
 			$("#screen a").attr('href',download.systems[i].fullsize);
 			$("#screen a img").attr('src',download.systems[i].screenshot);
-			break;
 		}
 		else {
 			$('#other').hide(); // hide the "we tried to detect" thing
