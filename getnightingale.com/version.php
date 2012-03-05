@@ -70,7 +70,7 @@ if($what=="JSON"||$what=="json"||$what=="js") {
 			'fullsize': '".$big[2]."'
 		}
 	],
-	'version':".$version."
+	'version':'".$version."'
 };";
 }
 

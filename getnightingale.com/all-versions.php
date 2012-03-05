@@ -61,12 +61,12 @@
 		</ul>
 		<h2>Mac:</h2>
 		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="<?php echo $urls[3]; ?>">Mac runnable | 32-Bit</a></li>
+			<li><a href="<?php echo $urls[3]; ?>">Mac disk Image (.dmg) | 32-Bit</a></li>
 		</ul>
 		<h2>Source:</h2>
 		<ul class="downloadlist" style="text-align:left;">
 			<li><a href="<?php echo $urls[4]; ?>">Tarball</a></li> <!-- Tarball link here! -->
-			<li><a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Git Repo</a> - right click and copy URL, then "git clone --depth=1 [url]" followed by "git checkout nightingale-1.8"</li>	
+			<li><a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Git Repo</a> - right click and copy URL, then "git clone --depth=1 [url]" followed by "git checkout nightingale-1.11"</li>	
 		</ul>
 		<h2>Linux Distro Specific:</h2>
 		<ul class="downloadlist" style="text-align:left;">
