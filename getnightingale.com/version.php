@@ -19,9 +19,9 @@ $urls[0] = ""; // Linux_32 URL
 $urls[1] = ""; // Linux_64 URL
 $urls[2] = ""; // Windows_32 URL
 $urls[3] = ""; // MAC_32 URL
-$urls[4] = ""; // Tarball URL
+$urls[4] = "http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.11.0"; // Tarball URL
 
-// Screenshot URLs, please use images in the dimension of 623x466px (thats a resized 640x480 screenshot)
+// Screenshot URLs, please use images in the dimension of 623x466px (thats a resized 4:3 screenshot)
 $images[0] = ""; // Linuxscreenshot
 $images[1] = "http://static.getnightingale.com/img/windows-screenshot.png"; // Windowsscreenshot
 $images[2] = "http://static.getnightingale.com/img/macosx-screenshot.png"; // Macscreenshot
@@ -69,10 +69,12 @@ if($what=="JSON"||$what=="json"||$what=="js") {
 			'screenshot': '"^.$images[2]."',
 			'fullsize': '".$big[2]."'
 		}
-	]
+	],
+	'version':".$version."
 };";
 }
 
+// get Version number
 else if($what=="num") {
 	echo $version;
 }
