@@ -15,20 +15,20 @@ $which = $GET['os'];
 $version = "1.11.0"; // actual version number
 
 // Installer / download URLs
-$urls[0] = ""; // Linux_32 URL
-$urls[1] = ""; // Linux_64 URL
-$urls[2] = ""; // Windows_32 URL
-$urls[3] = ""; // MAC_32 URL
+$urls[0] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_linux_x86.tar.bz2/download"; // Linux_32 URL
+$urls[1] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_linux_x86_64.tar.bz2/download"; // Linux_64 URL
+$urls[2] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_windows-i686.exe/download"; // Windows_32 URL
+$urls[3] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_macosx-i686.dmg/download"; // MAC_32 URL
 $urls[4] = "http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.11.0"; // Tarball URL
 
 // Screenshot URLs, please use images in the dimension of 623x466px (thats a resized 4:3 screenshot)
-$images[0] = ""; // Linuxscreenshot
+$images[0] = "http://static.getnightingale.com/img/linux-screenshot.png"; // Linuxscreenshot
 $images[1] = "http://static.getnightingale.com/img/windows-screenshot.png"; // Windowsscreenshot
 $images[2] = "http://static.getnightingale.com/img/macosx-screenshot.png"; // Macscreenshot
 
 // big screenshots (shown on click on the screenshot)
-$big[0] = ""; // Big Linux screenshot
-$big[1] = "http://static.getnightingale.com/img/windows-screenshot.png"; // big Windows screenshot
+$big[0] = "http://static.getnightingale.com/img/linux-screenshot-raw.png"; // Big Linux screenshot
+$big[1] = "http://static.getnightingale.com/img/windows-screenshot-raw.png"; // big Windows screenshot
 $big[2] = "http://static.getnightingale.com/img/macosx-screenshot-raw.png"; // Big Mac Screen.
 
 
