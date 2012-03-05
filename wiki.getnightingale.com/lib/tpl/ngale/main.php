@@ -187,5 +187,6 @@ if (!defined('DOKU_INC')) die();
 			</li>
 		</ul>
 	</footer>
+	<script src="http://static.getnightingale.com/js/language-switch.js" type="text/javascript"></script>
 </body>
 </html>
