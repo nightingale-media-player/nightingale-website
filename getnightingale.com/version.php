@@ -66,7 +66,7 @@ if($what=="JSON"||$what=="json"||$what=="js") {
 			'name': 'Mac OSX',
 			'architecture': 32,
 			'link': '".$urls[3]."',
-			'screenshot': '"^.$images[2]."',
+			'screenshot': '".$images[2]."',
 			'fullsize': '".$big[2]."'
 		}
 	],
