@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 	$("#screen").click(function(e) {
 		//Overlay elemnt code
-		var overlay = $('<div id="overlay" style="height:100%;width:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.8);cursor:pointer;display:none;"><img style="margin: 10px auto;display:block;" src="'+$("#screen a").attr('href')+'"></div>');
+		var overlay = $('<div id="overlay" style="z-index:1000;height:100%;width:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.8);cursor:pointer;display:none;"><img style="margin: 10px auto;display:block;" src="'+$("#screen a").attr('href')+'"></div>');
 		
 		
 		//initialize overlade and fade it in

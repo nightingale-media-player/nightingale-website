@@ -1,7 +1,7 @@
-var lang = navigator.language.substr(0,2);
-var link = document.getElementById("forumhelplink");
-
 window.onload = function() {
+	var lang = navigator.language.substr(0,2);
+	var link = document.getElementById("forumhelplink");
+
 	switch(lang) {
 		case "de":	link.href = "http://forum.getnightingale.com/forum-16.html";
 					link.innerHTML = "Hilfe";
@@ -16,5 +16,13 @@ window.onload = function() {
 					link.title = "Aiuto";
 		break;
 		default: link.href = "http://forum.getnightingale.com/forum-13.html";
+	}
+	
+	var footer = document.getElementById("ngalemainfooter");
+	
+	if(window.innerHeight>footer.offsetTop+footer.scrollHeight) {
+		footer.style.position = "absolute";
+		footer.style.bottom = "0px";
+		footer.style.left = "0px";
 	}
 }
