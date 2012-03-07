@@ -89,6 +89,7 @@ function optimizeOS(OS,arch) {
 			$('.button .small .os').text(OS+" | "+arch+"-Bit");
 			$("#screen a").attr('href',download.systems[i].fullsize);
 			$("#screen a img").attr('src',download.systems[i].screenshot);
+			$('#other').show(); // show the "we tried to detect" thing
 		}
 		else {
 			$('#other').hide(); // hide the "we tried to detect" thing
