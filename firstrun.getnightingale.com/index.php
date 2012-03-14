@@ -17,15 +17,13 @@
 	 }
 	 
 	 .flist li {
-		padding: 5px;
-		border-bottom: 1px solid grey;
+		padding: 10px 0;
 	 }
 	 
 	 #left {
 		width:455px;
 		padding: 10px;
 		height:342px;
-		border-right: 1px solid grey;
 	 }
 	 
 	 #right {
@@ -35,35 +33,29 @@
 		margin-top:-362px;
 	 }
 	 
-	 #right h3 {
+	 h3 {
 		margin-bottom: 5px;
 		padding: 0;
 	 }
 	 
-	 #suglist {
-		list-style: none;
+	 .flist li h4 {
 		margin: 0;
 		padding: 0;
-	 }
-	 #suglist li {
-		padding: 10px 0;
-		border-bottom: 1px solid grey;
 	 }
 	 
-	 #suglist li h4 {
-		margin: 0;
-		padding: 0;
+	 .flist a ,.flist a:link , .flist a:hover , .flist a:active {
+		color: #000000 !important;
+		test-decoration: none;
+	 }
+	 
+	 .flist a:hover h4 {
+		text-decoration: underline;
 	 }
 	 
 	 .addonicon {
 		height: 32px;
 		width: 32py;
 		margin-right: 3px;
-	 }
-	 
-	 .item {
-		color: #000000 !important;
-		display: inline-block;
 	 }
 	</style>
 	
@@ -93,23 +85,24 @@
 				More welcoming text. And more. More! MOREEEEEEEEEEEEEEEEEEEEEE! (less). <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:1.11.0_release_notes" title="Release Notes">Whats new?</a>
 			</div>
 			<div id="left">
+				<h3>Get started</h3>
 				<ul class="flist">
-					<li><a href="http://wiki.getnightingale.com" class="item"><img src="http://blogs-images.forbes.com/parmyolson/files/2011/06/ITunes_Logo.png" height="64" style="float:left;"> <b>Need help with importing your old library?</b><br>
+					<li><a href="http://wiki.getnightingale.com"><h4>Getting Started</h4>
+						A short introduction to Nightingale and how to set up the most important stuff</li>
+					<li><a href="http://wiki.getnightingale.com"><img src="http://blogs-images.forbes.com/parmyolson/files/2011/06/ITunes_Logo.png" height="64" style="float:left;"> <h4>Need help with importing your old library?</h4>
 						We know that you want to get your music into Nightingale as fast as possible. For this purpose you can migrate your old itunes library to Nightingale.</a></li>
-					<li><a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird" class="item">Are you a former Songbird user? We don't offer direct importing yet, but there is a guide how you can import you songbird library to Nightingale.</a></li>
+					<li><a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird" class="item"><h4>Import Songbird Library</h4>
+						Are you a former Songbird user? We don't offer direct importing yet, but there is a guide how you can import you songbird library to Nightingale.</a></li>
 				</ul>
 				<a href="http://wiki.getnightingale.com" class="more">Wiki &gt;</a>
 			</div>
 			<div id="right">
-				<p>
-					<img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_generic.png" style="margin-right: 10px;">
-					Missing a feature? An addon may already do that...<br>
-					otherwise,&nbsp;you&nbsp;can&nbsp;help&nbsp;develop&nbsp;or&nbsp;suggest&nbsp;one!
-				</p>
 				<h3>Sugested Addons</h3>
-				<ul id="suglist">
-					<li><h4><a href="" title="Detail page"><img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mediaflow.png" class="addonicon" alt="Addon Icon">MediaFlow</a></h4>MediaFlow expands your experience of the library enormous by adding a flow of all your covers to the top of the library</li>
-					<li><h4><img src="http://code.google.com/p/songbird-livetweeter/logo?cct=1324873978" class="addonicon" alt="LiveTweeter Addon Icon">LiveTweeter</h4>Finally you can spam your skype, MSN, Twitter, Facebook and Google+ friends with the music you are listening to by just listening it. Because LiveTweeter spams for you.</li>
+				<ul class="flist">
+					<li><a href="" title="Detail page"><h4><img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mediaflow.png" class="addonicon" alt="Addon Icon">MediaFlow</h4>
+						MediaFlow expands your experience of the library enormous by adding a flow of all your covers to the top of the library</a></li>
+					<li><a href="" title="Detail page"><h4><img src="http://code.google.com/p/songbird-livetweeter/logo?cct=1324873978" class="addonicon" alt="LiveTweeter Addon Icon">LiveTweeter</h4>
+						Finally you can spam your skype, MSN, Twitter, Facebook and Google+ friends with the music you are listening to by just listening it. Because LiveTweeter spams for you.</a></li>
 				</ul>
 				<a href="http://addons.getnightingale.com" class="more">Show more Addons &gt;</a>
 			</div>
