@@ -50,30 +50,32 @@
 		<div id="headtitle">
 			<h1>All Nightingale <?echo $version ?> downloads</h1>
 		</div>
-		<h2>Linux:</h2>
-		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="<?php echo $urls[0]; ?>">Linux Tarball (.tar.gz) | 32-Bit</a></li> <!-- here goes the linux 32bit tarball -->
-			<li><a href="<?php echo $urls[1]; ?>">Linux Tarball (.tar.gz)  | 64-Bit</a></li> <!-- and here its 64bit twin -->
-		</ul>
-		<h2>Windows:</h2>
-		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="<?php echo $urls[2]; ?>">Windows Installer (.exe) | 32-Bit</a></li> <!-- this link here offcourse refers to the windows installer.-->
-		</ul>
-		<h2>Mac:</h2>
-		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="<?php echo $urls[3]; ?>">Mac disk Image (.dmg) | 32-Bit</a></li>
-		</ul>
-		<h2>Source:</h2>
-		<ul class="downloadlist" style="text-align:left;">
-			<li><a href="<?php echo $urls[4]; ?>">Tarball</a></li> <!-- Tarball link here! -->
-			<li><a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Git Repo</a> - right click and copy URL, then "git clone --depth=1 [url]" followed by "git checkout nightingale-1.11"</li>	
-		</ul>
-		<h2>Linux Distro Specific:</h2>
-		<ul class="downloadlist" style="text-align:left;">
-			<li><a target="_blank" href="https://aur.archlinux.org/packages.php?ID=52721">Archlinux PKGBUILD</a></li>
-			<li>Ubuntu/Debian PPA Wanted - feel free to make one and we'll put it here!</li>
-			<li>Other distros: let us know and we'll post your Nightingale links here!</li>
-		</ul>
+		<div id="under">
+			<h2>Linux:</h2>
+			<ul class="downloadlist" style="text-align:left;">
+				<li><a href="<?php echo $urls[0]; ?>">Linux Tarball (.tar.gz) | 32-Bit</a></li> <!-- here goes the linux 32bit tarball -->
+				<li><a href="<?php echo $urls[1]; ?>">Linux Tarball (.tar.gz)  | 64-Bit</a></li> <!-- and here its 64bit twin -->
+			</ul>
+			<h2>Windows:</h2>
+			<ul class="downloadlist" style="text-align:left;">
+				<li><a href="<?php echo $urls[2]; ?>">Windows Installer (.exe) | 32-Bit</a></li> <!-- this link here offcourse refers to the windows installer.-->
+			</ul>
+			<h2>Mac:</h2>
+			<ul class="downloadlist" style="text-align:left;">
+				<li><a href="<?php echo $urls[3]; ?>">Mac disk Image (.dmg) | 32-Bit</a></li>
+			</ul>
+			<h2>Source:</h2>
+			<ul class="downloadlist" style="text-align:left;">
+				<li><a href="<?php echo $urls[4]; ?>">Tarball</a></li> <!-- Tarball link here! -->
+				<li><a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Git Repo</a> - right click and copy URL, then "git clone --depth=1 [url]" followed by "git checkout nightingale-1.11"</li>	
+			</ul>
+			<h2>Linux Distro Specific:</h2>
+			<ul class="downloadlist" style="text-align:left;">
+				<li><a target="_blank" href="https://aur.archlinux.org/packages.php?ID=52721">Archlinux PKGBUILD</a></li>
+				<li>Ubuntu/Debian PPA Wanted - feel free to make one and we'll put it here!</li>
+				<li>Other distros: let us know and we'll post your Nightingale links here!</li>
+			</ul>
+		</div>
 	  </div>
   </div>
 	<?php include("footer.php"); ?>

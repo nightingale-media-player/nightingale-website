@@ -6,8 +6,27 @@
 	<link rel="stylesheet" href="http://static.getnightingale.com/css/general.css" >
 	<link rel="stylesheet" href="http://static.getnightingale.com/css/style.css" >
 	<style type="text/css">
+	 #headtitle {
+		border-radius: 5px 5px 0 0;
+		
+		border: none;
+	 }
+	 
 	 #headtitle a {
 		color: lightgray;
+	 }
+	 
+	 #under {
+		padding: 10px;
+		
+		width: 928px;
+		
+		border-radius: 0 0 5px 5px;
+	 }
+	 
+	 #main {
+		box-shadow: 0 0 10px #292929;
+		border-radius: 5px;
 	 }
 	 
 	 .flist {
@@ -22,16 +41,19 @@
 	 
 	 #left {
 		width:455px;
-		padding: 10px;
-		height:342px;
+		height: 322px;
 	 }
 	 
 	 #right {
 		width:455px;
-		padding: 10px;
 		margin-left:475px;
-		margin-top:-362px;
-	 }
+		margin-top:-342px;
+		height: 322px;
+	}
+	
+	#right .more {
+		margin-top: -20px;
+	}
 	 
 	 h3 {
 		margin-bottom: 5px;
@@ -43,20 +65,31 @@
 		padding: 0;
 	 }
 	 
-	 .flist a ,.flist a:link , .flist a:hover , .flist a:active {
-		color: #000000 !important;
+	 .flist li img {
+		padding-right: 6px;
+	 }
+	 
+	 .flist a ,.flist a:link {
+		color:rgb(70,70,70) !important;
 		test-decoration: none;
 	 }
 	 
-	 .flist a:hover h4 {
-		text-decoration: underline;
+	 .flist a:hover, .flist a:active {
+		color: black !important;
+	 }
+	 
+	 .flist a h4,.flist a:link h4, .flist a:active h4, .flist a:hover h4 {
+		color: black !important;
+		test-decoration: none;
 	 }
 	 
 	 .addonicon {
 		height: 32px;
-		width: 32py;
-		margin-right: 3px;
-	 }
+		width: 32px;
+		vertical-align: bottom;
+		
+		padding-bottom: 3px;
+	}
 	</style>
 	
 	<link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
@@ -84,27 +117,29 @@
 				<h1>Welcome to Nightingale</h1>
 				More welcoming text. And more. More! MOREEEEEEEEEEEEEEEEEEEEEE! (less). <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:1.11.0_release_notes" title="Release Notes">Whats new?</a>
 			</div>
-			<div id="left">
-				<h3>Get started</h3>
-				<ul class="flist">
-					<li><a href="http://wiki.getnightingale.com"><h4>Getting Started</h4>
-						A short introduction to Nightingale and how to set up the most important stuff</li>
-					<li><a href="http://wiki.getnightingale.com"><img src="http://blogs-images.forbes.com/parmyolson/files/2011/06/ITunes_Logo.png" height="64" style="float:left;"> <h4>Need help with importing your old library?</h4>
-						We know that you want to get your music into Nightingale as fast as possible. For this purpose you can migrate your old itunes library to Nightingale.</a></li>
-					<li><a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird" class="item"><h4>Import Songbird Library</h4>
-						Are you a former Songbird user? We don't offer direct importing yet, but there is a guide how you can import you songbird library to Nightingale.</a></li>
-				</ul>
-				<a href="http://wiki.getnightingale.com" class="more">Wiki &gt;</a>
-			</div>
-			<div id="right">
-				<h3>Sugested Addons</h3>
-				<ul class="flist">
-					<li><a href="" title="Detail page"><h4><img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mediaflow.png" class="addonicon" alt="Addon Icon">MediaFlow</h4>
-						MediaFlow expands your experience of the library enormous by adding a flow of all your covers to the top of the library</a></li>
-					<li><a href="" title="Detail page"><h4><img src="http://code.google.com/p/songbird-livetweeter/logo?cct=1324873978" class="addonicon" alt="LiveTweeter Addon Icon">LiveTweeter</h4>
-						Finally you can spam your skype, MSN, Twitter, Facebook and Google+ friends with the music you are listening to by just listening it. Because LiveTweeter spams for you.</a></li>
-				</ul>
-				<a href="http://addons.getnightingale.com" class="more">Show more Addons &gt;</a>
+			<div id="under">
+				<div id="left">
+					<h3>Get started</h3>
+					<ul class="flist">
+						<li><a href="http://wiki.getnightingale.com"><h4>Getting Started</h4>
+							A short introduction to Nightingale and how to set up the most important stuff</li>
+						<li><a href="http://wiki.getnightingale.com"><h4>Need help with importing your old library?</h4>
+							<img src="http://blogs-images.forbes.com/parmyolson/files/2011/06/ITunes_Logo.png" height="58" style="float:left;"> We know that you want to get your music into Nightingale as fast as possible. For this purpose you can migrate your old itunes library to Nightingale.</a></li>
+						<li><a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird" class="item"><h4>Import Songbird Library</h4>
+							Are you a former Songbird user? We don't offer direct importing yet, but there is a guide how you can import you songbird library to Nightingale.</a></li>
+					</ul>
+					<a href="http://wiki.getnightingale.com" class="more">Wiki &gt;</a>
+				</div>
+				<div id="right">
+					<h3>Sugested Addons</h3>
+					<ul class="flist">
+						<li><a href="" title="Detail page"><h4><img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mediaflow.png" class="addonicon" alt="Addon Icon">MediaFlow</h4>
+							MediaFlow expands your experience of the library enormous by adding a flow of all your covers to the top of the library</a></li>
+						<li><a href="" title="Detail page"><h4><img src="http://code.google.com/p/songbird-livetweeter/logo?cct=1324873978" class="addonicon" alt="LiveTweeter Addon Icon">LiveTweeter</h4>
+							Finally you can spam your skype, MSN, Twitter, Facebook and Google+ friends with the music you are listening to by just listening it. Because LiveTweeter spams for you.</a></li>
+					</ul>
+					<a href="http://addons.getnightingale.com" class="more">Show more Addons &gt;</a>
+				</div>
 			</div>
 		</div>
 	</div>

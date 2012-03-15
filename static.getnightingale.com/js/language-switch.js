@@ -16,13 +16,20 @@ window.onload = function() {
 					link.title = "Aiuto";
 		break;
 		default: link.href = "http://forum.getnightingale.com/forum-13.html";
-	}
-	
+	}	
+	placeFooter
+}
+
+window.onresize = placeFooter();
+
+function placeFooter() {
 	var footer = document.getElementById("ngalemainfooter");
-	
 	if(window.innerHeight>footer.offsetTop+footer.scrollHeight) {
 		footer.style.position = "absolute";
 		footer.style.bottom = "0px";
 		footer.style.left = "0px";
+	}
+	else {
+		footer.style.position = "static";
 	}
 }

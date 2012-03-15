@@ -283,7 +283,7 @@ a:visited ,a:active,a:hover{
 #headtitle {
 	width:100%;
 	
-	border-radius:5px;
+	border-radius:5px 5px 0 0;
 	-moz-border-radius:5px;
 	
 	background: #4e8eb5; /* Old browsers */
@@ -298,10 +298,17 @@ a:visited ,a:active,a:hover{
 	text-align: left;
 	color: #fff; /*222*/
 	
-	border: 2px solid #4673AA;
-	
 	padding: 10px 0;
 	text-align: center;
+}
+
+#under {
+	width: 100%;
+	padding: 12px;
+		
+	z-index: 1;
+		
+	border-radius: 0 0 5px 5px;
 }
 
 #mainmsg a:link, #mainmsg a:visited {
