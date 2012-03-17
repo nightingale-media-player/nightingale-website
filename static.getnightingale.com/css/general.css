@@ -21,10 +21,12 @@ body {
 /* header/nav */
 
 	#ngalemainhead{
-		margin-bottom: 1em;
+		padding-bottom: 1em;
 		font-size: 15px;
 		line-height: 1.231 !important;
 		font-family: 'Open Sans', sans-serif;
+		width: 950px;
+		margin: 0 auto;
 	}
 
 	#headlogo {
@@ -39,6 +41,12 @@ body {
 		margin-top: 1em;
 	}
 	
+	#ngalemainhead nav .menu {
+		border-radius: 5px;
+		-moz-border-radius: 10px;
+		overflow: hidden;
+	}
+	
 	#ngalemainhead nav li {
 		float: left;
 		background-color: #333333;
@@ -51,16 +59,6 @@ body {
 		background-color: transparent !important;
 		display: block;
 		padding:.8em;
-	}
-	
-	#ngalemainhead nav li:first-child a,#ngalemainhead nav li:first-child  {
-		border-radius: 5px 0 0 5px;
-		-moz-border-radius: 5px 0 0 5px;
-	}
-	
-	#ngalemainhead nav li:last-child  a,#ngalemainhead nav li:last-child{
-		border-radius:0 5px 5px 0;
-		-moz-border-radius:0 5px 5px 0;
 	}
 	
 	#ngalemainhead nav .actual a {
@@ -153,12 +151,22 @@ body {
 	padding: 0;
 }
 
-#footerwrapper li {
+#footerwrapper>li {
 	float: left;
 	display: block;
-	width: 296.6px;
-	padding: 0 30px 0 0;
+	width: 276.6px;
+	padding: 0 20px;
 	margin: 0;
+}
+
+#footerwrapper>li:first-child {
+	padding-left: 0 !important;
+	width: 296.6px;
+}
+
+#footerwrapper>li:last-child {
+	padding-right: 0 !important;
+	width: 296.6px;
 }
 
 #double {
@@ -166,17 +174,15 @@ body {
 	padding: 0;
 }
 
-#double li {
+#double>li {
 	float: left;
-	width: 133.3px;
-}
-
-#double li:first-child {
+	width: 118.3px;
 	padding-right: 20px;
 }
 
-#footerwrapper li:last-child {
-	padding-left: 10px;
+#double>li:last-child {
+    padding-right: 0;
+    padding-left: 10px;
 }
 
 #outlinedngale {
