@@ -7,8 +7,9 @@
 	<link rel="stylesheet" href="http://static.getnightingale.com/css/style.css" >
 	<style type="text/css">
 	 #headtitle {
-		border-radius: 5px 5px 0 0;
-		
+		border-radius: 5px;
+		margin-bottom: 20px;
+		box-shadow: 0 0 5px #505050;
 		border: none;
 	 }
 	 
@@ -17,15 +18,11 @@
 	 }
 	 
 	 #under {
-		padding: 10px;
-		
-		width: 928px;
-		
-		border-radius: 0 0 5px 5px;
+		border-radius: 5px;
+		box-shadow: 0 0 5px #9f9f9f;
 	 }
 	 
 	 #main {
-		box-shadow: 0 0 10px #292929;
 		border-radius: 5px;
 	 }
 	 
@@ -37,27 +34,35 @@
 	 
 	 .flist li {
 		padding: 10px 0;
+		opacity: .8;
+		-moz-transition-property: opacity;
+		-moz-transition-duration: .3s;
+		-webkit-transition-property: opacity;
+		-webkit-transition-duration: .3s;
+		-o-transition-property: opacity;
+		-o-transition-duration: .3s;
+		transition-property: opacity;
+		transition-duration: .3s;
 	 }
 	 
-	 #left {
-		width:455px;
-		height: 322px;
-	 }
-	 
-	 #right {
-		width:455px;
-		margin-left:475px;
-		margin-top:-342px;
-		height: 322px;
-	}
-	
-	#right .more {
-		margin-top: -20px;
-	}
-	 
-	 h3 {
+	th {
 		margin-bottom: 5px;
 		padding: 0;
+		border-bottom: 1px solid #ccc;
+		width: 50%;
+	 }
+	 
+	 th:first-child {
+		border-right: 1px solid #ccc;
+	 }
+	 
+	 td {
+		padding: 10px;
+		width: 50%;
+	 }
+	 
+	 td:first-child {
+		border-right: 1px solid #ccc;
 	 }
 	 
 	 .flist li h4 {
@@ -70,12 +75,12 @@
 	 }
 	 
 	 .flist a ,.flist a:link {
-		color:rgb(70,70,70) !important;
+		color: black;
 		test-decoration: none;
 	 }
 	 
-	 .flist a:hover, .flist a:active {
-		color: black !important;
+	 .flist li:hover, .flist li:active {
+		opacity: 1 !important;
 	 }
 	 
 	 .flist a h4,.flist a:link h4, .flist a:active h4, .flist a:hover h4 {
@@ -87,6 +92,7 @@
 		height: 32px;
 		width: 32px;
 		vertical-align: bottom;
+		float: left;
 		
 		padding-bottom: 3px;
 	}
@@ -118,8 +124,9 @@
 				More welcoming text. And more. More! MOREEEEEEEEEEEEEEEEEEEEEE! (less). <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:1.11.0_release_notes" title="Release Notes">Whats new?</a>
 			</div>
 			<div id="under">
-				<div id="left">
-					<h3>Get started</h3>
+			<table>
+				<tr><th><h3>Get started</h3></th><th><h3>Sugested Addons</h3></th></tr>
+				<tr><td>
 					<ul class="flist">
 						<li><a href="http://wiki.getnightingale.com"><h4>Getting Started</h4>
 							A short introduction to Nightingale and how to set up the most important stuff</li>
@@ -129,17 +136,17 @@
 							Are you a former Songbird user? We don't offer direct importing yet, but there is a guide how you can import you songbird library to Nightingale.</a></li>
 					</ul>
 					<a href="http://wiki.getnightingale.com" class="more">Wiki &gt;</a>
-				</div>
-				<div id="right">
-					<h3>Sugested Addons</h3>
+				</td>
+				<td>
 					<ul class="flist">
-						<li><a href="" title="Detail page"><h4><img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mediaflow.png" class="addonicon" alt="Addon Icon">MediaFlow</h4>
+						<li><a href="" title="Detail page"><img src="http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mediaflow.png" class="addonicon" alt="Addon Icon"><h4>MediaFlow</h4>
 							MediaFlow expands your experience of the library enormous by adding a flow of all your covers to the top of the library</a></li>
-						<li><a href="" title="Detail page"><h4><img src="http://code.google.com/p/songbird-livetweeter/logo?cct=1324873978" class="addonicon" alt="LiveTweeter Addon Icon">LiveTweeter</h4>
+						<li><a href="" title="Detail page"><img src="http://code.google.com/p/songbird-livetweeter/logo?cct=1324873978" class="addonicon" alt="LiveTweeter Addon Icon"><h4>LiveTweeter</h4>
 							Finally you can spam your skype, MSN, Twitter, Facebook and Google+ friends with the music you are listening to by just listening it. Because LiveTweeter spams for you.</a></li>
 					</ul>
 					<a href="http://addons.getnightingale.com" class="more">Show more Addons &gt;</a>
-				</div>
+				</td></tr>
+			</table>
 			</div>
 		</div>
 	</div>
