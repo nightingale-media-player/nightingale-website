@@ -16,6 +16,7 @@ body {
 	background-image: url('http://static.getnightingale.com/img/gradent.png');
 	background-repeat:repeat-x;
 	font-family: 'Open Sans', sans-serif;
+	overflow-y: scroll;
 }
 
 /* header/nav */

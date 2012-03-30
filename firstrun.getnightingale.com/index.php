@@ -5,98 +5,7 @@
 	
 	<link rel="stylesheet" href="http://static.getnightingale.com/css/general.css" >
 	<link rel="stylesheet" href="http://static.getnightingale.com/css/style.css" >
-	<style type="text/css">
-	 #headtitle {
-		border-radius: 5px;
-		margin-bottom: 20px;
-		box-shadow: 0 0 5px #505050;
-		border: none;
-	 }
-	 
-	 #headtitle a {
-		color: lightgray;
-	 }
-	 
-	 #under {
-		border-radius: 5px;
-		box-shadow: 0 0 5px #9f9f9f;
-	 }
-	 
-	 #main {
-		border-radius: 5px;
-	 }
-	 
-	 .flist {
-		list-style: none;
-		padding:0;
-		margin:0 0 10px;
-	 }
-	 
-	 .flist li {
-		padding: 10px 0;
-		opacity: .8;
-		-moz-transition-property: opacity;
-		-moz-transition-duration: .3s;
-		-webkit-transition-property: opacity;
-		-webkit-transition-duration: .3s;
-		-o-transition-property: opacity;
-		-o-transition-duration: .3s;
-		transition-property: opacity;
-		transition-duration: .3s;
-	 }
-	 
-	th {
-		margin-bottom: 5px;
-		padding: 0;
-		border-bottom: 1px solid #ccc;
-		width: 50%;
-	 }
-	 
-	 th:first-child {
-		border-right: 1px solid #ccc;
-	 }
-	 
-	 td {
-		padding: 10px;
-		width: 50%;
-	 }
-	 
-	 td:first-child {
-		border-right: 1px solid #ccc;
-	 }
-	 
-	 .flist li h4 {
-		margin: 0;
-		padding: 0;
-	 }
-	 
-	 .flist li img {
-		padding-right: 6px;
-	 }
-	 
-	 .flist a ,.flist a:link {
-		color: black;
-		test-decoration: none;
-	 }
-	 
-	 .flist li:hover, .flist li:active {
-		opacity: 1 !important;
-	 }
-	 
-	 .flist a h4,.flist a:link h4, .flist a:active h4, .flist a:hover h4 {
-		color: black !important;
-		test-decoration: none;
-	 }
-	 
-	 .addonicon {
-		height: 32px;
-		width: 32px;
-		vertical-align: bottom;
-		float: left;
-		
-		padding-bottom: 3px;
-	}
-	</style>
+
 	
 	<link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
   
@@ -106,7 +15,7 @@
 	<div id="page">
 		<!-- Use this as header -->
 		<header id="ngalemainhead">
-			<a href="/" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
+			<a href="http://getnightingale.com" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 			<nav>
 			<ul class="menu">
 				<li><a href="http://getnightingale.com" title="Home">Home</a></li>

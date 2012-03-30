@@ -21,7 +21,7 @@
   
   <!-- css -->
   <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
-  <link rel="stylesheet" href="http://static.getnightingale.com/css/style.css">
+  <link rel="stylesheet" href="file:///E:/Users/Martin/Documents/dev/web/ngale/static.getnightingale.com/css/style.css">
   
   <!-- favicon -->
   <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="favicon.ico" >
@@ -32,25 +32,26 @@
 
 <body>
   <div id="page">
-  <!-- Use this as header -->
-	<header id="ngalemainhead">
-		<a href="/" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
-		<nav>
-		<ul class="menu">
-			<li><a href="/" title="Home">Home</a></li>
-			<li><a href="http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
-			<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-			<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
-			<li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
-		</ul>
-		</nav>
-	</header>
+		<!-- Use this as header -->
+		<header id="ngalemainhead">
+			<a href="/" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
+			<nav>
+			<ul class="menu">
+				<li><a href="http://getnightingale.com" title="Home">Home</a></li>
+				<li><a href="http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
+				<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
+				<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
+				<li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
+			</ul>
+			</nav>
+		</header>
+		<!-- end of header -->
 	<!-- end of header -->
     <div id="main" role="main">
 		<div id="headtitle">
 			<h1>All Nightingale <?echo $version ?> downloads</h1>
 		</div>
-		<div id="under">
+		<div id="under" class="plaincontent">
 			<h2>Linux:</h2>
 			<ul class="downloadlist" style="text-align:left;">
 				<li><a href="<?php echo $urls[0]; ?>">Linux Tarball (.tar.gz) | 32-Bit</a></li> <!-- here goes the linux 32bit tarball -->

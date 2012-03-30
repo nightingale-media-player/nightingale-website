@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Freaktechnik's Nightingale Forum Theme v8" version="1605">
+<theme name="Freaktechnik's Nightingale Forum Theme v21" version="2000">
 	<properties>
 		<templateset><![CDATA[2]]></templateset>
 		<editortheme><![CDATA[default]]></editortheme>
@@ -9,7 +9,9 @@
 		<borderwidth><![CDATA[0]]></borderwidth>
 	</properties>
 	<stylesheets>
-		<stylesheet name="css3.css" version="1605"><![CDATA[tr td.trow1:first-child,
+		<stylesheet name="css3.css" version="2000"><![CDATA[
+html{ overflow-y: scroll;}
+tr td.trow1:first-child,
 tr td.trow2:first-child,
 tr td.trow_shaded:first-child {
 	border-left: 0;
@@ -289,8 +291,7 @@ color:#555;
 	
 	text-align: left;
 	color: #fff; /*222*/
-	
-	border: 2px solid #4673AA;
+	box-shadow: 0 0 5px #505050;
 	border-radius: 5px;	
 }
 

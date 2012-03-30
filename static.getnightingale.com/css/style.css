@@ -1,5 +1,5 @@
 /* 
- * HTML5 ✰ Boilerplate
+ * HTML5 Boilerplate
  *
  * What follows is the result of much research on cross-browser styling. 
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -283,7 +283,7 @@ a:visited ,a:active,a:hover{
 #headtitle {
 	width:100%;
 	
-	border-radius:5px 5px 0 0;
+	border-radius:5px;
 	-moz-border-radius:5px;
 	
 	background: #4e8eb5; /* Old browsers */
@@ -295,20 +295,34 @@ a:visited ,a:active,a:hover{
 	background: linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e8eb5', endColorstr='#496b8e',GradientType=0 ); /* IE6-9 */
 	
-	text-align: left;
 	color: #fff; /*222*/
 	
 	padding: 10px 0;
 	text-align: center;
+	
+	margin-bottom: 20px;
+	
+	box-shadow: 0 0 5px #505050;
+	border: none;
+}
+
+#headtitle a {
+	color: lightgray;
 }
 
 #under {
 	width: 100%;
-	padding: 12px;
 		
 	z-index: 1;
-		
-	border-radius: 0 0 5px 5px;
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow: 0 0 5px #9f9f9f;
+}
+
+.plaincontent {
+	padding: 10px;
+	width: 930px !important;
 }
 
 #mainmsg a:link, #mainmsg a:visited {
@@ -488,6 +502,73 @@ h1 {
 
 #other {
 	font-size: 10px;
+}
+
+/* firstrun styles */
+
+#under .flist {
+	list-style: none;
+	padding:0;
+	margin:0 0 10px;
+}
+ 
+#under .flist li {
+	padding: 10px 0;
+	opacity: .8;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: .3s;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: .3s;
+	-o-transition-property: opacity;
+	-o-transition-duration: .3s;
+	transition-property: opacity;
+	transition-duration: .3s;
+}
+
+#under th {
+	margin-bottom: 5px;
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+	width: 50%;
+}
+
+#under th:first-child {
+	border-right: 1px solid #ccc;
+}
+
+#under td {
+	padding: 10px;
+	width: 50%;
+}
+
+#under td:first-child {
+	border-right: 1px solid #ccc;
+}
+
+#under .flist li h4 {
+	margin: 0;
+	padding: 0;
+}
+	 
+#under .flist li img {
+	padding-right: 6px;
+}
+
+#under .flist li>a {
+	color: black;
+}
+
+#under .flist li:hover,#under .flist li:active {
+	opacity: 1 !important;
+}
+
+#under .addonicon {
+	height: 32px;
+	width: 32px;
+	vertical-align: bottom;
+	float: left;
+
+	padding-bottom: 3px;
 }
 
 /* ==|== non-semantic helper classes ========================================
