@@ -44,7 +44,7 @@ body {
 	
 	#ngalemainhead nav .menu {
 		border-radius: 5px;
-		-moz-border-radius: 10px;
+		-moz-border-radius: 5px;
 		overflow: hidden;
 	}
 	
