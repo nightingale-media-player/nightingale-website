@@ -17,6 +17,8 @@ $version = "1.11.0"; // actual version number
 // Installer / download URLs
 $urls[0] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_linux_x86.tar.bz2/download"; // Linux_32 URL
 $urls[1] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_linux_x86_64.tar.bz2/download"; // Linux_64 URL
+$urls[5] = "ppa://trebelnik-stefina/nightingale"; // Ubuntu PPA
+$urls[6] = "https://aur.archlinux.org/packages.php?ID=52721"; //Archlinux
 $urls[2] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_windows-i686.exe/download"; // Windows_32 URL
 $urls[3] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_macosx-i686.dmg/download"; // MAC_32 URL
 $urls[4] = "http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.11.0"; // Tarball URL
@@ -52,6 +54,13 @@ if($what=="JSON"||$what=="json"||$what=="js") {
 			'name': 'Linux',
 			'architecture': 64,
 			'link': '".$urls[1]."',
+			'screenshot': '".$images[0]."',
+			'fullsize': '".$big[0]."'
+		},
+		{
+			'name': 'Ubuntu',
+			'architecture': 32,
+			'link': '".$urls[5]."',
 			'screenshot': '".$images[0]."',
 			'fullsize': '".$big[0]."'
 		},

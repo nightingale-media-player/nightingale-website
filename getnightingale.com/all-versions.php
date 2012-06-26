@@ -15,9 +15,6 @@
   <meta name="description" content="Nightingale is a free and powerfull music player for Linux, Windows and Mac">
   <meta name="author" content="Martin Giger">
   <link type="text/plain" rel="author" href="humans.txt" >
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
   
   <!-- css -->
   <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
@@ -54,8 +51,8 @@
 		<div id="under" class="plaincontent">
 			<h2>Linux:</h2>
 			<ul class="downloadlist" style="text-align:left;">
-				<li><a href="<?php echo $urls[0]; ?>">Linux Tarball (.tar.gz) | 32-Bit</a></li> <!-- here goes the linux 32bit tarball -->
-				<li><a href="<?php echo $urls[1]; ?>">Linux Tarball (.tar.gz)  | 64-Bit</a></li> <!-- and here its 64bit twin -->
+				<li><a href="<?php echo $urls[0]; ?>">Linux Tarball (.tar.bz2) | 32-Bit</a></li> <!-- here goes the linux 32bit tarball -->
+				<li><a href="<?php echo $urls[1]; ?>">Linux Tarball (.tar.bz2)  | 64-Bit</a></li> <!-- and here its 64bit twin -->
 			</ul>
 			<h2>Windows:</h2>
 			<ul class="downloadlist" style="text-align:left;">
@@ -72,8 +69,8 @@
 			</ul>
 			<h2>Linux Distro Specific:</h2>
 			<ul class="downloadlist" style="text-align:left;">
-				<li><a target="_blank" href="https://aur.archlinux.org/packages.php?ID=52721">Archlinux PKGBUILD</a></li>
-				<li>Ubuntu/Debian PPA Wanted - feel free to make one and we'll put it here!</li>
+				<li><a href="<?php echo $urls[6]; ?>">Archlinux PKGBUILD</a></li>
+				<li><a href="<?php echo $urls[5]; ?>">Ubuntu PPA</a></li>
 				<li>Other distros: let us know and we'll post your Nightingale links here!</li>
 			</ul>
 		</div>

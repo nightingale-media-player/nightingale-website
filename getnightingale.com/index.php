@@ -16,12 +16,10 @@
   <meta name="tags" content="Nightingale free powerfull music video browser Firefox Gecko Songbird player Linux Windows Mac">
   <meta name="author" content="Martin Giger">
   <link type="text/plain" rel="author" href="humans.txt" >
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   
   <!-- css -->
   <link rel="stylesheet" href="http://static.getnightingale.com/css/style.css">
-  <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
+  <link rel="stylesheet" href="file:///E:/Users/Martin/Documents/dev/web/ngale/static.getnightingale.com/css/general.css">
   
   <!-- favicon -->
   <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="favicon.ico" >
@@ -33,18 +31,20 @@
 </head>
 
 <body>
+  <div id="topline"></div>
   <div id="page">
   <!-- Use this as header -->
 	<header id="ngalemainhead">
 		<a href="/" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
 		<nav>
-		<ul class="menu">
-			<li class="actual"><a href="/" title="Home">Home</a></li>
-			<li><a href="http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
-			<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-			<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
-			<li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
-		</ul>
+			<div id="rightend"><div id="rightoverlay"></div></div>
+			<ul class="menu">
+				<li class="actual"><a href="/" title="Home">Home</a></li>
+				<li><a href="http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
+				<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
+				<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
+				<li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
+			</ul>
 		</nav>
 	</header>
 	<!-- end of header -->
