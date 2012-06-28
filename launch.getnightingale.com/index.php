@@ -22,7 +22,7 @@ if ($_COOKIE["nightingale_installed"] == "yes") {
 		function nightingaleOpen(stay) {
 			var gotourl = ".$_GET['url'].";
 			if(gotourl!='') {
-				var url = 'nightingale:open?url='+gotourl;
+				var url = 'songbird:open?url='+gotourl;
 				setTimeout(function() {
 					window.location.href = url;
 					if (!stay) {
@@ -58,7 +58,7 @@ if ($_COOKIE["nightingale_installed"] == "yes") {
 			Launching Nightingale...
 		</p>
 		<p class='link'>
-			<a href='nightingale:open?url=".$_GET['url']."'>nightingale:open?url=".htmlspecialchars($_GET['url'])."</a>
+			<a href='songbird:open?url=".$_GET['url']."'>songbird:open?url=".htmlspecialchars($_GET['url'])."</a>
 		</p>
 		<img src='images/launch.png' />
 		<div id='options'>
@@ -79,7 +79,7 @@ if ($_COOKIE["nightingale_installed"] == "yes") {
           Nightingale has not yet been detected.
         </p>
         <p class='link'>
-          <a href='nightingale:open?url=".$_GET['url']."'>nightingale:open?url=".htmlspecialchars($_GET['url'])."</a>
+          <a href='songbird:open?url=".$_GET['url']."'>songbird:open?url=".htmlspecialchars($_GET['url'])."</a>
         </p>
         <img src='images/detect.png' />
         <div id='options'>
