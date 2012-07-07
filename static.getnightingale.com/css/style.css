@@ -267,9 +267,10 @@ a:visited ,a:active,a:hover{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e8eb5', endColorstr='#496b8e',GradientType=0 ); /* IE6-9 */
 	
 	text-align: left;
-	color: #fff; /*222*/
+	color: #fff;
 	
-	border: 2px solid #4673AA;
+	box-shadow: 0 0 5px #505050;
+	border: none;
 	
 	width: 286.6px;
 	height: 462px;
@@ -295,7 +296,7 @@ a:visited ,a:active,a:hover{
 	background: linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e8eb5', endColorstr='#496b8e',GradientType=0 ); /* IE6-9 */
 	
-	color: #fff; /*222*/
+	color: #fff;
 	
 	padding: 10px 0;
 	text-align: center;

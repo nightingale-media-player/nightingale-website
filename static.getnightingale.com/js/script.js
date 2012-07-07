@@ -26,7 +26,7 @@ $(document).ready(function() {
 		$(this).attr('src','//static.getnightingale.com/img/'+$(this).attr('alt')+'.png');
 	});
 	*/
-	//screen box
+	//screenshot box
 
 	$("#screen").click(function(e) {
 		//Overlay elemnt code
@@ -61,10 +61,13 @@ function getOS() {
 	if (ua.indexOf("Win") != -1) {
 		OSName="Windows"; 
 	}
-	if (ua.indexOf("Linux") != -1) {
+	else if (ua.indexOf("Ubuntu") != -1) {
+		OSName="Ubuntu";
+	}
+	else if (ua.indexOf("Linux") != -1) {
 		OSName="Linux";
 	}
-	if(ua.indexOf("Mac") != -1) {
+	else if(ua.indexOf("Mac") != -1) {
 		OSName="Mac OSX";
 	}
 	
