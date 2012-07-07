@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Freaktechnik's Nightingale Forum Theme v21" version="2000">
+<theme name="Freaktechnik's Nightingale Forum Theme v22" version="2000">
 	<properties>
 		<templateset><![CDATA[2]]></templateset>
 		<editortheme><![CDATA[default]]></editortheme>
@@ -292,7 +292,9 @@ color:#555;
 	text-align: left;
 	color: #fff; /*222*/
 	box-shadow: 0 0 5px #505050;
+	
 	border-radius: 5px;	
+	-moz-border-radius: 5px;	
 }
 
 #panel a {
@@ -605,7 +607,6 @@ table {
 	width: 100%;
 	margin: auto auto;
 	border: 1px solid #ccc;
-	padding: 1px;
 }
 
 .thead {
@@ -1571,7 +1572,7 @@ td .star_rating {
 				<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
 				<li><a href="http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
 				<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-				<li><a href="all-versions.php" title="Download Nightingale">Download</a></li>
+				<li><a href="htp://getnightingale.com/all-versions.php" title="Download Nightingale">Download</a></li>
 				<li><a href="http://forum.getnightingale.com/forum-13.html" title="Help" id="forumhelplink">Help</a></li>
 			  </ul></li>
 			  <li><b>Developer</b>
