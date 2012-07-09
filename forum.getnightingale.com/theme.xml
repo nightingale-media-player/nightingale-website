@@ -609,6 +609,18 @@ table {
 	border: 1px solid #ccc;
 }
 
+.tborder tbody tr:last-child td:first-child {
+	-moz-border-radius:0 0 0 7px !important;
+	-webkit-border-radius:0 0 0  7px !important;
+	border-radius:0 0 0  7px !important;
+}
+
+.tborder tbody tr:last-child td:last-child {
+	-moz-border-radius:0 0 7px 0 !important;
+	-webkit-border-radius:0 0 7px 0 !important;
+	border-radius:0 0 7px 0 !important;
+}
+
 .thead {
 	background: #202121 url(images/1/thead.png) top left repeat-x;
 	color: #ffffff;
@@ -1865,5 +1877,33 @@ td .star_rating {
 {$footer}
 </body>
 </html>]]></template>
+	<template name="headerinclude" version="1000"><![CDATA[
+<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
+
+<!-- favicon -->
+<link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
+
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/prototype.js?ver=1603"></script>
+<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/general.js?ver=1603"></script>
+<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/popup_menu.js?ver=1600"></script>
+{$stylesheets}
+<script type="text/javascript">
+<!--
+	var cookieDomain = "{$mybb->settings['cookiedomain']}";
+	var cookiePath = "{$mybb->settings['cookiepath']}";
+	var cookiePrefix = "{$mybb->settings['cookieprefix']}";
+	var deleteevent_confirm = "{$lang->deleteevent_confirm}";
+	var removeattach_confirm = "{$lang->removeattach_confirm}";
+	var loading_text = '{$lang->ajax_loading}';
+	var saving_changes = '{$lang->saving_changes}';
+	var use_xmlhttprequest = "{$mybb->settings['use_xmlhttprequest']}";
+	var my_post_key = "{$mybb->post_code}";
+	var imagepath = "{$theme['imgdir']}";
+// -->
+</script>
+{$newpmmsg}]]></template>
 	</templates>
 </theme>
