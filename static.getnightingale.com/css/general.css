@@ -129,7 +129,7 @@ body {
 	background: -webkit-linear-gradient(top,  #414141 0%,#373737 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(top,  #414141 0%,#373737 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #414141 0%,#373737 100%); /* IE10+ */
-	background: linear-gradient(top,  #414141 0%,#373737 100%); /* W3C */
+	background: linear-gradient(to bottom,  #414141 0%,#373737 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414141', endColorstr='#373737',GradientType=0 ); /* IE6-9 */
 	
 	margin-bottom: 10px;
