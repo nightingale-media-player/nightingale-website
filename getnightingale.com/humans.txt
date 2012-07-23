@@ -1,17 +1,15 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
-
+/* Nightingale - the tune of Life, the tune of yours. */
 
 /* TEAM */
-  Web-Dev: Martin Giger
-  Site: http://humanoidsbepage.ch.vu
-  Twitter: @freaktechnik
-  Location: Switzerland
+  Web-Dev		: Martin Giger
+  Site			: http://humanoidsbepage.ch.vu
+  Twitter		: @freaktechnik
+  Location		: Switzerland
   
-  Lead Designer: Janek Bevendorff
-  Site: http://www.refining-linux.org/
-  Twitter: @Manko10
-  Location: Germany
+  Lead Designer	: Janek Bevendorff
+  Site			: http://www.refining-linux.org/
+  Twitter		: @Manko10
+  Location		: Germany
 
 /* THANKS */
   Names (& URL): Xeloader (http://xeloader.deviantart.com)
@@ -19,30 +17,7 @@
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery, .disableTextSelect
-  Software:
+  Software: HTML5faceplate, N++, Git(Hub)
   
-
-                                    
-                               -o/-                       
-                               +oo//-                     
-                              :ooo+//:                    
-                             -ooooo///-                   
-                             /oooooo//:                   
-                            :ooooooo+//-                  
-                           -+oooooooo///-                 
-           -://////////////+oooooooooo++////////////::    
-            :+ooooooooooooooooooooooooooooooooooooo+:::-  
-              -/+ooooooooooooooooooooooooooooooo+/::////:-
-                -:+oooooooooooooooooooooooooooo/::///////:-
-                  --/+ooooooooooooooooooooo+::://////:-   
-                     -:+ooooooooooooooooo+:://////:--     
-                       /ooooooooooooooooo+//////:-        
-                      -ooooooooooooooooooo////-           
-                      /ooooooooo+oooooooooo//:            
-                     :ooooooo+/::/+oooooooo+//-           
-                    -oooooo/::///////+oooooo///-          
-                    /ooo+::://////:---:/+oooo//:          
-                   -o+/::///////:-      -:/+o+//-         
-                   :-:///////:-            -:/://         
-                     -////:-                 --//:        
-                       --                       -:        
+/* Whats this? */
+  Visit htp://humanstxt.org!

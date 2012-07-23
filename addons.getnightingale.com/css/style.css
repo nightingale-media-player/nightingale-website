@@ -131,26 +131,29 @@ a:visited ,a:active,a:hover{
 
 #headtitle {
 	width:100%;
+	height: 61px;
 	
 	border-radius:5px;
 	-moz-border-radius:5px;
 	
 	background: #4e8eb5; /* Old browsers */
-	background: -moz-linear-gradient(top, #4e8eb5 0%, #496b8e 100%); /* FF3.6+ */
+	background: -moz-linear-gradient(top, #4e8eb5 0%, #496b8e 100%); /* FF3.6-15 */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4e8eb5), color-stop(100%,#496b8e)); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* IE10+ */
 	background: linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e8eb5', endColorstr='#496b8e',GradientType=0 ); /* IE6-9 */
-
-	color: #fff; /*222*/
 	
-	border: 2px solid #4673AA;
+	color: #fff;
 	
-	height: 61px;
-
-	text-align: left;
+	padding: 5px 0;
+	text-align: center;
+	
+	margin-bottom: 20px;
+	
+	box-shadow: 0 0 5px #505050;
+	border: none;
 }
 
 /* filterbar */

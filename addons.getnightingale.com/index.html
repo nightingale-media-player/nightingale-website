@@ -28,10 +28,14 @@
   <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="favicon.ico" >
   
   <script src="http://static.getnightingale.com/js/libs/modernizr-2.0.6.min.js"></script>
+  
 
 </head>
 
 <body>
+<div id="controller">
+	<input type="radio" name="view" value="list"> List <input type="radio" name="view" value="details"> Detail <input type="radio" name="view" value="profile"> Profile <input type="radio" name="view" value="changelog"> Changelog
+</div>
   <div id="page">
   <!-- Use this as header -->
 	<header id="ngalemainhead">
@@ -52,24 +56,29 @@
 		<header id="headtitle">
 			<nav>
 				<ul>
-					<li><a href="http://addons.getnightingale.com/category/featured">Featured Addons</a></li>
-					<li class="current"><a href="http://addons.getnightingale.com/category/all">All</a></li>
-					<li><a href="http://addons.getnightingale.com/category/appareance">Appearance</a></li>
-					<li><a href="http://addons.getnightingale.com/category/webbrowser">Web Browser</a></li>
-					<li><a href="http://addons.getnightingale.com/category/contentdiscovery">Content & Discovery</a></li>
-					<li><a href="http://addons.getnightingale.com/category/tools">Tools</a></li>
-					<li><a href="http://addons.getnightingale.com/category/feathers">Feathers</a></li>
+					<li><a href="javascript:show('list');">Featured Addons</a></li>
+					<li class="current"><a href="javascript:show('list');">All</a></li>
+					<li><a href="javascript:show('list');">Appearance</a></li>
+					<li><a href="javascript:show('list');">Web Browser</a></li>
+					<li><a href="javascript:show('list');">Content & Discovery</a></li>
+					<li><a href="javascript:show('list');">Tools</a></li>
+					<li><a href="javascript:show('list');">Feathers</a></li>
 				</ul>
 			</nav>
 		</header>
 		<!-- end of category navigation -->
 		
-		<div id="list">
 		<!-- Filterbar, only visible in addon lists-->
 		<div id="filterbar">
 			<span class="filterlabel">Languages:</span><select class="filterselect"></select><span class="filterlabel">Order by:</span><select class="filterselect"></select> <form action="GET" id="search"><input type="text" id="searchfield"><input type="submit" value="Search" class="button" id="searchbutton"></form>
 		</div>
 		<!-- end of filterbar -->
+		
+		<!-- Profile "banner", only visible in user profiles-->
+		<div id="profile">
+			<img class="img" alt="FooBar" title="FooBar" src="http://lorempixel.com/190/123/people">
+		</div>
+		<!-- end of profilebanner -->
 
 		<!-- Addons list, only on addon lists-->
 		<section id="addonslist">
@@ -77,11 +86,11 @@
 			  <tbody>
 				<tr class="addon">
 					<td>
-						<img class="img" alt="FooBar" title="FooBar" src="http://lorempixel.com/190/123/abstract">
+						<img class="img" alt="FooBar" title="FooBar" src="http://lorempixel.com/190/123/abstract" onclick="show('details');">
 					</td>
 					<td>
-						<h2 class="title">FooBar</h2>
-						<span class="category">Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 1</a></span>
+						<h2 class="title" onclick="show('details');">FooBar</h2>
+						<span class="category">Category: <a href="javascript:show('list');">Foobar 1</a></span>
 						<p class="description">Here goes the description...<br>Newline</p>
 						<form action="GET"><input type="submit" value="Install" class="install"></form>
 					</td>
@@ -91,11 +100,11 @@
 				</tr>
 				<tr class="addon">
 					<td>
-						<img class="img" alt="FooBar" title="FooBar" src="http://lorempixel.com/190/123/technics">
+						<img class="img" alt="FooBar" title="FooBar" src="http://lorempixel.com/190/123/technics" onclick="show('details');">
 					</td>
 					<td>
-						<h2 class="title">FooBar</h2>
-						<span class="category">Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 2</a></span>
+						<h2 class="title" onclick="show('details');">FooBar</h2>
+						<span class="category">Category: <a href="javascript:show('list');">Foobar 2</a></span>
 						<p class="description">Here goes the description...Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 						<form action="GET"><input type="submit" value="Install" class="install"></form>
 					</td>
@@ -107,13 +116,13 @@
 			</table>
 		</section>
 		<!-- end of addons list -->
-		</div>
+
 		<div class="details" id="details">
 		<!-- Details page-->
 		<section id="addondetail">
 			<div id="content-top">
 				<h2>FooBar</h2>
-				<span class="author">by <a href="http://addons.getnightingale.com/?author=foobar">Foobar</a></span>
+				<span class="author">by <a href="http://addons.getnightingale.com/?author=foobar" onclick="show('profile');">Foobar</a></span>
 			</div>
 			<div id="content-left">
 				<div class="detailimages">
@@ -135,20 +144,20 @@
 					  <tbody>
 						<tr class="comment">
 							<td>
-								<img class="img" alt="FooBar" title="FooBar" src="http://lorempixel.com/90/90/people">
+								<img class="img" alt="FooBar" title="FooBar" src="http://lorempixel.com/90/90/people" onclick="show('profile');">
 							</td>
 							<td>
-								<h4>FooBar</h4>
+								<h4 onclick="show('profile');">FooBar</h4>
 								<div class="info">n minutes ago</div>
 								<div class="text">Awesome Add-On</div>
 							</td>
 						</tr>
 						<tr class="comment">
 							<td>
-								<img class="img" alt="BarFoo" title="BarFoo" src="http://lorempixel.com/90/90/people">
+								<img class="img" alt="BarFoo" title="BarFoo" src="http://lorempixel.com/90/90/people" onclick="show('profile');">
 							</td>
 							<td>
-								<h4>BarFoo</h4>
+								<h4 onclick="show('profile);">BarFoo</h4>
 								<div class="info">n hours ago</div>
 								<div class="text">Keep on the good work<br>Thanks</div>
 							</td>
@@ -163,10 +172,9 @@
 				Average rating (based on xxx votes):
 				<div class="rating"></div>
 				<h3 class="title">About this Addon</h3>
-				Author: <a href="http://addons.getnightingale.com/?author=foobar">Foobar</a><br>
+				Author: <a href="javascript:show('profile');">Foobar</a><br>
 				Version: x.y.z</span><br />
-				Category: <a href="http://addons.getnightingale.com/?category=foobar">Foobar 1</a><br>
-				Tags: <a href="http://addons.getnightingale.com/?tag=foobar">foobar</a>, <a href="http://addons.getnightingale.com/?tag=foo">foo</a>, <a href="http://addons.getnightingale.com/?tag=bar">bar</a><br>
+				Tags: <a href="javascript:show('list');">foobar</a>, <a href="javascript:show('list');">foo</a>, <a href="javascript:show('list');">bar</a><br>
 				<br>
 				<a href="http://addons.getnightingale.com/?old-versions">See older versions</a><br>
 				<h3 class="title">Statistics</h3>
@@ -178,7 +186,7 @@
 				<!-- Other Add-ons -->
 				<h3 class="title">Other Add-ons by FooBar</h3>
 				<!-- A small version of the add-on list -->
-				<ul id="addonslist-small">
+				<ul id="addonslist-small" onclick="show('details');">
 					<li class="addon">
 						<img class="img" alt="FooBar" title="FooBar" src="http://lorempixel.com/90/90/technics">
 						<h4 class="title">FooBar</h4>
@@ -191,10 +199,10 @@
 					</li>
 				</ul>
 				<br>
-			</div>
+			</aside>
 			<div class="clear"></div>
 		</section>
-		<!-- end of addons list -->
+		<!-- end of addondetail -->
 		</div>
 	</div>
   </div>
@@ -238,6 +246,42 @@
     </footer>
 
   <script src="http://static.getnightingale.com/js/jquery-1.7.1.min.js"></script>
+  
+  <script type="text/javascript">
+	$(document).ready(function() {
+		show("list");
+		$('#controller input[name="view"]').change(function() {
+			show($('#controller input[name="view"]:checked').val());
+		});
+	});
+	
+	function show(name) {
+		clear();
+		switch(name) {
+			case "profile": $('#addonslist').show();
+							$('#profile').show();
+							break;
+			case "details": $('#details').show();
+							break;
+			case "list"   : $('#filterbar').show();
+							$('#addonslist').show();
+							break;
+			default       : $('#filterbar').show();
+							$('#addonslist').show();
+							$('#details').show();
+							$('#profile').show();
+							//$('#changelog').show();
+		}
+	}
+	
+	function clear() {
+		$('#filterbar').hide();
+		$('#addonslist').hide();
+		$('#details').hide();
+		$('#profile').hide();
+		//$('#changelog').hide();
+	}
+  </script>
 
   <script defer src="http://static.getnightingale.com/js/plugins.js"></script>
   <script>
