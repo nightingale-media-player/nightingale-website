@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Freaktechnik's Nightingale Forum Theme v22" version="2000">
+<theme name="Freak v24" version="1608">
 	<properties>
-		<templateset><![CDATA[2]]></templateset>
+		<templateset><![CDATA[28]]></templateset>
 		<editortheme><![CDATA[default]]></editortheme>
 		<imgdir><![CDATA[images/1]]></imgdir>
 		<logo><![CDATA[images/1/logo.png]]></logo>
@@ -9,7 +9,7 @@
 		<borderwidth><![CDATA[0]]></borderwidth>
 	</properties>
 	<stylesheets>
-		<stylesheet name="css3.css" version="2000"><![CDATA[
+			<stylesheet name="css3.css" version="1608"><![CDATA[
 html{ overflow-y: scroll;}
 tr td.trow1:first-child,
 tr td.trow2:first-child,
@@ -83,12 +83,9 @@ fieldset,
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
-
-		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="global.css" version="1605"><![CDATA[
+		<stylesheet name="global.css" version="1608"><![CDATA[
 body {
 	background-color: #fff;
 	background-image: url('//static.getnightingale.com/img/gradent.png');
@@ -131,103 +128,6 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
 .navigation a:hover {
 	color: #CCC
-}
-
-/* header/nav */
-
-	#mainhead {
-		margin-bottom: 1em;
-		font-size: 15px;
-		line-height: 1.231em;
-	}
-
-	#headlogo {
-		height: 100px;
-		margin-top: .8em;
-	}
-
-	/* nav*/
-	
-	#mainhead #pagenav {
-		float: right;
-		margin-top: 1em;
-	}
-	
-	#mainhead #pagenav li {
-		float: left;
-		background-color: #333333;
-		list-style: none;
-	}
-	
-	#mainhead #pagenav li a:link, #mainhead #pagenav li a:hover, #mainhead #pagenav li a:active, #mainhead #pagenav li a:visited {
-		color: #fff !important;
-		text-decoration: none !important;
-		background-color: transparent !important;
-		display: block;
-		padding:.8em;
-	}
-	
-	#mainhead #pagenav li:first-child a,#mainhead #pagenav li:first-child  {
-		border-radius: 5px 0 0 5px;
-		-moz-border-radius: 5px 0 0 5px;
-	}
-	
-	#mainhead #pagenav li:last-child  a,#mainhead #pagenav li:last-child{
-		border-radius:0 5px 5px 0;
-		-moz-border-radius:0 5px 5px 0;
-	}
-	
-	#mainhead #pagenav .actual a {
-		border-bottom: .4em solid #B55029 !important;
-		padding-bottom: .4em !important;
-	}
-	#mainhead #pagenav li a:hover,
-	#mainhead #pagenav .actual a:hover {
-		border-bottom: .4em solid #fff !important;
-		padding-bottom: .4em !important;
-	}
-
-/* footer styles */
-
-#ngalemainfooter {
-	color: #fff;
-	width: 100%;
-	background-color: #666;
-	z-index: 500;
-	margin: 0;
-	padding-bottom: 10px;
-	font-size: 14px;
-	text-align: left;
-	line-height: 1.231em !important;
-	
-	display: block;
-	
-	font-family: 'Open Sans', sans-serif;
-}
-
-#ngalemainfooter b {
-	padding-bottom: 5px;
-	display: block;
-}
-
-#ngalemainfooter a:link, #ngalemainfooter a:visited {
-	color: #fff;
-	text-decoration: none !important;
-	font-weight: normal;
-}
-
-#ngalemainfooter #license a:link, #ngalemainfooter #license a :visited {
-	text-decoration: underline;
-}
-
-#ngalemainfooter a:hover {
-	color: #EDEDED;
-	text-decoration: underline;
-}
-
-#ngalemainfooter a:active {
-	color: #ccc;
-	text-decoration: underline;
 }
 
 #header {
@@ -286,7 +186,7 @@ color:#555;
 	background: -webkit-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* IE10+ */
-	background: linear-gradient(top, #4e8eb5 0%,#496b8e 100%); /* W3C */
+	background: linear-gradient(to bottom, #4e8eb5 0%,#496b8e 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e8eb5', endColorstr='#496b8e',GradientType=0 ); /* IE6-9 */
 	
 	text-align: left;
@@ -487,112 +387,6 @@ color:#555;
 
 /* footer styles */
 
-footer {
-	color: #fff;
-	width: 100%;
-	background-color: #666;
-	z-index: 500;
-	margin: 0;
-	padding-bottom: 10px;
-	font-size: 14px;
-	display: block;
-}
-
-footer b {
-	padding-bottom: 5px;
-	display: block;
-}
-
-footer a:link, footer a:visited {
-	color: #fff;
-}
-
-footer a:hover {
-	color: #EDEDED;
-}
-
-footer a:active {
-	color: #ccc;
-}
-
-#lgradient {
-	height: 14px;
-	border-top: 2px solid #333333;
-	width: 100%;
-	
-	background: #414141; /* Old browsers */
-	background: -moz-linear-gradient(top,  #414141 0%, #373737 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#414141), color-stop(100%,#373737)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #414141 0%,#373737 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #414141 0%,#373737 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #414141 0%,#373737 100%); /* IE10+ */
-	background: linear-gradient(top,  #414141 0%,#373737 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414141', endColorstr='#373737',GradientType=0 ); /* IE6-9 */
-	
-	margin-bottom: 10px;
-}
-
-footer img {
-	margin-top: 3px;
-	margin-right: 5px;
-}
-
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
-
-#license {
-	height: 120px;
-}
-
-footer nav {
-	height: 120px;
-}
-
-#footerwrapper {
-	width: 950px;
-	margin: 10px auto;
-	list-style: none;
-	padding: 0;
-}
-
-#footerwrapper li {
-	float: left;
-	display: block;
-	width: 296.6px;
-	padding: 0 30px 0 0;
-	margin: 0;
-}
-
-#double {
-	margin: 0;
-	padding: 0;
-}
-
-#double li {
-	float: left;
-	width: 133.3px;
-}
-
-#double li:first-child {
-	padding-right: 30px;
-}
-
-#footerwrapper li:last-child {
-	padding-right: 0;
-}
-
-#outlinedngale {
-	float: left;
-	display: block;
-}
-
-#buttons img {
-	float: right;
-	cursor: pointer;
-	vertical-align: top;
-	margin-right: -10px;
-	margin-top: -10px;
-}
-
 fieldset {
 	border: 1px solid #ddd;
 }
@@ -609,16 +403,16 @@ table {
 	border: 1px solid #ccc;
 }
 
-.tborder tbody tr:last-child td:first-child {
-	-moz-border-radius:0 0 0 7px !important;
-	-webkit-border-radius:0 0 0  7px !important;
-	border-radius:0 0 0  7px !important;
+.tborder tbody tr:last-child td:first-child:not(.tfoot) {
+	-moz-border-radius:0 0 0 6px;
+	-webkit-border-radius:0 0 0  6px;
+	border-radius:0 0 0 6px;
 }
 
-.tborder tbody tr:last-child td:last-child {
-	-moz-border-radius:0 0 7px 0 !important;
-	-webkit-border-radius:0 0 7px 0 !important;
-	border-radius:0 0 7px 0 !important;
+.tborder tbody tr:last-child td:last-child:not(.tfoot) {
+	-moz-border-radius:0 0 6px 0;
+	-webkit-border-radius:0 0 6px 0;
+	border-radius:0 0 6px 0;
 }
 
 .thead {
@@ -1275,9 +1069,10 @@ form #message {
     width: 500px;
 }
 
-]]>
+
+		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1605"><![CDATA[.star_rating,
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1608"><![CDATA[.star_rating,
 .star_rating li a:hover,
 .star_rating .current_rating {
 	background: url(images/1/star_rating.gif) left -1000px repeat-x;
@@ -1365,6 +1160,7 @@ td .star_rating {
 	vertical-align: middle;
 }		
 		
+		
 		]]>
 		</stylesheet>
 	</stylesheets>
@@ -1448,7 +1244,6 @@ td .star_rating {
 		<template name="showthread" version="1600"><![CDATA[<html>
 <head>
 <title>{$thread['subject']}</title>
-<link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
 {$headerinclude}
 <script type="text/javascript">
 <!--
@@ -1616,18 +1411,21 @@ td .star_rating {
 		<template name="header" version="1600"><![CDATA[<div id="container">
 		<a name="top" id="top"></a>
 		<div id="header">
-			<div id="mainhead">
-				<a href="//getnightingale.com" title="Home"><img src="//static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
-				<div id="pagenav">
-				<ul class="menu">
-					<li><a href="//getnightingale.com" title="Home">Home</a></li>
-					<li class="actual"><a href="//forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
-					<li><a href="//addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
-					<li><a href="//blog.getnightingale.com" title="Development Blog">Blog</a></li>
-					<li><a href="//wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
-				</ul>
-				</div>
-			</div>
+			<!-- Use this as header -->
+			<header id="ngalemainhead">
+				<a href="http://getnightingale.com" title="Home"><img src="http://static.getnightingale.com/img/Nightingale_text.png" id="headlogo" alt="Nightingale. the tune of Life, the tune of yours."></a>
+				<nav>
+					<div id="rightend"><div id="rightoverlay"></div></div>
+					<ul class="menu">
+						<li><a href="http://getnightingale.com" title="Home">Home</a></li>
+						<li class="actual"><a href="http://forum.getnightingale.com" title="Nightingale Forum">Forum</a></li>
+						<li><a href="http://addons.getnightingale.com" title="Addons for Nightingale">Addons</a></li>
+						<li><a href="http://blog.getnightingale.com" title="Development Blog">Blog</a></li>
+						<li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Wiki</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!-- end of header -->
 			<div id="logo">
 				<div class="wrapper">
 					<a href="{$mybb->settings['bburl']}/index.php"><img src="{$theme['logo']}" alt="{$mybb->settings['bbname']}" title="{$mybb->settings['bbname']}" /></a>
@@ -1731,7 +1529,6 @@ td .star_rating {
 </table>]]></template>
 		<template name="member_register" version="1605"><![CDATA[<html>
 <head>
-<link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
 <title>{$mybb->settings['bbname']} - {$lang->registration}</title>
 {$headerinclude}
 <script type="text/javascript" src="jscripts/validator.js"></script>
@@ -1877,9 +1674,11 @@ td .star_rating {
 {$footer}
 </body>
 </html>]]></template>
-	<template name="headerinclude" version="1000"><![CDATA[
+		<template name="headerinclude" version="1000"><![CDATA[
 <link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
+
+<link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
 
 <!-- favicon -->
 <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
