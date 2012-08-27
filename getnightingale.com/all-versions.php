@@ -70,7 +70,7 @@
 			<h2>Linux Distro Specific:</h2>
 			<ul class="downloadlist" style="text-align:left;">
 				<li><a href="<?php echo $urls[6]; ?>">Archlinux PKGBUILD</a></li>
-				<li><a href="<?php echo $urls[5]; ?>">Ubuntu PPA</a></li>
+				<li>Ubuntu PPA: <?php echo $urls[5]; ?> - Have a look at <a href="http://www.omgubuntu.co.uk/how-to-add-a-ppa-to-software-sources-in-ubuntu">this article</a> for information on how to add a PPA to your system</li>
 				<li>Other distros: let us know and we'll post your Nightingale links here!</li>
 			</ul>
 		</div>
