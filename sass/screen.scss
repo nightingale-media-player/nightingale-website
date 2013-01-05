@@ -10,3 +10,55 @@
   @include container;
   @include susy-grid-background;
 }
+
+/* ----------------------------------------------------------------------------
+   Main content
+   --------------------------------------------------------------------------*/
+
+.container article {
+    @include span-columns(4);
+}
+
+#screenshots {
+    @include span-columns(2,2);
+    background: blue;
+    height: 300px;
+}
+
+#description span{
+    @include span-columns(1,2);
+    &:nth-child(2n) { @include omega; }
+}
+
+/* ----------------------------------------------------------------------------
+   Features sidebar
+   --------------------------------------------------------------------------*/
+.container aside {
+    @include span-columns(2 omega,6);
+}
+   
+.feature {
+    @include omega;
+    height: 100px;
+    
+    img {
+        @include span-columns(1,2);
+    }
+
+    span {
+        @include span-columns(1 omega,2);
+    }
+}
+
+/* ----------------------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------------------*/
+#footerinfo {
+    @include span-columns(3);
+}
+   
+footer .footerlinks {
+    @include span-columns(1);
+    
+    &:nth-child(2n) { @include omega; }
+}
