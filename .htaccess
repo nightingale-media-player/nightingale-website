@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------
-# Based on the Contao CMS (https://contao.org)
+# Based on the Contao CMS (contao.org)
 # and H5BP (h5bp.com) .htaccess templates
 # 
 # H5BP is licensed under the MIT License (opensource.org/licenses/MIT)
@@ -234,13 +234,7 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 # Further header adjustments
 # ----------------------------------------------------------------------
 
-<IfModule mod_headers.c>
-    # Do not cache the cron.txt file
-    # github.com/contao/core/issues/5105
-    <FilesMatch "cron\.txt$">
-        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0, proxy-revalidate, no-transform"
-    </FilesMatch>
-    
+<IfModule mod_headers.c>    
     # Add a Vary Accept-Encoding header for the compressed resources. If you
     # modify the file types above, make sure to change them here accordingly.
     # developer.yahoo.com/performance/rules.html#gzip
