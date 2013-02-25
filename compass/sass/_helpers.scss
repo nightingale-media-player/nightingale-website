@@ -40,8 +40,13 @@
     visibility: hidden;
 }
 
+// Clear preceding floats
+.clear {
+    clear: both;
+}
+
 // Clearfix: contain floats
-.clear:after {
+.clearfix:after {
     content: " ";
     display: block;
     visibility: hidden;

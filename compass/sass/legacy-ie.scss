@@ -43,6 +43,6 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 // Trigger hasLayout for clearfixes in IE 6/7.
-.clear {
+.clearfix {
     *zoom: 1;
 }
