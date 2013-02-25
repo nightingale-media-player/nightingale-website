@@ -1,0 +1,15 @@
+.sass-cache
+*.css
+~swp
+*.log
+*.bkp
+.directory
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.Trash
+Icon?
+Thumbs.db
+desktop.ini

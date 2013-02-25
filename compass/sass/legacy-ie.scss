@@ -1,0 +1,48 @@
+/*!
+ * CSS fixes for Legacy IE browsers (IE lte 8) to be included via Conditional Comments.
+ * Partially based on the H5BP main.css and normalize.css (h5bp.com | MIT License).
+ */
+
+// Correct `inline-block` display not defined in IE 6/7.
+audio, canvas, video {
+    *display: inline;
+    *zoom: 1;
+}
+
+// Correct font family set oddly in IE 6.
+code, kbd, pre, samp {
+    _font-family: 'courier new', monospace;
+}
+
+// Address CSS quotes not supported in IE 6/7.
+q {
+    quotes: none;
+}
+
+// Correct alignment displayed oddly in IE 6/7.
+legend {
+    *margin-left: -7px;
+}
+
+// Improve appearance and consistency in IE 6.
+button, input, select, textarea {
+    *vertical-align: middle;
+}
+
+// Remove inner spacing in IE 7 without affecting normal text inputs.
+// Known issue: inner spacing remains in IE 6.
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    *overflow: visible;
+}
+
+// Remove excess padding in IE 7.
+// Known issue: excess padding remains in IE 6.
+input[type="checkbox"], input[type="radio"] {
+    *height: 13px;
+    *width: 13px;
+}
+
+// Trigger hasLayout for clearfixes in IE 6/7.
+.clear {
+    *zoom: 1;
+}

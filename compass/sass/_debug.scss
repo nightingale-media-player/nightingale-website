@@ -1,0 +1,8 @@
+/*!
+ * Debug style sheets for CSS development.
+ */
+
+// Baseline grid
+html {
+    @include baseline-grid-background($base-line-height, #9df);
+}
