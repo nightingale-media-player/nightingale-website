@@ -60,38 +60,38 @@ included if need be.
 Here you can put your mixin definitions. Currently there is only one file called `_general.scss`
 which contains basic layout helper mixins.
 
-### compass/sass/_debug.scss
+#### compass/sass/_debug.scss
 This is a debug style sheet which contains some helpful styles for debugging your layout.
 This partial is only there for development purposes and should not be included in the
 production style sheets.
 
-### compass/sass/_helpers.scss
+#### compass/sass/_helpers.scss
 This file contains general CSS helper classes which are often needed such as styles for containing
 floats or hiding content. `_helpers.scss` is mainly derived from the H5BP main.css (h5bp.com).
 
-### compass/sass/_normalize.scss
+#### compass/sass/_normalize.scss
 The CSS in this file is basically a customized version of the H5BP normalize.css.
 I deleted or modified a few rules, optimized the general CSS for usage with Sass and Compass
 and added some definitions for establishing vertical rhythm (see 24ways.org/2006/compose-to-a-vertical-rhythm/).
 
-### compass/sass/legacy-ie.scss
+#### compass/sass/legacy-ie.scss
 Guess what... that file contains fixes for nasty Internet Exploders.
 
-### compass/sass/style.scss
+#### compass/sass/style.scss
 This is the main style sheet. Generally this is only used to include all the other files and does
 not contain any CSS itself.
 
-## compass/config-production.rb
+### compass/config-production.rb
 The Compass configuration file for exporting the CSS for use on the production server.
 
-## compass/config.rb
+### compass/config.rb
 Yet another config file for your Compass project. The only difference is that this is the default one
 used during development on your local system. There are two config files so you can adjust the
 export settings and folder paths in each one of them to match your local development
 environment and the production environment. So once you set up both config files, you can
 easily export your style sheets either for development or your live server.
 
-# css, fonts, images, javascript
+## css, fonts, images, javascript
 These folders are empty by default.
 
 `css` is the export folder for the generated development style sheets and `css-prod` for the
