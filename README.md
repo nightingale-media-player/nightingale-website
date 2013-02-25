@@ -91,7 +91,7 @@ export settings and folder paths in each one of them to match your local develop
 environment and the production environment. So once you set up both config files, you can
 easily export your style sheets either for development or your live server.
 
-## css, fonts, images, javascript
+## css, css-prod, fonts, images, javascript
 These folders are empty by default.
 
 `css` is the export folder for the generated development style sheets and `css-prod` for the
