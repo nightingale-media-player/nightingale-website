@@ -3,6 +3,6 @@
  */
 
 $total-columns: 12;
-$column-width:  4em;
-$gutter-width:  1em;
+$column-width:  px2em(64px);
+$gutter-width:  px2em(16px);
 $grid-padding:  $gutter-width;
