@@ -1,0 +1,56 @@
+/*!
+ * Font definitions.
+ */
+
+// Load web fonts
+// @include font-face("Open Sans",
+//                    font-files(
+//                         "OpenSans/OpenSans-Regular-webfont.woff",
+//                         "OpenSans/OpenSans-Regular-webfont.svg#OpenSansRegular"
+//                     ),
+//                    "OpenSans/OpenSans-Regular-webfont.eot", normal, normal
+// );
+
+// @include font-face("Open Sans",
+//                    font-files(
+//                         "OpenSans/OpenSans-Bold-webfont.woff",
+//                         "OpenSans/OpenSans-Bold-webfont.svg#OpenSansBold"
+//                     ),
+//                    "OpenSans/OpenSans-Bold-webfont.eot", bold, normal
+// );
+
+// @include font-face("Open Sans",
+//                    font-files(
+//                         "OpenSans/OpenSans-BoldItalic-webfont.woff",
+//                         "OpenSans/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic"
+//                     ),
+//                    "OpenSans/OpenSans-BoldItalic-webfont.eot", bold, italic
+// );
+
+// @include font-face("Open Sans",
+//                    font-files(
+//                         "OpenSans/OpenSans-Italic-webfont.woff",
+//                         "OpenSans/OpenSans-Italic-webfont.svg#OpenSansItalic"
+//                     ),
+//                    "OpenSans/OpenSans-Italic-webfont.eot", normal, italic
+// );
+// @include font-face("IcoMoon",
+//                    font-files(
+//                         "IcoMoon/IcoMoon.woff",
+//                         "IcoMoon/IcoMoon.svg#IcoMoon"
+//                     ),
+//                    "IcoMoon/IcoMoon.eot", normal, normal
+// );
+
+$base-font-family: "Open Sans", Verdana, Arial, sans-serif;
+$icon-font-family: "IcoMoon";
+
+$base-font-size:   16px;
+$base-line-height: $base-font-size * 1.5;
+
+$h1-font-size: $base-font-size + 13;
+$h2-font-size: $base-font-size + 10;
+$h3-font-size: $base-font-size + 7;
+$h4-font-size: $base-font-size + 3;
+$h5-font-size: $base-font-size;
+$h6-font-size: $base-font-size - 3;

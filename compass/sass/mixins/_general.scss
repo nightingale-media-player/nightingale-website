@@ -1,0 +1,19 @@
+/*!
+ * General layout mixins.
+ */
+
+/**
+ * Clearfix mixin for containing floats on elements without .clear class.
+ * Overrides Compass' default clearfix() mixin which uses overflow: hidden.
+ * The :after method is know to work better with print style sheets.
+ */
+@mixin clearfix() {
+    &:after {
+        content: " ";
+        display: block;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+        clear: both;
+    }
+}
