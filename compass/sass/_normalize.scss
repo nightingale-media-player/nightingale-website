@@ -303,6 +303,11 @@ button, input, select, textarea {
     padding: .3em;
 }
 
+// Address text squished down and cut off in mobile Webkit browsers
+select {
+    line-height: 1em;
+}
+
 // Address Firefox 3+ setting `line-height` on `input` using `!important` in the UA stylesheet.
 button, input {
     line-height: normal;
