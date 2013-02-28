@@ -34,45 +34,120 @@
     /* ----------------------------------------------------------------------------
        Nav
        --------------------------------------------------------------------------*/
-       
-       // nav reset ; shouldn't be needed here...
-    menu li {
-        list-style: none;
+    
+    #headerlogo {
+        position: absolute;
+        top: .5em;
     }
-
-    header {
-        height: 5em;
+    
+    #headerlogo img {
+        height: 9em;
+        width: 27em;
+        position: relative;
+        z-index: 10;
     }
-
-    header nav {
-        float: right;
-        height: 100%;
+    
+    #shadowtab {
+        width: 25em;
+        height: 7em;
+        top: 1.1em;
+        left: 1em;
+        position: absolute;
+        z-index: 0;
+        @include single-box-shadow(#292929,0,0,.4em,.1em);
         
-        menu li {
-            float: left;
-            height: 100%;
-
-            :link {
-                color: white;
-                height: 100%;
-                padding-left: .5rem;
-                padding-right: .5rem;
-                font-size: 1.25em;
-                line-height: 5rem;
-                text-decoration: none;
-                text-shadow: .1rem .1rem .3rem black;
-                display: block;
-                @include box-sizing(border-box);
-            }
-            a:hover {
-                border-bottom: .5rem solid white;
-            }
-            &.current a:link {
-                border-bottom: .5rem solid #b55029;
-            }
+        &::before {
+            content: "";
+            height: 6em;
+            width: 5em;
+            @include rotate(20deg);
+            @include border-radius(.5em);
+            position: absolute;
+            top: .54em;
+            left: -1.49em;
+            @include single-box-shadow(#292929,0,0,.4em,.1em);
+        }
+        &::after {
+            content: "";
+            height: 6em;
+            width: 5em;
+            @include rotate(-20deg);
+            @include border-radius(.5em);
+            position: absolute;
+            top: .54em;
+            right: -1.49em;
+            @include single-box-shadow(#292929,0,0,.4em,.1em);
+        }
+    }
+    
+    #birdtab {
+        background: white;
+        width: 25em;
+        height: 7em;
+        top: 1.1em;
+        left: 1em;
+        position: absolute;
+        z-index: 9;
+        
+        &::before {
+            content: "";
+            height: 6em;
+            width: 5em;
+            @include rotate(20deg);
+            @include border-radius(.5em);
+            background: white;
+            position: absolute;
+            top: .54em;
+            left: -1.49em;
+        }
+        &::after {
+            content: "";
+            height: 6em;
+            width: 5em;
+            @include rotate(-20deg);
+            @include border-radius(.5em);
+            background: white;
+            position: absolute;
+            top: .54em;
+            right: -1.49em;
         }
     }
 
+    header {
+        position: relative;
+        height: 5em;
+
+        nav {
+            float: right;
+            height: 100%;
+            z-index: 2;
+            position: relative;
+            
+            menu li {
+                float: left;
+                height: 100%;
+
+                :link,:visited {
+                    color: white;
+                    height: 100%;
+                    padding-left: .5rem;
+                    padding-right: .5rem;
+                    font-size: 1.25em;
+                    line-height: 5rem;
+                    text-decoration: none;
+                    text-shadow: .1rem .1rem .3rem black;
+                    display: block;
+                    @include box-sizing(border-box);
+                }
+                a:hover {
+                    border-bottom: .5rem solid white;
+                }
+                &.current a:link,&.current a:visited {
+                    border-bottom: .5rem solid #b55029;
+                }
+            }
+        }
+    }
     /* ----------------------------------------------------------------------------
        Main content
        --------------------------------------------------------------------------*/
@@ -81,9 +156,12 @@
         
         @include single-box-shadow(#292929,0,0,.4em,.1em);
         
-        padding-top: $gutter-width;
+        padding-top: 6em;
         padding-bottom: $gutter-width;
         margin-bottom: $gutter-width;
+        
+        position: relative;
+        z-index: 1;
     }
        
     #main article {
@@ -91,18 +169,16 @@
     }
 
     #screenshots {
-        @include span-columns(2 omega,2);
+        @include span-columns(4 omega,4);
         background: blue;
         height: 2*$sidebar-item-height + $gutter-width;
         margin-bottom: $gutter-width;
     }
     
     #description {
-        @include span-columns(2 omega, 2);
-        div {
-            @include span-columns(1,2);
-            @include nth-omega(2n);
-        }
+        @include span-columns(4 omega, 4);
+        @include columns($column-width 2);
+        @include column-gap($gutter-width);
     }
 
     /* ----------------------------------------------------------------------------
@@ -125,8 +201,10 @@
             width: $column-width;
         }
 
-        span {
+        figcaption {
             @include span-columns(1 omega,2);
+            font-style: normal;
+            text-align: left;
         }
     }
 
@@ -154,8 +232,17 @@
             @include nth-omega(3n);        
         }
     }
+    
+    #footergale {
+        float: left;
+        height: 9em;
+    }
        
     #footerinfo {
         @include span-columns(3);
+        
+        p {
+            margin-top: 0;
+        }
     }
 }
