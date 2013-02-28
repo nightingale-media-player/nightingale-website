@@ -40,24 +40,20 @@
         z-index: 10;
     }
     
-    #shadowtab {
+    .tab {
         width: 25em;
         height: 7em;
         top: 1.1em;
         left: 1em;
         position: absolute;
-        z-index: 0;
-        @include single-box-shadow(#292929,0,0,.4em,.1em);
         
         &::before,&::after {
             content: "";
             height: 6em;
             width: 5em;
             @include border-radius(.5em);
-            background: white;
             position: absolute;
             top: .54em;
-            @include single-box-shadow(#292929,0,0,.4em,.1em);
         }
         
         &::before {
@@ -67,6 +63,24 @@
         &::after {
             @include rotate(-20deg);
             right: -1.49em;
+        }
+    }
+    
+    #birdtab {
+        background: white;
+        z-index: 9;
+        
+        &::before,&::after {
+            background: white;
+        }
+    }
+    
+    #tabshadow {
+        z-index: 0;
+        @include single-box-shadow(#292929,0,0,.4em,.1em);
+        
+        &::before,&::after {
+            @include single-box-shadow(#292929,0,0,.4em,.1em);
         }
     }
     
@@ -163,8 +177,9 @@
     
     #description {
         @include span-columns(4 omega, 4);
-        @include columns($column-width 2);
-        @include column-gap($gutter-width);
+        @include column-width(columns(2,4));
+        @include column-count(2);
+        @include column-gap(gutter(6));
     }
 
     /* ----------------------------------------------------------------------------

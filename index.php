@@ -20,8 +20,8 @@
                         </menu>
                     </nav>
                     <figure id="headerlogo">
-                        <div id="shadowtab"></div>
-                        <div id="birdtab"></div>
+                        <div id="tabshadow" class="tab"></div>
+                        <div id="birdtab" class="tab"></div>
                         <img src="images/nightingale_official_text_outline.svg">
                     </figure>
                 </header>
@@ -54,7 +54,7 @@
         <div class="wrapper">
             <footer class="center container">
                 <section id="footerinfo">
-                    <img id="footergale" src="images/nightingale_official_stroke_white.png">
+                    <img id="footergale" src="images/footergale.png">
                     <p>Nightingale is free!<br>
                        It is an Open Source projcet release under the terms of the GNU General Public License vX (GPL cX).<br>
                        For more deails, please read the <a href="">license information</a>.
