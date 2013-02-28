@@ -72,7 +72,7 @@ floats or hiding content. `_helpers.scss` is mainly derived from the H5BP main.c
 #### compass/sass/_normalize.scss
 The CSS in this file is basically a customized version of the H5BP normalize.css.
 I deleted or modified a few rules, optimized the general CSS for usage with Sass and Compass
-and added some definitions for establishing vertical rhythm (see 24ways.org/2006/compose-to-a-vertical-rhythm/).
+and added some definitions for establishing vertical rhythm (see http://24ways.org/2006/compose-to-a-vertical-rhythm/).
 
 #### compass/sass/legacy-ie.scss
 Guess what... that file contains fixes for nasty Internet Exploders.

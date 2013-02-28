@@ -49,27 +49,24 @@
         z-index: 0;
         @include single-box-shadow(#292929,0,0,.4em,.1em);
         
-        &::before {
+        &::before,&::after {
             content: "";
             height: 6em;
             width: 5em;
-            @include rotate(20deg);
             @include border-radius(.5em);
+            background: white;
             position: absolute;
             top: .54em;
-            left: -1.49em;
             @include single-box-shadow(#292929,0,0,.4em,.1em);
         }
+        
+        &::before {
+            @include rotate(20deg);
+            left: -1.49em;
+        }
         &::after {
-            content: "";
-            height: 6em;
-            width: 5em;
             @include rotate(-20deg);
-            @include border-radius(.5em);
-            position: absolute;
-            top: .54em;
             right: -1.49em;
-            @include single-box-shadow(#292929,0,0,.4em,.1em);
         }
     }
     
@@ -82,26 +79,22 @@
         position: absolute;
         z-index: 9;
         
-        &::before {
+        &::before,&::after {
             content: "";
             height: 6em;
             width: 5em;
-            @include rotate(20deg);
             @include border-radius(.5em);
             background: white;
             position: absolute;
             top: .54em;
+        }
+        
+        &::before {
+            @include rotate(20deg);
             left: -1.49em;
         }
         &::after {
-            content: "";
-            height: 6em;
-            width: 5em;
             @include rotate(-20deg);
-            @include border-radius(.5em);
-            background: white;
-            position: absolute;
-            top: .54em;
             right: -1.49em;
         }
     }
@@ -191,7 +184,7 @@
             @include span-columns(1,2);
             
             height: $sidebar-item-height;
-            width: $column-width;
+            width: columns(1,2);
         }
 
         figcaption {
