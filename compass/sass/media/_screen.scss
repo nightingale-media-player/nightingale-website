@@ -117,15 +117,18 @@
         position: relative;
         height: 5em;
 
+        nav, nav ul {
+            height: 100%;
+        }    
         nav {
             float: right;
-            height: 100%;
             z-index: 2;
             position: relative;
             
             li {
                 float: left;
                 height: 100%;
+                @include box-sizing(border-box);
 
                 :link,:visited {
                     color: white;

@@ -16,7 +16,6 @@
                 <header class="container">
                     <nav role="navigation">
                         <ul>
-                            <!-- use buttons? -->
                             <li class="current"><a href="#">Home</a></li>
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Add-ons</a></li>
