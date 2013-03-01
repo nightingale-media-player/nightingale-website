@@ -1,12 +1,14 @@
 /*!
  * Debug style sheets for CSS development.
+ * Put things like your baseline and Susy grid here.
  */
 
-// Baseline grid
+// Baseline grid (example)
 html {
     @include baseline-grid-background($base-line-height, #9df);
 }
 
+// Susy column grid (example)
 .container {
-    @include susy-grid-background;
+    @include susy-background-grid();
 }

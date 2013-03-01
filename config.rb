@@ -1,4 +1,5 @@
 require 'susy'
+require 'animate'
 # Require any additional compass plugins here.
 
 

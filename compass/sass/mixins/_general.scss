@@ -3,17 +3,23 @@
  */
 
 /**
- * Clearfix mixin for containing floats on elements without .clear class.
- * Overrides Compass' default clearfix() mixin which uses overflow: hidden.
- * The :after method is know to work better with print style sheets.
+ * Completely hide an element, also for screen readers.
  */
-@mixin clearfix() {
-    &:after {
-        content: " ";
-        display: block;
-        visibility: hidden;
-        line-height: 0;
-        height: 0;
-        clear: both;
-    }
+@mixin hidden() {
+    display: none !important;
+    visibility: hidden;
+}
+
+/**
+ * Visually hide an element, but still make it accessible to screen readers.
+ */
+@mixin visuallyhidden() {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

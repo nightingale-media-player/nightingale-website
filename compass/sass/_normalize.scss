@@ -235,7 +235,7 @@ ul, ol, dl, menu {
     margin-left: 1.5em;
 }
 
-ul, ol, menu {
+ul, ol {
     list-style-type: disc;
     
     nav & {
@@ -301,6 +301,11 @@ button, input, select, textarea {
     font-size: 100%;
     vertical-align: baseline;
     padding: .3em;
+}
+
+// Address text squished down and cut off in mobile Webkit browsers
+select {
+    line-height: 1em;
 }
 
 // Address Firefox 3+ setting `line-height` on `input` using `!important` in the UA stylesheet.

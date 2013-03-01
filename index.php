@@ -1,17 +1,21 @@
-<!DOCTPYE html>
+<!DOCTYPE html>
 <html>
-    <head>
+    <head lang="en">
+        <meta charset="utf-8">
         <title>Nightingale - The tune of life, the tune of yours</title>
         
         <link rel="stylesheet" href="stylesheets/style.css">
-        <!--[if IE]> <link rel="stylesheet" href="stylesheets/legacy-ie.css"> <![endif]-->
+        <!--[if lt IE 9]>
+            <link rel="stylesheet" href="stylesheets/legacy-ie.css">
+            <script src="javascript/html5shiv.js"></script>
+        <![endif]-->
     </head>
     <body>
         <div class="wrapper">
             <div class="center">
                 <header class="container">
                     <nav role="navigation">
-                        <menu label="Navigation">
+                        <ul>
                             <!-- use buttons? -->
                             <li class="current"><a href="#">Home</a></li>
                             <li><a href="#">Blog</a></li>
@@ -19,12 +23,12 @@
                             <li><a href="#">Forum</a></li>
                             <li><a href="#">Wiki</a></li>
                             <li><a href="#">Developers</a></li>
-                        </menu>
+                        </ul>
                     </nav>
                     <figure id="headerlogo">
                         <div id="tabshadow" class="tab"></div>
                         <div id="birdtab" class="tab"></div>
-                        <img src="images/nightingale_official_text_outline.svg">
+                        <!--<img src="images/nightingale_official_text_outline.svg">-->
                     </figure>
                 </header>
             </div>
@@ -56,7 +60,7 @@
         <div class="wrapper">
             <footer class="center container">
                 <section id="footerinfo">
-                    <img id="footergale" src="images/footergale.png">
+                    <img id="footergale" alt="white outlined nightingale project logo" src="images/footergale.png">
                     <p>Nightingale is free!<br>
                        It is an Open Source projcet release under the terms of the GNU General Public License vX (GPL cX).<br>
                        For more deails, please read the <a href="">license information</a>.

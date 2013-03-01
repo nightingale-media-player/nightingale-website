@@ -1,5 +1,6 @@
 # Require any additional compass plugins here.
 require "susy"
+require "animate"
 
 # Set the paths accordingly to your production environment:
 http_path        = "/"
