@@ -330,6 +330,11 @@ input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
 }
 
+// Remove IE input clearing controls
+::-ms-clear {
+    display: none;
+}
+
 // Re-set default cursor for disabled elements.
 button[disabled], input[disabled] {
     cursor: default;
