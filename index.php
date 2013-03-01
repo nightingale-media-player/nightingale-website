@@ -2,7 +2,9 @@
 <html>
     <head>
         <title>Nightingale - The tune of life, the tune of yours</title>
+        
         <link rel="stylesheet" href="stylesheets/style.css">
+        <!--[if IE]> <link rel="stylesheet" href="stylesheets/legacy-ie.css"> <![endif]-->
     </head>
     <body>
         <div class="wrapper">
