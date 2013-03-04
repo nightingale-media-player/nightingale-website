@@ -13,3 +13,5 @@
 Icon?
 Thumbs.db
 desktop.ini
+*.sublime-project
+*.sublime-workspace
