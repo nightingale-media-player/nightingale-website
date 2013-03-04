@@ -11,7 +11,7 @@
     /* Layout */
 
     .container {
-      @include container;
+      @include container();
     }
 
     body {
@@ -190,7 +190,7 @@
        --------------------------------------------------------------------------*/
        
     #main aside {
-        @include span-columns(2 omega,6);
+        @include span-columns(2 omega);
     }
        
     .feature {
@@ -230,6 +230,10 @@
             @include span-columns(1);
             @include nth-omega(3n);        
         }
+        
+        ul {
+           margin: 0; 
+        }
     }
     
     #footergale {
@@ -243,5 +247,131 @@
         p {
             margin-top: 0;
         }
+    }
+    
+    @include at-breakpoint(4*$column-width+5*$gutter-width 4 6*$column-width+7*$gutter-width) {
+        .container {
+            @include set-container-width;
+        }
+        #headerlogo {
+            top: 5.5em;
+        }
+        
+        header {
+            padding-bottom: 5em;
+        }
+        
+        #main {
+            article {
+                @include span-columns(4 omega);
+            }
+            aside {
+                @include span-columns(4 omega);
+                .feature {
+                    @include span-columns(2);
+                    @include nth-omega(2n);
+                }
+                .feature:last-child {
+                    @include post(2);
+                }
+            }
+        }
+        footer {
+            .footerlinks {
+                @include span-columns(1);
+                @include remove-nth-omega(3n);
+            }
+        }
+        #footerinfo {
+            @include span-columns(3);
+        }
+    }
+    @include at-breakpoint(2*$column-width+3*$gutter-width 2 4*$column-width+5*$gutter-width) {
+        .container {
+            @include set-container-width;
+        }
+        
+        #headerlogo {
+            top: 5.5em;
+        }
+        
+        header {
+            padding-bottom: 5em;
+        }
+        
+        #main {
+            article {
+                @include span-columns(2 omega);
+                #screenshots, #description {
+                    @include span-columns(2 omega);
+                }
+            }
+            aside {
+                @include span-columns(2 omega);
+                .feature {
+                    @include span-columns(2);
+                    @include nth-omega(2n);
+                }
+            }
+        }
+        footer {
+            .footerlinks {
+                @include span-columns(1);
+                @include nth-omega(2n);
+                @include remove-nth-omega(3n);
+            }
+        }
+        #footerinfo {
+            @include span-columns(2);
+        }
+    }
+    @include at-breakpoint(1 2*$column-width+3*$gutter-width) {
+        .container {
+            @include set-container-width;
+        }
+        
+        #headerlogo {
+            top: 5.5em;
+        }
+        
+        header {
+            padding-bottom: 5em;
+        }
+        
+        #main {
+            article {
+                @include span-columns(1);
+                
+                #screenshots, #description {
+                    @include span-columns(1);
+                }
+                
+                #description {
+                    @include column-count(1);
+                }
+            }
+            aside {
+                @include span-columns(1);
+                .feature {
+                    @include span-columns(1);
+                    img {
+                        @include span-columns(1);
+                    }
+                    figcaption {
+                        @include span-columns(1);
+                    }
+                }
+            }
+        }
+        footer {
+            .footerlinks {
+                @include span-columns(1);
+                @include remove-nth-omega(3n);
+            }
+        }
+        #footerinfo {
+            @include span-columns(1);
+        }
+        // make footergale a column wide
     }
 }
