@@ -1,3 +1,8 @@
+# Local config
+compass/config.rb
+compass/config-production.rb
+
+# Automatically generated files
 .sass-cache
 *.css
 ~swp
@@ -13,3 +18,5 @@
 Icon?
 Thumbs.db
 desktop.ini
+*.sublime-project
+*.sublime-workspace

@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <title>Nightingale - The tune of life, the tune of yours</title>
         
-        <link rel="stylesheet" href="stylesheets/style.css">
+        <link rel="stylesheet" href="css/style.css">
         <!--[if lt IE 9]>
-            <link rel="stylesheet" href="stylesheets/legacy-ie.css">
+            <link rel="stylesheet" href="css/legacy-ie.css">
             <script src="javascript/html5shiv.js"></script>
         <![endif]-->
     </head>
