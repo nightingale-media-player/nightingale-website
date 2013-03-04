@@ -16,6 +16,9 @@ sass_dir         = "sass"
 output_style = :expanded
 environment  = :development
 
+# Enable debugging (for use with FireSass)
+sass_options = { :debug_info => true }
+
 # To enable relative paths to assets via compass helper functions. Uncomment:
 relative_assets = false
 
