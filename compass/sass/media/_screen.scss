@@ -6,6 +6,10 @@
   // Variables
 
     $sidebar-item-height: 8em;
+    
+  $onecolumn: 2*$column-width+3*$gutter-width;
+  $twocolumns: 4*$column-width+5*$gutter-width;
+  $allcolumns: 6*$column-width+7*$gutter-width;
 
     /* -------------------------------------------------------------------------*/
     /* Layout */
@@ -249,7 +253,7 @@
         }
     }
     
-    @include at-breakpoint(4*$column-width+5*$gutter-width 4 6*$column-width+7*$gutter-width) {
+    @include at-breakpoint($twocolumns 4 $allcolumns) {
         .container {
             @include set-container-width;
         }
@@ -286,7 +290,7 @@
             @include span-columns(3);
         }
     }
-    @include at-breakpoint(2*$column-width+3*$gutter-width 2 4*$column-width+5*$gutter-width) {
+    @include at-breakpoint($onecolumn 2 $twocolumns) {
         .container {
             @include set-container-width;
         }
@@ -325,7 +329,7 @@
             @include span-columns(2);
         }
     }
-    @include at-breakpoint(1 2*$column-width+3*$gutter-width) {
+    @include at-breakpoint(1 $onecolumn) {
         .container {
             @include set-container-width;
         }

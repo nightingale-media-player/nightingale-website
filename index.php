@@ -39,7 +39,7 @@
                     <figure id="headerlogo">
                         <div id="tabshadow" class="tab"></div>
                         <div id="birdtab" class="tab"></div>
-                        <!--<img src="images/nightingale_official_text_outline.svg">-->
+                        <!--<img src="images/nightingale_official_text_outline.svg" alt="Nightingale - The tune of life, the tune of yours">-->
                     </figure>
                 </header>
             </div>
