@@ -1,11 +1,23 @@
+<?php
+    $name = 'Nightingale';
+    $title = 'The tune of life, the tune of yours';
+    $description = 'Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bting you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.';
+    
+?>
 <!DOCTYPE html>
 <html>
     <head lang="en">
+        <!-- meta info -->
         <meta charset="utf-8">
-        <title>Nightingale - The tune of life, the tune of yours</title>
+        <title><?php echo $name.' - '.$title;?></title>
+        <meta name="description" content="<?php echo $description; ?>">
+        
+        <!-- styles -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="css/style.css">
         <!--[if lt IE 9]>
+            <meta http-equiv="X-UA-Compatible" content="chrome=1"> 
             <link rel="stylesheet" href="css/legacy-ie.css">
             <script src="javascript/html5shiv.js"></script>
         <![endif]-->
@@ -37,7 +49,7 @@
                 <article>
                     <div id="screenshots"></div>
                     <div id="description">
-                    Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bting you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.
+                        <?php echo $description; ?>
                     </div>
                 </article>
                 <aside>
