@@ -1,7 +1,7 @@
 /*!
  * Screen styles.
  */
-
+ 
 @media screen {
   // Variables
 
@@ -13,17 +13,16 @@
 
     /* -------------------------------------------------------------------------*/
     /* Layout */
-
-    .container {
-      @include container();
-    }
-
     html {
         @include background-image(linear-gradient(#414141,#333333));
         
-        height: 100%;
+        min-height: 100%;
     }
 
+    .container {
+        padding: 0 $gutter-width;
+    }
+    
     .wrapper {
         width: 100%;
     }
@@ -163,54 +162,41 @@
         
         @include single-box-shadow(#292929,0,0,.4em,.1em);
         
-        padding-top: 6em;
-        padding-bottom: $gutter-width;
-        margin-bottom: $gutter-width;
+        padding-top: 4*$base-line-height;
+        padding-bottom: $base-line-height;
+        margin-bottom: $base-line-height;
         
         position: relative;
         z-index: 1;
     }
-       
-    #main article {
-        @include span-columns(4);
-    }
 
     #screenshots {
-        @include span-columns(4 omega,4);
         background: blue;
         height: 2*$sidebar-item-height + $gutter-width;
-        margin-bottom: $gutter-width;
-    }
-    
-    #description {
-        @include span-columns(4 omega, 4);
-        @include column-width(columns(2,4));
-        @include column-count(2);
-        @include column-gap(gutter(6));
+        margin-bottom: $base-line-height;
     }
 
     /* ----------------------------------------------------------------------------
        Features sidebar
        --------------------------------------------------------------------------*/
-       
-    #main aside {
-        @include span-columns(2 omega);
-    }
-       
+        #main aside {
+            float: right;
+            width: $onecolumn;            
+        }
+
+    
     .feature {
-        @include span-columns(2 omega,2);
         height: $sidebar-item-height;
-        margin-bottom: $gutter-width;
+        margin-bottom: $base-line-height;
         
-        img {
-            @include span-columns(1,2);
-            
+        img {            
             height: $sidebar-item-height;
-            width: columns(1,2);
+            width: 50%;
+            float: left;
+            margin-right: $gutter-width;
         }
 
         figcaption {
-            @include span-columns(1 omega,2);
             font-style: normal;
             text-align: left;
         }
@@ -230,14 +216,14 @@
             color: #f0f0f0;
         }
         
-        .footerlinks {
-            @include span-columns(1);
-            @include nth-omega(3n);        
-        }
-        
         ul {
            margin: 0; 
         }
+    }
+    
+    .footerlinks {
+        float: right;
+        width: $column-width;
     }
     
     #footergale {
@@ -245,17 +231,73 @@
         height: 9em;
     }
        
-    #footerinfo {
-        @include span-columns(3);
+    #footerinfo p {
+        margin-top: 0;
+    }
+    
+    @include at-breakpoint($onecolumn) {
+        #description {
+            @include column-width(columns(2,4));
+            @include column-count(2);
+            @include column-gap(gutter(6));
+        }
         
-        p {
-            margin-top: 0;
+        .feature {
+            img {
+                width: columns(1,2);
+                float: none;
+                margin-right: 0;
+            }
+        }
+    }
+    
+    @include at-breakpoint($allcolumns 6) {
+        .container {
+          @include container();
+        }
+               
+        #main article {
+            @include span-columns(4);
+        }
+        
+        #screenshots {
+            @include span-columns(4 omega,4);
+        }
+        
+        #description {
+            @include span-columns(4 omega, 4);
+        }
+        
+        #main aside {
+            @include span-columns(2 omega);
+        }
+        
+        .feature {
+            @include span-columns(2 omega,2);
+            img {
+                @include span-columns(1,2);
+            }
+            
+            figcaption {
+                @include span-columns(1 omega,2);
+            }
+        }
+        
+        footer {
+            .footerlinks {
+                @include span-columns(1);
+                @include nth-omega(3n);        
+            }
+        }
+        
+        #footerinfo {
+            @include span-columns(3);
         }
     }
     
     @include at-breakpoint($twocolumns 4 $allcolumns) {
         .container {
-            @include set-container-width;
+          @include container();
         }
         #headerlogo {
             top: 5.5em;
@@ -271,28 +313,27 @@
             }
             aside {
                 @include span-columns(4 omega);
-                .feature {
-                    @include span-columns(2);
-                    @include nth-omega(2n);
-                }
-                .feature:last-child {
-                    @include post(2);
-                }
             }
         }
-        footer {
-            .footerlinks {
-                @include span-columns(1);
-                @include remove-nth-omega(3n);
-            }
+        
+        .feature {
+            @include span-columns(2);
+            @include nth-omega(2n);
+        }
+        .feature:last-child {
+            @include post(2);
+        }
+        .footerlinks {
+            @include span-columns(1);
         }
         #footerinfo {
             @include span-columns(3);
         }
     }
+    
     @include at-breakpoint($onecolumn 2 $twocolumns) {
         .container {
-            @include set-container-width;
+          @include container();
         }
         
         #headerlogo {
@@ -312,69 +353,39 @@
             }
             aside {
                 @include span-columns(2 omega);
-                .feature {
-                    @include span-columns(2);
-                    @include nth-omega(2n);
-                }
             }
         }
-        footer {
-            .footerlinks {
-                @include span-columns(1);
-                @include nth-omega(2n);
-                @include remove-nth-omega(3n);
-            }
+        .feature {
+            @include span-columns(2);
+            @include nth-omega(2n);
+        }
+        .footerlinks {
+            @include span-columns(1);
+            @include nth-omega(2n);
         }
         #footerinfo {
             @include span-columns(2);
         }
     }
-    @include at-breakpoint(1 $onecolumn) {
-        .container {
-            @include set-container-width;
-        }
-        
+    
+    // optimize the gridless layout for small screens
+    @include at-breakpoint(1 $onecolumn) {        
         #headerlogo {
             top: 5.5em;
+        }
+        
+        #main aside {
+            margin-top: $base-line-height;
+            float: none;
         }
         
         header {
             padding-bottom: 5em;
         }
         
-        #main {
-            article {
-                @include span-columns(1);
-                
-                #screenshots, #description {
-                    @include span-columns(1);
-                }
-                
-                #description {
-                    @include column-count(1);
-                }
-            }
-            aside {
-                @include span-columns(1);
-                .feature {
-                    @include span-columns(1);
-                    img {
-                        @include span-columns(1);
-                    }
-                    figcaption {
-                        @include span-columns(1);
-                    }
-                }
-            }
-        }
-        footer {
-            .footerlinks {
-                @include span-columns(1);
-                @include remove-nth-omega(3n);
-            }
-        }
-        #footerinfo {
-            @include span-columns(1);
+        .footerlinks {
+            float: none;
+            margin-top: $base-line-height;
         }
         // make footergale a column wide
     }
