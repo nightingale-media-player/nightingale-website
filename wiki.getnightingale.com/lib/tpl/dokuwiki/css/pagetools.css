@@ -18,10 +18,6 @@
     min-height: 190px; /* 30 (= height of icons) x 6 (= maximum number of possible tools) + 2x5 */
     height: auto;
 }
-#dokuwiki__usertools {
-    /* move the tools just outside of the site */
-    right: 40px;
-}
 [dir=rtl] #dokuwiki__usertools {
     right: auto;
     left: 40px;

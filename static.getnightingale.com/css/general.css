@@ -10,6 +10,16 @@ audio:not([controls]) { display: none; }
 /* ==|== primary styles =====================================================
    Author: Martin Giger
    ========================================================================== */
+
+/* nav menu fix */
+#ngalemainhead nav ul, #ngalemainfooter nav ul, #ngalemainhead nav li, #ngalemainfooter nav li {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1.231em;
+}
+
 /* General styles */  
 
 html {
@@ -54,7 +64,6 @@ body {
 	#ngalemainhead nav li {
 		float: left;
 		background-color: #333333;
-		list-style: none;
 	}
 	
 	#ngalemainhead nav li a:link, header nav li a:hover, header nav li a:active, header nav li a:visited {
@@ -210,17 +219,6 @@ body {
 
 /* MENU ONLY! */
 .menu { list-style-type:none; -webkit-margin-after:0; }
-
-
-/* nav menu fix */
-nav ul, nav ul,
-#ngalemainhead nav ul, #ngalemainhead nav ul {
-	list-style: none;
-	list-style-image: none;
-	margin: 0;
-	padding: 0;
-	line-height: 1.231em;
-}
 
 /* Font */
 

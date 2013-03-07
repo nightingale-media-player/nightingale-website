@@ -115,9 +115,7 @@
 /*____________ user tools ____________*/
 
 #dokuwiki__usertools {
-    position: absolute;
-    top: .5em;
-    right: .5em;
+    position: relative;
     text-align: right;
     width: 100%;
 }
