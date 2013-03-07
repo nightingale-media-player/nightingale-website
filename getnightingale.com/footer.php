@@ -6,7 +6,7 @@
 			<li><img src="http://static.getnightingale.com/img/footergale.png" alt="Nightingale logo" id="outlinedngale">
 			  <div id="license">
 			  <b>License</b>
-			  <?php if($_GET['wiki']=="true") { echo tpl_license(false); } else { echo
+			  <?php if(defined('DOKU_INC')) { echo tpl_license(false); } else { echo
 			  "Site content licensed under the <a href='http://www.gnu.org/copyleft/gpl.html'>GNU GPL</a>."; } ?> <!-- ready to include the dokuwiki licenseblock -->
 			  </div></li>
 			<li><nav>
