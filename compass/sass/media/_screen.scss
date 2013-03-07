@@ -191,7 +191,7 @@
         margin-bottom: $base-line-height;
         
         img {            
-            height: $sidebar-item-height;
+            max-height: $sidebar-item-height;
             max-width: 50%;
             float: left;
             margin-right: $gutter-width;
@@ -385,6 +385,7 @@
         #main aside {
             margin-top: $base-line-height;
             float: none;
+            width: 100%;
         }
         
         header {
