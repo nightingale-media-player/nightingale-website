@@ -192,7 +192,7 @@
         
         img {            
             height: $sidebar-item-height;
-            width: 50%;
+            max-width: 50%;
             float: left;
             margin-right: $gutter-width;
         }
@@ -245,9 +245,12 @@
         
         .feature {
             img {
+                @include span-columns(1,2);
                 width: columns(1,2);
-                float: none;
                 margin-right: 0;
+            }
+            figcaption {
+                @include span-columns(1 omega,2);
             }
         }
     }
@@ -255,10 +258,6 @@
     @include at-breakpoint($allcolumns 6) {
         .container {
           @include container();
-        }
-               
-        #main article {
-            @include span-columns(4);
         }
         
         #screenshots {
@@ -269,8 +268,13 @@
             @include span-columns(4 omega, 4);
         }
         
-        #main aside {
-            @include span-columns(2 omega);
+        #main {
+            article {
+                @include span-columns(4);
+            }
+            aside {
+                @include span-columns(2 omega);
+            }
         }
         
         .feature {
@@ -314,6 +318,7 @@
             }
             aside {
                 @include span-columns(4 omega);
+                margin-top: $base-line-height;
             }
         }
         
@@ -354,6 +359,7 @@
             }
             aside {
                 @include span-columns(2 omega);
+                margin-top: $base-line-height;
             }
         }
         .feature {
@@ -363,6 +369,7 @@
         .footerlinks {
             @include span-columns(1);
             @include nth-omega(2n);
+            margin-top: $base-line-height;
         }
         #footerinfo {
             @include span-columns(2);
