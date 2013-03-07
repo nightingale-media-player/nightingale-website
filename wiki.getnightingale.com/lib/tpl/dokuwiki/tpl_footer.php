@@ -9,15 +9,8 @@ if (!defined('DOKU_INC')) die();
 
 <!-- ********** FOOTER ********** -->
 <div id="dokuwiki__footer"><div class="pad">
-    <?php tpl_license(''); // license text ?>
 
     <div class="buttons">
-        <?php
-            tpl_license('button', true, false, false); // license button, no wrapper
-            $target = ($conf['target']['extern']) ? 'target="'.$conf['target']['extern'].'"' : '';
-        ?>
-        <a href="http://www.dokuwiki.org/donate" title="Donate" <?php echo $target?>><img
-            src="<?php echo tpl_basedir(); ?>images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
         <a href="http://www.php.net" title="Powered by PHP" <?php echo $target?>><img
             src="<?php echo tpl_basedir(); ?>images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
         <a href="http://validator.w3.org/check/referer" title="Valid HTML5" <?php echo $target?>><img
