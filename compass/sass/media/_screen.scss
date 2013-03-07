@@ -229,7 +229,11 @@
     
     #footergale {
         float: left;
-        height: 9em;
+        max-height: image-height("footergale.png");
+        max-width: image-width("footergale.png");
+        width: 100%;
+        margin-right: $gutter-width;
+        
     }
        
     #footerinfo p {
