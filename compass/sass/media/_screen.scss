@@ -20,7 +20,8 @@
     }
 
     .container {
-        padding: 0 $gutter-width;
+        padding-left: $gutter-width;
+        padding-right: $gutter-width;
         max-width: $allcolumns;
     }
     
@@ -314,6 +315,20 @@
         
         header {
             padding-bottom: 5em;
+            
+            nav li {
+                :link,:visited {
+                    border-top: .5rem solid transparent;
+                }
+                a:hover {
+                    border-top: .5rem solid white;
+                    border-bottom: none;
+                }
+                &.current a:link,&.current a:visited {
+                    border-top: .5rem solid #b55029;
+                    border-bottom: none;
+                }
+            }
         }
         
         #main {
@@ -352,6 +367,8 @@
         
         header {
             padding-bottom: 5em;
+            
+            //todo: uses alternative mobile menu
         }
         
         #main {
@@ -394,6 +411,8 @@
         
         header {
             padding-bottom: 5em;
+            
+            //todo: alternative mobile menu
         }
         
         .footerlinks {
