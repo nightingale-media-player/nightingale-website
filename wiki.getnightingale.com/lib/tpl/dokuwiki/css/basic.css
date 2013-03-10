@@ -15,7 +15,6 @@ html {
 html,
 body {
     color: __text__;
-    background: __background_site__ url(images/page-gradient.png) top left repeat-x;
     margin: 0;
     padding: 0;
 }
