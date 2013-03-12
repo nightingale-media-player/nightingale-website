@@ -265,21 +265,12 @@
           @include container();
         }
         
-        #screenshots {
-            @include span-columns(4 omega,4);
+        #contentleft {
+            @include span-columns(4);
         }
         
-        #description {
-            @include span-columns(4 omega, 4);
-        }
-        
-        #main {
-            article {
-                @include span-columns(4);
-            }
-            aside {
-                @include span-columns(2 omega);
-            }
+        #main aside {
+            @include span-columns(2 omega);
         }
         
         .feature {
@@ -331,14 +322,9 @@
             }
         }
         
-        #main {
-            article {
-                @include span-columns(4 omega);
-            }
-            aside {
-                @include span-columns(4 omega);
-                margin-top: $base-line-height;
-            }
+        #main aside {
+            @include span-columns(4);
+            margin-top: $base-line-height;
         }
         
         .feature {
@@ -371,21 +357,9 @@
             //todo: uses alternative mobile menu
         }
         
-        #main {
-            article {
-                @include span-columns(2 omega);
-                #screenshots, #description {
-                    @include span-columns(2 omega);
-                }
-            }
-            aside {
-                @include span-columns(2 omega);
-                margin-top: $base-line-height;
-            }
-        }
-        .feature {
+        #main  aside {
             @include span-columns(2);
-            @include nth-omega(2n);
+            margin-top: $base-line-height;
         }
         .footerlinks {
             @include span-columns(1);

@@ -36,7 +36,7 @@
                             <li><a href="#">Developers</a></li>
                         </ul>
                     </nav>
-                    <figure id="headerlogo">
+                    <figure id="headerlogo" role="banner">
                         <div id="tabshadow" class="tab"></div>
                         <div id="birdtab" class="tab"></div>
                         <img src="images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours">
@@ -45,13 +45,13 @@
             </div>
         </div>
         <div class="wrapper" id="wrapper">
-            <section id="main" class="center container" role="main">
-                <article>
+            <article id="main" class="center container" role="main">
+                <div id="contentleft">
                     <div id="screenshots"></div>
                     <div id="description">
                         <?php echo $description; ?>
                     </div>
-                </article>
+                </div>
                 <aside>
                     <figure class="feature">
                         <img src="http://lorempixel.com/400/400">
@@ -66,11 +66,11 @@
                         <figcaption>Lorem ipsum</figcaption>
                     </figure>
                 </aside>
-            </section>
+            </article>
         </div>
         <div class="wrapper">
             <footer class="center container">
-                <section id="footerinfo">
+                <section id="footerinfo" role="contentinfo">
                     <img id="footergale" alt="white outlined nightingale project logo" src="images/footergale.png">
                     <p>Nightingale is free!<br>
                        It is an Open Source projcet release under the terms of the GNU General Public License vX (GPL cX).<br>
