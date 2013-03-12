@@ -19,13 +19,13 @@
         min-height: 100%;
     }
 
-    .container {
+    body>.wrapper>.container {
         padding-left: $gutter-width;
         padding-right: $gutter-width;
         max-width: $allcolumns;
     }
     
-    .wrapper {
+    body>.wrapper {
         width: 100%;
     }
 
@@ -45,7 +45,7 @@
         z-index: 10;
     }
     
-    .tab {
+    #ngalemainheadwrapper .tab {
         width: 25em;
         height: 7em;
         top: 1.1em;
@@ -118,7 +118,7 @@
         }
     }
 
-    header {
+    #ngalemainheadwrapper header {
         position: relative;
         height: 5em;
 
@@ -207,7 +207,9 @@
     /* ----------------------------------------------------------------------------
        Footer
        --------------------------------------------------------------------------*/
-    footer {
+    
+    
+    #ngalemainfooterwrapper footer {
         color: white;
         
         :link,:visited {
@@ -284,7 +286,7 @@
             }
         }
         
-        footer {
+        #ngalemainfooterwrapper footer {
             .footerlinks {
                 @include span-columns(1);
                 @include nth-omega(3n);        
@@ -304,7 +306,7 @@
             top: 5.5em;
         }
         
-        header {
+        #ngalemainheadwrapper header {
             padding-bottom: 5em;
             
             nav li {
@@ -351,7 +353,7 @@
             top: 5.5em;
         }
         
-        header {
+        #ngalemainheadwrapper header {
             padding-bottom: 5em;
             
             //todo: uses alternative mobile menu
@@ -383,7 +385,7 @@
             width: 100%;
         }
         
-        header {
+        #ngalemainheadwrapper header {
             padding-bottom: 5em;
             
             //todo: alternative mobile menu

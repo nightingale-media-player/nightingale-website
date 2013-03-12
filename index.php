@@ -23,29 +23,27 @@
         <![endif]-->
     </head>
     <body>
-        <div class="wrapper">
-            <div class="center">
-                <header class="container">
-                    <nav role="navigation">
-                        <ul>
-                            <li class="current"><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Add-ons</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">Wiki</a></li>
-                            <li><a href="#">Developers</a></li>
-                        </ul>
-                    </nav>
-                    <figure id="headerlogo" role="banner">
-                        <div id="tabshadow" class="tab"></div>
-                        <div id="birdtab" class="tab"></div>
-                        <img src="images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours">
-                    </figure>
-                </header>
-            </div>
+        <div id="ngalemainheadwrapper" class="wrapper">
+            <header class="container">
+                <nav role="navigation">
+                    <ul>
+                        <li class="current"><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Add-ons</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Wiki</a></li>
+                        <li><a href="#">Developers</a></li>
+                    </ul>
+                </nav>
+                <figure id="headerlogo" role="banner">
+                    <div id="tabshadow" class="tab"></div>
+                    <div id="birdtab" class="tab"></div>
+                    <img src="images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours">
+                </figure>
+            </header>
         </div>
         <div class="wrapper" id="wrapper">
-            <article id="main" class="center container" role="main">
+            <article id="main" class="container" role="main">
                 <div id="contentleft">
                     <div id="screenshots"></div>
                     <div id="description">
@@ -68,8 +66,8 @@
                 </aside>
             </article>
         </div>
-        <div class="wrapper">
-            <footer class="center container">
+        <div class="wrapper" id="ngalemainfooterwrapper">
+            <footer class="container">
                 <section id="footerinfo" role="contentinfo">
                     <img id="footergale" alt="white outlined nightingale project logo" src="images/footergale.png">
                     <p>Nightingale is free!<br>
