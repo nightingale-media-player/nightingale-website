@@ -174,7 +174,7 @@
 
     #screenshots {
         background: blue;
-        height: 2*$sidebar-item-height + $gutter-width;
+        height: 2*$sidebar-item-height + px2em($base-line-height);
         margin-bottom: $base-line-height;
     }
 
