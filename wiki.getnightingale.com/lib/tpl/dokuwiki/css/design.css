@@ -19,6 +19,7 @@
     margin-bottom: 1.5em;
     width: 49%;
 }
+/*
 #dokuwiki__header h1 img {
     float: left;
     margin-right: .5em;
@@ -45,7 +46,7 @@
 #dokuwiki__header h1 a:hover,
 #dokuwiki__header h1 a:active,
 #dokuwiki__header h1 a:focus {
-}
+}*/
 #dokuwiki__header p.claim {
     margin-bottom: 0;
     font-size: 0.875em;
@@ -115,14 +116,15 @@
 /*____________ user tools ____________*/
 
 #dokuwiki__usertools {
-    position: relative;
-    text-align: right;
+    position: absolute;
+    text-align: left;
     width: 100%;
+    left: 40px;
 }
 [dir=rtl] #dokuwiki__usertools {
-    text-align: left;
-    left: 40px;
-    right: auto;
+    text-align: right;
+    right: 40px;
+    left: auto;
 }
 #dokuwiki__usertools ul {
     margin: 0 auto;
@@ -130,6 +132,7 @@
     max-width: __site_width__;
 }
 #dokuwiki__usertools ul li.user {
+    margin-left: 0;
 }
 
 #dokuwiki__usertools a.action.admin {
