@@ -45,7 +45,9 @@
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <div id="contentleft">
-                    <div id="screenshots"></div>
+                    <div id="screenshots">
+                        <button id="downloadbutton"><img src="images/dreambian.png" alt="Dreambian Icon">Download Nightingale<br><small>128-bit | Dreambian .lol</small></button>
+                    </div>
                     <div id="description">
                         <?php echo $description; ?>
                     </div>
@@ -96,13 +98,11 @@
                     </ul>
                 </nav>
                 <nav class="footerlinks">
-                    <b>MOAR!</b>
+                    <b>Ressources</b>
                     <ul>
-                        <li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Developers Center</a></li>
-                        <li><a href="http://wiki.getnightingale.com/doku.php?id=ngale-locales" title="Translate Nightingale">Translate Nightingale</a></li>
-                        <li><a href="https://github.com/nightingale-media-player" title="GitHub">Source Code</a></li>
-                        <li><a href="http://bugs.getnightingale.com" title="Bugzilla">Report a Bug</a></li>
-                        <li><a href="http://getnightingale.com/donate" title="donate to Nightingale">Donate</a></li>
+                        <li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki">Download Nightingale</a></li>
+                        <li><a href="http://wiki.getnightingale.com/doku.php?id=ngale-locales" title="Translate Nightingale">Features</a></li>
+                        <li><a href="https://github.com/nightingale-media-player" title="GitHub">Nightlies</a></li>
                     </ul>
                 </nav>
             </footer>

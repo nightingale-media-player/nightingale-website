@@ -10,6 +10,8 @@
   $onecolumn: 2*$column-width+3*$gutter-width;
   $twocolumns: 4*$column-width+5*$gutter-width;
   $allcolumns: 6*$column-width+7*$gutter-width;
+  
+  $orange: #b55029;
 
     /* -------------------------------------------------------------------------*/
     /* Layout */
@@ -39,15 +41,16 @@
     }
     
     #headerlogo img {
-        height: 9em;
-        width: 27em;
+        max-height: 9em;
+        max-width: 27em;
+        width: 100%;
         position: relative;
         z-index: 10;
     }
     
     #ngalemainheadwrapper .tab {
-        width: 25em;
-        height: 7em;
+        width: 92.59%;
+        height: 77.77%;
         top: 1.1em;
         left: 1em;
         position: absolute;
@@ -56,18 +59,21 @@
             content: "";
             height: 6em;
             width: 5em;
-            @include border-radius(.5em);
             position: absolute;
-            top: .54em;
+            top: -.15em;
         }
         
         &::before {
+            @include transform-origin(top, left, false);
             @include rotate(20deg);
-            left: -1.49em;
+            left: -.2em;
+            @include border-top-left-radius(.5em);
         }
         &::after {
+            @include transform-origin(top, right, false);
             @include rotate(-20deg);
-            right: -1.49em;
+            right: -.2em;
+            @include border-top-right-radius(.5em);
         }
     }
     
@@ -91,30 +97,10 @@
     
     #birdtab {
         background: white;
-        width: 25em;
-        height: 7em;
-        top: 1.1em;
-        left: 1em;
-        position: absolute;
         z-index: 9;
         
         &::before,&::after {
-            content: "";
-            height: 6em;
-            width: 5em;
-            @include border-radius(.5em);
             background: white;
-            position: absolute;
-            top: .54em;
-        }
-        
-        &::before {
-            @include rotate(20deg);
-            left: -1.49em;
-        }
-        &::after {
-            @include rotate(-20deg);
-            right: -1.49em;
         }
     }
 
@@ -151,7 +137,7 @@
                     border-bottom: .5rem solid white;
                 }
                 &.current a:link,&.current a:visited {
-                    border-bottom: .5rem solid #b55029;
+                    border-bottom: .5rem solid $orange;
                 }
             }
         }
@@ -176,6 +162,38 @@
         background: blue;
         height: 2*$sidebar-item-height + px2em($base-line-height);
         margin-bottom: $base-line-height;
+        position: relative;
+    }
+    
+    #downloadbutton {
+        text-align: right;
+        color: white;
+        border: 2px solid #343434;
+        @include border-radius(3px);
+        @include background-image(linear-gradient(#444444,#343434));
+        @include single-box-shadow(#fff,0,0,1em,.1em);
+        height: 4.5em;
+        width: 18em;
+        padding:0 1.25em;
+        position: absolute;
+        bottom: 0;
+        left: 2*$column-width + 1.5*$gutter-width - 9em;          
+        
+        small {
+            color: $orange;
+        }
+        
+        img {
+            float: left;
+            margin-right: 1.25em;
+            margin-top: .9375em;
+            height: 2.375em;
+            width: 2.375em;
+        }
+    }
+    
+    #downloadbutton small {
+        color: $orange;
     }
 
     /* ----------------------------------------------------------------------------
@@ -262,6 +280,21 @@
         }
     }
     
+    @include at-breakpoint(0 28em) {
+        #ngalemainheadwrapper .tab {
+            left: 0;
+        }
+    }
+    
+    @include at-breakpoint(0 $allcolumns) {
+        #headerlogo {
+            top: 5.5em;
+        }
+        #ngalemainheadwrapper header {
+            padding-bottom: 5em;
+        }
+    }
+    
     @include at-breakpoint($allcolumns 6) {
         .container {
           @include container();
@@ -286,11 +319,9 @@
             }
         }
         
-        #ngalemainfooterwrapper footer {
-            .footerlinks {
-                @include span-columns(1);
-                @include nth-omega(3n);        
-            }
+        #ngalemainfooterwrapper .footerlinks {
+            @include span-columns(1);
+            @include nth-omega(3n);
         }
         
         #footerinfo {
@@ -302,25 +333,18 @@
         .container {
           @include container();
         }
-        #headerlogo {
-            top: 5.5em;
-        }
         
-        #ngalemainheadwrapper header {
-            padding-bottom: 5em;
-            
-            nav li {
-                :link,:visited {
-                    border-top: .5rem solid transparent;
-                }
-                a:hover {
-                    border-top: .5rem solid white;
-                    border-bottom: none;
-                }
-                &.current a:link,&.current a:visited {
-                    border-top: .5rem solid #b55029;
-                    border-bottom: none;
-                }
+        #ngalemainheadwrapper header nav li {
+            :link,:visited {
+                border-top: .5rem solid transparent;
+            }
+            a:hover {
+                border-top: .5rem solid white;
+                border-bottom: none;
+            }
+            &.current a:link,&.current a:visited {
+                border-top: .5rem solid #b55029;
+                border-bottom: none;
             }
         }
         
@@ -349,12 +373,7 @@
           @include container();
         }
         
-        #headerlogo {
-            top: 5.5em;
-        }
-        
         #ngalemainheadwrapper header {
-            padding-bottom: 5em;
             
             //todo: uses alternative mobile menu
         }
@@ -374,10 +393,7 @@
     }
     
     // optimize the gridless layout for small screens
-    @include at-breakpoint(1 $onecolumn) {        
-        #headerlogo {
-            top: 5.5em;
-        }
+    @include at-breakpoint(1 $onecolumn) {
         
         #main aside {
             margin-top: $base-line-height;
@@ -386,7 +402,6 @@
         }
         
         #ngalemainheadwrapper header {
-            padding-bottom: 5em;
             
             //todo: alternative mobile menu
         }
