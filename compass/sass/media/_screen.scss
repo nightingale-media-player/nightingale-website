@@ -38,6 +38,7 @@
     #headerlogo {
         position: absolute;
         top: .5em;
+        left: -0.5%;
     }
     
     #headerlogo img {
@@ -51,8 +52,9 @@
     #ngalemainheadwrapper .tab {
         width: 92.59%;
         height: 77.77%;
-        top: 1.1em;
-        left: 1em;
+        top: 11.115%;
+        left: 3.705%;
+        margin-right: 3.705%;
         position: absolute;
         
         &::before,&::after {
@@ -277,12 +279,6 @@
             figcaption {
                 @include span-columns(1 omega,2);
             }
-        }
-    }
-    
-    @include at-breakpoint(0 28em) {
-        #ngalemainheadwrapper .tab {
-            left: 0;
         }
     }
     
