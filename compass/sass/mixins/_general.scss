@@ -6,7 +6,7 @@
  * Completely hide an element, also for screen readers.
  */
 @mixin hidden() {
-    display: none !important;
+    display: none;
     visibility: hidden;
 }
 

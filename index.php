@@ -23,6 +23,18 @@
         <![endif]-->
     </head>
     <body>
+        <div  id="instructions">
+            <section>
+                <ol type="1">
+                    <li>Open a terminal window</li>
+                    <li>Type <code>sudo add-apt-repository ppa:nightingaleteam/nightingale-release</code></li>
+                    <li>Then <code>sudo apt-get update</code></li>
+                    <li>And finally <code>sudo apt-get install nightingale</code></li>
+                </ol>
+            </section>
+        </div>
+        <div id="overlay">
+        </div>
         <div id="ngalemainheadwrapper" class="wrapper">
             <header class="container">
                 <nav role="navigation">
@@ -48,7 +60,7 @@
                     <div id="screenshots">
                         <img id="screenshotone" src="http://lorempixel.com/500/300">
                         <img id="screenshottwo" src="http://lorempixel.com/501/301">
-                        <button id="downloadbutton"><img src="images/dreambian.png" alt="Dreambian Icon"><div>Download Nightingale<br><small>128-bit | Dreambian .lol</small></div></button>
+                        <button id="downloadbutton" data-popup><img src="images/dreambian.png" alt="Dreambian Icon"><div>Download Nightingale<br><small>128-bit | Dreambian .lol</small></div></button>
                         <a href="#" id="moredownloadslink">Other platforms and architectures</a>
                     </div>
                     <div id="description">
@@ -110,5 +122,37 @@
                 </nav>
             </footer>
         </div>
+        
+        <script type="text/javascript">
+            window.onload = function() {
+                if(document.getElementById("downloadbutton").attributes['data-popup']) {
+                    document.getElementById("downloadbutton").addEventListener("click",function() {
+                        show("overlay");
+                        show("instructions");
+                        document.getElementById("overlay").addEventListener("click",hideOverlay);
+                        if(!('pointerEvents' in document.body.style))
+                            document.getElementById("instructions").addEventListener("click",hideOverlay);
+                    });
+                }
+            };
+            
+            function hideOverlay() {
+                console.log("hiding");
+                hide("overlay");
+                hide("instructions");
+                document.getelementbyid("overlay").removeeventlistener("click",hideoverlay);
+                if(!('pointerEvents' in document.body.style))
+                    document.getelementbyid("instructions").removeeventlistener("click",hideoverlay);
+            }
+            
+            function show(nodeId) {
+                document.getElementById(nodeId).style.display = "block";
+                document.getElementById(nodeId).style.visibility = "visible";
+            }
+            
+            function hide(nodeId) {
+                document.getElementById(nodeId).style = "";
+            }
+        </script>
     </body>
 </html>

@@ -308,6 +308,49 @@
         margin-top: 0;
     }
     
+    /* ----------------------------------------------------------------------------
+       Ubunut ppa overlay
+       --------------------------------------------------------------------------*/
+    #overlay {
+        @include hidden();
+        background: rgba(0,0,0,0.7);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 1002;
+        top: 0;
+        left: 0;
+    }
+    
+    #instructions {
+        @include hidden();
+        margin-top: 5em + 2*$sidebar-item-height;
+        position: absolute;
+        width: 100%;
+        z-index: 1003;
+        pointer-events: none;
+        
+        section {
+            pointer-events: auto;
+            background-color: white;
+            max-width: 4*$column-width+$gutter-width;
+            padding: $base-line-height $gutter-width;
+            @include border-radius(.3em);
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        ol {
+            list-style-type: decimal;
+        }
+    }
+    
+    
+    /* ----------------------------------------------------------------------------
+       Responsive enhancments
+       --------------------------------------------------------------------------*/
+    
+    
     @include at-breakpoint($onecolumn) {
         #description {
             @include column-width(columns(2,4));
