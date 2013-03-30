@@ -200,7 +200,7 @@
         height: 4.5em;
         max-width: 18em;
         width: 100%;
-        padding:1.0625em 1.25em;
+        padding:0 1.25em;
         position: absolute;
         bottom: 0;
         left: 2*$column-width + 1.5*$gutter-width - 9em;          
@@ -210,14 +210,17 @@
         }
         
         img {
-            float: left;
-            margin-right: 1.25em;
-            /*margin-top: .9375em;*/
+            position: absolute;
+            left: 1.25em;
+            top: 1.0625em;
             height: 2.375em;
             width: 2.375em;
         }
         div {
-            float: right;
+            position: absolute;
+            right: 1.25em;
+            top: 1.0625em - px2em(($base-line-height - $base-font-size)/2);
+            height: 2.375em;
         }
         small {
             color: $orange;
@@ -231,7 +234,7 @@
         line-height: 1em;
         bottom: -1.2em;
         
-        &:link {
+        &:link,&:hover,&:visited,&:active {
             color: $orange;
         }
     }
