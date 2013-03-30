@@ -209,6 +209,10 @@
             color: $orange;
         }
         
+        &:active  {
+            @include background-image(linear-gradient(#343434,#444444));
+        }
+        
         img {
             position: absolute;
             left: 1.25em;
@@ -220,7 +224,6 @@
             position: absolute;
             right: 1.25em;
             top: 1.0625em - px2em(($base-line-height - $base-font-size)/2);
-            height: 2.375em;
         }
         small {
             color: $orange;
