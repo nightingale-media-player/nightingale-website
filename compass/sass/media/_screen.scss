@@ -5,7 +5,7 @@
 @media screen {
   // Variables
 
-    $sidebar-item-height: 6*px2em($base-line-height);
+    $sidebar-item-height: 5*px2em($base-line-height);
     
   $onecolumn: 2*$column-width+3*$gutter-width;
   $twocolumns: 4*$column-width+5*$gutter-width;
@@ -188,6 +188,7 @@
         @include rotateY(-15deg);
         @include transform-origin(right,center,0px);
         float: right;
+        position: absolute;
     }
     
     #downloadbutton {
