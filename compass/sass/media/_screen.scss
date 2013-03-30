@@ -5,7 +5,7 @@
 @media screen {
   // Variables
 
-    $sidebar-item-height: 8em;
+    $sidebar-item-height: 6*px2em($base-line-height);
     
   $onecolumn: 2*$column-width+3*$gutter-width;
   $twocolumns: 4*$column-width+5*$gutter-width;
@@ -163,7 +163,7 @@
     #screenshots {
         // create a padding matching half of the download button
         padding-bottom: 2.25em;
-        margin-bottom: $base-line-height;
+        margin-bottom: 2*$base-line-height;
         position: relative;
         @include perspective(300px);
     }
@@ -229,7 +229,7 @@
         right: (2*$column-width + 1.5*$gutter-width - 9em) * px2em($base-font-size)/.8em;
         font-size: .8em;
         line-height: 1em;
-        bottom: -1em;
+        bottom: -1.2em;
         
         &:link {
             color: $orange;
