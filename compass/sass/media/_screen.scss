@@ -21,7 +21,7 @@
         min-height: 100%;
     }
 
-    body>.wrapper>.container {
+    body article {
         padding-left: $gutter-width;
         padding-right: $gutter-width;
         max-width: $allcolumns;
@@ -161,7 +161,8 @@
     }
 
     #screenshots {
-        height: 2*$sidebar-item-height + px2em($base-line-height);
+        // create a padding matching half of the download button
+        padding-bottom: 2.25em;
         margin-bottom: $base-line-height;
         position: relative;
         @include perspective(300px);
@@ -173,10 +174,10 @@
         
         @include transition-property(transform);
         @include transition-duration(.8s);
-    }
-    
-    #screenshotone:hover,#screenshottwo:hover {
-        @include rotateY(0deg);
+        
+        &:hover {
+            @include rotateY(0deg);
+        }
     }
     
     #screenshotone {
@@ -197,8 +198,9 @@
         @include background-image(linear-gradient(#444444,#343434));
         @include single-box-shadow(#fff,0,0,1em,.1em);
         height: 4.5em;
-        width: 18em;
-        padding:0 1.25em;
+        max-width: 18em;
+        width: 100%;
+        padding:1.0625em 1.25em;
         position: absolute;
         bottom: 0;
         left: 2*$column-width + 1.5*$gutter-width - 9em;          
@@ -210,14 +212,16 @@
         img {
             float: left;
             margin-right: 1.25em;
-            margin-top: .9375em;
+            /*margin-top: .9375em;*/
             height: 2.375em;
             width: 2.375em;
         }
-    }
-    
-    #downloadbutton small {
-        color: $orange;
+        div {
+            floaT: right;
+        }
+        small {
+            color: $orange;
+        }
     }
 
     /* ----------------------------------------------------------------------------
@@ -322,6 +326,10 @@
             @include span-columns(4);
         }
         
+        #screenshots {
+            height: 2*$sidebar-item-height + px2em($base-line-height) - 2.25em;
+        }
+        
         #main aside {
             @include span-columns(2 omega);
         }
@@ -370,7 +378,7 @@
             @include span-columns(4);
             margin-top: $base-line-height;
         }
-        
+
         .feature {
             @include span-columns(2);
             @include nth-omega(2n);
@@ -400,6 +408,10 @@
             @include span-columns(2);
             margin-top: $base-line-height;
         }
+        #downloadbutton {
+            left: $column-width + .5*$gutter-width - 9em;
+        }
+        
         .footerlinks {
             @include span-columns(1);
             @include nth-omega(2n);
@@ -422,6 +434,9 @@
         #ngalemainheadwrapper header {
             
             //todo: alternative mobile menu
+        }
+        #downloadbutton {
+            left: 0;
         }
         
         .footerlinks {
