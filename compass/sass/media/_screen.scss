@@ -161,10 +161,32 @@
     }
 
     #screenshots {
-        background: blue;
         height: 2*$sidebar-item-height + px2em($base-line-height);
         margin-bottom: $base-line-height;
         position: relative;
+        @include perspective(300px);
+    }
+    
+    #screenshotone,#screenshottwo{
+        @include single-box-shadow(#ccc,0,0,.3em,.1em);
+        width: 50%;
+        
+        @include transition-property(transform);
+        @include transition-duration(.8s);
+    }
+    
+    #screenshotone:hover,#screenshottwo:hover {
+        @include rotateY(0deg);
+    }
+    
+    #screenshotone {
+        @include rotateY(5deg);
+        @include transform-origin(left,center,0px);
+    }
+    #screenshottwo {
+        @include rotateY(-15deg);
+        @include transform-origin(right,center,0px);
+        float: right;
     }
     
     #downloadbutton {

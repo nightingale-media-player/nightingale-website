@@ -46,6 +46,8 @@
             <article id="main" class="container" role="main">
                 <div id="contentleft">
                     <div id="screenshots">
+                        <img id="screenshotone" src="http://lorempixel.com/500/300">
+                        <img id="screenshottwo" src="http://lorempixel.com/501/301">
                         <button id="downloadbutton"><img src="images/dreambian.png" alt="Dreambian Icon">Download Nightingale<br><small>128-bit | Dreambian .lol</small></button>
                     </div>
                     <div id="description">
