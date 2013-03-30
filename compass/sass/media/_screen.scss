@@ -217,9 +217,21 @@
             width: 2.375em;
         }
         div {
-            floaT: right;
+            float: right;
         }
         small {
+            color: $orange;
+        }
+    }
+    
+    #moredownloadslink {
+        position: absolute;
+        right: (2*$column-width + 1.5*$gutter-width - 9em) * px2em($base-font-size)/.8em;
+        font-size: .8em;
+        line-height: 1em;
+        bottom: -1em;
+        
+        &:link {
             color: $orange;
         }
     }
@@ -411,6 +423,9 @@
         #downloadbutton {
             left: $column-width + .5*$gutter-width - 9em;
         }
+        #moredownloadslink {
+            right: ($column-width + .5*$gutter-width - 9em) * px2em($base-font-size)/.8em;
+        }
         
         .footerlinks {
             @include span-columns(1);
@@ -437,6 +452,9 @@
         }
         #downloadbutton {
             left: 0;
+        }
+        #moredownloadslink {
+            right: 0;
         }
         
         .footerlinks {
