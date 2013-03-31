@@ -137,12 +137,11 @@
             };
             
             function hideOverlay() {
-                console.log("hiding");
                 hide("overlay");
                 hide("instructions");
-                document.getelementbyid("overlay").removeeventlistener("click",hideoverlay);
+                document.getElementById("overlay").removeEventListener("click",hideOverlay);
                 if(!('pointerEvents' in document.body.style))
-                    document.getelementbyid("instructions").removeeventlistener("click",hideoverlay);
+                    document.getElementById("instructions").removeEventListener("click",hideOverlay);
             }
             
             function show(nodeId) {
@@ -151,7 +150,8 @@
             }
             
             function hide(nodeId) {
-                document.getElementById(nodeId).style = "";
+                document.getElementById(nodeId).style.display = "";
+                document.getElementById(nodeId).style.visibility = "";
             }
         </script>
     </body>
