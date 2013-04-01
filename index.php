@@ -53,6 +53,13 @@
     $download['linux64']['package'] = '.tar.bz2';
     $download['linux64']['popup'] = false;
     
+    $download['unknown']['url'] = '/download.php';
+    $download['unknown']['img'] = 'images/application-x-generic.png';
+    $download['unknown']['osname'] = 'Unknown';
+    $download['unknown']['arch'] = 'unknown';
+    $download['unknown']['package'] = '';
+    $download['unknown']['popup'] = false;
+    
     function getOS() {
         $os = 'unknown';
         if(preg_match('/windows/i', $_SERVER['HTTP_USER_AGENT']))
@@ -139,7 +146,14 @@
                         <button id="downloadbutton" <?php if($download[$osstring]['popup']) echo 'data-popup'; else echo 'data-url="'.$download[$osstring]['url'].'"'; ?>>
                             <img src="<?php echo $download[$osstring]['img']; ?>" alt="<?php echo $download[$osstring]['osname']; ?> Icon">
                             <div>Download Nightingale<br>
-                                <small><?php echo $download[$osstring]['arch']; ?>-bit | <?php echo $download[$osstring]['osname']; ?> <?php echo $download[$osstring]['package']; ?></small>
+                                <small><?php 
+                                    if($osstring!='unknown') {
+                                        echo $download[$osstring]['arch'].'-bit | '.$download[$osstring]['osname'].' '.$download[$osstring]['package'];
+                                    }
+                                    else {
+                                        echo $download[$osstring]['osname'];
+                                    }
+                                ?></small>
                             </div>
                         </button>
                         <a href="#" id="moredownloadslink">Other platforms and architectures</a>
