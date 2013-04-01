@@ -310,7 +310,7 @@ document.webL10n = (function(window, document, undefined) {
       var dict = getL10nDictionary();
       if (dict && dict.locales && dict.default_locale) {
         for(var l in dict.locales) {
-            gLanugages.push(l);
+            gLanguages.push(l);
         }
         
         
