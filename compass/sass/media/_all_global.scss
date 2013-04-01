@@ -108,6 +108,21 @@
         
         }
     }
+    
+    /* ----------------------------------------------------------------------------
+       Main content
+       --------------------------------------------------------------------------*/
+    
+    #wrapper {
+        @include single-box-shadow(#292929,0,0,.4em,.1em);
+        
+        padding-top: 4*$base-line-height;
+        padding-bottom: $base-line-height;
+        margin-bottom: $base-line-height;
+        
+        position: relative;
+        z-index: 1;
+    }
  
  
     /* ----------------------------------------------------------------------------

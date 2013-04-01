@@ -15,10 +15,7 @@
     /* ----------------------------------------------------------------------------
        Main content
        --------------------------------------------------------------------------*/
-    #wrapper {
-        background: white;
-    }
-    
+
     #screenshotone,#screenshottwo{
         @include single-box-shadow(#ccc,0,0,.3em,.1em);
         width: 50%;
