@@ -277,17 +277,19 @@
     /* ----------------------------------------------------------------------------
        Footer
        --------------------------------------------------------------------------*/
-    
+    $footer-line-height : 1.5em;
     
     #ngalemainfooterwrapper footer {
         color: white;
         
         :link,:visited {
             color: white;
+            text-decoration: none;
         }
         
         a:hover {
             color: #f0f0f0;
+            text-decoration: underline;
         }
         
         ul {
@@ -296,8 +298,20 @@
     }
     
     .footerlinks {
+        font-size: .8em;
+        line-height: $footer-line-height;
         float: right;
         width: $column-width;
+        
+        b {
+            margin-bottom: $footer-line-height;
+            display: block;
+        }
+    }
+    
+    .socialicon {
+        max-height: 16px;
+        max-width: 16px;
     }
     
     #footergale {
@@ -305,12 +319,15 @@
         max-height: image-height("footergale.png");
         max-width: image-width("footergale.png");
         width: 100%;
-        margin-right: $gutter-width;
         
     }
        
     #footerinfo p {
         margin-top: 0;
+        font-size: .8em;
+        line-height: $footer-line-height;
+        margin-bottom: $footer-line-height;
+        margin-left: px2em(image-width("footergale.png")) + 2*$gutter-width;
     }
     
     /* ----------------------------------------------------------------------------

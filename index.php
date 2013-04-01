@@ -185,7 +185,11 @@
                     <p>Nightingale is free!<br>
                        It is an Open Source projcet release under the terms of the GNU General Public License vX (GPL cX).<br>
                        For more deails, please read the <a href="">license information</a>.
-                    </p>
+                   </p>
+                   <p>
+                       <b>Follow us!</b><br>
+                       <a href="http://www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on Facebook"><img class="socialicon" src="images/facebook.png" alt="Like Nightingale on Facebook"></a><a href="https://plus.google.com/103377471329459083108/posts" title="Nightingale on Google+"><img class="socialicon" src="images/googlep.png" alt="Circle Nightingale on Google+"></a><a href="http://twitter.com/getnightingale" title="Nightingale on Twitter"><img class="socialicon" src="images/twitter.png" alt="Follow @getnightingale on Twitter"></a>
+                   </p> 
                 </section>
                 <nav class="footerlinks">
                     <b>Support</b>
