@@ -471,7 +471,7 @@
                 height: initial;
                 
                 ul {
-                    border-top: 1px dotted white;
+                    border-top: .1em dotted white;
                     height: initial;
                     margin-left: 0;
                     @include hidden();
@@ -547,7 +547,7 @@
                 height: initial;
                 
                 ul {
-                    border-top: 1px dotted white;
+                    border-top: .1em dotted white;
                     height: initial;
                     margin-left: 0;
                     @include hidden();
@@ -583,8 +583,9 @@
         }
         
         #downloadbutton {
-            left: 0;
+            position: static;
             padding: 1.25em;
+            margin-top: $base-line-height;
             
             img {
                 position: static;
