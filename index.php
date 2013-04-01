@@ -3,6 +3,72 @@
     $title = 'The tune of life, the tune of yours';
     $description = 'Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.';
     
+    
+    $download['windows']['url'] = ''; // download url
+    $download['windows']['img'] = ''; // symbolicon
+    $download['windows']['osname'] = 'Windows';
+    $download['windows']['arch'] = 32;
+    $download['windows']['package'] = '.exe'; // orange package info
+    $download['windows']['popup'] = false;
+    
+    $download['mac']['url'] = '';
+    $download['mac']['img'] = '';
+    $download['mac']['osname'] = 'Mac OS X';
+    $download['mac']['arch'] = 32;
+    $download['mac']['package'] = '.dmg';
+    $download['mac']['popup'] = false;
+    
+    $download['ubuntu']['url'] = '';
+    $download['ubuntu']['img'] = '';
+    $download['ubuntu']['osname'] = 'Ubuntu';
+    $download['ubuntu']['arch'] = getArch();
+    $download['ubuntu']['package'] = 'PPA';
+    $download['ubuntu']['popup'] = true;
+    
+    $download['arch']['url'] = '';
+    $download['arch']['img'] = '';
+    $download['arch']['osname'] = 'Archlinux';
+    $download['arch']['arch'] = 32;
+    $download['arch']['package'] = 'PKGBUILD';
+    $download['arch']['popup'] = false;
+    
+    $download['linux32']['url'] = '';
+    $download['linux32']['img'] = '';
+    $download['linux32']['osname'] = 'Linux';
+    $download['linux32']['arch'] = 32;
+    $download['linux32']['package'] = '.tar.bz2';
+    $download['linux32']['popup'] = false;
+    
+    $download['linux64']['url'] = '';
+    $download['linux64']['img'] = '';
+    $download['linux64']['osname'] = 'Linux';
+    $download['linux64']['arch'] = 64;
+    $download['linux64']['package'] = '.tar.bz2';
+    $download['linux64']['popup'] = false;
+    
+    function getOS() {
+        $os = 'unknown';
+        if(preg_match('/windows/i', $_SERVER['HTTP_USER_AGENT']))
+            $os = 'windows';
+        elseif(preg_match('/macintosh|mac os x/i', $_SERVER['HTTP_USER_AGENT']))
+            $os = 'mac';
+        elseif(preg_match('/ubuntu/i', $_SERVER['HTTP_USER_AGENT']))
+            $os = 'ubuntu';
+        elseif(preg_match('/archlinux/i', $_SERVER['HTTP_USER_AGENT']))
+            $os = 'arch';
+        elseif(preg_match('/linux/i', $_SERVER['HTTP_USER_AGENT']))
+            $os = 'linux'.getArch();
+            
+        return $os;
+    }
+    function getArch() {
+        $arch = 32;
+        if(preg_match('/x86_64|amd64/i', $_SERVER['HTTP_USER_AGENT']))
+            $arch = 64;
+        return $arch;
+    }
+    
+    $osstring = getOS();
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,7 +127,12 @@
                     <div id="screenshots">
                         <img id="screenshotone" src="http://lorempixel.com/500/300">
                         <img id="screenshottwo" src="http://lorempixel.com/501/301">
-                        <button id="downloadbutton" data-popup><img src="images/dreambian.png" alt="Dreambian Icon"><div>Download Nightingale<br><small>128-bit | Dreambian .lol</small></div></button>
+                        <button id="downloadbutton" <?php if($download[$osstring]['popup']) echo 'data-popup'; else echo 'data-url="'.$download[$osstring]['url'].'"'; ?>>
+                            <img src="<?php echo $download[$osstring]['img']; ?>" alt="<?php echo $download[$osstring]['osname']; ?> Icon">
+                            <div>Download Nightingale<br>
+                                <small><?php echo $download[$osstring]['arch']; ?>-bit | <?php echo $download[$osstring]['osname']; ?> <?php echo $download[$osstring]['package']; ?></small>
+                            </div>
+                        </button>
                         <a href="#" id="moredownloadslink">Other platforms and architectures</a>
                     </div>
                     <div id="description">
@@ -133,6 +204,11 @@
                         document.getElementById("overlay").addEventListener("click",hideOverlay);
                         if(!('pointerEvents' in document.body.style))
                             document.getElementById("instructions").addEventListener("click",hideOverlay);
+                    });
+                }
+                else {
+                    document.getElementById("downloadbutton").addEventListener("click",function() {
+                        document.location = document.getElementById("downloadbutton").attributes['data-url'].value;
                     });
                 }
                 document.getElementById("expandngalenav").addEventListener("click",toggleNav);
