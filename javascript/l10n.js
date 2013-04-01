@@ -206,6 +206,7 @@ document.webL10n = (function(window, document, undefined) {
         var entries = rawText.replace(reBlank, '').split(/[\r\n]+/);
         var currentLang = '*';
         var genericLang = lang.replace(/-[a-z]+$/i, '');
+        var usedGenericLang = false;
         var skipLang = false;
         var match = '';
 
@@ -226,6 +227,14 @@ document.webL10n = (function(window, document, undefined) {
               }
               skipLang = (currentLang !== '*') &&
                   (currentLang !== lang) && (currentLang !== genericLang);
+                  
+              if(currentLang !== lang && currentLang === genericLang)
+                usedGenericLang = true;
+              else if(usedGenericLang && currentLang === lang)
+                usedGenericLang = false;
+              if(lang!==currentLang&&currentLang===genericLang) {
+                
+              }
               continue;
             } else if (skipLang) {
               continue;
@@ -242,6 +251,9 @@ document.webL10n = (function(window, document, undefined) {
             dictionary[tmp[1]] = evalString(tmp[2]);
           }
         }
+        
+        if(usedGenericLang)
+            gLanguage = genericLang;
       }
 
       // import another *.properties file

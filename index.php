@@ -191,7 +191,7 @@
                     </div>
                     <p data-l10n-id="footerInfo">Nightingale is free!<br>
                        It is an Open Source projcet release under the terms of the GNU General Public License vX (GPL cX).<br>
-                       For more deails, please read the <a href="">license information</a>.
+                       For more details, please read the <a href="">license information</a>.
                    </p>
                    <p>
                        <b data-l10n-id="footerSocial">Follow us!</b><br>
@@ -256,11 +256,13 @@
                     var select = document.getElementById('l10nselect'), n;
                     for(var l in langs) {
                         n = document.createElement("option");
-                        n.innerHTML = langs[l];
-                        select.append(n);
+                        n.text = l10n.get(langs[l]+'Name');
+                        n.value = langs[l];
+                        select.appendChild(n);
                     }
                     
                     // set current language
+                    console.log("setting lang "+l10n.getLanguage());
                     select.value = l10n.getLanguage(); // not working with IE<9
                     
                     // chane document language when selection is changed
