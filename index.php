@@ -38,7 +38,8 @@
         <div id="ngalemainheadwrapper" class="wrapper">
             <header class="container">
                 <nav role="navigation">
-                    <ul>
+                    <button class="mobilenav" id="expandngalenav">Navigation</button>
+                    <ul id="ngalenavlist">
                         <li class="current"><a href="#">Home</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Add-ons</a></li>
@@ -134,6 +135,7 @@
                             document.getElementById("instructions").addEventListener("click",hideOverlay);
                     });
                 }
+                document.getElementById("expandngalenav").addEventListener("click",toggleNav);
             };
             
             function hideOverlay() {
@@ -152,6 +154,12 @@
             function hide(nodeId) {
                 document.getElementById(nodeId).style.display = "";
                 document.getElementById(nodeId).style.visibility = "";
+            }
+            function toggleNav() {
+                if(document.getElementById("ngalenavlist").style.display=="block")
+                    hide("ngalenavlist");
+                else
+                    show("ngalenavlist");
             }
         </script>
     </body>

@@ -37,7 +37,7 @@
     
     #headerlogo {
         position: absolute;
-        top: .5em;
+        bottom: -4em;
         left: -0.5%;
     }
     
@@ -59,8 +59,8 @@
         
         &::before,&::after {
             content: "";
-            height: 6em;
-            width: 5em;
+            height: 70%;
+            width: 10%;
             position: absolute;
             top: -.15em;
         }
@@ -96,15 +96,6 @@
             @include single-box-shadow(#292929,0,0,.4em,.1em);
         }
     }
-    
-    #birdtab {
-        background: white;
-        z-index: 9;
-        
-        &::before,&::after {
-            background: white;
-        }
-    }
 
     #ngalemainheadwrapper header {
         position: relative;
@@ -126,23 +117,34 @@
                 :link,:visited {
                     color: white;
                     height: 100%;
-                    padding-left: .5rem;
-                    padding-right: .5rem;
+                    padding-left: .4em;
+                    padding-right: .4em;
                     font-size: 1.25em;
-                    line-height: 5rem;
+                    line-height: 4em;
                     text-decoration: none;
+                    text-shadow: .08em .08em .25em black;
                     text-shadow: .1rem .1rem .3rem black;
                     display: block;
                     @include box-sizing(border-box);
                 }
                 a:hover {
-                    border-bottom: .5rem solid white;
+                    border-bottom: .4em solid white;
                 }
                 &.current a:link,&.current a:visited {
-                    border-bottom: .5rem solid $orange;
+                    border-bottom: .4em solid $orange;
                 }
             }
+        
         }
+    }
+    
+    #expandngalenav {
+        @include hidden();
+        background: none;
+        border: none;
+        color: white;
+        font-size: $base-font-size;
+        width: 100%;
     }
     /* ----------------------------------------------------------------------------
        Main content
@@ -164,6 +166,7 @@
         // create a padding matching half of the download button
         padding-bottom: 2.25em;
         margin-bottom: 2*$base-line-height;
+        z-index: 21;
         position: relative;
         @include perspective(300px);
     }
@@ -198,13 +201,13 @@
         @include border-radius(3px);
         @include background-image(linear-gradient(#444444,#343434));
         @include single-box-shadow(#fff,0,0,1em,.1em);
-        height: 4.5em;
+        min-height: 4.5em;
         max-width: 18em;
         width: 100%;
         padding:0 1.25em;
         position: absolute;
         bottom: 0;
-        left: 2*$column-width + 1.5*$gutter-width - 9em;          
+        left: 2*$column-width + 1.5*$gutter-width - 9em;
         
         small {
             color: $orange;
@@ -218,8 +221,10 @@
             position: absolute;
             left: 1.25em;
             top: 1.0625em;
-            height: 2.375em;
-            width: 2.375em;
+            max-height: 2.375em;
+            max-width: 2.375em;
+            height: 100%;
+            width: 100%;
         }
         div {
             position: absolute;
@@ -370,15 +375,6 @@
         }
     }
     
-    @include at-breakpoint(0 $allcolumns) {
-        #headerlogo {
-            top: 5.5em;
-        }
-        #ngalemainheadwrapper header {
-            padding-bottom: 5em;
-        }
-    }
-    
     @include at-breakpoint($allcolumns 6) {
         .container {
           @include container();
@@ -422,17 +418,20 @@
           @include container();
         }
         
-        #ngalemainheadwrapper header nav li {
-            :link,:visited {
-                border-top: .5rem solid transparent;
-            }
-            a:hover {
-                border-top: .5rem solid white;
-                border-bottom: none;
-            }
-            &.current a:link,&.current a:visited {
-                border-top: .5rem solid #b55029;
-                border-bottom: none;
+        #ngalemainheadwrapper header {
+            padding-bottom: 5em;
+            nav li {
+                :link,:visited {
+                    border-top: .5rem solid transparent;
+                }
+                a:hover {
+                    border-top: .5rem solid white;
+                    border-bottom: none;
+                }
+                &.current a:link,&.current a:visited {
+                    border-top: .5rem solid #b55029;
+                    border-bottom: none;
+                }
             }
         }
         
@@ -462,8 +461,49 @@
         }
         
         #ngalemainheadwrapper header {
-            
-            //todo: uses alternative mobile menu
+            padding-bottom: 4em;
+            height: initial;
+            nav {
+                width: 100%;
+                text-align: center;
+                float: none;
+                position: static;
+                height: initial;
+                
+                ul {
+                    border-top: 1px dotted white;
+                    height: initial;
+                    margin-left: 0;
+                    @include hidden();
+                }
+                li {
+                    height: initial;
+                    float: none;
+                    width: 100%;
+                    font-size: $base-font-size;
+                    
+                    :link,:visited {
+                        font-size: $base-font-size;
+                        line-height: 2*$base-line-height;
+                        text-shadow: none;
+                    }
+                    a:hover {
+                        border-bottom: none;
+                        border-left: .4em solid white;
+                        padding-left: 0;
+                    }
+                    &.current a:link,&.current a:visited {
+                        border-bottom: none;
+                        border-left: .4em solid $orange;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+
+        #expandngalenav {
+            display: block;
+            visibility: visible;
         }
         
         #main  aside {
@@ -497,20 +537,78 @@
         }
         
         #ngalemainheadwrapper header {
-            
-            //todo: alternative mobile menu
+            padding-bottom: 4em;
+            height: initial;
+            nav {
+                width: 100%;
+                text-align: center;
+                float: none;
+                position: static;
+                height: initial;
+                
+                ul {
+                    border-top: 1px dotted white;
+                    height: initial;
+                    margin-left: 0;
+                    @include hidden();
+                }
+                li {
+                    float: none;
+                    width: 100%;
+                    font-size: $base-font-size;
+                    height: initial;
+                    
+                    :link,:visited {
+                        font-size: $base-font-size;
+                        line-height: 2*$base-line-height;
+                        text-shadow: none;
+                    }
+                    a:hover {
+                        border-bottom: none;
+                        border-left: .4em solid white;
+                        padding-left: 0;
+                    }
+                    &.current a:link,&.current a:visited {
+                        border-bottom: none;
+                        border-left: .4em solid $orange;
+                        padding-left: 0;
+                    }
+                }
+            }
         }
+        
+        #expandngalenav {
+            display: block;
+            visibility: visible;
+        }
+        
         #downloadbutton {
             left: 0;
+            padding: 1.25em;
+            
+            img {
+                position: static;
+                float: left;
+            }
+            
+            div {
+                position: static;
+            }
         }
+        
+        
         #moredownloadslink {
             right: 0;
         }
         
-        .footerlinks {
-            float: none;
-            margin-top: $base-line-height;
+        #ngalemainfooterwrapper .container {
+            padding-left: $gutter-width;
+            padding-right: $gutter-width;
+            
+            .footerlinks {
+                float: none;
+                margin-top: $base-line-height;
+            }
         }
-        // make footergale a column wide
     }
 }
