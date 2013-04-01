@@ -171,7 +171,7 @@
                     </figure>
                     <figure class="feature">
                         <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
-                        <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons</figcaption>
+                        <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
                     </figure>
                     <figure class="feature">
                         <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="thirdFeatureImage">
