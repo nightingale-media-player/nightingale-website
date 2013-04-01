@@ -1,4 +1,114 @@
 /*!
  * Media-independent styles.
  */
+ 
+    $sidebar-item-height: 5*px2em($base-line-height);
+    
+    $orange: #b55029;
 
+    $onecolumn: 2*$column-width+3*$gutter-width;
+    $twocolumns: 4*$column-width+5*$gutter-width;
+    $allcolumns: 6*$column-width+7*$gutter-width;
+    
+    /* -------------------------------------------------------------------------*/
+    /* Layout */
+
+    body>.wrapper {
+        width: 100%;
+    }
+    
+    /* ----------------------------------------------------------------------------
+       Main content
+       --------------------------------------------------------------------------*/
+    
+    #wrapper {
+        @include single-box-shadow(#292929,0,0,.4em,.1em);
+        
+        padding-top: 4*$base-line-height;
+        padding-bottom: $base-line-height;
+        margin-bottom: $base-line-height;
+        
+        position: relative;
+        z-index: 1;
+    }
+    
+    #screenshots {
+        // create a padding matching half of the download button
+        padding-bottom: 2.25em;
+        margin-bottom: 2*$base-line-height;
+        position: relative;
+        @include perspective(300px);
+    }
+    
+    #downloadbutton {
+        text-align: right;
+        color: white;
+        border: 2px solid #343434;
+        @include border-radius(3px);
+        @include background-image(linear-gradient(#444444,#343434));
+        @include single-box-shadow(#fff,0,0,1em,.1em);
+        min-height: 4.5em;
+        max-width: 18em;
+        width: 100%;
+        padding:0 1.25em;
+        position: absolute;
+        bottom: 0;
+        left: 2*$column-width + 1.5*$gutter-width - 9em;
+        
+        small {
+            color: $orange;
+        }
+        
+        
+        img {
+            position: absolute;
+            left: 1.25em;
+            top: 0.8125em;
+            max-height: 48px;
+            max-width: 48px;
+            height: 100%;
+            width: 100%;
+        }
+        div {
+            position: absolute;
+            right: 1.25em;
+            top: 1.0625em - px2em(($base-line-height - $base-font-size)/2);
+        }
+        small {
+            color: $orange;
+        }
+    }
+    
+    #moredownloadslink {
+        position: absolute;
+        right: (2*$column-width + 1.5*$gutter-width - 9em) * px2em($base-font-size)/.8em;
+        font-size: .8em;
+        line-height: 1em;
+        bottom: -1.2em;
+   }
+   
+   /* ----------------------------------------------------------------------------
+       Features sidebar
+       --------------------------------------------------------------------------*/
+        #main aside {
+            float: right;
+            width: $onecolumn;            
+        }
+
+    
+    .feature {
+        height: $sidebar-item-height;
+        margin-bottom: $base-line-height;
+        
+        img {            
+            max-height: $sidebar-item-height;
+            max-width: 50%;
+            float: left;
+            margin-right: $gutter-width;
+        }
+
+        figcaption {
+            font-style: normal;
+            text-align: left;
+        }
+    }

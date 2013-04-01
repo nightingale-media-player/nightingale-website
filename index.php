@@ -93,13 +93,14 @@
         <meta charset="utf-8">
         <title><?php echo $name.' - '.$title;?></title>
         <meta name="description" content="<?php echo $description; ?>">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1"> 
         
         <!-- styles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/style.css">
         <!--[if lt IE 9]>
-            <meta http-equiv="X-UA-Compatible" content="chrome=1"> 
             <link rel="stylesheet" href="css/legacy-ie.css">
             <script src="javascript/html5shiv.js"></script>
         <![endif]-->

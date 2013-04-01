@@ -1,0 +1,60 @@
+/*!
+ * Screen styles.
+ */
+ 
+@media screen {
+    /* -------------------------------------------------------------------------*/
+    /* Layout */
+    html {
+        @include background-image(linear-gradient(#414141,#333333));
+        
+        min-height: 100%;
+    }
+
+    body article {
+        padding-left: $gutter-width;
+        padding-right: $gutter-width;
+        max-width: $allcolumns;
+    }
+    
+
+    /* ----------------------------------------------------------------------------
+       Nav
+       --------------------------------------------------------------------------*/
+    #ngalemainheadwrapper header nav li {
+        a:hover {
+            border-bottom: .4em solid white;
+        }
+        &.current a:link,&.current a:visited {
+            border-bottom: .4em solid $orange;
+        }
+    }
+    
+    
+    #expandngalenav {
+        @include hidden();
+        background: none;
+        border: none;
+        color: white;
+        font-size: $base-font-size;
+        width: 100%;
+    }
+
+    /* ----------------------------------------------------------------------------
+       Footer
+       --------------------------------------------------------------------------*/
+    
+    #ngalemainfooterwrapper footer {
+        color: white;
+        
+        :link,:visited {
+            color: white;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #f0f0f0;
+            text-decoration: underline;
+        }
+    }
+}

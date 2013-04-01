@@ -1,0 +1,162 @@
+/*!
+ * Media-independent styles.
+ */
+    
+    $orange: #b55029;
+
+    $allcolumns: 6*$column-width+7*$gutter-width;
+    
+    /* -------------------------------------------------------------------------*/
+    /* Layout */
+    /* ----------------------------------------------------------------------------
+       Nav
+       --------------------------------------------------------------------------*/
+    
+    #headerlogo {
+        position: absolute;
+        bottom: -4em;
+        left: -0.5%;
+    }
+    
+    #headerlogo img {
+        max-height: 9em;
+        max-width: 27em;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+    
+    #ngalemainheadwrapper .tab {
+        width: 92.59%;
+        height: 77.77%;
+        top: 11.115%;
+        left: 3.705%;
+        margin-right: 3.705%;
+        position: absolute;
+        
+        &::before,&::after {
+            content: "";
+            height: 70%;
+            width: 10%;
+            position: absolute;
+            top: -.15em;
+        }
+        
+        &::before {
+            @include transform-origin(top, left, false);
+            @include rotate(20deg);
+            left: -.2em;
+            @include border-top-left-radius(.5em);
+        }
+        &::after {
+            @include transform-origin(top, right, false);
+            @include rotate(-20deg);
+            right: -.2em;
+            @include border-top-right-radius(.5em);
+        }
+    }
+    
+    #birdtab {
+        background: white;
+        z-index: 9;
+        
+        &::before,&::after {
+            background: white;
+        }
+    }
+    
+    #tabshadow {
+        z-index: 0;
+        @include single-box-shadow(#292929,0,0,.4em,.1em);
+        
+        &::before,&::after {
+            @include single-box-shadow(#292929,0,0,.4em,.1em);
+        }
+    }
+
+    #ngalemainheadwrapper header {
+        position: relative;
+        height: 5em;
+
+        nav, nav ul {
+            height: 100%;
+        }    
+        nav {
+            float: right;
+            z-index: 2;
+            position: relative;
+            
+            li {
+                float: left;
+                height: 100%;
+                @include box-sizing(border-box);
+
+                :link,:visited {
+                    color: white;
+                    height: 100%;
+                    padding-left: .4em;
+                    padding-right: .4em;
+                    font-size: 1.25em;
+                    line-height: 4em;
+                    text-decoration: none;
+                    text-shadow: .08em .08em .25em black;
+                    text-shadow: .1rem .1rem .3rem black;
+                    display: block;
+                    @include box-sizing(border-box);
+                }
+            }
+        
+        }
+    }
+ 
+ 
+    /* ----------------------------------------------------------------------------
+       Footer
+       --------------------------------------------------------------------------*/
+    $footer-line-height : 1.5em;
+    
+    #ngalemainfooterwrapper footer {
+        color: white;
+        
+        :link,:visited {
+            color: white;
+            text-decoration: none;
+        }
+        
+        ul {
+           margin: 0; 
+        }
+    }
+    
+    .footerlinks {
+        font-size: .8em;
+        line-height: $footer-line-height;
+        float: right;
+        width: $column-width;
+        
+        b {
+            margin-bottom: $footer-line-height;
+            display: block;
+        }
+    }
+    
+    .socialicon {
+        max-height: 16px;
+        max-width: 16px;
+    }
+    
+    #footergale {
+        float: left;
+        max-height: image-height("footergale.png");
+        max-width: image-width("footergale.png");
+        width: 100%;
+        
+    }
+       
+    #footerinfo p {
+        margin-top: 0;
+        font-size: .8em;
+        line-height: $footer-line-height;
+        margin-bottom: $footer-line-height;
+        margin-left: px2em(image-width("footergale.png")) + 2*$gutter-width;
+    }

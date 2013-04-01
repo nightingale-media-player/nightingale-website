@@ -3,15 +3,6 @@
  */
  
 @media screen {
-  // Variables
-
-    $sidebar-item-height: 5*px2em($base-line-height);
-    
-  $onecolumn: 2*$column-width+3*$gutter-width;
-  $twocolumns: 4*$column-width+5*$gutter-width;
-  $allcolumns: 6*$column-width+7*$gutter-width;
-  
-  $orange: #b55029;
 
     /* -------------------------------------------------------------------------*/
     /* Layout */
@@ -21,154 +12,11 @@
         min-height: 100%;
     }
 
-    body article {
-        padding-left: $gutter-width;
-        padding-right: $gutter-width;
-        max-width: $allcolumns;
-    }
-    
-    body>.wrapper {
-        width: 100%;
-    }
-
-    /* ----------------------------------------------------------------------------
-       Nav
-       --------------------------------------------------------------------------*/
-    
-    #headerlogo {
-        position: absolute;
-        bottom: -4em;
-        left: -0.5%;
-    }
-    
-    #headerlogo img {
-        max-height: 9em;
-        max-width: 27em;
-        width: 100%;
-        position: relative;
-        z-index: 10;
-    }
-    
-    #ngalemainheadwrapper .tab {
-        width: 92.59%;
-        height: 77.77%;
-        top: 11.115%;
-        left: 3.705%;
-        margin-right: 3.705%;
-        position: absolute;
-        
-        &::before,&::after {
-            content: "";
-            height: 70%;
-            width: 10%;
-            position: absolute;
-            top: -.15em;
-        }
-        
-        &::before {
-            @include transform-origin(top, left, false);
-            @include rotate(20deg);
-            left: -.2em;
-            @include border-top-left-radius(.5em);
-        }
-        &::after {
-            @include transform-origin(top, right, false);
-            @include rotate(-20deg);
-            right: -.2em;
-            @include border-top-right-radius(.5em);
-        }
-    }
-    
-    #birdtab {
-        background: white;
-        z-index: 9;
-        
-        &::before,&::after {
-            background: white;
-        }
-    }
-    
-    #tabshadow {
-        z-index: 0;
-        @include single-box-shadow(#292929,0,0,.4em,.1em);
-        
-        &::before,&::after {
-            @include single-box-shadow(#292929,0,0,.4em,.1em);
-        }
-    }
-
-    #ngalemainheadwrapper header {
-        position: relative;
-        height: 5em;
-
-        nav, nav ul {
-            height: 100%;
-        }    
-        nav {
-            float: right;
-            z-index: 2;
-            position: relative;
-            
-            li {
-                float: left;
-                height: 100%;
-                @include box-sizing(border-box);
-
-                :link,:visited {
-                    color: white;
-                    height: 100%;
-                    padding-left: .4em;
-                    padding-right: .4em;
-                    font-size: 1.25em;
-                    line-height: 4em;
-                    text-decoration: none;
-                    text-shadow: .08em .08em .25em black;
-                    text-shadow: .1rem .1rem .3rem black;
-                    display: block;
-                    @include box-sizing(border-box);
-                }
-                a:hover {
-                    border-bottom: .4em solid white;
-                }
-                &.current a:link,&.current a:visited {
-                    border-bottom: .4em solid $orange;
-                }
-            }
-        
-        }
-    }
-    
-    #expandngalenav {
-        @include hidden();
-        background: none;
-        border: none;
-        color: white;
-        font-size: $base-font-size;
-        width: 100%;
-    }
     /* ----------------------------------------------------------------------------
        Main content
        --------------------------------------------------------------------------*/
     #wrapper {
         background: white;
-        
-        @include single-box-shadow(#292929,0,0,.4em,.1em);
-        
-        padding-top: 4*$base-line-height;
-        padding-bottom: $base-line-height;
-        margin-bottom: $base-line-height;
-        
-        position: relative;
-        z-index: 1;
-    }
-
-    #screenshots {
-        // create a padding matching half of the download button
-        padding-bottom: 2.25em;
-        margin-bottom: 2*$base-line-height;
-        z-index: 21;
-        position: relative;
-        @include perspective(300px);
     }
     
     #screenshotone,#screenshottwo{
@@ -194,140 +42,14 @@
         position: absolute;
     }
     
-    #downloadbutton {
-        text-align: right;
-        color: white;
-        border: 2px solid #343434;
-        @include border-radius(3px);
-        @include background-image(linear-gradient(#444444,#343434));
-        @include single-box-shadow(#fff,0,0,1em,.1em);
-        min-height: 4.5em;
-        max-width: 18em;
-        width: 100%;
-        padding:0 1.25em;
-        position: absolute;
-        bottom: 0;
-        left: 2*$column-width + 1.5*$gutter-width - 9em;
-        
-        small {
-            color: $orange;
-        }
-        
-        &:active  {
-            @include background-image(linear-gradient(#343434,#444444));
-        }
-        
-        img {
-            position: absolute;
-            left: 1.25em;
-            top: 0.8125em;
-            max-height: 48px;
-            max-width: 48px;
-            height: 100%;
-            width: 100%;
-        }
-        div {
-            position: absolute;
-            right: 1.25em;
-            top: 1.0625em - px2em(($base-line-height - $base-font-size)/2);
-        }
-        small {
-            color: $orange;
-        }
+    #downloadbutton:active  {
+        @include background-image(linear-gradient(#343434,#444444));
     }
     
-    #moredownloadslink {
-        position: absolute;
-        right: (2*$column-width + 1.5*$gutter-width - 9em) * px2em($base-font-size)/.8em;
-        font-size: .8em;
-        line-height: 1em;
-        bottom: -1.2em;
-        
+    #moredownloadslink { 
         &:link,&:hover,&:visited,&:active {
             color: $orange;
         }
-    }
-
-    /* ----------------------------------------------------------------------------
-       Features sidebar
-       --------------------------------------------------------------------------*/
-        #main aside {
-            float: right;
-            width: $onecolumn;            
-        }
-
-    
-    .feature {
-        height: $sidebar-item-height;
-        margin-bottom: $base-line-height;
-        
-        img {            
-            max-height: $sidebar-item-height;
-            max-width: 50%;
-            float: left;
-            margin-right: $gutter-width;
-        }
-
-        figcaption {
-            font-style: normal;
-            text-align: left;
-        }
-    }
-
-    /* ----------------------------------------------------------------------------
-       Footer
-       --------------------------------------------------------------------------*/
-    $footer-line-height : 1.5em;
-    
-    #ngalemainfooterwrapper footer {
-        color: white;
-        
-        :link,:visited {
-            color: white;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            color: #f0f0f0;
-            text-decoration: underline;
-        }
-        
-        ul {
-           margin: 0; 
-        }
-    }
-    
-    .footerlinks {
-        font-size: .8em;
-        line-height: $footer-line-height;
-        float: right;
-        width: $column-width;
-        
-        b {
-            margin-bottom: $footer-line-height;
-            display: block;
-        }
-    }
-    
-    .socialicon {
-        max-height: 16px;
-        max-width: 16px;
-    }
-    
-    #footergale {
-        float: left;
-        max-height: image-height("footergale.png");
-        max-width: image-width("footergale.png");
-        width: 100%;
-        
-    }
-       
-    #footerinfo p {
-        margin-top: 0;
-        font-size: .8em;
-        line-height: $footer-line-height;
-        margin-bottom: $footer-line-height;
-        margin-left: px2em(image-width("footergale.png")) + 2*$gutter-width;
     }
     
     /* ----------------------------------------------------------------------------
