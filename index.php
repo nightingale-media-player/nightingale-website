@@ -167,7 +167,7 @@
                     <h2 data-l10n-id="asideHeading">Why Nightingale?</h2>
                     <figure class="feature">
                         <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
-                        <figcaption data-l10n-id="firstFeature">Nightingale supports a wide variety of music and video formats, including MP3, Ogg, Flac, WAV and many more.</figcaption>
+                        <figcaption data-l10n-id="firstFeature">Wide variety of supported media formats including MP3, Ogg, FLAC, WAV and many more.</figcaption>
                     </figure>
                     <figure class="feature">
                         <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
@@ -189,8 +189,8 @@
                             <option selected value="en">English</option>
                         </select>
                     </div>
-                    <p data-l10n-id="footerInfo">Nightingale is free!<br>
-                       It is an Open Source projcet release under the terms of the GNU General Public License vX (GPL cX).<br>
+                    <p data-l10n-id="footerInfo" data-l10n-args='{"license":"GNU General Public License v2 (GPL v2)"}'>Nightingale is free!<br>
+                       It is an Open Source projcet release under the terms of the GNU General Public License v2 (GPL v2).<br>
                        For more details, please read the <a href="">license information</a>.
                    </p>
                    <p>
@@ -262,7 +262,6 @@
                     }
                     
                     // set current language
-                    console.log("setting lang "+l10n.getLanguage());
                     select.value = l10n.getLanguage(); // not working with IE<9
                     
                     // chane document language when selection is changed
