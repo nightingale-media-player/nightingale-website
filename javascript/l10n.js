@@ -227,11 +227,11 @@ document.webL10n = (function(window, document, undefined) {
               }
               skipLang = (currentLang !== '*') &&
                   (currentLang !== lang) && (currentLang !== genericLang);
-                  continue;
               if(currentLang !== lang && currentLang === genericLang)
                 usedGenericLang = true;
               else if(usedGenericLang && currentLang === lang)
                 usedGenericLang = false;
+              continue;
             } else if (skipLang) {
               continue;
             }
