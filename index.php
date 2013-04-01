@@ -146,7 +146,7 @@
                         <img id="screenshottwo" src="http://lorempixel.com/501/301">
                         <button id="downloadbutton" <?php if($download[$osstring]['popup']) echo 'data-popup'; else echo 'data-url="'.$download[$osstring]['url'].'"'; ?>>
                             <img src="<?php echo $download[$osstring]['img']; ?>" alt="<?php echo $download[$osstring]['osname']; ?> Icon">
-                            <div>Download Nightingale<br>
+                            <div><b>Download Nightingale</b><br>
                                 <small><?php 
                                     if($osstring!='unknown') {
                                         echo $download[$osstring]['arch'].'-bit | '.$download[$osstring]['osname'].' '.$download[$osstring]['package'];
@@ -164,6 +164,7 @@
                     </div>
                 </div>
                 <aside>
+                    <h2>Why Nightingale?</h2>
                     <figure class="feature">
                         <img src="http://lorempixel.com/400/400">
                         <figcaption>Lorem ipsum</figcaption>

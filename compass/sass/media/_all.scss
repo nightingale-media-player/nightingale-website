@@ -74,15 +74,20 @@
         font-size: .8em;
         line-height: 1em;
         bottom: -1.2em;
-   }
+    }
    
-   /* ----------------------------------------------------------------------------
+    /* ----------------------------------------------------------------------------
        Features sidebar
        --------------------------------------------------------------------------*/
-        #main aside {
-            float: right;
-            width: $onecolumn;            
+    #main aside {
+        float: right;
+        width: $onecolumn;   
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: $base-line-height;
         }
+    }
 
     
     .feature {

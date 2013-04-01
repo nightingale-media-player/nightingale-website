@@ -121,7 +121,7 @@
         }
         
         #screenshots {
-            height: 2*$sidebar-item-height + px2em($base-line-height) - 2.25em;
+            height: 2*$sidebar-item-height + 4*px2em($base-line-height) - 2.25em;
         }
         
         #main aside {
