@@ -161,11 +161,24 @@
     }
     
     #footergale {
-        float: left;
         max-height: image-height("footergale.png");
         max-width: image-width("footergale.png");
         width: 100%;
         
+    }
+    
+    #leftfooter {
+        float: left;
+        max-width: image-width("footergale.png");
+        width: 100%;
+        
+        select {
+            margin-top: $footer-line-height;
+            font-size: .8em;
+            width: 100%;
+            height: $footer-line-height;
+            padding: 0;
+        }
     }
        
     #footerinfo p {
