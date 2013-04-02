@@ -270,6 +270,19 @@
                         l10n.setLanguage(this.value);
                     };
                 });
+                
+                //lazyload hiDPI images
+                if(window.devicePixelRatio&&window.devicePixelRatio>1.3) {
+                    var imgs = document.getElementsByTagName("img");
+                    for(var i in imgs) {
+                        if(imgs[i].src) {
+                            console.log(imgs[i].src+" "+i);
+                            imgs[i].src = imgs[i].src.replace(/\.png|\.jpg/i,function(str) {
+                                return "-hidpi"+str;
+                            });
+                        }
+                    }
+                }
             };
             
             function hideOverlay() {
