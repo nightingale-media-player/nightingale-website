@@ -103,7 +103,6 @@
         <!-- l10n -->
         <script src="javascript/l10n.js"></script>
         <link rel="resource" type="application/l10n" href="l10n/locales.ini" >
-        <link rel="resource" type="application/l10n" href="l10n/front.locales.ini" >
         
     </head>
     <body>
