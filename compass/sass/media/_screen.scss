@@ -176,7 +176,7 @@
         }
         .footerlinks {
             @include span-columns(1);
-            margin-bottom: 1.5em;
+            margin-bottom: $footer-line-height;
         }
         #footerinfo {
             @include span-columns(3);
@@ -251,7 +251,7 @@
             margin-top: $base-line-height;
             
             &:last-child {
-                margin-bottom: 1.5em;
+                margin-bottom: $footer-line-height;
             }
         }
         #footerinfo {
@@ -343,7 +343,7 @@
                 margin-top: $base-line-height;
                 
                 &:last-child {
-                    margin-bottom: 1.5em;
+                    margin-bottom: $footer-line-height;
                 }
             }
         }
