@@ -9,6 +9,8 @@
         @include background-image(linear-gradient(#414141,#333333));
         
         min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
 
     body article {
