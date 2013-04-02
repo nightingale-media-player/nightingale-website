@@ -30,11 +30,13 @@
         &.current a:link,&.current a:visited {
             border-bottom: .4em solid $orange;
         }
+
+        :link,:visited {
+            color: white;
+        }
     }
-    
-    
+
     #expandngalenav {
-        @include hidden();
         background: none;
         border: none;
         color: white;

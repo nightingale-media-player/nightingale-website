@@ -28,28 +28,28 @@
     $download['debian']['popup'] = false;
     
     $download['arch']['url'] = 'https://aur.archlinux.org/packages/ni/nightingale-git/nightingale-git.tar.gz';
-    $download['arch']['img'] = 'images/application-x-generic.png';
+    $download['arch']['img'] = 'images/package-x-generic.png';
     $download['arch']['osname'] = 'Archlinux';
     $download['arch']['arch'] = 32;
     $download['arch']['package'] = 'PKGBUILD';
     $download['arch']['popup'] = false;
     
     $download['linux32']['url'] = '';
-    $download['linux32']['img'] = 'images/application-x-generic.png';
+    $download['linux32']['img'] = 'images/package-x-generic.png';
     $download['linux32']['osname'] = 'Linux';
     $download['linux32']['arch'] = 32;
     $download['linux32']['package'] = '.tar.bz2';
     $download['linux32']['popup'] = false;
     
     $download['linux64']['url'] = '';
-    $download['linux64']['img'] = 'images/application-x-generic.png';
+    $download['linux64']['img'] = 'images/package-x-generic.png';
     $download['linux64']['osname'] = 'Linux';
     $download['linux64']['arch'] = 64;
     $download['linux64']['package'] = '.tar.bz2';
     $download['linux64']['popup'] = false;
     
     $download['unknown']['url'] = '/download.php';
-    $download['unknown']['img'] = 'images/application-x-generic.png';
+    $download['unknown']['img'] = 'images/package-x-generic.png';
     $download['unknown']['osname'] = 'Unknown';
     $download['unknown']['arch'] = 'unknown';
     $download['unknown']['package'] = '';

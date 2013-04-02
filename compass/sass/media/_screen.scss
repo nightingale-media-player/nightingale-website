@@ -45,7 +45,6 @@
        Ubunut ppa overlay
        --------------------------------------------------------------------------*/
     #overlay {
-        @include hidden();
         background: rgba(0,0,0,0.7);
         position: fixed;
         height: 100%;
@@ -56,7 +55,6 @@
     }
     
     #instructions {
-        @include hidden();
         margin-top: 5em + 2*$sidebar-item-height;
         position: absolute;
         width: 100%;
