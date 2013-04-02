@@ -140,6 +140,14 @@
         ul {
            margin: 0; 
         }
+        
+        .socialicon {
+            font-family: $icon-font-family;
+            
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
     
     .footerlinks {
@@ -152,11 +160,6 @@
             margin-bottom: $footer-line-height;
             display: block;
         }
-    }
-    
-    .socialicon {
-        max-height: 16px;
-        max-width: 16px;
     }
     
     #footergale {

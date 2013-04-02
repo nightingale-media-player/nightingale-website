@@ -195,7 +195,7 @@
                    </p>
                    <p>
                        <b data-l10n-id="footerSocial">Follow us!</b><br>
-                       <a href="http://www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on Facebook"><img class="socialicon" src="images/facebook.png" alt="Like Nightingale on Facebook"></a><a href="https://plus.google.com/103377471329459083108/posts" title="Nightingale on Google+"><img class="socialicon" src="images/googlep.png" alt="Circle Nightingale on Google+"></a><a href="http://twitter.com/getnightingale" title="Nightingale on Twitter"><img class="socialicon" src="images/twitter.png" alt="Follow @getnightingale on Twitter"></a>
+                       <a href="http://www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on Facebook" class="socialicon">f</a>&nbsp;<a href="https://plus.google.com/103377471329459083108/posts" title="Nightingale on Google+" class="socialicon">g</a>&nbsp;<a href="http://twitter.com/getnightingale" title="Nightingale on Twitter" class="socialicon">t</a>
                    </p> 
                 </section>
                 <nav class="footerlinks">
