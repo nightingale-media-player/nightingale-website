@@ -179,12 +179,14 @@
         .feature {
             @include span-columns(2);
             @include nth-omega(2n);
-        }
-        .feature:last-child {
-            @include post(2);
+            
+            &:last-child {
+                @include post(2);
+            }
         }
         .footerlinks {
             @include span-columns(1);
+            margin-bottom: 1.5em;
         }
         #footerinfo {
             @include span-columns(3);
@@ -255,8 +257,12 @@
         
         .footerlinks {
             @include span-columns(1);
-            @include nth-omega(2n);
+            @include nth-omega(2n+1);
             margin-top: $base-line-height;
+            
+            &:last-child {
+                margin-bottom: 1.5em;
+            }
         }
         #footerinfo {
             @include span-columns(2);
@@ -343,8 +349,12 @@
             padding-right: $gutter-width;
             
             .footerlinks {
-                float: none;
+                float: left;
                 margin-top: $base-line-height;
+                
+                &:last-child {
+                    margin-bottom: 1.5em;
+                }
             }
         }
     }
