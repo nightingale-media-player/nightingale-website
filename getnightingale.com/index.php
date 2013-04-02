@@ -247,38 +247,41 @@
                 }
                 document.getElementById("expandngalenav").addEventListener("click",toggleNav);
                 
-                var l10n = document.webL10n;
+                var l10n = document.webL10n , selectLoaded = false;
                 
                 l10n.ready(function() {
-                
-                    // add the languages to the dropdown
-                    var langs = l10n.getLanguages();
-                    var select = document.getElementById('l10nselect'), n;
-                    for(var l in langs) {
-                        if(!containsLanguage(select,langs[l])) {
-                            n = document.createElement("option");
-                            n.text = l10n.get(langs[l]+'Name');
-                            n.value = langs[l];
-                            select.appendChild(n);
+                    if(!selectLoaded) {
+                        // add the languages to the dropdown
+                        var langs = l10n.getLanguages();
+                        var select = document.getElementById('l10nselect'), n;
+                        for(var l in langs) {
+                            if(!containsLanguage(select.options,langs[l])) {
+                                n = document.createElement("option");
+                                n.text = l10n.get(langs[l]+'Name');
+                                n.value = langs[l];
+                                select.appendChild(n);
+                            }
                         }
+                        
+                        // set current language
+                        select.value = l10n.getLanguage(); // not working with IE<9
+                        
+                        // chane document language when selection is changed
+                        select.onchange = function() {
+                            l10n.setLanguage(this.value);
+                        };
+                        
+                        selectLoaded = true;
                     }
-                    
-                    // set current language
-                    select.value = l10n.getLanguage(); // not working with IE<9
-                    
-                    // chane document language when selection is changed
-                    select.onchange = function() {
-                        l10n.setLanguage(this.value);
-                    };
                 });
                 
                 //lazyload hiDPI images
                 if(window.devicePixelRatio&&window.devicePixelRatio>1.3) {
                     var imgs = document.getElementsByTagName("img");
                     for(var i in imgs) {
-                        if(imgs[i].src) {
+                        if(imgs[i].src&&!imgs[i].src.match(/-hidpi/i)) {
                             console.log(imgs[i].src+" "+i);
-                            imgs[i].src = imgs[i].src.replace(/\.png|\.jpg/i,function(str) {
+                            imgs[i].src = imgs[i].src.replace(/(?!-hidpi)\.(png|jpg)$/i,function(str) {
                                 return "-hidpi"+str;
                             });
                         }
@@ -286,8 +289,7 @@
                 }
             };
             
-            function containsLanguage(select,lang) {
-                var options = select.options;
+            function containsLanguage(options,lang) {
                 for(var o in options) {
                     if(options.item(o).value===lang) {
                         return true;
