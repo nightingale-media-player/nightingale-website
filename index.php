@@ -256,10 +256,12 @@
                     var langs = l10n.getLanguages();
                     var select = document.getElementById('l10nselect'), n;
                     for(var l in langs) {
-                        n = document.createElement("option");
-                        n.text = l10n.get(langs[l]+'Name');
-                        n.value = langs[l];
-                        select.appendChild(n);
+                        if(!containsLanguage(select,langs[l])) {
+                            n = document.createElement("option");
+                            n.text = l10n.get(langs[l]+'Name');
+                            n.value = langs[l];
+                            select.appendChild(n);
+                        }
                     }
                     
                     // set current language
@@ -284,6 +286,16 @@
                     }
                 }
             };
+            
+            function containsLanguage(select,lang) {
+                var options = select.options;
+                for(var o in options) {
+                    if(options.item(o).value===lang) {
+                        return true;
+                    }
+                }
+                return false;
+            }
             
             function hideOverlay() {
                 hide("overlay");
