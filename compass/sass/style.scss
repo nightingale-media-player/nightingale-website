@@ -15,9 +15,6 @@
 @import "defs/font-defs";
 @import "defs/grid-defs";
 
-// Import normalize CSS
-@import "normalize";
-
 // Import custom mixins
 @import "mixins/general";
 
@@ -27,9 +24,6 @@
 // Import media-dependent styles
 @import "media/screen";
 @import "media/print";
-
-// Import helper classes
-@import "helpers";
 
 // Import debugging style sheets
 //@import "debug";
