@@ -131,7 +131,7 @@
         
         #ngalemainfooterwrapper .footerlinks {
             @include span-columns(1);
-            @include nth-omega(3n);
+            @include nth-omega(3n+1);
         }
         
         #footerinfo {
