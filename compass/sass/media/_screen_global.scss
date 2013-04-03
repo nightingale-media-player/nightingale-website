@@ -6,6 +6,7 @@
     /* -------------------------------------------------------------------------*/
     /* Layout */
     html {
+        background-color: #414141;
         @include background-image(linear-gradient(#414141,#333333));
         
         min-height: 100%;
