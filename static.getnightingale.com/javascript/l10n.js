@@ -203,9 +203,22 @@ document.webL10n = (function(window, document, undefined) {
 
       // parse the *.properties file into an associative array
       function parseRawLines(rawText, extendedSyntax) {
+        function indexOf(array,obj,start) {
+            if (!Array.prototype.indexOf) {
+                 for (var i = (start || 0), j = this.length; i < j; i++) {
+                     if (this[i] === obj) { return i; }
+                 }
+                 return -1;
+            }
+            else
+                return array.indexOf(obj,start);
+       }
+      
+      
         var entries = rawText.replace(reBlank, '').split(/[\r\n]+/);
         var currentLang = '*';
-        var genericLang = lang.replace(/-[a-z]+$/i, '');
+        if(lang)
+            var genericLang = lang.replace(/-[a-z]+$/i, '');
         var usedGenericLang = false;
         var skipLang = false;
         var match = '';
@@ -222,7 +235,7 @@ document.webL10n = (function(window, document, undefined) {
             if (reSection.test(line)) { // section start?
               match = reSection.exec(line);
               currentLang = match[1];
-              if(gLanguages.indexOf(currentLang)<0&&currentLang !== '*') {
+              if(indexOf(gLanguages,currentLang)<0&&currentLang !== '*') {
                 gLanguages.push(currentLang);
               }
               skipLang = (currentLang !== '*') &&

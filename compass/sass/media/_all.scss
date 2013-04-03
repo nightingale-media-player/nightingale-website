@@ -14,6 +14,11 @@
     /* ----------------------------------------------------------------------------
        Main content
        --------------------------------------------------------------------------*/
+    #contentleft {
+        max-width: $twocolumns - 2 * $gutter-width;
+        margin-right: $gutter-width;
+        display: inline-block;
+    }    
     
     #screenshots {
         // create a padding matching half of the download button
@@ -76,7 +81,7 @@
        --------------------------------------------------------------------------*/
     #main aside {
         float: right;
-        width: $onecolumn;   
+        width: $onecolumn - 2 * $gutter-width;   
 
         h2 {
             margin-top: 0;

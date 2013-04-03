@@ -231,21 +231,22 @@
         
         <script type="text/javascript">
             window.onload = function() {
+            
                 if(document.getElementById("downloadbutton").attributes['data-popup']) {
-                    document.getElementById("downloadbutton").addEventListener("click",function() {
+                    addEventListener(document.getElementById("downloadbutton"),"click",function() {
                         show("overlay");
                         show("instructions");
-                        document.getElementById("overlay").addEventListener("click",hideOverlay);
+                        addEventListener(document.getElementById("overlay"),"click",hideOverlay);
                         if(!('pointerEvents' in document.body.style))
-                            document.getElementById("instructions").addEventListener("click",hideOverlay);
+                            addEventListener(document.getElementById("instructions"),"click",hideOverlay);
                     });
                 }
                 else {
-                    document.getElementById("downloadbutton").addEventListener("click",function() {
+                    addEventListener(document.getElementById("downloadbutton"),"click",function() {
                         document.location = document.getElementById("downloadbutton").attributes['data-url'].value;
                     });
                 }
-                document.getElementById("expandngalenav").addEventListener("click",toggleNav);
+                addEventListener(document.getElementById("expandngalenav"),"click",toggleNav);
                 
                 var l10n = document.webL10n , selectLoaded = false;
                 
@@ -254,8 +255,8 @@
                         // add the languages to the dropdown
                         var langs = l10n.getLanguages();
                         var select = document.getElementById('l10nselect'), n;
-                        for(var l in langs) {
-                            if(!containsLanguage(select.options,langs[l])) {
+                        for(var l = 0;l<langs.length;l++) {
+                            if(typeof l !== 'function' && !containsLanguage(select.options,langs[l])) {
                                 n = document.createElement("option");
                                 n.text = l10n.get(langs[l]+'Name');
                                 n.value = langs[l];
@@ -280,7 +281,6 @@
                     var imgs = document.getElementsByTagName("img");
                     for(var i in imgs) {
                         if(imgs[i].src&&!imgs[i].src.match(/-hidpi/i)) {
-                            console.log(imgs[i].src+" "+i);
                             imgs[i].src = imgs[i].src.replace(/(?!-hidpi)\.(png|jpg)$/i,function(str) {
                                 return "-hidpi"+str;
                             });
@@ -290,7 +290,7 @@
             };
             
             function containsLanguage(options,lang) {
-                for(var o in options) {
+                for(var o = 0; o<options.length;o++) {
                     if(options.item(o).value===lang) {
                         return true;
                     }
@@ -301,9 +301,9 @@
             function hideOverlay() {
                 hide("overlay");
                 hide("instructions");
-                document.getElementById("overlay").removeEventListener("click",hideOverlay);
+                removeEventListener(document.getElementById("overlay"),"click",hideOverlay);
                 if(!('pointerEvents' in document.body.style))
-                    document.getElementById("instructions").removeEventListener("click",hideOverlay);
+                    removeEventListener(document.getElementById("instructions"),"click",hideOverlay);
             }
             
             function show(nodeId) {
@@ -320,6 +320,23 @@
                     hide("ngalenavlist");
                 else
                     show("ngalenavlist");
+            }
+            
+            function addEventListener(obj,evt,func) {
+                if(document.addEventListener) {
+                    obj.addEventListener(evt,func,false);
+                }
+                else {
+                    obj.attachEvent(evt,func);
+                }
+            }
+            function removeEventListener(obj,evt,func) {
+                if(document.removeEventListener) {
+                    obj.removeEventListener(evt,func,false);
+                }
+                else {
+                    obj.detachEvent(evt,func);
+                }
             }
         </script>
     </body>

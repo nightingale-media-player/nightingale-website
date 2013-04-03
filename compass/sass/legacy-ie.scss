@@ -46,3 +46,7 @@ input[type="checkbox"], input[type="radio"] {
 .clearfix {
     *zoom: 1;
 }
+
+// Import custom fixes
+
+@import "media/legacy-ie";

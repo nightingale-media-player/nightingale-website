@@ -21,7 +21,11 @@
     body article {
         padding-left: $gutter-width;
         padding-right: $gutter-width;
+    }
+    
+    .container {
         max-width: $allcolumns;
+        margin: 0 auto;
     }
     
 
@@ -31,9 +35,6 @@
     #ngalemainheadwrapper header nav li {
         a:hover {
             border-bottom: .4em solid white;
-        }
-        &.current a:link,&.current a:visited {
-            border-bottom: .4em solid $orange;
         }
 
         :link,:visited {

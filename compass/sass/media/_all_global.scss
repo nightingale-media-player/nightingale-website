@@ -100,6 +100,10 @@
                     display: block;
                     @include box-sizing(border-box);
                 }
+                
+                &.current a:link,&.current a:visited {
+                    border-bottom: .4em solid $orange;
+                }
             }
         
         }
@@ -183,7 +187,7 @@
         }
     }
        
-    #footerinfo p {
+    #footerinfo   p {
         margin-top: 0;
         font-size: $footer-font-size;
         line-height: $footer-line-height;
