@@ -107,7 +107,7 @@
         </div>
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
-                <p data-l10n-id="nightliesText">We automatically build the latest version of our source. We don't have a Nightly update channel, so the version you download here will only upgrade to the next major release.</p>
+                <p data-l10n-id="nightliesText">We automatically build the latest version of our source. Since those are development versions, we don't take any liability for possible damage. If you run into an issue, please <a href="https://github.com/nightingale-media-player/nightingale-addons/issues/">report it</a> to us! We don't have a Nightly update channel, so the version you download here will only upgrade to the next major release.</p>
                 <ul id="downloadlist">
                     <?php foreach($download as $os => $properties) {
                             echo '
