@@ -1,5 +1,52 @@
 <?php    
-    include('version.php');
+    $download['windows']['url'] = ''; // download url
+    $download['windows']['img'] = 'images/wine.png'; // symbolicon
+    $download['windows']['osname'] = 'Windows';
+    $download['windows']['arch'] = 32;
+    $download['windows']['package'] = '.exe'; // orange package info
+    $download['windows']['popup'] = false;
+    
+    $download['windows']['url'] = '';
+    $download['windows']['img'] = 'images/wine.png';
+    $download['windows']['osname'] = 'Windows';
+    $download['windows']['arch'] = 32;
+    $download['windows']['package'] = '.zip';
+    $download['windows']['popup'] = false;
+    
+    $download['mac']['url'] = '';
+    $download['mac']['img'] = 'images/dmg.png';
+    $download['mac']['osname'] = 'Mac OS X';
+    $download['mac']['arch'] = 32;
+    $download['mac']['package'] = '.dmg';
+    $download['mac']['popup'] = false;
+    
+    $download['ubuntu']['url'] = '';
+    $download['ubuntu']['img'] = 'images/start-here-ubuntuoriginal.png';
+    $download['ubuntu']['osname'] = 'Ubuntu';
+    $download['ubuntu']['arch'] = getArch();
+    $download['ubuntu']['package'] = 'PPA';
+    $download['ubuntu']['popup'] = true;
+    
+    $download['linux32']['url'] = '';
+    $download['linux32']['img'] = 'images/package-x-generic.png';
+    $download['linux32']['osname'] = 'Linux';
+    $download['linux32']['arch'] = 32;
+    $download['linux32']['package'] = '.tar.bz2';
+    $download['linux32']['popup'] = false;
+    
+    $download['linux64']['url'] = '';
+    $download['linux64']['img'] = 'images/package-x-generic.png';
+    $download['linux64']['osname'] = 'Linux';
+    $download['linux64']['arch'] = 64;
+    $download['linux64']['package'] = '.tar.bz2';
+    $download['linux64']['popup'] = false;
+    
+    function getArch() {
+        $arch = 32;
+        if(preg_match('/x86_64|amd64/i', $_SERVER['HTTP_USER_AGENT']))
+            $arch = 64;
+        return $arch;
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -63,8 +110,6 @@
                 <p data-l10n-id="nightliesText">We automatically build the latest version of our source. We don't have a Nightly update channel, so the version you download here will only upgrade to the next major release.</p>
                 <ul id="downloadlist">
                     <?php foreach($download as $os => $properties) {
-                            if($os == 'unknown') // exclude the default option...
-                                continue;
                             echo '
                                 <li '.($properties['popup'] ? 'data-popup':'data-url="'.$properties['url'].'"').' class="download">
                                     <img src="'.$properties[img].'" alt="'.$properties['osname'].' Icon"> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
