@@ -80,6 +80,30 @@
         bottom: -1.2em;
     }
    
+   
+    /* ----------------------------------------------------------------------------
+       Downloads list
+       --------------------------------------------------------------------------*/
+    #downloadlist {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    .download {
+        max-width: 3*$column-width+2*$gutter-width;
+        min-width: 45%;
+        float: left;
+        
+        padding: 0 $base-line-height $gutter-width;
+        list-style-type: none;
+        margin: 0;
+        
+        .package {
+            color: grey;
+        }
+    }
+   
     /* ----------------------------------------------------------------------------
        Features sidebar
        --------------------------------------------------------------------------*/

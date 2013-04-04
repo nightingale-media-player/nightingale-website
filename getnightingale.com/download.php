@@ -1,25 +1,5 @@
 <?php    
     include('version.php');
-    
-    function getOS() {
-        $os = 'unknown';
-        if(preg_match('/windows/i', $_SERVER['HTTP_USER_AGENT']))
-            $os = 'windows';
-        elseif(preg_match('/macintosh|mac os x/i', $_SERVER['HTTP_USER_AGENT']))
-            $os = 'mac';
-        elseif(preg_match('/ubuntu/i', $_SERVER['HTTP_USER_AGENT']))
-            $os = 'ubuntu';
-        elseif(preg_match('/debian/i', $_SERVER['HTTP_USER_AGENT']))
-            $os = 'debian';
-        elseif(preg_match('/archlinux/i', $_SERVER['HTTP_USER_AGENT']))
-            $os = 'arch';
-        elseif(preg_match('/linux/i', $_SERVER['HTTP_USER_AGENT']))
-            $os = 'linux'.getArch();
-            
-        return $os;
-    }
-    
-    $osstring = getOS();
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,43 +60,23 @@
         </div>
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
-                <div id="contentleft">
-                    <div id="screenshots">
-                        <img src="http://lorempixel.com/702/300">
-                        <button id="downloadbutton" <?php if($download[$osstring]['popup']) echo 'data-popup'; else echo 'data-url="'.$download[$osstring]['url'].'"'; ?>>
-                            <img src="<?php echo $download[$osstring]['img']; ?>" alt="<?php echo $download[$osstring]['osname']; ?> Icon">
-                            <div><b data-l10n-id="download">Download Nightingale</b><br>
-                                <small><?php 
-                                    if($osstring!='unknown') {
-                                        echo $download[$osstring]['arch'].'-bit | '.$download[$osstring]['osname'].' '.$download[$osstring]['package'];
-                                    }
-                                    else {
-                                        echo $download[$osstring]['osname'];
-                                    }
-                                ?></small>
-                            </div>
-                        </button>
-                        <?php if($osstring!='unknown') echo '<a href="/download.php" id="moredownloadslink" data-l10n-id="otherPlattforms">Other platforms and architectures</a>'; ?>
-                    </div>
-                    <div id="description" data-l10n-id="description">
-                        Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.
-                    </div>
-                </div>
-                <aside>
-                    <h2 data-l10n-id="asideHeading">Why Nightingale?</h2>
-                    <figure class="feature">
-                        <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
-                        <figcaption data-l10n-id="firstFeature">Wide variety of supported media formats including MP3, Ogg, FLAC, WAV and many more.</figcaption>
-                    </figure>
-                    <figure class="feature">
-                        <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
-                        <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
-                    </figure>
-                    <figure class="feature">
-                        <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="thirdFeatureImage">
-                        <figcaption data-l10n-id="thirdFeature">Support by an active and very ambitious community.</figcaption>
-                    </figure>
-                </aside>
+                <p>Nightingale <?php echo $version; ?> is available for multiple platforms. If yours isn't in the list, this doesn't mean, Nightingale isn't available for it. If you compiled Nightingale for an Operating System not listed below, let us know in the <a href="http://forum.getnightingale.com">forum</a>!</p>
+                <ul id="downloadlist">
+                    <?php foreach($download as $os => $properties) {
+                            if($os == 'unknown') // exclude the default option...
+                                continue;
+                            echo '
+                                <li '.($properties['popup'] ? 'data-popup':'data-url="'.$properties['url'].'"').' class="download">
+                                    <img src="'.$properties[img].'" alt="'.$properties['osname'].' Icon"> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
+                                </li>
+                            ';
+                          }
+                    ?>
+                    <section class="clear">
+                        <h2>Compile Nightingale</h2>
+                        <p>Link to source code & compiling instructions</p>
+                    </section>
+                </ul>
             </article>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
@@ -170,21 +130,24 @@
         
         <script type="text/javascript">
             window.onload = function() {
-            
-                if(document.getElementById("downloadbutton").attributes['data-popup']) {
-                    addEventListener(document.getElementById("downloadbutton"),"click",function() {
-                        show("overlay");
-                        show("instructions");
-                        addEventListener(document.getElementById("overlay"),"click",hideOverlay);
-                        if(!('pointerEvents' in document.body.style))
-                            addEventListener(document.getElementById("instructions"),"click",hideOverlay);
-                    });
+                var download = document.getElementsByClassName('download');
+                for(var i = 0; i< download.length; i++) {
+                    if(download[i].attributes['data-popup']) {
+                        addEventListener(download[i],"click",function() {
+                            show("overlay");
+                            show("instructions");
+                            addEventListener(document.getElementById("overlay"),"click",hideOverlay);
+                            if(!('pointerEvents' in document.body.style))
+                                addEventListener(document.getElementById("instructions"),"click",hideOverlay);
+                        });
+                    }
+                    else {
+                        addEventListener(download[i],"click",function(e) {
+                            document.location = e.currentTarget.attributes['data-url'].value;
+                        });
+                    }
                 }
-                else {
-                    addEventListener(document.getElementById("downloadbutton"),"click",function() {
-                        document.location = document.getElementById("downloadbutton").attributes['data-url'].value;
-                    });
-                }
+                
                 addEventListener(document.getElementById("expandngalenav"),"click",toggleNav);
                 
                 var l10n = document.webL10n , selectLoaded = false;
