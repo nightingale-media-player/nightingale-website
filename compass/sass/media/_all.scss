@@ -95,12 +95,26 @@
         min-width: 45%;
         float: left;
         
-        padding: 0 $base-line-height $gutter-width;
+        padding: $base-line-height $gutter-width $base-line-height 0;
         list-style-type: none;
         margin: 0;
+        height: 2*$base-line-height;
+        
+        cursor: pointer;
+        
+        &:hover .os {
+            text-decoration: underline;
+        }
         
         .package {
             color: grey;
+        }
+        
+        img {
+            max-height: 48px;
+            max-width: 48px;
+            height: 100%;
+            width: 100%;
         }
     }
    
