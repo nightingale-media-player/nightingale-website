@@ -30,7 +30,7 @@
             <section>
                 <ol type="1">
                     <li data-l10n-id="ubuntuFirstStep">Open a terminal window</li>
-                    <li><span data-l10n-id="ubuntuSecondStep">Type</span> <code>sudo add-apt-repository ppa:nightingaleteam/nightingale-release</code></li>
+                    <li><span data-l10n-id="ubuntuSecondStep">Type</span> <code>sudo add-apt-repository ppa:nightingaleteam/nightingale-nightly</code></li>
                     <li><span data-l10n-id="ubuntuThirdStep">Then</span> <code>sudo apt-get update</code></li>
                     <li><span data-l10n-id="ubuntuFourthStep">And finally</span> <code>sudo apt-get install nightingale</code></li>
                 </ol>
