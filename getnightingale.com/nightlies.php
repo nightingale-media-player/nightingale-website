@@ -1,10 +1,10 @@
 <?php    
-    $download['windows']['url'] = ''; // download url
-    $download['windows']['img'] = 'images/wine.png'; // symbolicon
-    $download['windows']['osname'] = 'Windows';
-    $download['windows']['arch'] = 32;
-    $download['windows']['package'] = '.exe'; // orange package info
-    $download['windows']['popup'] = false;
+    $download['windowsInstaller']['url'] = ''; // download url
+    $download['windowsInstaller']['img'] = 'images/wine.png'; // symbolicon
+    $download['windowsInstaller']['osname'] = 'Windows Installer';
+    $download['windowsInstaller']['arch'] = 32;
+    $download['windowsInstaller']['package'] = '.exe'; // orange package info
+    $download['windowsInstaller']['popup'] = false;
     
     $download['windows']['url'] = '';
     $download['windows']['img'] = 'images/wine.png';
