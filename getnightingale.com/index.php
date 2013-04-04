@@ -142,8 +142,7 @@
             <article id="main" class="container" role="main">
                 <div id="contentleft">
                     <div id="screenshots">
-                        <img id="screenshotone" src="http://lorempixel.com/500/300">
-                        <img id="screenshottwo" src="http://lorempixel.com/501/301">
+                        <img src="http://lorempixel.com/702/300">
                         <button id="downloadbutton" <?php if($download[$osstring]['popup']) echo 'data-popup'; else echo 'data-url="'.$download[$osstring]['url'].'"'; ?>>
                             <img src="<?php echo $download[$osstring]['img']; ?>" alt="<?php echo $download[$osstring]['osname']; ?> Icon">
                             <div><b data-l10n-id="download">Download Nightingale</b><br>

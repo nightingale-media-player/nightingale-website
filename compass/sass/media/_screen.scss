@@ -7,29 +7,6 @@
     /* ----------------------------------------------------------------------------
        Main content
        --------------------------------------------------------------------------*/
-
-    #screenshotone,#screenshottwo{
-        @include single-box-shadow(#ccc,0,0,.3em,.1em);
-        width: 50%;
-        
-        @include transition-property(transform);
-        @include transition-duration(.8s);
-        
-        &:hover {
-            @include rotateY(0deg);
-        }
-    }
-    
-    #screenshotone {
-        @include rotateY(5deg);
-        @include transform-origin(left,center,0px);
-    }
-    #screenshottwo {
-        @include rotateY(-15deg);
-        @include transform-origin(right,center,0px);
-        float: right;
-        position: absolute;
-    }
     
     #downloadbutton:active  {
         background-color: #343434;

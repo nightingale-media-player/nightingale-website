@@ -25,7 +25,11 @@
         padding-bottom: 2.25em;
         margin-bottom: 2*$base-line-height;
         position: relative;
-        @include perspective(300px);
+        
+        &>img {
+            height: 100%;
+            width: 100%;
+        }
     }
     
     #downloadbutton {
