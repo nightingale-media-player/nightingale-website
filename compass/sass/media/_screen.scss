@@ -62,9 +62,19 @@
     
     @include at-breakpoint($onecolumn) {
         #description {
-            @include column-width(columns(2,4));
+            @include column-width(2*$column-width);
             @include column-count(2);
-            @include column-gap(gutter(6));
+            @include column-gap($gutter-width);
+        }
+        
+        #main p {
+            @include column-gap($gutter-width);
+            @include column-width(2*$column-width);
+        }
+        
+        .download {
+            padding-left: 0;
+            padding-right: 0;
         }
         
         .feature {
@@ -92,8 +102,20 @@
             height: 2*$sidebar-item-height + 4*px2em($base-line-height) - 2.25em;
         }
         
-        #main aside {
-            @include span-columns(2 omega);
+        #main {
+            aside {
+                @include span-columns(2 omega);
+            }
+            
+            p {
+                @include column-count(3);
+                @include span-columns(6);
+            }
+        }
+        
+        .download {
+            @include span-columns(3);
+            @include nth-omega(2n);
         }
         
         .feature {
@@ -139,9 +161,20 @@
             }
         }
         
-        #main aside {
-            @include span-columns(4);
-            margin-top: $base-line-height;
+        #main {
+            aside {
+                @include span-columns(4);
+                margin-top: $base-line-height;
+            }
+            p {
+                @include column-count(2);
+                @include span-columns(4);
+            }
+        }
+        
+        .download {
+            @include span-columns(2);
+            @include nth-omega(2n);
         }
 
         .feature {
@@ -212,10 +245,20 @@
             visibility: visible;
         }
         
-        #main  aside {
-            @include span-columns(2);
-            margin-top: $base-line-height;
+        #main {
+            aside {
+                @include span-columns(2);
+                margin-top: $base-line-height;
+            }
+            p {
+                @include span-columns(2 omega);
+            }
         }
+        
+        .download {
+            @include span-columns(2 omega);
+        }
+            
         #downloadbutton {
             left: $column-width + .5*$gutter-width - 9em;
         }
