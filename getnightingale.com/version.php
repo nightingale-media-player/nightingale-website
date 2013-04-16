@@ -4,7 +4,7 @@
 
 
 $what = $_GET['as'];
-$which = $GET['os'];
+$which = $_GET['os'];
 
 // --------------------------------
 // | Please insert the URLS here. |
@@ -12,16 +12,16 @@ $which = $GET['os'];
 
 // I know, doing this with a DB would be more fun. But this is enought.
 
-$version = "1.11.0"; // actual version number
+$version = "1.12"; // actual version number
 
 // Installer / download URLs
-$urls[0] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_linux_x86.tar.bz2/download"; // Linux_32 URL
-$urls[1] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_linux_x86_64.tar.bz2/download"; // Linux_64 URL
+$urls[0] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_linux-i686.tar.bz2/download"; // Linux_32 URL
+$urls[1] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_linux-x86_64.tar.bz2/download"; // Linux_64 URL
 $urls[5] = "ppa:trebelnik-stefina/nightingale"; // Ubuntu PPA
 $urls[6] = "https://aur.archlinux.org/packages.php?ID=52721"; //Archlinux
-$urls[2] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_windows-i686.exe/download"; // Windows_32 URL
-$urls[3] = "http://sourceforge.net/projects/ngale/files/1.11.0-Release/Nightingale_1.11.0-2223_macosx-i686.dmg/download"; // MAC_32 URL
-$urls[4] = "http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.11.0"; // Tarball URL
+$urls[2] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_windows-i686.exe/download"; // Windows_32 URL
+$urls[3] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_macosx-i686.dmg/download"; // MAC_32 URL
+$urls[4] = "http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.12"; // Tarball URL
 
 // Screenshot URLs, please use images in the dimension of 623x466px (thats a resized 4:3 screenshot)
 $images[0] = "http://static.getnightingale.com/img/linux-screenshot.png"; // Linuxscreenshot

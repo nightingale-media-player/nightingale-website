@@ -52,7 +52,7 @@
 		<div id="messageh">
 			<h2>Nightingale chirps your favorite tunes!</h2>
 			<!-- If you scroll a bit over there (this direction ->), you will find the link to the release notes. You may want to replace it ~-> (hehe, fake end :P)                                                                                                                  Here you go. It's under this phrase. v (& here finally comes the end of this comment:)                                                         404 End not found :P                                                    200 OK-->
-			<span id="mainmsg">A beautiful interface with a wide range of supported audio formats, all with multi-platform support! <br /><br> <b>We are proud to offer you the first full release.</b><br> To see the changes we did, check out the <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:1.11.0_release_notes">release notes</a> for more details! Feel free to leave us your feedback in our <a href="http://forum.getnightingale.com" title="forum">forum</a>.</span>
+			<span id="mainmsg">A beautiful interface with a wide range of supported audio formats, all with multi-platform support! <br /><br> <b>We are proud to offer you the first full release.</b><br> To see the changes we did, check out the <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:<?php echo $version; ?>_release_notes">release notes</a> for more details! Feel free to leave us your feedback in our <a href="http://forum.getnightingale.com" title="forum">forum</a>.</span>
 		<div class="buttonpadder">
 			<a class="button" href="all-versions.php" title="Download Nightingale">
 				<div class="play"></div>
