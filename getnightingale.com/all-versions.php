@@ -53,6 +53,8 @@
 			<ul class="downloadlist" style="text-align:left;">
 				<li><a href="<?php echo $urls[0]; ?>">Linux Tarball (.tar.bz2) | 32-Bit</a></li> <!-- here goes the linux 32bit tarball -->
 				<li><a href="<?php echo $urls[1]; ?>">Linux Tarball (.tar.bz2)  | 64-Bit</a></li> <!-- and here its 64bit twin -->
+                <li><a href="<?php echo $urls[7]; ?>">With GNOME/Unity integration | Linux Tarball (.tar.bz2) | 32-Bit</a></li> <!-- here goes the linux gnome 32bit tarball -->
+				<li><a href="<?php echo $urls[8]; ?>">With GNOME/Unity integration | Linux Tarball (.tar.bz2)  | 64-Bit</a></li> <!-- and here its 64bit twin -->
 			</ul>
 			<h2>Windows:</h2>
 			<ul class="downloadlist" style="text-align:left;">
@@ -65,7 +67,7 @@
 			<h2>Source:</h2>
 			<ul class="downloadlist" style="text-align:left;">
 				<li><a href="<?php echo $urls[4]; ?>">Tarball</a></li> <!-- Tarball link here! -->
-				<li><a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Git Repo</a> - right click and copy URL, then "git clone --depth=1 [url]" followed by "git checkout nightingale-1.11"</li>	
+				<li><a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Git Repo</a> - right click and copy URL, then "git clone --depth=1 [url]" followed by "git checkout nightingale-1.12"</li>	
 			</ul>
 			<h2>Linux Distro Specific:</h2>
 			<ul class="downloadlist" style="text-align:left;">

@@ -17,6 +17,8 @@ $version = "1.12"; // actual version number
 // Installer / download URLs
 $urls[0] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_linux-i686.tar.bz2/download"; // Linux_32 URL
 $urls[1] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_linux-x86_64.tar.bz2/download"; // Linux_64 URL
+$urls[7] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_ubuntu-i686.tar.bz2/download"; // Linux_32 gnome URL
+$urls[9] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_ubuntu-x86_64.tar.bz2/download"; // Linux_64 gnome URL
 $urls[5] = "ppa:trebelnik-stefina/nightingale"; // Ubuntu PPA
 $urls[6] = "https://aur.archlinux.org/packages.php?ID=52721"; //Archlinux
 $urls[2] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_windows-i686.exe/download"; // Windows_32 URL
