@@ -19,7 +19,7 @@ $urls[0] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightinga
 $urls[1] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_linux-x86_64.tar.bz2/download"; // Linux_64 URL
 $urls[7] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_ubuntu-i686.tar.bz2/download"; // Linux_32 gnome URL
 $urls[8] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_ubuntu-x86_64.tar.bz2/download"; // Linux_64 gnome URL
-$urls[5] = "ppa:trebelnik-stefina/nightingale"; // Ubuntu PPA
+$urls[5] = "ppa:nightingaleteam/nightingale-release"; // Ubuntu PPA
 $urls[6] = "https://aur.archlinux.org/packages.php?ID=52721"; //Archlinux
 $urls[2] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_windows-i686.exe/download"; // Windows_32 URL
 $urls[3] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_macosx-i686.dmg/download"; // MAC_32 URL
