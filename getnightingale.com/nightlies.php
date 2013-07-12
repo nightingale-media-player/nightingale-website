@@ -69,7 +69,7 @@
         
         <!-- l10n -->
         <script src="javascript/l10n.js"></script>
-        <link rel="resource" type="application/l10n" href="l10n/locales.ini" >
+        <link rel="prefetch" type="application/l10n" href="l10n/locales.ini" >
         
     </head>
     <body>

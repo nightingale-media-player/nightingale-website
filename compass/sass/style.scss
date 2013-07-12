@@ -16,15 +16,24 @@
 @import "defs/grid-defs";
 @import "defs/color-defs";
 
+// Import normalize CSS
+@import "normalize";
+
 // Import custom mixins
 @import "mixins/general";
 
 // Import global media-independent styles
+@import "media/all_global";
 @import "media/all";
 
 // Import media-dependent styles
+@import "media/screen_global";
+@import "media/print_global";
 @import "media/screen";
 @import "media/print";
+
+// Import helper classes
+@import "helpers";
 
 // Import debugging style sheets
 //@import "debug";
