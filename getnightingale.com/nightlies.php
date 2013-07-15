@@ -172,6 +172,6 @@
             </footer>
         </div>
         
-        <script type="text/javascript" src="http://static.getnightingale.com/javascript/base.js"></script>
+        <script type="text/javascript" src="javascript/base.js"></script>
     </body>
 </html>

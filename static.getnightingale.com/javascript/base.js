@@ -1,27 +1,8 @@
 window.onload = function() {
-    var download = document.getElementsByClassName('download');
-    for(var i = 0; i< download.length; i++) {
-        if(download[i].attributes['data-popup']) {
-            addEventListener(download[i],"click",function() {
-                show("overlay");
-                show("instructions");
-                addEventListener(document.getElementById("overlay"),"click",hideOverlay);
-                if(!('pointerEvents' in document.body.style))
-                    addEventListener(document.getElementById("instructions"),"click",hideOverlay);
-            });
-        }
-        else {
-            addEventListener(download[i],"click",function(e) {
-                document.location = e.currentTarget.attributes['data-url'].value;
-            });
-        }
-    }
-    
-    addEventListener(document.getElementById("expandngalenav"),"click",toggleNav);
-    
     var l10n = document.webL10n , selectLoaded = false;
-    
-    l10n.ready(function() {
+
+    addEventListenerLegacy(document,"localized",function() {
+        console.log("hi");
         if(!selectLoaded) {
             // add the languages to the dropdown
             var langs = l10n.getLanguages();
@@ -45,7 +26,27 @@ window.onload = function() {
             
             selectLoaded = true;
         }
-    });
+    },false);
+ 
+    var download = document.getElementsByClassName('download');
+    for(var i = 0; i< download.length; i++) {
+        if(download[i].attributes['data-popup']) {
+            addEventListenerLegacy(download[i],"click",function() {
+                show("overlay");
+                show("instructions");
+                addEventListenerLegacy(document.getElementById("overlay"),"click",hideOverlay);
+                if(!('pointerEvents' in document.body.style))
+                    addEventListenerLegacy(document.getElementById("instructions"),"click",hideOverlay);
+            });
+        }
+        else {
+            addEventListenerLegacy(download[i],"click",function(e) {
+                document.location = e.currentTarget.attributes['data-url'].value;
+            });
+        }
+    }
+    
+    addEventListenerLegacy(document.getElementById("expandngalenav"),"click",toggleNav);
     
     //lazyload hiDPI images
     if(window.devicePixelRatio&&window.devicePixelRatio>1.3) {
@@ -93,7 +94,7 @@ function toggleNav() {
         show("ngalenavlist");
 }
 
-function addEventListener(obj,evt,func) {
+function addEventListenerLegacy(obj,evt,func) {
     if(document.addEventListener) {
         obj.addEventListener(evt,func,false);
     }
