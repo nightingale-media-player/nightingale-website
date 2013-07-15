@@ -2,7 +2,6 @@ window.onload = function() {
     var l10n = document.webL10n , selectLoaded = false;
 
     addEventListenerLegacy(document,"localized",function() {
-        console.log("hi");
         if(!selectLoaded) {
             // add the languages to the dropdown
             var langs = l10n.getLanguages();
