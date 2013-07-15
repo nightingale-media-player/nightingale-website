@@ -1,6 +1,3 @@
-<?php    
-    include('version.php');
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,24 +22,12 @@
         
     </head>
     <body>
-        <div  id="instructions">
-            <section>
-                <ol type="1">
-                    <li data-l10n-id="ubuntuFirstStep">Open a terminal window</li>
-                    <li><span data-l10n-id="ubuntuSecondStep">Type</span> <code>sudo add-apt-repository ppa:nightingaleteam/nightingale-release</code></li>
-                    <li><span data-l10n-id="ubuntuThirdStep">Then</span> <code>sudo apt-get update</code></li>
-                    <li><span data-l10n-id="ubuntuFourthStep">And finally</span> <code>sudo apt-get install nightingale</code></li>
-                </ol>
-            </section>
-        </div>
-        <div id="overlay">
-        </div>
         <div id="ngalemainheadwrapper" class="wrapper">
             <header class="container">
                 <nav role="navigation">
                     <button class="mobilenav" id="expandngalenav" data-l10n-id="menu">Menu</button>
                     <ul id="ngalenavlist">
-                        <li class="current"><a href="http://getnightingale.com" data-l10n-id="home">Home</a></li>
+                        <li><a href="http://getnightingale.com" data-l10n-id="home">Home</a></li>
                         <li><a href="http://blog.getnightingale.com" data-l10n-id="blog">Blog</a></li>
                         <li><a href="http://addons.getnightingale.com" data-l10n-id="add-ons">Add-ons</a></li>
                         <li><a href="http://forum.getnightingale.com" data-l10n-id="forum">Forum</a></li>
@@ -59,23 +44,7 @@
         </div>
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
-                <p data-l10n-id="downloadsText" data-l10n-args='{"version":"<?php echo $version; ?> "}'>Nightingale <?php echo $version; ?> is available for multiple platforms. If yours isn't in the list, this doesn't mean, Nightingale isn't available for it. If you compiled Nightingale for an Operating System not listed below, let us know in the <a href="http://forum.getnightingale.com">forum</a>!</p>
-                <ul id="downloadlist">
-                    <?php foreach($download as $os => $properties) {
-                            if($os == 'unknown') // exclude the default option...
-                                continue;
-                            echo '
-                                <li '.($properties['popup'] ? 'data-popup':'data-url="'.$properties['url'].'"').' class="download">
-                                    <img src="'.$properties[img].'" alt="'.$properties['osname'].' Icon"> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
-                                </li>
-                            ';
-                          }
-                    ?>
-                    <section class="clear">
-                        <h2 data-l10n-id="compile">Compile Nightingale</h2>
-                        <p data-l10n-id="compilingInstructions">Link to source code & compiling instructions</p>
-                    </section>
-                </ul>
+                
             </article>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
