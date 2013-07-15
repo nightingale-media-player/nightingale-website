@@ -47,54 +47,54 @@
                 <h1 data-l10n-id="firstrunWelcomeTitle">Welcome to Nightingale!</h1>
                 <p data-l10n-id="firstrunWelcomeMessage" data-l10n='{"url":"http://wiki.getnightignale.com/release_notes"}'>You just installed the best music player. For information on whats new in this version, please read the <a href="http://wiki.getnightignale.com/release_notes">Release Notes.</a></p>
                 <ul class="column">
-                    <li>
-                        <figure class="feature">
+                    <li class="feature">
+                        <figure>
                             <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
                             <figcaption data-l10n-id="firstFeature">Wide variety of supported media formats including MP3, Ogg, FLAC, WAV and many more.</figcaption>
                         </figure>
-                    </li><li>
-                        <figure class="feature">
+                    </li><li class="feature">
+                        <figure>
                             <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
                             <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
                         </figure>
-                    <li></li>
-                        <figure class="feature">
+                    </li><li class="feature">
+                        <figure>
                             <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="thirdFeatureImage">
                             <figcaption data-l10n-id="thirdFeature">Support by an active and very ambitious community.</figcaption>
                         </figure>
                     </li>
                 </ul>
                 <ul class="column">
-                    <li>
-                        <figure class="feature">
+                    <li class="feature">
+                        <figure>
                             <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
                             <figcaption data-l10n-id="firstFeature">Wide variety of supported media formats including MP3, Ogg, FLAC, WAV and many more.</figcaption>
                         </figure>
-                    </li><li>
-                        <figure class="feature">
+                    </li><li class="feature">
+                        <figure>
                             <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
                             <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
                         </figure>
-                    <li></li>
-                        <figure class="feature">
+                    </li><li class="feature">
+                        <figure>
                             <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="thirdFeatureImage">
                             <figcaption data-l10n-id="thirdFeature">Support by an active and very ambitious community.</figcaption>
                         </figure>
                     </li>
                 </ul>
                 <ul class="column">
-                    <li>
-                        <figure class="feature">
+                    <li class="feature">
+                        <figure>
                             <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
                             <figcaption data-l10n-id="firstFeature">Wide variety of supported media formats including MP3, Ogg, FLAC, WAV and many more.</figcaption>
                         </figure>
-                    </li><li>
-                        <figure class="feature">
+                    </li><li class="feature">
+                        <figure>
                             <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
                             <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
                         </figure>
-                    <li></li>
-                        <figure class="feature">
+                    </li><li class="feature">
+                        <figure>
                             <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="thirdFeatureImage">
                             <figcaption data-l10n-id="thirdFeature">Support by an active and very ambitious community.</figcaption>
                         </figure>
