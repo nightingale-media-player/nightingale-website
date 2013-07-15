@@ -104,10 +104,6 @@
         }
         
         #main {
-            aside {
-                @include span-columns(2 omega);
-            }
-            
             p {
                 @include column-count(3);
                 @include span-columns(6);
@@ -252,7 +248,6 @@
         
         #main {
             aside {
-                @include span-columns(2);
                 margin-top: $base-line-height;
             }
             p {
