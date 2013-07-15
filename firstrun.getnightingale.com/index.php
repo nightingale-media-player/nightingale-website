@@ -64,6 +64,42 @@
                         </figure>
                     </li>
                 </ul>
+                <ul class="column">
+                    <li>
+                        <figure class="feature">
+                            <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
+                            <figcaption data-l10n-id="firstFeature">Wide variety of supported media formats including MP3, Ogg, FLAC, WAV and many more.</figcaption>
+                        </figure>
+                    </li><li>
+                        <figure class="feature">
+                            <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
+                            <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
+                        </figure>
+                    <li></li>
+                        <figure class="feature">
+                            <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="thirdFeatureImage">
+                            <figcaption data-l10n-id="thirdFeature">Support by an active and very ambitious community.</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="column">
+                    <li>
+                        <figure class="feature">
+                            <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
+                            <figcaption data-l10n-id="firstFeature">Wide variety of supported media formats including MP3, Ogg, FLAC, WAV and many more.</figcaption>
+                        </figure>
+                    </li><li>
+                        <figure class="feature">
+                            <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
+                            <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
+                        </figure>
+                    <li></li>
+                        <figure class="feature">
+                            <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="thirdFeatureImage">
+                            <figcaption data-l10n-id="thirdFeature">Support by an active and very ambitious community.</figcaption>
+                        </figure>
+                    </li>
+                </ul>
             </article>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
