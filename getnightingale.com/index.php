@@ -33,15 +33,15 @@
         <!-- styles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
             <link rel="stylesheet" href="css/legacy-ie.css">
             <script src="javascript/html5shiv.js"></script>
         <![endif]-->
         
         <!-- l10n -->
-        <script src="javascript/l10n.js"></script>
-        <link rel="prefetch" type="application/l10n" href="l10n/locales.ini" >
+        <script src="../static.getnightingale.com/javascript/l10n.js"></script>
+        <link rel="prefetch" type="application/l10n" href="../static.getnightingale.com/l10n/locales.ini" >
         
     </head>
     <body>
@@ -73,7 +73,7 @@
                 <figure id="headerlogo" role="banner">
                     <div id="tabshadow" class="tab"></div>
                     <div id="birdtab" class="tab"></div>
-                    <img src="images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo">
+                    <img src="../static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo">
                 </figure>
             </header>
         </div>
@@ -122,7 +122,7 @@
             <footer class="container">
                 <section id="footerinfo" role="contentinfo">
                     <div id="leftfooter">
-                        <img id="footergale" alt="white outlined nightingale project logo" src="images/footergale.png">
+                        <img id="footergale" alt="white outlined nightingale project logo" src="../static.getnightingale.com/images/footergale.png">
                         <select id="l10nselect">
                             <option selected value="en">English</option>
                         </select>
@@ -167,6 +167,6 @@
             </footer>
         </div>
         
-        <script type="text/javascript" src="javascript/base.js"></script>
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
     </body>
 </html>

@@ -10,15 +10,15 @@
         <!-- styles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
             <link rel="stylesheet" href="css/legacy-ie.css">
             <script src="javascript/html5shiv.js"></script>
         <![endif]-->
         
         <!-- l10n -->
-        <script src="javascript/l10n.js"></script>
-        <link rel="prefetch" type="application/l10n" href="l10n/locales.ini" >
+        <script src="../static.getnightingale.com/javascript/l10n.js"></script>
+        <link rel="prefetch" type="application/l10n" href="../static.getnightingale.com/l10n/locales.ini" >
         
     </head>
     <body>
@@ -38,29 +38,52 @@
                 <figure id="headerlogo" role="banner">
                     <div id="tabshadow" class="tab"></div>
                     <div id="birdtab" class="tab"></div>
-                    <img src="images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo">
+                    <img src="../static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo">
                 </figure>
             </header>
         </div>
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <h1 data-l10n-id="firstrunWelcomeTitle">Welcome to Nightingale!</h1>
-                <p data-l10n-id="firstrunWelcomeMessage" data-l10n='{"url":"http://wiki.getnightignale.com/release_notes"}'>You just installed the best music player. For information on whats new in this version, please read the <a href="http://wiki.getnightignale.com/release_notes">Release Notes.</a></p>
+                <p data-l10n-id="firstrunWelcomeMessage" data-l10n='{"url":"http://wiki.getnightignale.com/release_notes"}'>You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. For information on whats new in this version, please read the <a href="http://wiki.getnightignale.com/release_notes">Release Notes</a>.</p>
                 <ul class="column">
                     <li class="feature">
                         <figure>
-                            <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
-                            <figcaption data-l10n-id="firstFeature">Wide variety of supported media formats including MP3, Ogg, FLAC, WAV and many more.</figcaption>
+                            <img src="http://lorempixel.com/400/400" alt="">
+                            <figcaption>First add-on</figcaption>
                         </figure>
                     </li><li class="feature">
                         <figure>
-                            <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
-                            <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
+                            <img src="http://lorempixel.com/404/404" alt="">
+                            <figcaption>Second recommended add-on</figcaption>
                         </figure>
                     </li><li class="feature">
                         <figure>
-                            <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="thirdFeatureImage">
-                            <figcaption data-l10n-id="thirdFeature">Support by an active and very ambitious community.</figcaption>
+                            <img src="http://lorempixel.com/401/401" alt="">
+                            <figcaption>Yet anotother recommended add-on.</figcaption>
+                        </figure>
+                    </li><li class="feature">
+                        <figure>
+                            <img src="http://lorempixel.com/402/402" alt="">
+                            <figcaption>Add-on.</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="column">
+                    <li class="feature">
+                        <figure>
+                            <img src="http://lorempixel.com/400/400" alt="">
+                            <figcaption>Some wiki article featuring some important and frequently asked question.</figcaption>
+                        </figure>
+                    </li><li class="feature">
+                        <figure>
+                            <img src="http://lorempixel.com/404/404" alt="">
+                            <figcaption>A getting started guide, especially written to help new users to get around the UI.</figcaption>
+                        </figure>
+                    </li><li class="feature">
+                        <figure>
+                            <img src="http://lorempixel.com/401/401" alt="">
+                            <figcaption>The article describing how to migrate the old Songbird library to Nightingale.</figcaption>
                         </figure>
                     </li>
                 </ul>
@@ -68,35 +91,17 @@
                     <li class="feature">
                         <figure>
                             <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
-                            <figcaption data-l10n-id="firstFeature">Wide variety of supported media formats including MP3, Ogg, FLAC, WAV and many more.</figcaption>
+                            <figcaption>If you have any issues, feature requests or questions, please visit our <a href="http://forum.getnightignale.com">forum</a>.</figcaption>
                         </figure>
                     </li><li class="feature">
                         <figure>
-                            <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
-                            <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
+                            <img src="http://lorempixel.com/404/404" alt="">
+                            <figcaption>Follow our <a href="http://blog.getnightingale.com">blog</a> to receive updates on ongoing development of Nightingale.</figcaption>
                         </figure>
                     </li><li class="feature">
                         <figure>
-                            <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="thirdFeatureImage">
-                            <figcaption data-l10n-id="thirdFeature">Support by an active and very ambitious community.</figcaption>
-                        </figure>
-                    </li>
-                </ul>
-                <ul class="column">
-                    <li class="feature">
-                        <figure>
-                            <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
-                            <figcaption data-l10n-id="firstFeature">Wide variety of supported media formats including MP3, Ogg, FLAC, WAV and many more.</figcaption>
-                        </figure>
-                    </li><li class="feature">
-                        <figure>
-                            <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="secondFeatureImage">
-                            <figcaption data-l10n-id="secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
-                        </figure>
-                    </li><li class="feature">
-                        <figure>
-                            <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="thirdFeatureImage">
-                            <figcaption data-l10n-id="thirdFeature">Support by an active and very ambitious community.</figcaption>
+                            <img src="http://lorempixel.com/401/401" alt="">
+                            <figcaption>Support by an active and very ambitious community.</figcaption>
                         </figure>
                     </li>
                 </ul>
@@ -106,7 +111,7 @@
             <footer class="container">
                 <section id="footerinfo" role="contentinfo">
                     <div id="leftfooter">
-                        <img id="footergale" alt="white outlined nightingale project logo" src="images/footergale.png">
+                        <img id="footergale" alt="white outlined nightingale project logo" src="../static.getnightingale.com/images/footergale.png">
                         <select id="l10nselect">
                             <option selected value="en">English</option>
                         </select>
@@ -151,6 +156,6 @@
             </footer>
         </div>
         
-        <script type="text/javascript" src="javascript/base.js"></script>
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
     </body>
 </html>

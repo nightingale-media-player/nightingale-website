@@ -1,45 +1,47 @@
 <?php    
     $download['windowsInstaller']['url'] = ''; // download url
-    $download['windowsInstaller']['img'] = 'images/wine.png'; // symbolicon
+    $download['windowsInstaller']['img'] = '../static.getnightingale.com/images/wine.png'; // symbolicon
     $download['windowsInstaller']['osname'] = 'Windows Installer';
     $download['windowsInstaller']['arch'] = 32;
     $download['windowsInstaller']['package'] = '.exe'; // orange package info
     $download['windowsInstaller']['popup'] = false;
     
     $download['windows']['url'] = '';
-    $download['windows']['img'] = 'images/wine.png';
+    $download['windows']['img'] = '../static.getnightingale.com/images/wine.png';
     $download['windows']['osname'] = 'Windows';
     $download['windows']['arch'] = 32;
     $download['windows']['package'] = '.zip';
     $download['windows']['popup'] = false;
     
     $download['mac']['url'] = '';
-    $download['mac']['img'] = 'images/dmg.png';
+    $download['mac']['img'] = '../static.getnightingale.com/images/dmg.png';
     $download['mac']['osname'] = 'Mac OS X';
     $download['mac']['arch'] = 32;
     $download['mac']['package'] = '.dmg';
     $download['mac']['popup'] = false;
     
     $download['ubuntu']['url'] = '';
-    $download['ubuntu']['img'] = 'images/start-here-ubuntuoriginal.png';
+    $download['ubuntu']['img'] = '../static.getnightingale.com/images/start-here-ubuntuoriginal.png';
     $download['ubuntu']['osname'] = 'Ubuntu';
     $download['ubuntu']['arch'] = getArch();
     $download['ubuntu']['package'] = 'PPA';
     $download['ubuntu']['popup'] = true;
     
     $download['linux32']['url'] = '';
-    $download['linux32']['img'] = 'images/package-x-generic.png';
+    $download['linux32']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
     $download['linux32']['osname'] = 'Linux';
     $download['linux32']['arch'] = 32;
     $download['linux32']['package'] = '.tar.bz2';
     $download['linux32']['popup'] = false;
     
     $download['linux64']['url'] = '';
-    $download['linux64']['img'] = 'images/package-x-generic.png';
+    $download['linux64']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
     $download['linux64']['osname'] = 'Linux';
     $download['linux64']['arch'] = 64;
     $download['linux64']['package'] = '.tar.bz2';
     $download['linux64']['popup'] = false;
+    
+    $tarball = 'git://github.com/nightingale-media-player/nightingale-hacking.git';
     
     function getArch() {
         $arch = 32;
@@ -60,15 +62,15 @@
         <!-- styles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
             <link rel="stylesheet" href="css/legacy-ie.css">
             <script src="javascript/html5shiv.js"></script>
         <![endif]-->
         
         <!-- l10n -->
-        <script src="javascript/l10n.js"></script>
-        <link rel="prefetch" type="application/l10n" href="l10n/locales.ini" >
+        <script src="../static.getnightingale.com/javascript/l10n.js"></script>
+        <link rel="prefetch" type="application/l10n" href="../static.getnightingale.com/l10n/locales.ini" >
         
     </head>
     <body>
@@ -100,7 +102,7 @@
                 <figure id="headerlogo" role="banner">
                     <div id="tabshadow" class="tab"></div>
                     <div id="birdtab" class="tab"></div>
-                    <img src="images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo">
+                    <img src="../static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo">
                 </figure>
             </header>
         </div>
@@ -111,14 +113,14 @@
                     <?php foreach($download as $os => $properties) {
                             echo '
                                 <li '.($properties['popup'] ? 'data-popup':'data-url="'.$properties['url'].'"').' class="download">
-                                    <img src="'.$properties[img].'" alt="'.$properties['osname'].' Icon"> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
+                                    <img src="'.$properties['img'].'" alt="'.$properties['osname'].' Icon"> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
                                 </li>
                             ';
                           }
                     ?>
                     <section class="clear">
                         <h2 data-l10n-id="compile">Compile Nightingale</h2>
-                        <p data-l10n-id="compilingInstructions">Link to source code & compiling instructions</p>
+                        <p data-l10n-id="compilingInstructions" data-l10n-args='{"tarball":"<?php echo $tarball;?>"}'>You can compile Nightingale for yourself. You will require our <a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Source</a> and everything else is conviniently explained for each plattform in the <a href="http://wiki.getnightingale.com/doku.php?id=build">"Build" wiki article</a>.</p>
                     </section>
                 </ul>
             </article>
@@ -127,7 +129,7 @@
             <footer class="container">
                 <section id="footerinfo" role="contentinfo">
                     <div id="leftfooter">
-                        <img id="footergale" alt="white outlined nightingale project logo" src="images/footergale.png">
+                        <img id="footergale" alt="white outlined nightingale project logo" src="../static.getnightingale.com/images/footergale.png">
                         <select id="l10nselect">
                             <option selected value="en">English</option>
                         </select>
@@ -172,6 +174,6 @@
             </footer>
         </div>
         
-        <script type="text/javascript" src="javascript/base.js"></script>
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
     </body>
 </html>

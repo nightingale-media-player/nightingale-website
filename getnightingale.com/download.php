@@ -13,15 +13,15 @@
         <!-- styles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
             <link rel="stylesheet" href="css/legacy-ie.css">
             <script src="javascript/html5shiv.js"></script>
         <![endif]-->
         
         <!-- l10n -->
-        <script src="javascript/l10n.js"></script>
-        <link rel="prefetch" type="application/l10n" href="l10n/locales.ini" >
+        <script src="../static.getnightingale.com/javascript/l10n.js"></script>
+        <link rel="prefetch" type="application/l10n" href="../static.getnightingale.com/l10n/locales.ini" >
         
     </head>
     <body>
@@ -53,7 +53,7 @@
                 <figure id="headerlogo" role="banner">
                     <div id="tabshadow" class="tab"></div>
                     <div id="birdtab" class="tab"></div>
-                    <img src="images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo">
+                    <img src="../static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo">
                 </figure>
             </header>
         </div>
@@ -66,14 +66,14 @@
                                 continue;
                             echo '
                                 <li '.($properties['popup'] ? 'data-popup':'data-url="'.$properties['url'].'"').' class="download">
-                                    <img src="'.$properties[img].'" alt="'.$properties['osname'].' Icon"> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
+                                    <img src="'.$properties['img'].'" alt="'.$properties['osname'].' Icon"> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
                                 </li>
                             ';
                           }
                     ?>
                     <section class="clear">
                         <h2 data-l10n-id="compile">Compile Nightingale</h2>
-                        <p data-l10n-id="compilingInstructions">Link to source code & compiling instructions</p>
+                        <p data-l10n-id="compilingInstructions" data-l10n-args='{"tarball":"<?php echo $tarball;?>"}'>You can compile Nightingale for yourself. You will require our <a href="http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.12">Source</a> and everything else is conviniently explained for each plattform in the <a href="http://wiki.getnightingale.com/doku.php?id=build">"Build" wiki article</a>.</p>
                     </section>
                 </ul>
             </article>
@@ -82,7 +82,7 @@
             <footer class="container">
                 <section id="footerinfo" role="contentinfo">
                     <div id="leftfooter">
-                        <img id="footergale" alt="white outlined nightingale project logo" src="images/footergale.png">
+                        <img id="footergale" alt="white outlined nightingale project logo" src="../static.getnightingale.com/images/footergale.png">
                         <select id="l10nselect">
                             <option selected value="en">English</option>
                         </select>
@@ -127,6 +127,6 @@
             </footer>
         </div>
         
-        <script type="text/javascript" src="javascript/base.js"></script>
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
     </body>
 </html>

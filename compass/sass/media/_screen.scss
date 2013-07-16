@@ -89,6 +89,10 @@
                 @include span-columns(1 omega,2);
             }
         }
+        
+        .column:last-child {
+            @include omega();
+        }
 
     }
     
@@ -106,9 +110,6 @@
         }
         
         #main {
-            aside {
-                @include omega();
-            }
             p {
                 @include column-count(3);
                 @include span-columns(6);
@@ -135,7 +136,6 @@
                 
         .column {
             @include span-columns(2);
-            @include nth-omega(3n+1);
         }
     }
     
@@ -187,7 +187,6 @@
         }
 
         .column {
-            @include nth-omega(2n);
             @include span-columns(2);
         }
 

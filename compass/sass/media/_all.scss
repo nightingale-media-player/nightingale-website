@@ -17,6 +17,7 @@
     #contentleft {
         max-width: $twocolumns - 2 * $gutter-width;
         margin-right: $gutter-width;
+        margin-bottom: $base-line-height;
         display: inline-block;
     }    
     
@@ -154,7 +155,7 @@
         }
 
     }
-    
+
     /* ----------------------------------------------------------------------------
        Ubunut ppa overlay
        --------------------------------------------------------------------------*/
