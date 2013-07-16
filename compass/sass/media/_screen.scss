@@ -90,23 +90,10 @@
             }
         }
         
-        .column:last-child {
-            @include omega();
-        }
-        
-        .column.omega, .twocolumns.omega, .omega {
-            @include omega();
-        }
-        
         .columnimage {
             width: 2*$column-width+$gutter-width;
             margin-right: $gutter-width;
         }
-        
-        .twocolumns .column {
-            @include span-columns(2 omega,4);
-        }
-
     }
     
     @include at-breakpoint($allcolumns 6) {
@@ -145,12 +132,25 @@
             @include span-columns(2);
         }
         
+        .column.omega, .twocolumns.omega, .omega, .column:last-child {
+            @include omega();
+        }
+        
         .twocolumns {
             @include span-columns(4);
             
             p {
                 @include column-count(2);
             }
+        }
+        
+        .twocolumnimage {
+            width: 4*$column-width+2*$gutter-width;
+            margin-right: $gutter-width;
+        }
+        
+        .twocolumns .column {
+            @include span-columns(2 omega,4);
         }
     }
     
@@ -184,6 +184,15 @@
             }
         }
         
+        #contentleft {
+            margin-right: 0;
+        }
+        
+        .twocolumnimage {
+            width: 4*$column-width+2*$gutter-width;
+            margin-right: $gutter-width;
+        }
+        
         #main {
             aside {
                 @include span-columns(4);
@@ -208,6 +217,9 @@
         .column {
             @include span-columns(2);
         }
+        .column.omega, .twocolumns.omega, .omega, .column:last-child {
+            @include omega();
+        }
 
         .footerlinks {
             @include span-columns(1);
@@ -215,6 +227,10 @@
         }
         #footerinfo {
             @include span-columns(3);
+        }
+        
+        .twocolumns .column {
+            @include span-columns(2 omega,4);
         }
     }
     
@@ -263,7 +279,12 @@
                 }
             }
         }
-
+        
+        #contentleft {
+            margin-right: 0;
+            //@include omega();
+        }
+        
         #expandngalenav {
             display: block;
             visibility: visible;
@@ -278,12 +299,20 @@
             }
         }
         
-        .twocolumns {
-            @include omega();
+        .twocolumnimage {
+            width: 2*$column-width+$gutter-width;
+        }
+        
+        .columnimage {
+            margin-right: 0;
         }
         
         .download {
             @include span-columns(2 omega);
+        }
+        
+        .twocolumns .column {
+            @include span-columns(2 omega,2);
         }
             
         #downloadbutton {

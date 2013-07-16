@@ -52,7 +52,7 @@ window.onload = function() {
     if(window.devicePixelRatio&&window.devicePixelRatio>1.3) {
         var imgs = document.getElementsByTagName("img");
         for(var i in imgs) {
-            if(imgs[i].src&&!imgs[i].src.match(/-hidpi/i)) {
+            if(imgs[i].src&&!imgs[i].src.match(/-hidpi/i)&&imgs[i].dataset.hdpi) {
                 imgs[i].src = imgs[i].src.replace(/(?!-hidpi)\.(png|jpg)$/i,function(str) {
                     return "-hidpi"+str;
                 });

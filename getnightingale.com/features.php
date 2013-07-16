@@ -39,7 +39,7 @@
                 <figure id="headerlogo" role="banner">
                     <div id="tabshadow" class="tab"></div>
                     <div id="birdtab" class="tab"></div>
-                    <img src="../static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo">
+                    <img src="../static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo" data-hdpi>
                 </figure>
             </header>
         </div>
@@ -85,7 +85,7 @@
                     </section>
                     <section class="twocolumns omega">
                         <h3>Tabbed Browsing</h3>
-                        <img src="../static.getnightingale.com/images/tabstrip.png">
+                        <img src="../static.getnightingale.com/images/tabstrip.png" class="twocolumnimage">
                         <p>By default you can only see one tab, the Library tab. However you can open an unlimited amount of other tabs to browse the web. Thanks to Gecko being integrated into XULRunner Nightingale has builtin a full featured browser.</p>
                     </section>
                 </section>
@@ -126,7 +126,7 @@
             <footer class="container">
                 <section id="footerinfo" role="contentinfo">
                     <div id="leftfooter">
-                        <img id="footergale" alt="white outlined nightingale project logo" src="../static.getnightingale.com/images/footergale.png">
+                        <img id="footergale" alt="white outlined nightingale project logo" src="../static.getnightingale.com/images/footergale.png" data-hdpi>
                         <select id="l10nselect">
                             <option selected value="en">English</option>
                         </select>
