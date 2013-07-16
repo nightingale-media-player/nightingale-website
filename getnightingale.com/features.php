@@ -46,78 +46,77 @@
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <h1 data-l10n-id="featuresTitle">Nightingale Features</h1>
-                <p>Nightingale is powered by <a href="">XULRunner</a> from Mozilla. XULRunner is a [insert adjectiv] toolkit from Mozilla. Other applications like Thunderbird or Instantbird are also based on XULRunner. the media core of Nightingale uses GStreamer. It allows Nightingale to have a large feature set of playback customization as well as a large selection of supported file formats.</p>
+                <p data-l10n-id="featuresIntro">Nightingale is powered by <a href="">XULRunner</a> from Mozilla. XULRunner is a [insert adjectiv] toolkit from Mozilla. Other applications like Thunderbird or Instantbird are also based on XULRunner. the media core of Nightingale uses GStreamer. It allows Nightingale to have a large feature set of playback customization as well as a large selection of supported file formats.</p>
                 <section class="fullwidth">
-                    <h2>Playback</h2>
+                    <h2 data-l10n-id="playback">Playback</h2>
                     <section class="twocolumns">
-                        <h3>Audio Formats</h3>
-                        <p>Thanks to GStreamer Nighitngale can play various different file formats. Including MP3, WAV, AAC, FLAC and many more. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
+                        <h3 data-l10n-id="audioFormat">Audio Formats</h3>
+                        <p data-l10n-id="audioFormatDescription">Thanks to GStreamer Nighitngale can play various different file formats. Including MP3, WAV, AAC, FLAC and many more. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
                     </section>
                     <section class="column omega">
-                        <h3>Native GStreamer</h3>
-                        <p>On Linux systems Nightingale uses the GStreamer of the system. This slims down our package size and enhances compatibility with different operating systems.</p>
+                        <h3 data-l10n-id="native">Native GStreamer</h3>
+                        <p data-l10n-id="nativeDescription">On Linux systems Nightingale uses the GStreamer of the system. This slims down our package size and enhances compatibility with different operating systems.</p>
                     </section>
                     <section class="column">
-                        <h3>Video Playback</h3>
-                        <p>Apart from playing audio, Nightingale also masters the playback of common video formats. This makes Nightingale the hub for all your local media files.
+                        <h3 data-l10n-id="videoPlayback">Video Playback</h3>
+                        <p data-l10n-id="videoPlaybackDescription">Apart from playing audio, Nightingale also masters the playback of common video formats. This makes Nightingale the hub for all your local media files.
                     </section>
                     <section class="twocolumns omega">
-                        <h3>Playlists</h3>
-                        <img src="../static.getnightingale.com/images/playlists.png" class="columnimage">
-                        <p class="column">As every media player, Nightingale has playlists. However there are special playlists in Nightingale: Smart Playlists. They allow you to filter your Library based on any available tag with complex rulesets.
+                        <h3 data-l10n-id="playlists">Playlists</h3>
+                        <img src="../static.getnightingale.com/images/playlists.png" class="columnimage" alt="Smart playlist selector with multiple filter arguments" data-l10n-id="playlistsIamge">
+                        <p class="column" data-l10n-id="playlistsDescription">As every media player, Nightingale has playlists. However there are special playlists in Nightingale: Smart Playlists. They allow you to filter your Library based on any available tag with complex rulesets.
                     </section>
                     <section class="twocolumns">
-                        <h3>Equalizer</h3>
-                        <img src="../static.getnightingale.com/images/equalizer.png" class="columnimage">
-                        <p class="column">Adjust the frequency range of your music with the built-in 10-band equalizer.</p>
+                        <h3 data-l10n-id="equalizer">Equalizer</h3>
+                        <img src="../static.getnightingale.com/images/equalizer.png" class="columnimage" alt="Equalizer window with ten horizontal sliders set to different heights." data-l10n-id="equalizerImage">
+                        <p class="column" data-l10n-id="equalizerDescription">Adjust the frequency range of your music with the built-in 10-band equalizer.</p>
                     </section>
                     <section class="column">
-                        <h3>Radiostreams</h3>
-                        <p>For the internet radio fans: Nightingale can play m3u, pls and other streams. Just click on the link to the file and Nightingale will start playing the Stream.</p>
+                        <h3 data-l10n-id="radio">Radiostreams</h3>
+                        <p data-l10n-id="radioDescription">For the internet radio fans: Nightingale can play m3u, pls and other streams. Just click on the link to the file and Nightingale will start playing the Stream.</p>
                     </section>
-                    <!-- equalizer, (radio)streams-->
                 </section>
                 <section class="fullwidth">
-                    <h2>Integrated Browser</h2>
+                    <h2 data-l10n-id="browser">Integrated Browser</h2>
                     <section class="column">
-                        <h3>Link Grabber</h3>
-                        <p>The intgerated browser of Nightingale detects links to media files and lists the files in a pane in the bottom of the window. You can then listen to the file or download it directly into your library.</p>
+                        <h3 data-l10n-id="linkGrabber">Link Grabber</h3>
+                        <p data-l10n-id="linkGrabberDescription">The intgerated browser of Nightingale detects links to media files and lists the files in a pane in the bottom of the window. You can then listen to the file or download it directly into your library.</p>
                     </section>
                     <section class="twocolumns omega">
-                        <h3>Tabbed Browsing</h3>
-                        <img src="../static.getnightingale.com/images/tabstrip.png" class="twocolumnimage">
-                        <p>By default you can only see one tab, the Library tab. However you can open an unlimited amount of other tabs to browse the web. Thanks to Gecko being integrated into XULRunner Nightingale has builtin a full featured browser.</p>
+                        <h3 data-l10n-id="tabs">Tabbed Browsing</h3>
+                        <img src="../static.getnightingale.com/images/tabstrip.png" class="twocolumnimage" alt="Tabstrip with various titles, mostly related to Nightingale and parts of the navigationbar, including forward and backwards buttons." data-l10n-id="tabsImage">
+                        <p data-l10n-id="tabsDescription">By default you can only see one tab, the Library tab. However you can open an unlimited amount of other tabs to browse the web. Thanks to Gecko being integrated into XULRunner Nightingale has builtin a full featured browser.</p>
                     </section>
                 </section>
                 <section class="fullwidth">
-                    <h2>Synchronization</h2>
-                    <p>You can synchronize any volume with Nightingale.</p>
+                    <h2 data-l10n-id="sync">Synchronization</h2>
+                    <p data-l10n-id="syncDescription">You can synchronize any volume with Nightingale.</p>
                 </section>
                 <section class="fullwidth">
-                    <h2>Customization</h2>
+                    <h2 data-l10n-id="customization">Customization</h2>
                     <section class="twocolumns">
-                        <h3>Feathers</h3>
-                        <p>You don't like the default look of Nightingale? No problem! The builtin Theme system allows you to quickly completely change the layout. Themes are called Feathers - well - because Nightingale is a bird.</p>
+                        <h3 data-l10n-id="feathers">Feathers</h3>
+                        <p data-l10n-id="feathersDescription">You don't like the default look of Nightingale? No problem! The builtin Theme system allows you to quickly completely change the layout. Themes are called Feathers - well - because Nightingale is a bird.</p>
                     </section>
                     <section class="column omega">
-                        <h3>Add-ons</h3>
-                        <p>Similiar to Firefox, Nightingale also supports Add-ons. Extensions add new features to Nightingale or enhance existing ones. There is a big community creating extensions for Nightingale.</p>
+                        <h3 data-l10n-id="addOns">Add-ons</h3>
+                        <p data-l10n-id="addOnsDescription">Similiar to Firefox, Nightingale also supports Add-ons. Extensions add new features to Nightingale or enhance existing ones. There is a big community creating extensions for Nightingale.</p>
                     </section>
                     
                     <section class="column">
-                        <h3>SoundCloud Integration</h3>
-                        <p>You can optionally install an extension to neatly integrate SoundCloud into Nightingale.</p>
-                        <a href="INSTALL">Install SoundCloud</a>
+                        <h3 data-l10n-id="soundCloud">SoundCloud Integration</h3>
+                        <p data-l10n-id="soundCloudDescription">You can optionally install an extension to neatly integrate SoundCloud into Nightingale.</p>
+                        <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"SoundCloud"}'>Install SoundCloud</a>
                     </section>
                     <section class="column">
-                        <h3>Last.fm Scrobbling</h3>
-                        <p>You can optionally install an extension to neatly integrate SoundCloud into Nightingale.</p>
-                        <a href="INSTALL">Install Last.fm</a>
+                        <h3 data-l10n-id="lastFm">Last.fm Scrobbling</h3>
+                        <p data-l10n-id="lastFmDescription">Scrobble the songs you are listening to last.fm - from within Nightingale.</p>
+                        <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"Last.fm"}'>Install Last.fm</a>
                     </section>
                     <section class="column">
-                        <h3>ShoutCast Integration</h3>
-                        <p>You can optionally install an extension to neatly integrate SoundCloud into Nightingale.</p>
-                        <a href="INSTALL">Install ShoutCast</a>
+                        <h3 data-l10n-id="shoutCast">ShoutCast Integration</h3>
+                        <p data-l10n-id="shoutCastDescription">All your favorite ShoutCast streams just a click away in Nightingale.</p>
+                        <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"ShoutCast"}'>Install ShoutCast</a>
                     </section>
                 </section>
             </article>
