@@ -86,6 +86,15 @@
         list-style: none;
         margin-left: 0;
     }
+    
+    h3+p,h2+p,h1+p {
+        margin-top: 0;
+    }
+    
+    .fullwidth {
+        width: 100%;
+        clear: both;
+    }
    
     /* ----------------------------------------------------------------------------
        Downloads list

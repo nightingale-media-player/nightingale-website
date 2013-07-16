@@ -93,6 +93,10 @@
         .column:last-child {
             @include omega();
         }
+        
+        .column.omega, .twocolumns.omega, .omega {
+            @include omega();
+        }
 
     }
     
@@ -101,19 +105,13 @@
           @include container();
         }
         
-        #contentleft {
-            @include span-columns(4);
-        }
-        
         #screenshots {
             height: 2*$sidebar-item-height + 4*px2em($base-line-height) - 2.25em;
         }
         
-        #main {
-            p {
-                @include column-count(3);
-                @include span-columns(6);
-            }
+        #main>p {
+            @include column-count(3);
+            @include span-columns(6);
         }
         
         .download {
@@ -136,6 +134,14 @@
                 
         .column {
             @include span-columns(2);
+        }
+        
+        .twocolumns {
+            @include span-columns(4);
+            
+            p {
+                @include column-count(2);
+            }
         }
     }
     
@@ -161,8 +167,12 @@
             }
         }
         
-        #contentleft {
-            @include omega();
+        .twocolumns {
+            @include span-columns(4 omega);
+            
+            p {
+                @include column-count(2);
+            }
         }
         
         #main {
@@ -175,7 +185,7 @@
                     @include nth-omega(2n-1);
                 }
             }
-            p {
+            &>p {
                 @include column-count(2);
                 @include span-columns(4);
             }
@@ -254,12 +264,12 @@
             aside {
                 margin-top: $base-line-height;
             }
-            p {
+            &>p {
                 @include span-columns(2 omega);
             }
         }
         
-        #contentleft {
+        .twocolumns {
             @include omega();
         }
         

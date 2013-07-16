@@ -1,68 +1,16 @@
-<?php    
-    $download['windowsInstaller']['url'] = ''; // download url
-    $download['windowsInstaller']['img'] = '../static.getnightingale.com/images/wine.png'; // symbolicon
-    $download['windowsInstaller']['osname'] = 'Windows Installer';
-    $download['windowsInstaller']['arch'] = 32;
-    $download['windowsInstaller']['package'] = '.exe'; // orange package info
-    $download['windowsInstaller']['popup'] = false;
-    
-    $download['windows']['url'] = '';
-    $download['windows']['img'] = '../static.getnightingale.com/images/wine.png';
-    $download['windows']['osname'] = 'Windows';
-    $download['windows']['arch'] = 32;
-    $download['windows']['package'] = '.zip';
-    $download['windows']['popup'] = false;
-    
-    $download['mac']['url'] = '';
-    $download['mac']['img'] = '../static.getnightingale.com/images/dmg.png';
-    $download['mac']['osname'] = 'Mac OS X';
-    $download['mac']['arch'] = 32;
-    $download['mac']['package'] = '.dmg';
-    $download['mac']['popup'] = false;
-    
-    $download['ubuntu']['url'] = '';
-    $download['ubuntu']['img'] = '../static.getnightingale.com/images/start-here-ubuntuoriginal.png';
-    $download['ubuntu']['osname'] = 'Ubuntu';
-    $download['ubuntu']['arch'] = getArch();
-    $download['ubuntu']['package'] = 'PPA';
-    $download['ubuntu']['popup'] = true;
-    
-    $download['linux32']['url'] = '';
-    $download['linux32']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
-    $download['linux32']['osname'] = 'Linux';
-    $download['linux32']['arch'] = 32;
-    $download['linux32']['package'] = '.tar.bz2';
-    $download['linux32']['popup'] = false;
-    
-    $download['linux64']['url'] = '';
-    $download['linux64']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
-    $download['linux64']['osname'] = 'Linux';
-    $download['linux64']['arch'] = 64;
-    $download['linux64']['package'] = '.tar.bz2';
-    $download['linux64']['popup'] = false;
-    
-    $tarball = 'git://github.com/nightingale-media-player/nightingale-hacking.git';
-    
-    function getArch() {
-        $arch = 32;
-        if(preg_match('/x86_64|amd64/i', $_SERVER['HTTP_USER_AGENT']))
-            $arch = 64;
-        return $arch;
-    }
-?>
 <!DOCTYPE html>
 <html>
     <head>
         <!-- meta info -->
         <meta charset="utf-8">
-        <title>Nightingale Nightlies</title>
+        <title data-l10n-id="featuresTitle">Nightingale Features</title>
         <meta name="description" content="Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.">
         <meta http-equiv="X-UA-Compatible" content="chrome=1"> 
         
         <!-- styles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link type="text/css" rel="stylesheet" href="../static.getnightingale.com/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
             <link rel="stylesheet" href="css/legacy-ie.css">
             <script src="javascript/html5shiv.js"></script>
@@ -75,24 +23,12 @@
         
     </head>
     <body>
-        <div  id="instructions">
-            <section>
-                <ol type="1">
-                    <li data-l10n-id="ubuntuFirstStep">Open a terminal window</li>
-                    <li><span data-l10n-id="ubuntuSecondStep">Type</span> <code>sudo add-apt-repository ppa:nightingaleteam/nightingale-nightly</code></li>
-                    <li><span data-l10n-id="ubuntuThirdStep">Then</span> <code>sudo apt-get update</code></li>
-                    <li><span data-l10n-id="ubuntuFourthStep">And finally</span> <code>sudo apt-get install nightingale</code></li>
-                </ol>
-            </section>
-        </div>
-        <div id="overlay">
-        </div>
         <div id="ngalemainheadwrapper" class="wrapper">
             <header class="container">
                 <nav role="navigation">
                     <button class="mobilenav" id="expandngalenav" data-l10n-id="menu">Menu</button>
                     <ul id="ngalenavlist">
-                        <li class="current"><a href="http://getnightingale.com" data-l10n-id="home">Home</a></li>
+                        <li><a href="http://getnightingale.com" data-l10n-id="home">Home</a></li>
                         <li><a href="http://blog.getnightingale.com" data-l10n-id="blog">Blog</a></li>
                         <li><a href="http://addons.getnightingale.com" data-l10n-id="add-ons">Add-ons</a></li>
                         <li><a href="http://forum.getnightingale.com" data-l10n-id="forum">Forum</a></li>
@@ -109,21 +45,70 @@
         </div>
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
-                <p data-l10n-id="nightliesText">We automatically build the latest version of our source. Since those are development versions, we don't take any liability for possible damage. If you run into an issue, please <a href="https://github.com/nightingale-media-player/nightingale-addons/issues/">report it</a> to us! We don't have a Nightly update channel, so the version you download here will only upgrade to the next major release.</p>
-                <ul id="downloadlist">
-                    <?php foreach($download as $os => $properties) {
-                            echo '
-                                <li '.($properties['popup'] ? 'data-popup':'data-url="'.$properties['url'].'"').' class="download">
-                                    <img src="'.$properties['img'].'" alt="'.$properties['osname'].' Icon"> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
-                                </li>
-                            ';
-                          }
-                    ?>
-                    <section class="clear">
-                        <h2 data-l10n-id="compile">Compile Nightingale</h2>
-                        <p data-l10n-id="compilingInstructions" data-l10n-args='{"tarball":"<?php echo $tarball;?>"}'>You can compile Nightingale for yourself. You will require our <a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Source</a> and everything else is conviniently explained for each plattform in the <a href="http://wiki.getnightingale.com/doku.php?id=build">"Build" wiki article</a>.</p>
+                <h1 data-l10n-id="featuresTitle">Nightingale Features</h1>
+                <p>Nightingale is powered by <a href="">XULRunner</a> from Mozilla. XULRunner is a [insert adjectiv] toolkit from Mozilla. Other applications like Thunderbird or Instantbird are also based on XULRunner. the media core of Nightingale uses GStreamer. It allows Nightingale to have a large feature set of playback customization as well as a large selection of supported file formats.</p>
+                <section class="fullwidth">
+                    <h2>Playback</h2>
+                    <section class="twocolumns">
+                        <h3>Audio Formats</h3>
+                        <p>Thanks to GStreamer Nighitngale can play various different file formats. Including MP3, WAV, AAC, FLAC and many more. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
                     </section>
-                </ul>
+                    <section class="column omega">
+                        <h3>Native GStreamer</h3>
+                        <p>On Linux systems Nightingale uses the GStreamer of the system. This slims down our package size and enhances compatibility with different operating systems.</p>
+                    </section>
+                    <section class="column">
+                        <h3>Video Playback</h3>
+                        <p>Apart from playing audio, Nightingale also masters the playback of common video formats. This makes Nightingale the hub for all your local media files.
+                    </section>
+                    <section class="twocolumns omega">
+                        <h3>Playlists</h3>
+                        <p>As every media player, Nightingale has playlists. However there are special playlists in Nightingale: Smart Playlists. They allow you to filter your Library based on any available tag with complex rulesets.
+                    </section>
+                    <!-- equalizer, (radio)streams-->
+                </section>
+                <section class="fullwidth">
+                    <h2>Integrated Browser</h2>
+                    <section class="column">
+                        <h3>Link Grabber</h3>
+                        <p>The intgerated browser of Nightingale detects links to media files and lists the files in a pane in the bottom of the window. You can then listen to the file or download it directly into your library.</p>
+                    </section>
+                    <section class="twocolumns omega">
+                        <h3>Tabbed Browsing</h3>
+                        <p>By default you can only see one tab, the Library tab. However you can open an unlimited amount of other tabs to browse the web. Thanks to Gecko being integrated into XULRunner Nightingale has builtin a full featured browser.</p>
+                    </section>
+                </section>
+                <section class="fullwidth">
+                    <h2>Synchronization</h2>
+                    <p>You can synchronize any volume with Nightingale.</p>
+                </section>
+                <section class="fullwidth">
+                    <h2>Customization</h2>
+                    <section class="twocolumns">
+                        <h3>Feathers</h3>
+                        <p>You don't like the default look of Nightingale? No problem! The builtin Theme system allows you to quickly completely change the layout. Themes are called Feathers - well - because Nightingale is a bird.</p>
+                    </section>
+                    <section class="column omega">
+                        <h3>Add-ons</h3>
+                        <p>Similiar to Firefox, Nightingale also supports Add-ons. Extensions add new features to Nightingale or enhance existing ones. There is a big community creating extensions for Nightingale.</p>
+                    </section>
+                    
+                    <section class="column">
+                        <h3>SoundCloud Integration</h3>
+                        <p>You can optionally install an extension to neatly integrate SoundCloud into Nightingale.</p>
+                        <a href="INSTALL">Install SoundCloud</a>
+                    </section>
+                    <section class="column">
+                        <h3>Last.fm Scrobbling</h3>
+                        <p>You can optionally install an extension to neatly integrate SoundCloud into Nightingale.</p>
+                        <a href="INSTALL">Install Last.fm</a>
+                    </section>
+                    <section class="column">
+                        <h3>ShoutCast Integration</h3>
+                        <p>You can optionally install an extension to neatly integrate SoundCloud into Nightingale.</p>
+                        <a href="INSTALL">Install ShoutCast</a>
+                    </section>
+                </section>
             </article>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">

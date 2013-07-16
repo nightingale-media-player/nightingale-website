@@ -80,7 +80,7 @@
         </div>
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
-                <div id="contentleft">
+                <div id="contentleft" class="twocolumns">
                     <div id="screenshots">
                         <img src="http://lorempixel.com/702/300">
                         <button id="downloadbutton" <?php if($download[$osstring]['popup']) echo 'data-popup'; else echo 'data-url="'.$download[$osstring]['url'].'"'; ?>>
