@@ -94,6 +94,10 @@
             width: 2*$column-width+$gutter-width;
             margin-right: $gutter-width;
         }
+        
+        .column p, .twocolumns p {
+            margin-top: 0;
+        }
     }
     
     @include at-breakpoint($allcolumns 6) {
@@ -231,6 +235,7 @@
         
         .twocolumns .column {
             @include span-columns(2 omega,4);
+            
         }
     }
     

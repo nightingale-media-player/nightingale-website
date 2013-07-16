@@ -51,7 +51,8 @@
                     <h2 data-l10n-id="playback">Playback</h2>
                     <section class="twocolumns">
                         <h3 data-l10n-id="audioFormat">Audio Formats</h3>
-                        <p data-l10n-id="audioFormatDescription">Thanks to GStreamer Nighitngale can play various different file formats. Including MP3, WAV, AAC, FLAC and many more. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
+                        <img src="../static.getnightingale.com/images/controls.png" alt="Player controls" data-l10n-id="playerControlsImage" class="columnimage">
+                        <p class="column" data-l10n-id="audioFormatDescription">Thanks to GStreamer Nighitngale can play various different file formats. Including MP3, WAV, AAC, FLAC and many more. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
                     </section>
                     <section class="column omega">
                         <h3 data-l10n-id="native">Native GStreamer</h3>
@@ -119,6 +120,7 @@
                         <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"ShoutCast"}'>Install ShoutCast</a>
                     </section>
                 </section>
+                <!-- Miniplayer -->
             </article>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
