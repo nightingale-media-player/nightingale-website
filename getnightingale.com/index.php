@@ -84,7 +84,7 @@
                     <div id="screenshots">
                         <img src="http://lorempixel.com/702/300">
                         <button id="downloadbutton" <?php if($download[$osstring]['popup']) echo 'data-popup'; else echo 'data-url="'.$download[$osstring]['url'].'"'; ?>>
-                            <img src="<?php echo $download[$osstring]['img']; ?>" alt="<?php echo $download[$osstring]['osname']; ?> Icon">
+                            <img src="<?php echo $download[$osstring]['img']; ?>" alt="<?php echo $download[$osstring]['osname']; ?> Icon" data-l10n-id="downloadButtonImage">
                             <div><b data-l10n-id="download">Download Nightingale</b><br>
                                 <small><?php 
                                     if($osstring!='unknown') {
