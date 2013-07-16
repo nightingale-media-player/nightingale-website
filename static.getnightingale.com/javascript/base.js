@@ -1,32 +1,33 @@
-window.onload = function() {
-    var l10n = document.webL10n , selectLoaded = false;
+var selectLoaded = false;
 
-    addEventListenerLegacy(document,"localized",function() {
-        if(!selectLoaded) {
-            // add the languages to the dropdown
-            var langs = l10n.getLanguages();
-            var select = document.getElementById('l10nselect'), n;
-            for(var l = 0;l<langs.length;l++) {
-                if(typeof l !== 'function' && !containsLanguage(select.options,langs[l])) {
-                    n = document.createElement("option");
-                    n.text = l10n.get(langs[l]+'Name');
-                    n.value = langs[l];
-                    select.appendChild(n);
-                }
+addEventListenerLegacy(document,"localized",function() {
+    var l10n = document.webL10n;
+    if(!selectLoaded) {
+        // add the languages to the dropdown
+        var langs = l10n.getLanguages();
+        var select = document.getElementById('l10nselect'), n;
+        for(var l = 0;l<langs.length;l++) {
+            if(typeof l !== 'function' && !containsLanguage(select.options,langs[l])) {
+                n = document.createElement("option");
+                n.text = l10n.get(langs[l]+'Name');
+                n.value = langs[l];
+                select.appendChild(n);
             }
-            
-            // set current language
-            select.value = l10n.getLanguage(); // not working with IE<9
-            
-            // chane document language when selection is changed
-            select.onchange = function() {
-                l10n.setLanguage(this.value);
-            };
-            
-            selectLoaded = true;
         }
-    },false);
- 
+        
+        // set current language
+        select.value = l10n.getLanguage(); // not working with IE<9
+        
+        // chane document language when selection is changed
+        select.onchange = function() {
+            l10n.setLanguage(this.value);
+        };
+        
+        selectLoaded = true;
+    }
+},false);
+
+window.onload = function() {
     var download = document.getElementsByClassName('download');
     for(var i = 0; i< download.length; i++) {
         if(download[i].attributes['data-popup']) {

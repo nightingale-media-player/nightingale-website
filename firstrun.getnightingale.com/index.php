@@ -10,14 +10,15 @@
         <!-- styles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="../static.getnightingale.com/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
             <link rel="stylesheet" href="css/legacy-ie.css">
             <script src="javascript/html5shiv.js"></script>
         <![endif]-->
         
         <!-- l10n -->
-        <script src="../static.getnightingale.com/javascript/l10n.js"></script>
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/l10n.js"></script>
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
         <link rel="prefetch" type="application/l10n" href="../static.getnightingale.com/l10n/locales.ini" >
         
     </head>
@@ -90,7 +91,7 @@
                 <ul class="column">
                     <li class="feature">
                         <figure>
-                            <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="firstFeatureImage">
+                            <img src="http://lorempixel.com/400/400" alt="">
                             <figcaption>If you have any issues, feature requests or questions, please visit our <a href="http://forum.getnightignale.com">forum</a>.</figcaption>
                         </figure>
                     </li><li class="feature">
@@ -155,7 +156,5 @@
                 </nav>
             </footer>
         </div>
-        
-        <script type="text/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
     </body>
 </html>
