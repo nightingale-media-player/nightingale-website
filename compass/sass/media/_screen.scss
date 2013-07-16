@@ -97,6 +97,15 @@
         .column.omega, .twocolumns.omega, .omega {
             @include omega();
         }
+        
+        .columnimage {
+            width: 2*$column-width+$gutter-width;
+            margin-right: $gutter-width;
+        }
+        
+        .twocolumns .column {
+            @include span-columns(2 omega,4);
+        }
 
     }
     

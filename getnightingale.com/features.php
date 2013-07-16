@@ -63,7 +63,17 @@
                     </section>
                     <section class="twocolumns omega">
                         <h3>Playlists</h3>
-                        <p>As every media player, Nightingale has playlists. However there are special playlists in Nightingale: Smart Playlists. They allow you to filter your Library based on any available tag with complex rulesets.
+                        <img src="../static.getnightingale.com/images/playlists.png" class="columnimage">
+                        <p class="column">As every media player, Nightingale has playlists. However there are special playlists in Nightingale: Smart Playlists. They allow you to filter your Library based on any available tag with complex rulesets.
+                    </section>
+                    <section class="twocolumns">
+                        <h3>Equalizer</h3>
+                        <img src="../static.getnightingale.com/images/equalizer.png" class="columnimage">
+                        <p class="column">Adjust the frequency range of your music with the built-in 10-band equalizer.</p>
+                    </section>
+                    <section class="column">
+                        <h3>Radiostreams</h3>
+                        <p>For the internet radio fans: Nightingale can play m3u, pls and other streams. Just click on the link to the file and Nightingale will start playing the Stream.</p>
                     </section>
                     <!-- equalizer, (radio)streams-->
                 </section>
@@ -75,6 +85,7 @@
                     </section>
                     <section class="twocolumns omega">
                         <h3>Tabbed Browsing</h3>
+                        <img src="../static.getnightingale.com/images/tabstrip.png">
                         <p>By default you can only see one tab, the Library tab. However you can open an unlimited amount of other tabs to browse the web. Thanks to Gecko being integrated into XULRunner Nightingale has builtin a full featured browser.</p>
                     </section>
                 </section>
