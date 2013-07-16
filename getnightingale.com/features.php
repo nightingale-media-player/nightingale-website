@@ -46,7 +46,7 @@
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <h1 data-l10n-id="featuresTitle">Nightingale Features</h1>
-                <p data-l10n-id="featuresIntro">Nightingale is powered by <a href="">XULRunner</a> from Mozilla. XULRunner is a [insert adjectiv] toolkit from Mozilla. Other applications like Thunderbird or Instantbird are also based on XULRunner. the media core of Nightingale uses GStreamer. It allows Nightingale to have a large feature set of playback customization as well as a large selection of supported file formats.</p>
+                <p data-l10n-id="featuresIntro">Nightingale is powered by <a href="">XULRunner</a> from Mozilla. XULRunner is a reliable base from Mozilla. Other applications like Thunderbird or Instantbird are also based on XULRunner. the media core of Nightingale uses GStreamer. It allows Nightingale to have a large feature set of playback customization as well as a large selection of supported file formats.</p>
                 <section class="fullwidth">
                     <h2 data-l10n-id="playback">Playback</h2>
                     <section class="twocolumns">
