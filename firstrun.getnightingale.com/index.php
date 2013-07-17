@@ -81,19 +81,19 @@
                     <li class="feature">
                         <h3>First Aid</h3>
                         <figure>
-                            <img src="http://lorempixel.com/400/400" alt="">
+                            <img src="http://lorempixel.com/400/400" alt=""> <!-- what pictures -->
                             <figcaption>Some wiki article featuring some important and frequently asked question.</figcaption>
                         </figure>
                     </li><li class="feature">
                         <h3>Get started with Nightingale</h3>
                         <figure>
-                            <img src="http://lorempixel.com/404/404" alt="">
+                            <img src="http://lorempixel.com/404/404" alt=""> <!-- can we even -->
                             <figcaption>A getting started guide, especially written to help new users to get around the UI.</figcaption>
                         </figure>
                     </li><li class="feature">
                         <h3>Keep you itunes library</h3>
                         <figure>
-                            <img src="http://lorempixel.com/401/401" alt="">
+                            <img src="http://lorempixel.com/401/401" alt=""> <!-- use here? -->
                             <figcaption>The article describing how to migrate the old Songbird library to Nightingale.</figcaption>
                         </figure>
                     </li>
@@ -109,12 +109,19 @@
                     </li><li class="feature">
                         <h3>Album Name</h3>
                         <figure>
-                            <img src="http://lorempixel.com/404/404" alt="">
-                            <figcaption>The current album of Artist Name. It's also the Album we're featuring everywhere on screenshots. Maybe a list with the titles or similiar. Should be static, so we don't always have to l10n that.</figcaption>
+                            <img src="http://lorempixel.com/404/404" alt="" class="cover"> <!-- make that badbuoy square! -->
+                            <figcaption><ol>
+                                <li>First Track</li>
+                                <li>Second Track</li>
+                                <li>Third Track</li>
+                                <li>The layout can't take more tracks</li>
+                                <li>IT CAN!</li>
+                                <li>(if the titles aren't tooo long, not like this one, who takes three lines for itself)</li>
+                            </ol></figcaption>
                         </figure>
                     </li><li class="feature">
                         <h3>Discover more Artists</h3>
-                        Artists of previous releases. MAybe a list of the last few or just a link to some sort of history page.
+                        <p>Artists of previous releases. MAybe a list of the last few or just a link to some sort of history page.</p>
                     </li>
                 </ul>
             </article>
