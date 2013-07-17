@@ -120,7 +120,7 @@
                         <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"ShoutCast"}'>Install ShoutCast</a>
                     </section>
                 </section>
-                <!-- Miniplayer -->
+                <!-- Miniplayer, iTunes import, cross platform -->
             </article>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
