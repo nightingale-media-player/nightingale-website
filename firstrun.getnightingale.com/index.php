@@ -48,8 +48,8 @@
                 <h1 data-l10n-id="firstrunWelcomeTitle">Welcome to Nightingale!</h1>
                 <p data-l10n-id="firstrunWelcomeMessage" data-l10n-args='{"url":"http://wiki.getnightignale.com/release_notes"}'>You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. For information on whats new in this version, please read the <a href="http://wiki.getnightignale.com/release_notes">Release Notes</a>.</p>
                 <section class="column">
-                    <h2>Recommended Add-ons</h2>
-                    <ul>
+                    <h2 data-l10n-id="recommendedAddOnsTitle">Recommended Add-ons</h2>
+                    <ul><!-- the LIs should probably be links -->
                         <li class="feature">
                             <h3>First</h3>
                             <figure>
@@ -78,7 +78,7 @@
                     </ul>
                 </section>
                 <section class="column">
-                    <h2>Help</h2>
+                    <h2>Toutorials</h2> <!-- title tbc -->
                     <!-- for more help visit the forum -->
                     <ul>
                         <li class="feature">
@@ -103,12 +103,13 @@
                     </ul>
                 </scetion>
                 <section class="column">
-                    <h2>Featured Artist</h2>
+                    <h2 data-l10n-id="firstrunArtist">Featured Artist</h2>
                     <ul>
                         <li class="feature">
                             <h3>Artist Name</h3>
                             <figure>
                                 <img src="http://lorempixel.com/400/400" alt="">
+                                <!-- does this need an l10n??? -->
                                 <figcaption>Artist Name has a bio. It will be conviniently placed here, so people know who he is. Optionally a link to his homepage.</figcaption>
                             </figure>
                         </li><li class="feature">
@@ -125,7 +126,7 @@
                                 </ol></figcaption>
                             </figure>
                         </li><li class="feature">
-                            <h3>Discover more Artists</h3>
+                            <h3 data-l10n-id="firstrunDiscoverArtists">Discover more Artists</h3>
                             <p>Artists of previous releases. MAybe a list of the last few or just a link to some sort of history page.</p>
                         </li>
                     </ul>
