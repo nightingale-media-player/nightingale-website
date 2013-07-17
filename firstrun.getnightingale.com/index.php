@@ -47,83 +47,89 @@
             <article id="main" class="container" role="main">
                 <h1 data-l10n-id="firstrunWelcomeTitle">Welcome to Nightingale!</h1>
                 <p data-l10n-id="firstrunWelcomeMessage" data-l10n-args='{"url":"http://wiki.getnightignale.com/release_notes"}'>You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. For information on whats new in this version, please read the <a href="http://wiki.getnightignale.com/release_notes">Release Notes</a>.</p>
-                <ul class="column">
+                <section class="column">
                     <h2>Recommended Add-ons</h2>
-                    <li class="feature">
-                        <h3>First</h3>
-                        <figure>
-                            <img src="http://lorempixel.com/400/400" alt="">
-                            <figcaption>First add-on</figcaption>
-                        </figure>
-                    </li><li class="feature">
-                        <h3>Second</h3>
-                        <figure>
-                            <img src="http://lorempixel.com/404/404" alt="">
-                            <figcaption>Second recommended add-on</figcaption>
-                        </figure>
-                    </li><li class="feature">
-                        <h3>???</h3>
-                        <figure>
-                            <img src="http://lorempixel.com/401/401" alt="">
-                            <figcaption>Yet anotother recommended add-on.</figcaption>
-                        </figure>
-                    </li><li class="feature">
-                        <h3>Profit!</h3>
-                        <figure>
-                            <img src="http://lorempixel.com/402/402" alt="">
-                            <figcaption>Add-on.</figcaption>
-                        </figure>
-                    </li>
-                </ul>
-                <ul class="column">
+                    <ul>
+                        <li class="feature">
+                            <h3>First</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/400/400" alt="">
+                                <figcaption>First add-on</figcaption>
+                            </figure>
+                        </li><li class="feature">
+                            <h3>Second</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/404/404" alt="">
+                                <figcaption>Second recommended add-on</figcaption>
+                            </figure>
+                        </li><li class="feature">
+                            <h3>???</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/401/401" alt="">
+                                <figcaption>Yet anotother recommended add-on.</figcaption>
+                            </figure>
+                        </li><li class="feature">
+                            <h3>Profit!</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/402/402" alt="">
+                                <figcaption>Add-on.</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </section>
+                <section class="column">
                     <h2>Help</h2>
                     <!-- for more help visit the forum -->
-                    <li class="feature">
-                        <h3>First Aid</h3>
-                        <figure>
-                            <img src="http://lorempixel.com/400/400" alt=""> <!-- what pictures -->
-                            <figcaption>Some wiki article featuring some important and frequently asked question.</figcaption>
-                        </figure>
-                    </li><li class="feature">
-                        <h3>Get started with Nightingale</h3>
-                        <figure>
-                            <img src="http://lorempixel.com/404/404" alt=""> <!-- can we even -->
-                            <figcaption>A getting started guide, especially written to help new users to get around the UI.</figcaption>
-                        </figure>
-                    </li><li class="feature">
-                        <h3>Keep you itunes library</h3>
-                        <figure>
-                            <img src="http://lorempixel.com/401/401" alt=""> <!-- use here? -->
-                            <figcaption>The article describing how to migrate the old Songbird library to Nightingale.</figcaption>
-                        </figure>
-                    </li>
-                </ul>
-                <ul class="column">
+                    <ul>
+                        <li class="feature">
+                            <h3>First Aid</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/400/400" alt=""> <!-- what pictures -->
+                                <figcaption>Some wiki article featuring some important and frequently asked question.</figcaption>
+                            </figure>
+                        </li><li class="feature">
+                            <h3>Get started with Nightingale</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/404/404" alt=""> <!-- can we even -->
+                                <figcaption>A getting started guide, especially written to help new users to get around the UI.</figcaption>
+                            </figure>
+                        </li><li class="feature">
+                            <h3>Keep you itunes library</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/401/401" alt=""> <!-- use here? -->
+                                <figcaption>The article describing how to migrate the old Songbird library to Nightingale.</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </scetion>
+                <section class="column">
                     <h2>Featured Artist</h2>
-                    <li class="feature">
-                        <h3>Artist Name</h3>
-                        <figure>
-                            <img src="http://lorempixel.com/400/400" alt="">
-                            <figcaption>Artist Name has a bio. It will be conviniently placed here, so people know who he is. Optionally a link to his homepage.</figcaption>
-                        </figure>
-                    </li><li class="feature">
-                        <h3>Album Name</h3>
-                        <figure>
-                            <img src="http://lorempixel.com/404/404" alt="" class="cover"> <!-- make that badbuoy square! -->
-                            <figcaption><ol>
-                                <li>First Track</li>
-                                <li>Second Track</li>
-                                <li>Third Track</li>
-                                <li>The layout can't take more tracks</li>
-                                <li>IT CAN!</li>
-                                <li>(if the titles aren't tooo long, not like this one, who takes three lines for itself)</li>
-                            </ol></figcaption>
-                        </figure>
-                    </li><li class="feature">
-                        <h3>Discover more Artists</h3>
-                        <p>Artists of previous releases. MAybe a list of the last few or just a link to some sort of history page.</p>
-                    </li>
-                </ul>
+                    <ul>
+                        <li class="feature">
+                            <h3>Artist Name</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/400/400" alt="">
+                                <figcaption>Artist Name has a bio. It will be conviniently placed here, so people know who he is. Optionally a link to his homepage.</figcaption>
+                            </figure>
+                        </li><li class="feature">
+                            <h3>Album Name</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/404/404" alt="" class="cover"> <!-- make that badbuoy square! -->
+                                <figcaption><ol>
+                                    <li>First Track</li>
+                                    <li>Second Track</li>
+                                    <li>Third Track</li>
+                                    <li>The layout can't take more tracks</li>
+                                    <li>IT CAN!</li>
+                                    <li>(if the titles aren't tooo long, not like this one, who takes three lines for itself)</li>
+                                </ol></figcaption>
+                            </figure>
+                        </li><li class="feature">
+                            <h3>Discover more Artists</h3>
+                            <p>Artists of previous releases. MAybe a list of the last few or just a link to some sort of history page.</p>
+                        </li>
+                    </ul>
+                </section>
             </article>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
