@@ -122,7 +122,7 @@
                                     <li>Third Track</li>
                                     <li>The layout can't take more tracks</li>
                                     <li>IT CAN!</li>
-                                    <li>(if the titles aren't tooo long, not like this one, who takes three lines for itself)</li>
+                                    <li>(if the titles aren't tooo long, not like this one, who takes five lines for itself)</li>
                                 </ol></figcaption>
                             </figure>
                         </li><li class="feature">
