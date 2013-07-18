@@ -82,9 +82,13 @@
     }
    
    
-    .column, .column li {
+    .column, .column li, .column ul {
         list-style: none;
         margin-left: 0;
+    }
+    
+    .column ol, .column ol>li {
+        list-style-type: decimal;
     }
     
     h3+p,h2+p,h1+p {
@@ -148,11 +152,14 @@
             margin-top: 0;
             margin-bottom: $base-line-height;
         }
+        
+        .feature {
+            height: $sidebar-item-height;
+        }
     }
 
     
     .feature {
-        height: $sidebar-item-height;
         margin-bottom: $base-line-height;
         
         img {            
@@ -160,11 +167,19 @@
             max-width: 50%;
             float: left;
             margin-right: $gutter-width;
+            
+            &.cover {
+                max-height: 50%;
+            }
         }
 
         figcaption {
             font-style: normal;
             text-align: left;
+        }
+        
+        h3 {
+            margin-top: 0;
         }
 
     }

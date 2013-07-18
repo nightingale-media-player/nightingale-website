@@ -101,7 +101,7 @@
                             </figure>
                         </li>
                     </ul>
-                </scetion>
+                </section>
                 <section class="column">
                     <h2 data-l10n-id="firstrunArtist">Featured Artist</h2>
                     <ul>
