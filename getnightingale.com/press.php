@@ -3,7 +3,7 @@
     <head>
         <!-- meta info -->
         <meta charset="utf-8">
-        <title data-l10n-id="firstrunWelcomeTitle">Welcome to Nightingale!</title>
+        <title data-l10n-id="pressTitle">Nightingale Press</title>
         <meta name="description" content="Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.">
         <meta http-equiv="X-UA-Compatible" content="chrome=1"> 
         
@@ -39,105 +39,32 @@
                 <figure id="headerlogo" role="banner">
                     <div id="tabshadow" class="tab"></div>
                     <div id="birdtab" class="tab"></div>
-                    <img src="../static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo">
+                    <img src="../static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo" data-hdpi>
                 </figure>
             </header>
         </div>
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
-                <h1 data-l10n-id="firstrunWelcomeTitle">Welcome to Nightingale!</h1>
-                <p data-l10n-id="firstrunWelcomeMessage" data-l10n-args='{"url":"http://wiki.getnightignale.com/release_notes"}'>You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. For information on whats new in this version, please read the <a href="http://wiki.getnightignale.com/release_notes">Release Notes</a>.</p>
-                <section class="column">
-                    <h2 data-l10n-id="recommendedAddOnsTitle">Recommended Add-ons</h2>
-                    <ul><!-- the LIs should probably be links -->
-                        <li class="feature">
-                            <h3>First</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/400/400" alt="">
-                                <figcaption>First add-on</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>Second</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/404/404" alt="">
-                                <figcaption>Second recommended add-on</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>???</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/401/401" alt="">
-                                <figcaption>Yet anotother recommended add-on.</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>Profit!</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/402/402" alt="">
-                                <figcaption>Add-on.</figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-                </section>
-                <section class="column">
-                    <h2>Toutorials</h2> <!-- title tbc -->
-                    <!-- for more help visit the forum -->
-                    <ul>
-                        <li class="feature">
-                            <h3>First Aid</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/400/400" alt=""> <!-- what pictures -->
-                                <figcaption>Some wiki article featuring some important and frequently asked question.</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>Get started with Nightingale</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/404/404" alt=""> <!-- can we even -->
-                                <figcaption>A getting started guide, especially written to help new users to get around the UI.</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>Keep you itunes library</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/401/401" alt=""> <!-- use here? -->
-                                <figcaption>The article describing how to migrate the old Songbird library to Nightingale.</figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-                </section>
-                <section class="column">
-                    <h2 data-l10n-id="firstrunArtist">Featured Artist</h2>
-                    <ul>
-                        <li class="feature">
-                            <h3>Artist Name</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/400/400" alt="">
-                                <!-- does this need an l10n??? -->
-                                <figcaption>Artist Name has a bio. It will be conviniently placed here, so people know who he is. Optionally a link to his homepage.</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>Album Name</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/404/404/nature/just a crappy album/" alt="" class="cover"> <!-- make that badbuoy square! -->
-                                <figcaption><ol>
-                                    <li>First Track</li>
-                                    <li>Second Track</li>
-                                    <li>Third Track</li>
-                                    <li>The layout can't take more tracks</li>
-                                    <li>IT CAN!</li>
-                                    <li>(if the titles aren't tooo long, not like this one, who takes five lines for itself)</li>
-                                </ol></figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3 data-l10n-id="firstrunDiscoverArtists">Discover more Artists</h3>
-                            <p>Artists of previous releases. MAybe a list of the last few or just a link to some sort of history page.</p>
-                        </li>
-                    </ul>
-                </section>
+                <h2 data-l10n-id="pressLogo">Logo</h2>
+                <a href="">SVG</a> <a href="">PNG (1000x100)</a> <a href="">PNG (500x50)</a> <a href="">PNG (200x20)</a>
+                <img scr=""><!-- logo with text -->
+                
+                <a href="">SVG</a> <a href="">PNG (1000x1000)</a> <a href="">PNG (512x512)</a> <a href="">PNG (256x256)</a> <a href="">PNG (128x128)</a>
+                <img src=""><!-- logo without text -->
+                
+                <a href="">PSD</a> <a href="">PNG</a>
+                <img src=""><!-- splash screen -->
+                
+                <h2 data-l10n-id="pressScreenshots">Screenshots</h2>
+                <!-- insert all the promotional screen shots (features & differen plattforms) -->
+                
             </article>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
             <footer class="container">
                 <section id="footerinfo" role="contentinfo">
                     <div id="leftfooter">
-                        <img id="footergale" alt="white outlined nightingale project logo" src="../static.getnightingale.com/images/footergale.png">
+                        <img id="footergale" alt="white outlined nightingale project logo" src="../static.getnightingale.com/images/footergale.png" data-hdpi>
                         <select id="l10nselect">
                             <option selected value="en">English</option>
                         </select>
