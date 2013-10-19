@@ -3,7 +3,7 @@
     <head>
         <!-- meta info -->
         <meta charset="utf-8">
-        <title data-l10n-id="pressTitle">Nightingale Press</title>
+        <title data-l10n-id="pressTitle">Nightingale Branding</title>
         <meta name="description" content="Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.">
         <meta http-equiv="X-UA-Compatible" content="chrome=1"> 
         
@@ -45,18 +45,21 @@
         </div>
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
-                <h2 data-l10n-id="pressLogo">Logo</h2>
-                <a href="">SVG</a> <a href="">PNG (1000x100)</a> <a href="">PNG (500x50)</a> <a href="">PNG (200x20)</a>
-                <img scr=""><!-- logo with text -->
+                <section>
+                    <h2 data-l10n-id="brandingLogo">Logo</h2>
+                    <a href="">SVG</a> <a href="">PNG (1000x100)</a> <a href="">PNG (500x50)</a> <a href="">PNG (200x20)</a>
+                    <img scr="../static.getnightingale.com/nightingale_official_text_outline_1064.png"><!-- logo with text -->
                 
-                <a href="">SVG</a> <a href="">PNG (1000x1000)</a> <a href="">PNG (512x512)</a> <a href="">PNG (256x256)</a> <a href="">PNG (128x128)</a>
-                <img src=""><!-- logo without text -->
+                    <a href="">SVG</a> <a href="">PNG (1000x1000)</a> <a href="">PNG (512x512)</a> <a href="">PNG (256x256)</a> <a href="">PNG (128x128)</a>
+                    <img src=""><!-- logo without text -->
                 
-                <a href="">PSD</a> <a href="">PNG</a>
-                <img src=""><!-- splash screen -->
-                
-                <h2 data-l10n-id="pressScreenshots">Screenshots</h2>
-                <!-- insert all the promotional screen shots (features & differen plattforms) -->
+                    <a href="">PSD</a> <a href="">PNG</a>
+                    <img src=""><!-- splash screen -->
+                </section>
+                <section>
+                    <h2 data-l10n-id="brandingScreenshots">Screenshots</h2>
+                    <!-- insert all the promotional screen shots (features & differen plattforms) -->
+                </section>
                 
             </article>
         </div>

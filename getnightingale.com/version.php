@@ -37,6 +37,13 @@
     $download['arch']['package'] = 'PKGBUILD';
     $download['arch']['popup'] = false;
     
+    $download['gentoo']['url'] = 'https://bugs.gentoo.org/show_bug.cgi?id=316443';
+    $download['gentoo']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
+    $download['gentoo']['osname'] = 'Gentoo';
+    $download['gentoo']['arch'] = getArch();
+    $download['gentoo']['package'] = 'ebuild';
+    $download['gentoo']['popup'] = false;
+    
     $download['linux32']['url'] = '';
     $download['linux32']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
     $download['linux32']['osname'] = 'Linux';
