@@ -98,9 +98,6 @@
         .column p, .twocolumns p {
             margin-top: 0;
         }
-        .bottom {
-            margin-bottom: $base-line-height;
-        }
     }
     
     @include at-breakpoint($allcolumns 6) {

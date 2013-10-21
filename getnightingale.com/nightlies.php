@@ -119,7 +119,7 @@
                             ';
                           }
                     ?>
-                    <section class="clear">
+                    <section class="clear bottom">
                         <h2 data-l10n-id="compile">Compile Nightingale</h2>
                         <p data-l10n-id="compilingInstructions" data-l10n-args='{"tarball":"<?php echo $tarball;?>"}'>You can compile Nightingale for yourself. You will require our <a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Source</a> and everything else is conviniently explained for each plattform in the <a href="http://wiki.getnightingale.com/doku.php?id=build">"Build" wiki article</a>.</p>
                     </section>

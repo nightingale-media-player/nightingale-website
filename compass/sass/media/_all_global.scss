@@ -127,6 +127,13 @@
         position: relative;
         z-index: 1;
     }
+    .bottom {
+        padding-bottom: $base-line-height;
+    
+        p {
+            margin-bottom: 0;
+        }
+    }
  
  
     /* ----------------------------------------------------------------------------

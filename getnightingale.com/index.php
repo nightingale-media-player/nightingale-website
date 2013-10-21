@@ -137,7 +137,7 @@
                        <a href="http://www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on Facebook" class="socialicon" rel="me">f</a>&nbsp;
                        <a href="https://plus.google.com/103377471329459083108/posts" title="Nightingale on Google+" class="socialicon" rel="me">g</a>&nbsp;
                        <a href="http://twitter.com/getnightingale" title="Nightingale on Twitter" class="socialicon" rel="me">t</a>
-                   </p> 
+                   </p>
                 </section>
                 <nav class="footerlinks">
                     <b data-l10n-id="footerSupport">Support</b>

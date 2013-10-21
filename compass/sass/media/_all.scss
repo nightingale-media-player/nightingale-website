@@ -154,13 +154,13 @@
         }
         
         .feature {
-            height: $sidebar-item-height;
+            min-height: $sidebar-item-height;
         }
     }
 
     
     .feature {
-        margin-bottom: $base-line-height;
+        padding-bottom: $base-line-height;
         
         img {            
             max-height: $sidebar-item-height;
