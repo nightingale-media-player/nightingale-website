@@ -170,7 +170,7 @@
         max-height: image-height("footergale.png");
         max-width: image-width("footergale.png");
         width: 100%;
-        
+        float: left;
     }
     
     #leftfooter {
@@ -182,8 +182,6 @@
             margin-top: $footer-line-height;
             font-size: $footer-font-size;
             width: 100%;
-            height: $footer-line-height;
-            padding: 0;
         }
     }
        

@@ -5,7 +5,7 @@
 
 // Baseline grid (example)
 .container {
-//    @include baseline-grid-background($base-line-height, #9df);
+    @include baseline-grid-background($base-line-height, #9df);
 }
 
 // Susy column grid (example)
