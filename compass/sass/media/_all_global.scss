@@ -122,7 +122,7 @@
         
         padding-top: 4*$base-line-height;
         //padding-bottom: $base-line-height;
-        margin-bottom: $base-line-height;
+        //margin-bottom: $base-line-height;
         
         position: relative;
         z-index: 1;
@@ -142,6 +142,8 @@
     
     #ngalemainfooterwrapper footer {
         color: black;
+        margin-top: $base-line-height;
+        overflow: hidden;
         
         :link,:visited {
             color: black;

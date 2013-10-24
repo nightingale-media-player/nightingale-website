@@ -66,7 +66,7 @@
                             if($os == 'unknown') // exclude the default option...
                                 continue;
                             echo '
-                                <li '.($properties['popup'] ? 'data-popup':'data-url="'.$properties['url'].'"').' class="download">
+                                <li '.($properties['popup'] ? 'data-popup':'data-url="'.$properties['url'].'"').' class="download split">
                                     <img src="'.$properties['img'].'" alt="'.$properties['osname'].' Icon" data-hdpi> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
                                 </li>
                             ';

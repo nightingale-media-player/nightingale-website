@@ -40,11 +40,11 @@
         <![endif]-->
         
         <!-- l10n -->
-        <script type="text/javascript"" src="../static.getnightingale.com/javascript/l10n.js"></script>
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/l10n.js"></script>
         <script type="text/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
-        <link rel="prefetch" type="application/l10n" href="../static.getnightingale.com/l10n/locales.ini" >
+        <link rel="prefetch" type="application/l10n" href="../static.getnightingale.com/l10n/locales.ini">
         
-    </head>
+    </head> 
     <body>
         <div id="instructions">
             <section>
@@ -83,20 +83,31 @@
                 <div id="contentleft" class="twocolumns">
                     <div id="screenshots">
                         <img src="http://lorempixel.com/702/300">
-                        <button id="downloadbutton" class="download" <?php if($download[$osstring]['popup']) echo 'data-popup'; else echo 'data-url="'.$download[$osstring]['url'].'"'; ?>>
-                            <img src="<?php echo $download[$osstring]['img']; ?>" alt="<?php echo $download[$osstring]['osname']; ?> Icon" data-l10n-id="downloadButtonImage" data-hdpi>
-                            <div><b data-l10n-id="download">Download Nightingale</b><br>
-                                <small><?php 
-                                    if($osstring!='unknown') {
-                                        echo $download[$osstring]['arch'].'-bit | '.$download[$osstring]['osname'].' '.$download[$osstring]['package'];
-                                    }
-                                    else {
-                                        echo $download[$osstring]['osname'];
-                                    }
-                                ?></small>
+                        <div class="relativecenterwrapper">
+                            <div class="realtivecenter">
+                                <button id="downloadbutton" class="download" <?php  if($download[$osstring]['popup']) echo 'data-popup'; 
+                                                                                    else echo 'data-url="'.$download[$osstring]['url'].'"'; ?>>
+                                    <img src="<?php echo $download[$osstring]['img']; ?>"
+                                         alt="<?php echo $download[$osstring]['osname']; ?> Icon"
+                                         data-l10n-id="downloadButtonImage"
+                                         data-hdpi>
+                                    <div><b data-l10n-id="download">Download Nightingale</b><br>
+                                        <small><?php 
+                                            if($osstring!='unknown') {
+                                                echo $download[$osstring]['arch'].'-bit | '.$download[$osstring]['osname'].' '.$download[$osstring]['package'];
+                                            }
+                                            else {
+                                                echo $download[$osstring]['osname'];
+                                            }
+                                        ?></small>
+                                    </div>
+                                </button>
+                                <?php
+                                    if($osstring!='unknown')
+                                        echo '<br><a href="download.php" id="moredownloadslink" data-l10n-id="otherPlattforms">Other platforms and architectures</a>'; 
+                                ?>
                             </div>
-                        </button>
-                        <?php if($osstring!='unknown') echo '<a href="download.php" id="moredownloadslink" data-l10n-id="otherPlattforms">Other platforms and architectures</a>'; ?>
+                        </div>
                     </div>
                     <div id="description" data-l10n-id="description">
                         Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.

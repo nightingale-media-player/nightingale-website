@@ -23,13 +23,26 @@
     
     #screenshots {
         // create a padding matching half of the download button
-        padding-bottom: 2.25em;
-        margin-bottom: 2*$base-line-height;
+        padding-bottom: 2.25em + px2em($base-line-height);
+        margin-bottom: $base-line-height;
         position: relative;
         
         &>img {
             height: 100%;
             width: 100%;
+        }
+    }
+
+    .relativecenterwrapper {
+        float: left;
+        left: 50%;
+        position: relative;
+        height: 0;
+    
+        &>.realtivecenter {
+            position: relative;
+            left: -50%;
+            top: -2.25em;
         }
     }
     
@@ -42,31 +55,20 @@
         @include background-image(linear-gradient(#444444,#343434));
         @include single-box-shadow(#fff,0,0,1em,.1em);
         min-height: 4.5em;
-        max-width: 18em;
-        width: 100%;
-        padding:0 1.25em;
-        position: absolute;
-        bottom: 0;
-        left: 2*$column-width + 1.5*$gutter-width - 9em;
-        
-        small {
-            color: $orange;
-        }
-        
+        padding: 0 1.25em;
         
         img {
             position: absolute;
             left: 1.25em;
             top: 0.8125em;
-            max-height: 48px;
-            max-width: 48px;
-            height: 100%;
-            width: 100%;
         }
         div {
+            /*
             position: absolute;
             right: 1.25em;
             top: 1.0625em - px2em(($base-line-height - $base-font-size)/2);
+            */
+            margin-left: px2em(48px);
         }
         small {
             color: $orange;
@@ -74,11 +76,9 @@
     }
     
     #moredownloadslink {
-        position: absolute;
-        right: (2*$column-width + 1.5*$gutter-width - 9em) * px2em($base-font-size)/.8em;
+        float: right;
         font-size: .8em;
         line-height: 1em;
-        bottom: -1.2em;
     }
    
    
@@ -113,11 +113,12 @@
         list-style-type: none;
     }
     
-    .download {
+    .split {
         max-width: 3*$column-width+2*$gutter-width;
         min-width: 45%;
         float: left;
-        
+    }
+    .download {
         padding: $base-line-height $gutter-width $base-line-height 0;
         list-style-type: none;
         margin: 0;

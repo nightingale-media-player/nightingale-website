@@ -105,16 +105,12 @@
           @include container();
         }
         
-        #screenshots {
-            height: 2*$sidebar-item-height + 4*px2em($base-line-height) - 2.25em;
-        }
-        
         #main>p {
             @include column-count(3);
             @include span-columns(6);
         }
         
-        .download {
+        .split {
             @include span-columns(3);
             @include nth-omega(2n);
         }
@@ -213,7 +209,7 @@
             }
         }
         
-        .download {
+        .split {
             @include span-columns(2);
             @include nth-omega(2n);
         }
@@ -312,17 +308,14 @@
             margin-right: 0;
         }
         
-        .download {
+        .split {
             @include span-columns(2 omega);
         }
         
         .twocolumns .column {
             @include span-columns(2 omega,2);
         }
-            
-        #downloadbutton {
-            left: $column-width + .5*$gutter-width - 9em;
-        }
+    
         #moredownloadslink {
             right: ($column-width + .5*$gutter-width - 9em) * px2em($base-font-size)/.8em;
         }
@@ -395,25 +388,9 @@
             display: block;
             visibility: visible;
         }
-        
-        #downloadbutton {
-            position: static;
-            padding: 1.25em;
-            margin-top: $base-line-height;
-            
-            img {
-                position: static;
-                float: left;
-            }
-            
-            div {
-                position: static;
-            }
-        }
-        
-        
-        #moredownloadslink {
-            right: 0;
+    
+        #contentleft {
+            margin-right: 0;
         }
         
         #ngalemainfooterwrapper .container {
