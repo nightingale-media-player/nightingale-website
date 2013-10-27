@@ -84,17 +84,17 @@
                     </ul>
                 </section>
                 <section class="column">
-                    <h2>Toutorials</h2> <!-- title tbc -->
+                    <h2>Getting Started</h2> <!-- title tbc -->
                     <!-- for more help visit the forum -->
                     <ul>
                         <li class="feature">
-                            <h3>First Aid</h3>
+                            <h3>What is Interestging</h3>
                             <figure>
                                 <img src="http://lorempixel.com/400/400" alt=""> <!-- what pictures -->
                                 <figcaption>Some wiki article featuring some important and frequently asked question.</figcaption>
                             </figure>
                         </li><li class="feature">
-                            <h3>Get started with Nightingale</h3>
+                            <h3>On First Launch?</h3>
                             <figure>
                                 <img src="http://lorempixel.com/404/404" alt=""> <!-- can we even -->
                                 <figcaption>A getting started guide, especially written to help new users to get around the UI.</figcaption>
@@ -108,7 +108,7 @@
                         </li>
                     </ul>
                 </section>
-                <section class="column">
+                <section class="column omega">
                     <h2 data-l10n-id="firstrunArtist">Featured Artist</h2>
                     <ul>
                         <li class="feature">
