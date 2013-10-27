@@ -94,6 +94,11 @@
     h3+p,h2+p,h1+p {
         margin-top: 0;
     }
+
+    .normalize {
+        font-size: $base-font-size;
+        font-weight: normal;
+    }
     
     .fullwidth {
         width: 100%;
