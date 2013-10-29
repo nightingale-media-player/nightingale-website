@@ -83,10 +83,6 @@
             img {
                 @include span-columns(1,2);
                 width: columns(1,2);
-                margin-right: 0;
-            }
-            figcaption {
-                @include span-columns(1 omega,2);
             }
         }
         

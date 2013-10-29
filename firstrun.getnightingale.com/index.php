@@ -1,3 +1,9 @@
+<?php
+    $_GET['version'];
+    $_GET['type']; // update or installation
+
+    // fetch release dependent content
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -84,6 +90,11 @@
                     </ul>
                 </section>
                 <section class="column">
+                <?php
+                    if($_GET['type']!='upgrade')
+                    {
+                        // for the actual firstrun
+                        echo '
                     <h2>Getting Started</h2> <!-- title tbc -->
                     <!-- for more help visit the forum -->
                     <ul>
@@ -103,20 +114,41 @@
                             <h3>Migrate your Songbird profile</h3>
                             <figure>
                                 <img src="http://lorempixel.com/401/401" alt=""> <!-- use here? -->
-                                <figcaption>Nightingale isn't too diffeent from Songbird yet. You can still easily migrate your profile from Songbird as described in <a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird">this article</a>.</figcaption>
+                                <figcaption>Nightingale isn\'t too diffeent from Songbird yet. You can still easily migrate your profile from Songbird as described in <a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird">this article</a>.</figcaption>
                             </figure>
                         </li>
-                    </ul>
+                    </ul>';
+                    }
+                    else
+                    {
+                        // for the update page, generates content from some file
+                        echo '
+                    <h2>What\'s New</h2>
+                    <ul>
+                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/1">#1</a> Kill iTunes</li>
+                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/42">#42</a> Know why you\'re here</li>
+                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/1337">#1337</a> Dont\'t be a product for nerds only</li>
+                    </ul>';
+                    }
+                ?>
                 </section>
                 <section class="column omega">
+                <?php
+                    if(!$_GET['openstage'])
+                        echo '<h2>Coming Soon!</h2>';
+                    else
+                        echo '
+                    <!--Project Open Stage
+                         For more information visit http://wiki.getnightingale.com/some.php?get=kitchen:open_stage -->
+
                     <h2 data-l10n-id="firstrunArtist">Featured Artist</h2>
                     <ul>
                         <li class="feature">
                             <h3>Artist Name</h3>
                             <figure>
                                 <img src="http://lorempixel.com/400/400" alt="">
-                                <!-- does this need an l10n??? -->
-                                <figcaption>Artist Name has a bio. It will be conviniently placed here, so people know who he is. Optionally a link to his <a href="#artist">homepage.</a></figcaption>
+                                <!-- does this need l10n??? -->
+                                <figcaption>Artist Name has a bio. It will be conviniently placed here, so people know who he is. Optionally a link to his <a href="#artist">homepage</a>.</figcaption>
                             </figure>
                         </li><li class="feature">
                             <h3>Album Name</h3>
@@ -126,16 +158,17 @@
                                     <li>First Track</li>
                                     <li>Second Track</li>
                                     <li>Third Track</li>
-                                    <li>The layout can't take more tracks</li>
+                                    <li>The layout can\'t take more tracks</li>
                                     <li>IT CAN!</li>
-                                    <li>(if the titles aren't tooo long, not like this one, who takes five lines for itself)</li>
+                                    <li>(if the titles aren\'t tooo long, not like this one, who takes five lines for itself)</li>
                                 </ol></figcaption>
                             </figure>
                         </li><li class="feature">
                             <h3 data-l10n-id="firstrunDiscoverArtists">Discover more Artists</h3>
-                            <p>Artists of previous releases. MAybe a list of the last few or just a link to some sort of history page.</p>
+                            <p>Artists of previous releases. Maybe a list of the last few or just a link to some sort of history page.</p>
                         </li>
-                    </ul>
+                    </ul>';
+                ?>
                 </section>
             </article>
         </div>
@@ -154,7 +187,7 @@
                    </p>
                    <p>
                        <b data-l10n-id="footerSocial">Follow us!</b><br>
-                       <a href="http://www.facebook.com/pages/Nightingale/210174055669535" title="Nightingale on Facebook" class="socialicon">f</a>&nbsp;<a href="https://plus.google.com/103377471329459083108/posts" title="Nightingale on Google+" class="socialicon">g</a>&nbsp;<a href="http://twitter.com/getnightingale" title="Nightingale on Twitter" class="socialicon">t</a>
+                       <a href="http://www.facebook.com/ngale" title="Nightingale on Facebook" class="socialicon">f</a>&nbsp;<a href="https://plus.google.com/103377471329459083108/posts" title="Nightingale on Google+" class="socialicon">g</a>&nbsp;<a href="http://twitter.com/getnightingale" title="Nightingale on Twitter" class="socialicon">t</a>
                    </p> 
                 </section>
                 <nav class="footerlinks">

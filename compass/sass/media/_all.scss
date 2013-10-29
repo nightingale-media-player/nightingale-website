@@ -88,7 +88,9 @@
     }
     
     .column ol, .column ol>li {
+        margin-left: 0;
         list-style-type: decimal;
+        list-style-position: inside;
     }
     
     h3+p,h2+p,h1+p {
