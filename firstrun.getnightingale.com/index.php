@@ -89,49 +89,6 @@
                         </li>
                     </ul>
                 </section>
-                <section class="column">
-                <?php
-                    if($_GET['type']!='upgrade')
-                    {
-                        // for the actual firstrun
-                        echo '
-                    <h2>Getting Started</h2> <!-- title tbc -->
-                    <!-- for more help visit the forum -->
-                    <ul>
-                        <li class="feature">
-                            <h3>What is Interestging</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/400/400" alt=""> <!-- what pictures -->
-                                <figcaption>Some wiki article featuring some important and frequently asked question.</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>On First Launch?</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/404/404" alt=""> <!-- can we even -->
-                                <figcaption>A getting started guide, especially written to help new users to get around the UI.</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>Migrate your Songbird profile</h3>
-                            <figure>
-                                <img src="http://lorempixel.com/401/401" alt=""> <!-- use here? -->
-                                <figcaption>Nightingale isn\'t too diffeent from Songbird yet. You can still easily migrate your profile from Songbird as described in <a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird">this article</a>.</figcaption>
-                            </figure>
-                        </li>
-                    </ul>';
-                    }
-                    else
-                    {
-                        // for the update page, generates content from some file
-                        echo '
-                    <h2>What\'s New</h2>
-                    <ul>
-                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/1">#1</a> Kill iTunes</li>
-                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/42">#42</a> Know why you\'re here</li>
-                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/1337">#1337</a> Dont\'t be a product for nerds only</li>
-                    </ul>';
-                    }
-                ?>
-                </section>
                 <section class="column omega">
                 <?php
                     if(!$_GET['openstage'])
@@ -168,6 +125,44 @@
                             <p>Artists of previous releases. Maybe a list of the last few or just a link to some sort of history page.</p>
                         </li>
                     </ul>';
+                ?>
+                </section>
+                <section class="column">
+                <?php
+                    if($_GET['type']!='upgrade')
+                    {
+                        // for the actual firstrun
+                        echo '
+                    <h2>Getting Started</h2> <!-- title tbc -->
+                    <!-- for more help visit the forum -->
+                    <ul>
+                        <li class="feature">
+                            <h3>Migrate your Songbird profile</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/401/401" alt="">
+                                <figcaption>Nightingale isn\'t too diffeent from Songbird yet. You can easily migrate your Music, Videos, Playlists and Extensions from Songbird as described in <a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird">this article</a>.</figcaption>
+                            </figure>
+                        </li>
+                        <li class="feature">
+                            <h3>Follow our Blog for Updates!</h3>
+                            <figure>
+                                <img src="http://lorempixel.com/401/401" alt="">
+                                <figcaption>Always want to know the latest news of the project? Subscribe to our <a href="http://blog.getnightingale.com">blog</a> or follow us on <a href="http://twitter.com/getnightingale">Twitter</a>, <a href="http://plus.google.com/+Getnightingale">Google+</a> or <a href="http://facebook.com/getnightingale">Facebook</a>.</figcaption>
+                            </figure>
+                        </li>
+                    </ul>';
+                    }
+                    else
+                    {
+                        // for the update page, generates content from some file
+                        echo '
+                    <h2>What\'s New</h2>
+                    <ul>
+                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/1">#1</a> Kill iTunes</li>
+                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/42">#42</a> Know why you\'re here</li>
+                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/1337">#1337</a> Dont\'t be a product for nerds only</li>
+                    </ul>';
+                    }
                 ?>
                 </section>
             </article>
