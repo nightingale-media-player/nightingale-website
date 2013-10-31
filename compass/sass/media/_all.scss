@@ -180,6 +180,11 @@
                 max-height: 50%;
             }
         }
+    
+        figure {
+            display: inline-block;
+            width: 100%;
+        }
 
         figcaption {
             font-style: normal;

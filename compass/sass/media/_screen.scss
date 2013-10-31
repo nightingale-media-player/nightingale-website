@@ -60,7 +60,7 @@
        --------------------------------------------------------------------------*/
     
     
-    @include at-breakpoint($onecolumn) {
+    @include at-breakpoint($twocolumns) {
         #description {
             @include column-width(2*$column-width);
             @include column-count(2);
@@ -155,23 +155,6 @@
           @include container();
         }
         
-        #ngalemainheadwrapper header {
-            padding-bottom: 5em;
-            nav li {
-                :link,:visited {
-                    border-top: .5rem solid transparent;
-                }
-                a:hover {
-                    border-top: .5rem solid white;
-                    border-bottom: none;
-                }
-                &.current a:link,&.current a:visited {
-                    border-top: .5rem solid #b55029;
-                    border-bottom: none;
-                }
-            }
-        }
-        
         .twocolumns {
             @include span-columns(4 omega);
             
@@ -231,158 +214,11 @@
         }
     }
     
-    @include at-breakpoint($onecolumn 2 $twocolumns) {
-        .container {
-          @include container();
-        }
-        
-        #ngalemainheadwrapper header {
-            padding-bottom: 4em;
-            height: initial;
-            nav {
-                width: 100%;
-                text-align: center;
-                float: none;
-                position: static;
-                height: initial;
-                
-                ul {
-                    border-top: .1em dotted white;
-                    height: initial;
-                    margin-left: 0;
-                    @include hidden();
-                }
-                li {
-                    height: initial;
-                    float: none;
-                    width: 100%;
-                    font-size: $base-font-size;
-                    
-                    :link,:visited {
-                        font-size: $base-font-size;
-                        line-height: 2*$base-line-height;
-                        text-shadow: none;
-                    }
-                    a:hover {
-                        border-bottom: none;
-                        border-left: .4em solid white;
-                        padding-left: 0;
-                    }
-                    &.current a:link,&.current a:visited {
-                        border-bottom: none;
-                        border-left: .4em solid $orange;
-                        padding-left: 0;
-                    }
-                }
-            }
-        }
-        
-        #contentleft {
-            margin-right: 0;
-            //@include omega();
-        }
-        
-        #expandngalenav {
-            display: block;
-            visibility: visible;
-        }
-        
-        #main {
-            aside {
-                margin-top: $base-line-height;
-            }
-            &>p {
-                @include span-columns(2 omega);
-            }
-        }
-        
-        .twocolumnimage {
-            width: 2*$column-width+$gutter-width;
-        }
-        
-        .columnimage {
-            margin-right: 0;
-        }
-        
-        .split {
-            @include span-columns(2 omega);
-        }
-        
-        .twocolumns .column {
-            @include span-columns(2 omega,2);
-        }
-    
-        #moredownloadslink {
-            right: ($column-width + .5*$gutter-width - 9em) * px2em($base-font-size)/.8em;
-        }
-        
-        .footerlinks {
-            @include span-columns(1);
-            @include nth-omega(2n+1);
-            margin-top: $base-line-height;
-            
-            &:last-child {
-                margin-bottom: $footer-line-height;
-            }
-        }
-        #footerinfo {
-            @include span-columns(2);
-        }
-    }
-    
-    // optimize the gridless layout for small screens
-    @include at-breakpoint(1 $onecolumn) {
-        
+    @include at-breakpoint(1 $twocolumns) {        
         #main aside {
             margin-top: $base-line-height;
             float: none;
             width: 100%;
-        }
-        
-        #ngalemainheadwrapper header {
-            padding-bottom: 4em;
-            height: initial;
-            nav {
-                width: 100%;
-                text-align: center;
-                float: none;
-                position: static;
-                height: initial;
-                
-                ul {
-                    border-top: .1em dotted white;
-                    height: initial;
-                    margin-left: 0;
-                    @include hidden();
-                }
-                li {
-                    float: none;
-                    width: 100%;
-                    font-size: $base-font-size;
-                    height: initial;
-                    
-                    :link,:visited {
-                        font-size: $base-font-size;
-                        line-height: 2*$base-line-height;
-                        text-shadow: none;
-                    }
-                    a:hover {
-                        border-bottom: none;
-                        border-left: .4em solid white;
-                        padding-left: 0;
-                    }
-                    &.current a:link,&.current a:visited {
-                        border-bottom: none;
-                        border-left: .4em solid $orange;
-                        padding-left: 0;
-                    }
-                }
-            }
-        }
-        
-        #expandngalenav {
-            display: block;
-            visibility: visible;
         }
     
         #contentleft {
@@ -400,6 +236,101 @@
                 &:last-child {
                     margin-bottom: $footer-line-height;
                 }
+            }
+        }
+    }
+    
+    // centered nav for narrower styles. Under breakpoint to be adjusted
+    @include at-breakpoint ($allcolumns $onecolumn) {
+        #ngalemainheadwrapper header {
+            padding-bottom: 5em;
+            nav {
+                text-align: center;
+                float: none;
+                 ul {
+                    margin-left: 0;
+                    display: inline-block;
+                }
+                
+                li {
+                    :link,:visited {
+                        border-top: .5rem solid transparent;
+                    }
+                    a:hover {
+                        border-top: .5rem solid white;
+                        border-bottom: none;
+                    }
+                    &.current a:link,&.current a:visited {
+                        border-top: .5rem solid #b55029;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+        
+        
+        #headerlogo {
+            width: 90%;
+            left: 5%;
+        }
+    }
+    
+    
+    // rollout nav for mobiles and no moar tab. Set upper breakpoint to lower of the centered style
+    @include at-breakpoint(1 $onecolumn) {
+        #ngalemainheadwrapper header {
+            padding-bottom: 4em;
+            height: initial;
+            nav {
+                width: 100%;
+                text-align: center;
+                float: none;
+                position: static;
+                height: initial;
+                
+                ul {
+                    border-top: .1em dotted white;
+                    height: initial;
+                    margin-left: 0;
+                    @include hidden();
+                }
+                li {
+                    float: none;
+                    width: 100%;
+                    font-size: $base-font-size;
+                    height: initial;
+                    
+                    :link,:visited {
+                        font-size: $base-font-size;
+                        line-height: 2*$base-line-height;
+                        text-shadow: none;
+                    }
+                    a:hover {
+                        border-bottom: none;
+                        border-left: .4em solid white;
+                        padding-left: 0;
+                    }
+                    &.current a:link,&.current a:visited {
+                        border-bottom: none;
+                        border-left: .4em solid $orange;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        
+        #expandngalenav {
+            display: block;
+            visibility: visible;
+        }
+        
+        #headerlogo {
+            width: 100%;
+            left: 0;
+            
+            .tab {
+                width: 100%;
+                left: 0;
             }
         }
     }
