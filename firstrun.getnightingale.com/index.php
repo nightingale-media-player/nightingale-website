@@ -77,7 +77,7 @@
                         </li><li class="feature">
                             <h3>Last.fm <a data-l10n-id="install" href="http://addon-files.getnightingale.com/xpis/audioscrobbler-1.0.10.2432.xpi" class="normalize">install</a></h3>
                             <figure>
-                                <img src="http://lorempixel.com/402/402" alt="">
+                                <img src="../static.getnightingale.com/images/lastfm.png" alt="">
                                 <figcaption>Publish your playback history to Last.fm and listen to Last.fm Radio</figcaption>
                             </figure>
                         </li><li class="feature">
