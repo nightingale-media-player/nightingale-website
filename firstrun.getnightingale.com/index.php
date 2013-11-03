@@ -52,7 +52,7 @@
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <h1 data-l10n-id="firstrunWelcomeTitle">Welcome to Nightingale!</h1>
-                <p data-l10n-id="firstrunWelcomeMessage" data-l10n-args='{"url":"http://wiki.getnightignale.com/release_notes"}'>You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. For information on whats new in this version, please read the <a href="http://wiki.getnightignale.com/release_notes">Release Notes</a>.</p>
+                <p data-l10n-id="firstrunWelcomeMessage" data-l10n-args='{"url":"http://wiki.getnightingale.com/doku.php?id=release_notes"}'>You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. For information on whats new in this version, please read the <a href="http://wiki.getnightingale.com/doku.php?id=release_notes">Release Notes</a>.</p>
                 <section class="column">
                     <h2 data-l10n-id="recommendedAddOnsTitle">Recommended Add-ons</h2>
                     <ul><!-- the LIs should probably be links -->
