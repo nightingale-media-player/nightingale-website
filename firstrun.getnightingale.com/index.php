@@ -59,19 +59,19 @@
                         <li class="feature">
                             <h3>SoundCloud <a data-l10n-id="install" href="http://addon-files.getnightingale.com/xpis/soundcloud-1.0.3-201303280131.xpi" class="normalize">install</a></h3>
                             <figure>
-                                <img src="http://lorempixel.com/400/400" alt="">
+                                <img src="../static.getnightingale.com/images/soundcloud.png" alt="">
                                 <figcaption>Integrates SoundCloud into Nightingale</figcaption>
                             </figure>
                         </li><li class="feature">
                             <h3>MLyrics <a data-l10n-id="install" href="http://addon-files.getnightingale.com/xpis/MLyrics-1.3.4.xpi" class="normalize">install</a></h3>
                             <figure>
-                                <img src="http://lorempixel.com/404/404" alt="">
+                                <img src="../static.getnightingale.com/images/mlyrics.png" alt="">
                                 <figcaption>Lyrics viewer and editor in the right side pane</figcaption>
                             </figure>
                         </li><li class="feature">
                             <h3>SHOUTCast <a data-l10n-id="install" href="http://addon-files.getnightingale.com/xpis/shoutcast-radio-1.0.10.2432.xpi" class="normalize">install</a></h3>
                             <figure>
-                                <img src="http://lorempixel.com/401/401" alt="">
+                                <img src="../static.getnightingale.com/images/shoutcast.png" alt="">
                                 <figcaption>Directory of SHOUTcast Internet radio streams</figcaption>
                             </figure>
                         </li><li class="feature">
@@ -83,7 +83,7 @@
                         </li><li class="feature">
                             <h3>mashTape <a data-l10n-id="install" href="http://addon-files.getnightingale.com/xpis/mashTape-1.1.11.2432.xpi" class="normalize">install</a></h3>
                             <figure>
-                                <img src="http://lorempixel.com/405/405" alt="">
+                                <img src="../static.getnightingale.com/images/mashtape.png" alt="">
                                 <figcaption>Like your favourite old school mix tape, mix and mash up various web sources for your library enhancing pleasure</figcaption>
                             </figure>
                         </li>
@@ -139,7 +139,7 @@
                         <li class="feature">
                             <h3>Migrate your Songbird profile</h3>
                             <figure>
-                                <img src="http://lorempixel.com/401/401" alt="">
+                                <img src="../static.getnightingale.com/images/songbirdtransition.png" alt="">
                                 <figcaption>Nightingale isn\'t too diffeent from Songbird yet. You can easily migrate your Music, Videos, Playlists and Extensions from Songbird as described in <a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird">this article</a>.</figcaption>
                             </figure>
                         </li>
