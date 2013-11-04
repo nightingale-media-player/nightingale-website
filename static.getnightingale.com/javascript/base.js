@@ -86,7 +86,6 @@ window.onload = function() {
     for(var i = 0; i < download.length; i++) {
         if(hasDataset?download[i].dataset.hasOwnProperty("popup"):download[i].attributes["data-popup"]) {
             addEventListenerLegacy(download[i],"click",function() {
-                console.log("here goes nothing");
                 show("overlay");
                 show("instructions");
                 addEventListenerLegacy(document.getElementById("overlay"),"click",hideOverlay);
@@ -106,7 +105,6 @@ window.onload = function() {
     
     //lazyload hiDPI images
     if(window.devicePixelRatio && window.devicePixelRatio > 1.3) {
-        console.log("hdpi biatch!");
         var imgs = document.getElementsByTagName("img");
         for(var i = 0; i < imgs.length; i++) {
             if( imgs[i].src && imgs[i].dataset.hasOwnProperty("hdpi") && !imgs[i].src.match(/-hidpi/i)) {
