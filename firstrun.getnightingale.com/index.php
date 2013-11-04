@@ -1,8 +1,13 @@
 <?php
-    $_GET['version'];
-    $_GET['type']; // update or installation
-
-    // fetch release dependent content
+    if(array_key_exists('version',$_GET))
+    {
+        $content = json_decode(file_get_contents($_GET['version'].'.json'));
+    }
+    else
+    {
+        echo "I'm not sure how you got here. But please go.";
+        die;
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,45 +60,29 @@
                 <p data-l10n-id="firstrunWelcomeMessage" data-l10n-args='{"url":"http://wiki.getnightingale.com/doku.php?id=releases_notes:<?php echo $_GET['version'];?>_release_notes"}'>You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. For information on whats new in this version, please read the <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:<?php echo $_GET['version'];?>_release_notes">Release Notes</a>.</p>
                 <section class="column">
                     <h2 data-l10n-id="recommendedAddOnsTitle">Recommended Add-ons</h2>
-                    <ul><!-- the LIs should probably be links -->
-                        <li class="feature">
-                            <h3>SoundCloud <a data-l10n-id="install" href="http://addon-files.getnightingale.com/xpis/soundcloud-1.0.3-201303280131.xpi" class="normalize">install</a></h3>
-                            <figure>
-                                <img src="../static.getnightingale.com/images/soundcloud.png" alt="" data-hdpi>
-                                <figcaption>Integrates SoundCloud into Nightingale</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>MLyrics <a data-l10n-id="install" href="http://addon-files.getnightingale.com/xpis/MLyrics-1.3.4.xpi" class="normalize">install</a></h3>
-                            <figure>
-                                <img src="../static.getnightingale.com/images/mlyrics.png" alt="" data-hdpi>
-                                <figcaption>Lyrics viewer and editor in the right side pane</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>SHOUTCast <a data-l10n-id="install" href="http://addon-files.getnightingale.com/xpis/shoutcast-radio-1.0.10.2432.xpi" class="normalize">install</a></h3>
-                            <figure>
-                                <img src="../static.getnightingale.com/images/shoutcast.png" alt="" data-hdpi>
-                                <figcaption>Directory of SHOUTcast Internet radio streams</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>Last.fm <a data-l10n-id="install" href="http://addon-files.getnightingale.com/xpis/audioscrobbler-1.0.10.2432.xpi" class="normalize">install</a></h3>
-                            <figure>
-                                <img src="../static.getnightingale.com/images/lastfm.png" alt="" data-hdpi>
-                                <figcaption>Publish your playback history to Last.fm and listen to Last.fm Radio</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>mashTape <a data-l10n-id="install" href="http://addon-files.getnightingale.com/xpis/mashTape-1.1.11.2432.xpi" class="normalize">install</a></h3>
-                            <figure>
-                                <img src="../static.getnightingale.com/images/mashtape.png" alt="" data-hdpi>
-                                <figcaption>Like your favourite old school mix tape, mix and mash up various web sources for your library enhancing pleasure</figcaption>
-                            </figure>
-                        </li>
+                    <ul><?php
+foreach($content->extensions as $extension) {
+    echo '<li class="feature">
+            <h3>'.$extension->name.' <a data-l10n-id="install" href="'.$extension->url.'" class="normalize">install</a></h3>
+            <figure>
+                <img src="'.$extension->image.'" alt="'.$extension->name.' Preview" data-hdpi>
+                <figcaption>'.$extension->description.'</figcaption>
+            </figure>
+        </li>';
+}
+                        ?>
                     </ul>
                 </section>
                 <section class="column omega">
                 <?php
-                    if(!$_GET['openstage'])
+                    if(!array_key_exists('openstage',$_GET))
                         echo '<h2>Coming Soon!</h2>';
-                    else
+                    else {
+                        $tracks = '';
+                        foreach($content->openstage->tracks as $track) {
+                            $tracks .= '<li>'.$track.'</li>
+                            ';
+                        }
                         echo '
                     <!--Project Open Stage
                          For more information visit http://wiki.getnightingale.com/some.php?get=kitchen:open_stage -->
@@ -101,35 +90,29 @@
                     <h2 data-l10n-id="firstrunArtist">Featured Artist</h2>
                     <ul>
                         <li class="feature">
-                            <h3>Artist Name</h3>
+                            <h3>'.$content->openstage->artist.'</h3>
                             <figure>
-                                <img src="http://lorempixel.com/400/400" alt="">
-                                <!-- does this need l10n??? -->
-                                <figcaption>Artist Name has a bio. It will be conviniently placed here, so people know who he is. Optionally a link to his <a href="#artist">homepage</a>.</figcaption>
+                                <img src="'.$content->openstage->picture.'" alt="'.$content->openstage->artist.'">
+                                <figcaption>'.$content->openstage->bio.'</figcaption>
                             </figure>
                         </li><li class="feature">
-                            <h3>Album Name</h3>
+                            <h3>'.$content->openstage->album.'</h3>
                             <figure>
-                                <img src="http://lorempixel.com/404/404/nature/just a crappy album/" alt="" class="cover">
+                                <img src="'.$content->openstage->cover.'" alt="'.$content->openstage->album.' Cover" class="cover">
                                 <figcaption><ol>
-                                    <li>First Track</li>
-                                    <li>Second Track</li>
-                                    <li>Third Track</li>
-                                    <li>The layout can\'t take more tracks</li>
-                                    <li>IT CAN!</li>
-                                    <li>(if the titles aren\'t tooo long, not like this one, who takes five lines for itself)</li>
-                                </ol></figcaption>
+                                    '.$tracks.'</ol></figcaption>
                             </figure>
                         </li><li class="feature">
                             <h3 data-l10n-id="firstrunDiscoverArtists">Discover more Artists</h3>
                             <p>Artists of previous releases. Maybe a list of the last few or just a link to some sort of history page.</p>
                         </li>
                     </ul>';
+                    }
                 ?>
                 </section>
                 <section class="column">
                 <?php
-                    if($_GET['type']!='upgrade')
+                    if(!array_key_exists('type',$_GET)||$_GET['type']!='upgrade')
                     {
                         // for the actual firstrun
                         echo '
@@ -154,13 +137,15 @@
                     }
                     else
                     {
-                        // for the update page, generates content from some file
+                        $li = '';
+                        foreach($content->changes as $change) {
+                            $li .= '<li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/'.$change->number.'">#'.$change->number.'</a> '.$change->title.'</li>
+                            ';
+                        }
                         echo '
                     <h2>What\'s New</h2>
                     <ul>
-                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/1">#1</a> Kill iTunes</li>
-                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/42">#42</a> Know why you\'re here</li>
-                        <li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/1337">#1337</a> Dont\'t be a product for nerds only</li>
+                        '.$li.'
                     </ul>';
                     }
                 ?>
