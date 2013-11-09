@@ -122,14 +122,14 @@ foreach($content->extensions as $extension) {
                         <li class="feature">
                             <h3>Migrate your Songbird profile</h3>
                             <figure>
-                                <img src="../static.getnightingale.com/images/songbirdtransition.png" alt="" data-hdpi>
+                                <img src="../static.getnightingale.com/images/songbirdtransition.png" alt="Songbird to Nightingale" data-hdpi>
                                 <figcaption>Nightingale isn\'t too diffeent from Songbird yet. You can easily migrate your Music, Videos, Playlists and Extensions from Songbird as described in <a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird">this article</a>.</figcaption>
                             </figure>
                         </li>
                         <li class="feature">
                             <h3>Follow our Blog for Updates!</h3>
                             <figure>
-                                <img src="http://lorempixel.com/401/401" alt="">
+                                <img src="../static.getnightingale.com/images/social.png" alt="twitter, Facebook and Google+ Logos">
                                 <figcaption>Always want to know the latest news of the project? Subscribe to our <a href="http://blog.getnightingale.com">blog</a> or follow us on <a href="http://twitter.com/getnightingale">Twitter</a>, <a href="http://plus.google.com/+Getnightingale">Google+</a> or <a href="http://facebook.com/getnightingale">Facebook</a>.</figcaption>
                             </figure>
                         </li>
