@@ -196,7 +196,7 @@
         .column {
             @include span-columns(2);
         }
-        .column.omega, .twocolumns.omega, .omega, .column:last-child {
+        .column.omega, .twocolumns.omega, .omega, .column:nth-child(2n) {
             @include omega();
         }
 
@@ -279,7 +279,7 @@
     // rollout nav for mobiles and no moar tab. Set upper breakpoint to lower of the centered style
     @include at-breakpoint(1 $onecolumn) {
         #ngalemainheadwrapper header {
-            padding-bottom: 4em;
+            padding-bottom: 13%;
             height: initial;
             nav {
                 width: 100%;

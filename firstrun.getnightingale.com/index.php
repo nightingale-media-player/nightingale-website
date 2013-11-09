@@ -73,43 +73,6 @@ foreach($content->extensions as $extension) {
                         ?>
                     </ul>
                 </section>
-                <section class="column omega">
-                <?php
-                    if(!array_key_exists('openstage',$_GET))
-                        echo '<h2>Coming Soon!</h2>';
-                    else {
-                        $tracks = '';
-                        foreach($content->openstage->tracks as $track) {
-                            $tracks .= '<li>'.$track.'</li>
-                            ';
-                        }
-                        echo '
-                    <!--Project Open Stage
-                         For more information visit http://wiki.getnightingale.com/some.php?get=kitchen:open_stage -->
-
-                    <h2 data-l10n-id="firstrunArtist">Featured Artist</h2>
-                    <ul>
-                        <li class="feature">
-                            <h3>'.$content->openstage->artist.'</h3>
-                            <figure>
-                                <img src="'.$content->openstage->picture.'" alt="'.$content->openstage->artist.'">
-                                <figcaption>'.$content->openstage->bio.'</figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3>'.$content->openstage->album.'</h3>
-                            <figure>
-                                <img src="'.$content->openstage->cover.'" alt="'.$content->openstage->album.' Cover" class="cover">
-                                <figcaption><ol>
-                                    '.$tracks.'</ol></figcaption>
-                            </figure>
-                        </li><li class="feature">
-                            <h3 data-l10n-id="firstrunDiscoverArtists">Discover more Artists</h3>
-                            <p>Artists of previous releases. Maybe a list of the last few or just a link to some sort of history page.</p>
-                        </li>
-                    </ul>';
-                    }
-                ?>
-                </section>
                 <section class="column">
                 <?php
                     if(!array_key_exists('type',$_GET)||$_GET['type']!='upgrade')
@@ -146,6 +109,43 @@ foreach($content->extensions as $extension) {
                     <h2>What\'s New</h2>
                     <ul>
                         '.$li.'
+                    </ul>';
+                    }
+                ?>
+                </section>
+                <section class="column omega">
+                <?php
+                    if(!array_key_exists('openstage',$_GET))
+                        echo '<h2>Coming Soon!</h2>';
+                    else {
+                        $tracks = '';
+                        foreach($content->openstage->tracks as $track) {
+                            $tracks .= '<li>'.$track.'</li>
+                            ';
+                        }
+                        echo '
+                    <!--Project Open Stage
+                         For more information visit http://wiki.getnightingale.com/some.php?get=kitchen:open_stage -->
+
+                    <h2 data-l10n-id="firstrunArtist">Featured Artist</h2>
+                    <ul>
+                        <li class="feature">
+                            <h3>'.$content->openstage->artist.'</h3>
+                            <figure>
+                                <img src="'.$content->openstage->picture.'" alt="'.$content->openstage->artist.'">
+                                <figcaption>'.$content->openstage->bio.'</figcaption>
+                            </figure>
+                        </li><li class="feature">
+                            <h3>'.$content->openstage->album.'</h3>
+                            <figure>
+                                <img src="'.$content->openstage->cover.'" alt="'.$content->openstage->album.' Cover" class="cover">
+                                <figcaption><ol>
+                                    '.$tracks.'</ol></figcaption>
+                            </figure>
+                        </li><li class="feature">
+                            <h3 data-l10n-id="firstrunDiscoverArtists">Discover more Artists</h3>
+                            <p>Artists of previous releases. Maybe a list of the last few or just a link to some sort of history page.</p>
+                        </li>
                     </ul>';
                     }
                 ?>
