@@ -76,7 +76,7 @@ foreach($content->extensions as $extension) {
                 <section class="column">
                 <?php
                     if(!array_key_exists('type',$_GET)||$_GET['type']!='upgrade')
-                    {$
+                    {
                         // for the actual firstrun
                         echo '
                     <h2 data-l10n-id="gettingStarted">Getting Started</h2>
