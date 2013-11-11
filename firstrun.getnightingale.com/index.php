@@ -57,7 +57,7 @@
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <h1 data-l10n-id="firstrunWelcomeTitle">Welcome to Nightingale!</h1>
-                <p data-l10n-id="firstrunWelcomeMessage" data-l10n-args='{"url":"http://wiki.getnightingale.com/doku.php?id=releases_notes:<?php echo $_GET['version'];?>_release_notes"}'>You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. For information on whats new in this version, please read the <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:<?php echo $_GET['version'];?>_release_notes">Release Notes</a>.</p>
+                <p data-l10n-id="firstrunWelcomeMessage">You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm.</p>
                 <section class="column">
                     <h2 data-l10n-id="recommendedAddOnsTitle">Recommended Add-ons</h2>
                     <ul><?php
@@ -76,10 +76,10 @@ foreach($content->extensions as $extension) {
                 <section class="column">
                 <?php
                     if(!array_key_exists('type',$_GET)||$_GET['type']!='upgrade')
-                    {
+                    {$
                         // for the actual firstrun
                         echo '
-                    <h2>Getting Started</h2> <!-- title tbc -->
+                    <h2 data-l10n-id="gettingStarted">Getting Started</h2>
                     <!-- for more help visit the forum -->
                     <ul>
                         <li class="feature">
@@ -106,9 +106,10 @@ foreach($content->extensions as $extension) {
                             ';
                         }
                         echo '
-                    <h2>What\'s New</h2>
+                    <h2 data-l10n-id="whatsNew">What\'s New</h2>
                     <ul>
                         '.$li.'
+                        <li data-l10n-id="firstrunReleaseNotes"  data-l10n-args=\'{"url":"http://wiki.getnightingale.com/doku.php?id=releases_notes:'.$_GET['version'].'_release_notes"}\'>For the full changelog visit the <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:'.$_GET['version'].'_release_notes">Release Notes</a>.</li>
                     </ul>';
                     }
                 ?>
@@ -116,7 +117,7 @@ foreach($content->extensions as $extension) {
                 <section class="column omega">
                 <?php
                     if(!array_key_exists('openstage',$_GET))
-                        echo '<h2>Coming Soon!</h2>';
+                        echo '<h2 data-l10n-id="firstrunSoon">Coming Soon!</h2>';
                     else {
                         $tracks = '';
                         foreach($content->openstage->tracks as $track) {
