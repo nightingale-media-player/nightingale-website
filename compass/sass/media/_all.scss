@@ -1,209 +1,233 @@
 /*!
  * Media-independent styles.
  */
- 
-    $sidebar-item-height: 5*px2em($base-line-height);
-    
-    /* -------------------------------------------------------------------------*/
-    /* Layout */
 
-    body>.wrapper {
+$sidebar-item-height: 5*px2em($base-line-height);
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+body>.wrapper {
+    width: 100%;
+}
+
+/* ----------------------------------------------------------------------------
+   Main content
+   --------------------------------------------------------------------------*/
+#contentleft {
+    max-width: $twocolumns - 2 * $gutter-width;
+    margin-right: $gutter-width;
+    margin-bottom: $base-line-height;
+    display: inline-block;
+}    
+
+#screenshots {
+    // create a padding matching half of the download button
+    padding-bottom: 2.25em + px2em($base-line-height);
+    margin-bottom: $base-line-height;
+    position: relative;
+    
+    &>img {
+        height: 100%;
         width: 100%;
     }
-    
-    /* ----------------------------------------------------------------------------
-       Main content
-       --------------------------------------------------------------------------*/
-    #contentleft {
-        max-width: $twocolumns - 2 * $gutter-width;
-        margin-right: $gutter-width;
-        margin-bottom: $base-line-height;
-        display: inline-block;
-    }    
-    
-    #screenshots {
-        // create a padding matching half of the download button
-        padding-bottom: 2.25em + px2em($base-line-height);
-        margin-bottom: $base-line-height;
+}
+
+.relativecenterwrapper {
+    float: left;
+    left: 50%;
+    position: relative;
+    height: 0;
+
+    &>.realtivecenter {
         position: relative;
+        left: -50%;
+        top: -2.25em;
+    }
+}
+
+#downloadbutton {
+    text-align: right;
+    color: white;
+    border: 2px solid #343434;
+    @include border-radius(3px);
+    background-color: #444444;
+    @include background-image(linear-gradient(#444444,#343434));
+    @include single-box-shadow(#fff,0,0,1em,.1em);
+    min-height: 4.5em;
+    padding: 0 1.25em;
+    
+    img {
+        position: absolute;
+        left: 1.25em;
+        top: 0.8125em;
+    }
+    div {
+        /*
+        position: absolute;
+        right: 1.25em;
+        top: 1.0625em - px2em(($base-line-height - $base-font-size)/2);
+        */
+        margin-left: px2em(48px);
+    }
+    small {
+        color: $orange;
+    }
+}
+
+#moredownloadslink {
+    float: right;
+    font-size: .8em;
+    line-height: 1em;
+}
+
+
+.column, .column li, .column ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.column ol, .column ol>li {
+    margin-left: 0;
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+h3+p,h2+p,h1+p {
+    margin-top: 0;
+}
+
+.normalize {
+    font-size: $base-font-size;
+    font-weight: normal;
+}
+
+.fullwidth {
+    width: 100%;
+    clear: both;
+}
+
+.columnimage {
+    max-width: 100%;
+}
+
+/* ----------------------------------------------------------------------------
+   Downloads list
+   --------------------------------------------------------------------------*/
+#downloadlist {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.split {
+    max-width: 3*$column-width+2*$gutter-width;
+    min-width: 45%;
+    float: left;
+}
+.download {
+    padding: $base-line-height $gutter-width $base-line-height 0;
+    list-style-type: none;
+    margin: 0;
+    height: 2*$base-line-height;
+    
+    cursor: pointer;
+    
+    &:hover .os {
+        text-decoration: underline;
+    }
+    
+    .package {
+        color: grey;
+    }
+    
+    img {
+        max-height: 48px;
+        max-width: 48px;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* ----------------------------------------------------------------------------
+   Features sidebar
+   --------------------------------------------------------------------------*/
+#main aside {
+    float: right;
+    width: $onecolumn - 2 * $gutter-width;   
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: $base-line-height;
+    }
+    
+    .feature {
+        min-height: $sidebar-item-height;
+    }
+}
+
+
+.feature {
+    padding-bottom: $base-line-height;
+    
+    img {            
+        max-height: $sidebar-item-height;
+        max-width: 50%;
+        float: left;
+        margin-right: $gutter-width;
         
-        &>img {
-            height: 100%;
-            width: 100%;
+        &.cover {
+            max-height: 50%;
         }
     }
 
-    .relativecenterwrapper {
-        float: left;
-        left: 50%;
-        position: relative;
-        height: 0;
-    
-        &>.realtivecenter {
-            position: relative;
-            left: -50%;
-            top: -2.25em;
-        }
+    figure {
+        display: inline-block;
+        width: 100%;
+    }
+
+    figcaption {
+        font-style: normal;
+        text-align: left;
     }
     
-    #downloadbutton {
-        text-align: right;
-        color: white;
-        border: 2px solid #343434;
-        @include border-radius(3px);
-        background-color: #444444;
-        @include background-image(linear-gradient(#444444,#343434));
-        @include single-box-shadow(#fff,0,0,1em,.1em);
-        min-height: 4.5em;
-        padding: 0 1.25em;
-        
-        img {
-            position: absolute;
-            left: 1.25em;
-            top: 0.8125em;
-        }
-        div {
-            /*
-            position: absolute;
-            right: 1.25em;
-            top: 1.0625em - px2em(($base-line-height - $base-font-size)/2);
-            */
-            margin-left: px2em(48px);
-        }
-        small {
-            color: $orange;
-        }
-    }
-    
-    #moredownloadslink {
-        float: right;
-        font-size: .8em;
-        line-height: 1em;
-    }
-   
-   
-    .column, .column li, .column ul {
-        list-style: none;
-        margin-left: 0;
-    }
-    
-    .column ol, .column ol>li {
-        margin-left: 0;
-        list-style-type: decimal;
-        list-style-position: inside;
-    }
-    
-    h3+p,h2+p,h1+p {
+    h3 {
         margin-top: 0;
     }
 
-    .normalize {
-        font-size: $base-font-size;
-        font-weight: normal;
-    }
-    
-    .fullwidth {
-        width: 100%;
-        clear: both;
-    }
-    
-    .columnimage {
-        max-width: 100%;
-    }
-   
-    /* ----------------------------------------------------------------------------
-       Downloads list
-       --------------------------------------------------------------------------*/
-    #downloadlist {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-    }
-    
-    .split {
-        max-width: 3*$column-width+2*$gutter-width;
-        min-width: 45%;
-        float: left;
-    }
-    .download {
-        padding: $base-line-height $gutter-width $base-line-height 0;
-        list-style-type: none;
-        margin: 0;
-        height: 2*$base-line-height;
-        
-        cursor: pointer;
-        
-        &:hover .os {
-            text-decoration: underline;
-        }
-        
-        .package {
-            color: grey;
-        }
-        
-        img {
-            max-height: 48px;
-            max-width: 48px;
-            height: 100%;
-            width: 100%;
-        }
-    }
-   
-    /* ----------------------------------------------------------------------------
-       Features sidebar
-       --------------------------------------------------------------------------*/
-    #main aside {
-        float: right;
-        width: $onecolumn - 2 * $gutter-width;   
-
-        h2 {
-            margin-top: 0;
-            margin-bottom: $base-line-height;
-        }
-        
-        .feature {
-            min-height: $sidebar-item-height;
-        }
+    p {
+        margin-bottom: 0;
     }
 
-    
-    .feature {
-        padding-bottom: $base-line-height;
-        
-        img {            
-            max-height: $sidebar-item-height;
-            max-width: 50%;
-            float: left;
-            margin-right: $gutter-width;
-            
-            &.cover {
-                max-height: 50%;
+}
+
+/* ----------------------------------------------------------------------------
+   Ubunut ppa overlay
+   --------------------------------------------------------------------------*/
+#instructions, #overlay {
+    @include hidden();
+}
+
+/* ----------------------------------------------------------------------------
+   Dashboard
+   --------------------------------------------------------------------------*/
+#crowd-dashboard-status-list {
+    ul, li {
+        list-style-type: none;
+        margin-left: 0;
+    }
+
+    .offline {
+        background-color: rgb(239, 66, 66);
+        color: white;
+
+        a {
+            &:link, &:visited {
+                color: white;
+            }
+            &:hover {
+                color: rgb(240, 240, 240);
             }
         }
-    
-        figure {
-            display: inline-block;
-            width: 100%;
-        }
-
-        figcaption {
-            font-style: normal;
-            text-align: left;
-        }
-        
-        h3 {
-            margin-top: 0;
-        }
-    
-        p {
-            margin-bottom: 0;
-        }
-
     }
-
-    /* ----------------------------------------------------------------------------
-       Ubunut ppa overlay
-       --------------------------------------------------------------------------*/
-    #instructions, #overlay {
-        @include hidden();
-    }
+}
