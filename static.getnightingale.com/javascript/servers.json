@@ -1,0 +1,67 @@
+[
+    {
+        "name":"Nightingale Webservices",
+        "withLocations":true,
+        "pages":
+        [
+            {
+                "name":"Website",
+                "url":"http://getnightingale.com",
+                "location":"USA"
+            },
+            {
+                "name":"IRC Channel",
+                "url":"irc://irc.mozilla.org/nightingale",
+                "location":"USA"
+            },
+            {
+                "name":"IRC Logbot 'SNAILBot'",
+                "url":"http://irclogs.jackgrigg.com/irc.mozilla.org/nightingale",
+                "location":"USA"
+            },
+            {
+                "name":"Git Repository",
+                "url":"http://github.com",
+                "location":"USA"
+            },
+            {
+                "name":"Sourceforge Downoads",
+                "url":"http://sourceforge.net",
+                "location":"USA"
+            },
+            {
+                "name":"OpenGrok Codesearch",
+                "url":"http://nzf.turmel.info/opengrok",
+                "location":"Saint-Nazaire, France"
+            }
+        ]
+    },
+    {
+        "name":"Buildbots",
+        "withLocations":true,
+        "pages":
+        [
+            {
+                "name":"Linux i686",
+                "url":"http://flc.turmel.info/ngale",
+                "location":"Fontenay le Comte, France"
+            },
+            {
+                "name":"Linux x86_64",
+                "url":"http://nzf.turmel.info/ngale",
+                "location":"Saint Nazaire, France"
+            },
+            {
+                "name":"Windows",
+                "url":"localhost",
+                "location":"Fontenay le Comte, France"
+            },
+            {
+                "name":"Mac OS X",
+                "url":"localhost",
+                "location":"",
+                "location":"undisclosed"
+            }
+        ]
+    }
+]
