@@ -22,7 +22,8 @@
             {
                 "name":"Git Repository",
                 "url":"http://github.com",
-                "location":"USA"
+                "location":"USA",
+                "hasStatusAPI":true
             },
             {
                 "name":"Sourceforge Downoads",

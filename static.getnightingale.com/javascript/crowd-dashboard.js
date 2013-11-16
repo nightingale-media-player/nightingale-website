@@ -1,5 +1,9 @@
 /**
- * Credits for the status ping image hack idea to (even tough this might not be ther original source): http://jsfiddle.net/Maslow/GSSCD/
+ *  Crowd Dashboard Javascript
+ *  Created by Martin giger in 2013
+ *  Licensed under GPLv2
+ *  
+ *  Credits for the status ping image hack idea to (even tough this might not be ther original source): http://jsfiddle.net/Maslow/GSSCD/
  */
 
 "use strict";
@@ -73,10 +77,27 @@ Dashboard.prototype.checkServers = function() {
         var rand = (url.contains('?')?'&':'?')+'timestamp='+Date.now();
         img.src = url+rand;
     }
+    
+    function getStatusAPI(url, callback) {
+        var urlObj = URL(url) || window.URL(url) || window.webkitURL(url),
+            rand = '?timestamp='+Date.now(),
+            funcName = 'processStatusAPI' + window.btoa(encodeURI(urlObj.hostname+rand)).replace(/[\/=]./,'');
+            
+        window[funcName] = function(response) {
+            callback( url, response.status == "good", that );
+        }
+            
+        var script = document.createElement("script");
+        script.src = 'https://status.' + urlObj.host + '/api/status.json' + rand + '&callback=' + funcName;
+        document.body.appendChild(script);
+    }
 
     for( var serverList in this.servers ) {
         for( var page in this.servers[serverList].pages) {
-            getStatus(this.servers[serverList].pages[page].url, this.addServerToList);
+            if(!this.servers[serverList].pages[page].hasOwnProperty("hasStatusAPI") || !this.servers[serverList].pages[page].hasStatusAPI)
+                getStatus(this.servers[serverList].pages[page].url, this.addServerToList);
+            else
+                getStatusAPI(this.servers[serverList].pages[page].url, this.addServerToList);
         }
     }
 };
