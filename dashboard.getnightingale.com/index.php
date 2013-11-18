@@ -76,9 +76,9 @@
                 <section class="twocolumns">
                     <h1>Statistics</h1>
                     <h2>Installations &amp; Upgrades</h2>
-                    <img src="http://humanoids.be/stats/?module=API&method=ImageGraph.get&idSite=3&apiModule=CustomVariables&apiAction=getCustomVariablesValuesFromNameId&idSubtable=Type&language=en&token_auth=506ec0949c33349acc434455dd7e9e75&period=month&date=today">
+                    <img src="http://humanoids.be/stats/?module=API&method=ImageGraph.get&idSite=3&apiModule=CustomVariables&apiAction=getCustomVariables&language=en&token_auth=506ec0949c33349acc434455dd7e9e75&period=day&date=<?php echo date('Y-m-d',strtotime('-1 month')); ?>,today&flat=1&segment=customVariableName1==Type">
                     <h2>Version</h2>
-                    <img src="http://humanoids.be/stats/?module=API&method=ImageGraph.get&idSite=3&apiModule=CustomVariables&apiAction=getCustomVariablesValuesFromNameId&idSubtable=Version&language=en&token_auth=506ec0949c33349acc434455dd7e9e75&period=month&date=today">
+                    <img src="http://humanoids.be/stats/?module=API&method=ImageGraph.get&idSite=3&apiModule=CustomVariables&apiAction=getCustomVariables&language=en&token_auth=506ec0949c33349acc434455dd7e9e75&period=day&date=<?php echo date('Y-m-d',strtotime('-1 month')); ?>,today&flat=1&segment=customVariableName2==Version">
                 </section>
                 <section class="column">
                     <h1>Services Status</h1>
