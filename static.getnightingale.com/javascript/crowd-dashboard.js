@@ -79,16 +79,16 @@ Dashboard.prototype.checkServers = function() {
     }
     
     function getStatusAPI(url, callback) {
-        var urlObj = URL(url) || window.URL(url) || window.webkitURL(url),
+        var domain = (/:\/\/([a-z0-9\.:].*)/).exec(url)[1],
             rand = '?timestamp='+Date.now(),
-            funcName = 'processStatusAPI' + window.btoa(encodeURI(urlObj.hostname+rand)).replace(/[\/=]./,'');
+            funcName = 'processStatusAPI' + window.btoa(encodeURI(domain+rand)).replace(/[\/=]./,'');
             
         window[funcName] = function(response) {
             callback( url, response.status == "good", that );
         }
             
         var script = document.createElement("script");
-        script.src = 'https://status.' + urlObj.host + '/api/status.json' + rand + '&callback=' + funcName;
+        script.src = 'https://status.' + domain + '/api/status.json' + rand + '&callback=' + funcName;
         document.body.appendChild(script);
     }
 
