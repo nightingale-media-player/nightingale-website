@@ -5,8 +5,7 @@
     }
     else
     {
-        echo "I'm not sure how you got here. But please go.";
-        die;
+        header( 'Location: http://getnightingale.com' );
     }
 ?>
 <!DOCTYPE html>
