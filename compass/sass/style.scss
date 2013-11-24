@@ -23,12 +23,9 @@
 @import "mixins/general";
 
 // Import global media-independent styles
-@import "media/all_global";
 @import "media/all";
 
 // Import media-dependent styles
-@import "media/screen_global";
-@import "media/print_global";
 @import "media/screen";
 @import "media/print";
 
