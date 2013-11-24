@@ -22,6 +22,13 @@
     $download['ubuntu']['arch'] = getArch();
     $download['ubuntu']['package'] = 'PPA';
     $download['ubuntu']['popup'] = true;
+
+    $download['ubuntu-nounity']['url'] = '';
+    $download['ubuntu-nounity']['img'] = '../static.getnightingale.com/images/start-here-ubuntuoriginal.png';
+    $download['ubuntu-nounity']['osname'] = 'Ubuntu without Unity';
+    $download['ubuntu-nounity']['arch'] = getArch();
+    $download['ubuntu-nounity']['package'] = 'PPA';
+    $download['ubuntu-nounity']['popup'] = true;
     
     $download['debian']['url'] = '';
     $download['debian']['img'] = '../static.getnightingale.com/images/application-x-deb.png';
