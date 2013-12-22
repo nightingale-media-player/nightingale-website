@@ -80,4 +80,9 @@
             $arch = 64;
         return $arch;
     }
+
+    if($_GET['as'] === 'num')
+    {
+        echo $version;
+    }
 ?>
