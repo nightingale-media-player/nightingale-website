@@ -128,24 +128,24 @@ body>.wrapper {
     @include single-box-shadow(#292929,0,0,.4em,.1em);
     
     padding-top: 4*$base-line-height;
-    //padding-bottom: $base-line-height;
+    padding-bottom: $base-line-height;
     //margin-bottom: $base-line-height;
     
     position: relative;
     z-index: 1;
 }
-.bottom {
-    padding-bottom: $base-line-height;
 
-    p {
-        margin-bottom: 0;
-    }
+.container img {
+    max-width: 100%;
+}
+
+.bottom p {
+    margin-bottom: 0;
 }
 
 #contentleft {
     max-width: $twocolumns - 2 * $gutter-width;
     margin-right: $gutter-width;
-    margin-bottom: $base-line-height;
     display: inline-block;
 }    
 
@@ -210,9 +210,13 @@ body>.wrapper {
 }
 
 
-.column, .column li, .column ul {
-    list-style: none;
-    margin-left: 0;
+.column {
+    width: $onecolumn - 2 * $gutter-width;
+
+    &, .column li, .column ul {
+        list-style: none;
+        margin-left: 0;
+    }
 }
 
 .column ol, .column ol>li {
@@ -233,10 +237,6 @@ h3+p,h2+p,h1+p {
 .fullwidth {
     width: 100%;
     clear: both;
-}
-
-.columnimage {
-    max-width: 100%;
 }
 
 /* ----------------------------------------------------------------------------
@@ -281,9 +281,6 @@ h3+p,h2+p,h1+p {
    Features sidebar
    --------------------------------------------------------------------------*/
 #main aside {
-    float: right;
-    width: $onecolumn - 2 * $gutter-width;   
-
     h2 {
         margin-top: 0;
         margin-bottom: $base-line-height;
@@ -296,7 +293,9 @@ h3+p,h2+p,h1+p {
 
 
 .feature {
-    padding-bottom: $base-line-height;
+    &:not(:last-child) {
+        padding-bottom: $base-line-height;
+    }
     
     img {            
         max-height: $sidebar-item-height;

@@ -17,11 +17,12 @@ The Website is based on a few different existing projects:
  * [Susy](http://susy.oddbird.net/)
  * [Webl10n.js](https://github.com/freaktechnik/webL10n)
  * [crowd-dashboard.js](https://github.com/freaktechnik/Crowd-Dashboard)
+ * [compass-boilerplate](https://github.com/Manko10/compass-boilerplate)
 
 ## Contributors
 
- * Manko10
- * freaktechnik
+ * [Manko10](https://github.com/Manko10)
+ * [freaktechnik](https://github.com/freaktechnik)
 
 ## Licensing
 This project is licensed under the GPL v2 (see LICENSE)
@@ -29,10 +30,10 @@ This project is licensed under the GPL v2 (see LICENSE)
 ## Contents
 
 The whole website consists of
- * front-page for downloads (getnightingale.com folder)
+ * front-page for downloads ([getnightingale.com folder](getnightingale.com/))
  * myBB theme (forum.getnightingale.com folder)
  * WordPress theme (blog.getnightingale.com folder)
  * DokuWiki theme (wiki.getnightingale.com folder)
- * firstrun page (firstrun.getnightingale.com folder)
- * assets like scripts, styles and images (static.getnightingale.com folder)
- * SCSS source (compass folder)
+ * firstrun page ([firstrun.getnightingale.com folder](firtstrun.getnightingale.com/))
+ * assets like scripts, styles and images ([static.getnightingale.com folder](static.getnightingale.com/))
+ * SCSS source ([compass folder](compass/))

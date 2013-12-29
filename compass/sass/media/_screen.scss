@@ -168,6 +168,10 @@
         .column p, .twocolumns p {
             margin-top: 0;
         }
+        
+        .twocolumnimage {
+            width: 4*$column-width+3*$gutter-width;
+        }
     }
     
     @include at-breakpoint($allcolumns 6) {
@@ -214,11 +218,6 @@
             }
         }
         
-        .twocolumnimage {
-            width: 4*$column-width+2*$gutter-width;
-            margin-right: $gutter-width;
-        }
-        
         .twocolumns .column {
             @include span-columns(2 omega,4);
         }
@@ -241,21 +240,15 @@
             margin-right: 0;
         }
         
-        .twocolumnimage {
-            width: 4*$column-width+2*$gutter-width;
-            margin-right: $gutter-width;
-        }
-        
-        #main {
-            aside {
-                @include span-columns(4);
-                margin-top: $base-line-height;
+        .column.alt-full {
+            @include span-columns(4);
+            margin-top: $base-line-height;
                 
-                .feature {
-                    @include span-columns(2);
-                    @include nth-omega(2n-1);
-                }
+            .feature {
+                @include span-columns(2);
+                @include nth-omega(2n-1);
             }
+            
             &>p {
                 @include column-count(2);
                 @include span-columns(4);

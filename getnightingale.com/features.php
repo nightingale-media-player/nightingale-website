@@ -79,7 +79,7 @@
                 </section>
                 <section class="fullwidth">
                     <h2 data-l10n-id="features_browser">Integrated Browser</h2>
-                    <section class="column">
+                    <section class="column alt-full">
                         <h3 data-l10n-id="features_linkGrabber">Link Grabber</h3>
                         <p data-l10n-id="featzres_linkGrabber_description">The intgerated browser of Nightingale detects links to media files and lists the files in a pane in the bottom of the window. You can then listen to the file or download it directly into your library.</p>
                     </section>

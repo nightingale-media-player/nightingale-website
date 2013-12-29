@@ -85,4 +85,8 @@
     {
         echo $version;
     }
+    else if($_GET['as'] === 'json')
+    {
+        echo encode_json($download);
+    }
 ?>

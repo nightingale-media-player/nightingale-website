@@ -82,7 +82,7 @@
             <article id="main" class="container" role="main">
                 <div id="contentleft" class="twocolumns">
                     <div id="screenshots">
-                        <img src="http://lorempixel.com/702/300">
+                        <img src="http://lorempixel.com/702/300" class="twocolumnimage">
                         <div class="relativecenterwrapper">
                             <div class="realtivecenter">
                                 <button id="downloadbutton" class="download" <?php  if($download[$osstring]['popup']) echo 'data-popup'; 
