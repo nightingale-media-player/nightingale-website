@@ -378,7 +378,7 @@ h3+p,h2+p,h1+p {
     }
     
     .socialicon {
-        font-family: $icon-font-family;
+        font-family: $icon-font-family, sans-serif;
         
         &:hover {
             text-decoration: none;

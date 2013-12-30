@@ -34,16 +34,18 @@
 //                     ),
 //                    "OpenSans/OpenSans-Italic-webfont.eot", normal, italic
 // );
-// @include font-face("IcoMoon",
-//                    font-files(
-//                         "IcoMoon/IcoMoon.woff",
-//                         "IcoMoon/IcoMoon.svg#IcoMoon"
-//                     ),
-//                    "IcoMoon/IcoMoon.eot", normal, normal
-// );
+
+@include font-face ("ngale icons",
+                    font-files(
+                        'fontello.woff',
+                        'fontello.ttf',
+                        'fontello.svg#fontello'
+                    ),
+                    'fontello.eot', normal, normal
+);
 
 $base-font-family: "Open Sans", Verdana, Arial, sans-serif;
-$icon-font-family: "IcoMoon";
+$icon-font-family: 'ngale icons';
 
 $base-font-size:   16px;
 $base-line-height: $base-font-size * 1.5;
