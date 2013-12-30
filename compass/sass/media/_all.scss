@@ -213,7 +213,7 @@ body>.wrapper {
 .column {
     width: $onecolumn - 2 * $gutter-width;
 
-    &, .column li, .column ul {
+    &, & li, & ul {
         list-style: none;
         margin-left: 0;
     }
