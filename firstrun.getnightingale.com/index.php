@@ -1,7 +1,8 @@
 <?php
-    if(array_key_exists('version',$_GET))
+    if(preg_match('/Songbird\//', $_SERVER['HTTP_USER_AGENT']))
     {
-        $content = json_decode(file_get_contents($_GET['version'].'.json'));
+        preg_match('/Songbird\/([1-9\.]+)/', $_SERVER['HTTP_USER_AGENT'], $matches);
+        $content = json_decode(file_get_contents($matches[1].'.json'));
     }
     else
     {

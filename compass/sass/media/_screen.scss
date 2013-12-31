@@ -61,14 +61,14 @@
         @include background-image(linear-gradient(#343434,#444444));
     }
     
-    #main a {
-        &:link,&:hover,&:visited,&:active {
-            color: $orange;
-        }
-    }
-
     #wrapper {
         background: white;
+        
+        a {
+            &:link,&:hover,&:visited,&:active {
+                color: $orange;
+            }
+        }
     }
     
     /* ----------------------------------------------------------------------------
