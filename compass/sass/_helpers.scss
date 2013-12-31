@@ -41,3 +41,9 @@
 .clearfix {
     @include pie-clearfix();
 }
+
+// Destyle lists
+.plainlist, .plainlist li {
+    list-style-type: none;
+    margin: 0;
+}

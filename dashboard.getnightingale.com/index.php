@@ -83,7 +83,7 @@
                 <section class="column">
                     <h1>Services Status</h1>
                     <button onclick="refresh(statusDashboard);">Refresh</button>
-                    <div id="crowd-dashboard-status-list">
+                    <div id="crowd-dashboard-status-list" class="plainlist">
                     </div>
                 </section>
             </article>

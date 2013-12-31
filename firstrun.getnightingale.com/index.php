@@ -59,7 +59,7 @@
                 <p data-l10n-id="firstrun_descriptionessage">You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm.</p>
                 <section class="column">
                     <h2 data-l10n-id="firstrun_recommendedAdd-ons">Recommended Add-ons</h2>
-                    <ul><?php
+                    <ul class="plainlist"><?php
 foreach($content->extensions as $extension) {
     echo '<li class="feature">
             <h3>'.$extension->name.' <a data-l10n-id="firstrun_recommendedAdd-ons_install" href="'.$extension->url.'" class="normalize">install</a></h3>
@@ -80,7 +80,7 @@ foreach($content->extensions as $extension) {
                         echo '
                     <h2 data-l10n-id="firstrun_gettingStarted">Getting Started</h2>
                     <!-- for more help visit the forum -->
-                    <ul>
+                    <ul class="plainlist">
                         <li class="feature">
                             <h3>Migrate your Songbird profile</h3>
                             <figure>
@@ -106,7 +106,7 @@ foreach($content->extensions as $extension) {
                         }
                         echo '
                     <h2 data-l10n-id="firstrun_whatsNew">What\'s New</h2>
-                    <ul>
+                    <ul class="plainlist">
                         '.$li.'
                         <li data-l10n-id="firstrun_releaseNotes"  data-l10n-args=\'{"url":"http://wiki.getnightingale.com/doku.php?id=releases_notes:'.$_GET['version'].'_release_notes"}\'>For the full changelog visit the <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:'.$_GET['version'].'_release_notes">Release Notes</a>.</li>
                     </ul>';
@@ -128,7 +128,7 @@ foreach($content->extensions as $extension) {
                          For more information visit http://wiki.getnightingale.com/some.php?get=kitchen:open_stage -->
 
                     <h2 data-l10n-id="firstrunArtist">Featured Artist</h2>
-                    <ul>
+                    <ul class="plainlist">
                         <li class="feature">
                             <h3>'.$content->openstage->artist.'</h3>
                             <figure>
