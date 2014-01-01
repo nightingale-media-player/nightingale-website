@@ -80,24 +80,28 @@ var selectLoaded = false;
 
 addEventListenerLegacy(document, "localized", function() {initl10n();}, false);
 
-window.onload = function() {
+window.onload = init;
+
+function init() {
     var download = document.getElementsByClassName('download'),
         hasDataset = document.dataset;
-    for(var i = 0; i < download.length; i++) {
-        if(hasDataset?download[i].dataset.hasOwnProperty("popup"):download[i].attributes["data-popup"]) {
-            addEventListenerLegacy(download[i],"click",function() {
-                show("overlay");
-                show("instructions");
-                addEventListenerLegacy(document.getElementById("overlay"),"click",hideOverlay);
-                if(!('pointerEvents' in document.body.style))
-                    addEventListenerLegacy(document.getElementById("instructions"),"click",hideOverlay);
-            });
-        }
-        else {
-            addEventListenerLegacy(download[i],"click",function(e) {
-                console.log(e.currentTarget.dataset.url);
-                document.location = hasDataset?e.currentTarget.dataset.url:e.currentTarget.attributes['data-url'].value;
-            });
+    if(download) {
+        for(var i = 0; i < download.length; i++) {
+            if(hasDataset?download[i].dataset.hasOwnProperty("popup"):download[i].attributes["data-popup"]) {
+                addEventListenerLegacy(download[i],"click",function() {
+                    show("overlay");
+                    show("instructions");
+                    addEventListenerLegacy(document.getElementById("overlay"),"click",hideOverlay);
+                    if(!('pointerEvents' in document.body.style))
+                        addEventListenerLegacy(document.getElementById("instructions"),"click",hideOverlay);
+                });
+            }
+            else {
+                addEventListenerLegacy(download[i],"click",function(e) {
+                    console.log(e.currentTarget.dataset.url);
+                    document.location = hasDataset?e.currentTarget.dataset.url:e.currentTarget.attributes['data-url'].value;
+                });
+            }
         }
     }
     
@@ -114,4 +118,4 @@ window.onload = function() {
             }
         }
     }
-};
+}

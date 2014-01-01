@@ -28,6 +28,9 @@
 
             var statusDashboard;
             window.onload = function() {
+                // call the default onload
+                init();
+                
                 function loadDataForDashboard(fileURL,dashboard) {
                     var xhr = new XMLHttpRequest();
                     xhr.onreadystatechange = function() {
