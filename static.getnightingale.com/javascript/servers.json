@@ -54,13 +54,12 @@
             },
             {
                 "name":"Windows",
-                "url":"localhost",
+                "url":"http://box.euro-services.fr",
                 "location":"Fontenay le Comte, France"
             },
             {
                 "name":"Mac OS X",
                 "url":"localhost",
-                "location":"",
                 "location":"undisclosed"
             }
         ]
