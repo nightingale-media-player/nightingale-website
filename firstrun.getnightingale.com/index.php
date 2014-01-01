@@ -1,8 +1,10 @@
 <?php
+    $version;
     if(preg_match('/Songbird\//', $_SERVER['HTTP_USER_AGENT']))
     {
         preg_match('/Songbird\/([1-9\.]+)/', $_SERVER['HTTP_USER_AGENT'], $matches);
-        $content = json_decode(file_get_contents($matches[1].'.json'));
+        $version = $matches[1];
+        $content = json_decode(file_get_contents($version.'.json'));
     }
     else
     {
@@ -109,7 +111,7 @@ foreach($content->extensions as $extension) {
                     <h2 data-l10n-id="firstrun_whatsNew">What\'s New</h2>
                     <ul class="plainlist">
                         '.$li.'
-                        <li data-l10n-id="firstrun_releaseNotes"  data-l10n-args=\'{"url":"http://wiki.getnightingale.com/doku.php?id=releases_notes:'.$_GET['version'].'_release_notes"}\'>For the full changelog visit the <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:'.$_GET['version'].'_release_notes">Release Notes</a>.</li>
+                        <li data-l10n-id="firstrun_releaseNotes"  data-l10n-args=\'{"url":"http://wiki.getnightingale.com/doku.php?id=releases_notes:'.$version.'_release_notes"}\'>For the full changelog visit the <a href="http://wiki.getnightingale.com/doku.php?id=releases_notes:'.$version.'_release_notes">Release Notes</a>.</li>
                     </ul>';
                     }
                 ?>
@@ -207,7 +209,7 @@ foreach($content->extensions as $extension) {
         <script type="text/javascript">
           var _paq = _paq || [];
           _paq.push(["setCustomVariable",1,"Type","<?php echo $_GET['type'];?>","visit"]);
-          _paq.push(["setCustomVariable",2,"Version","<?php echo $_GET['version'];?>","visit"]);
+          _paq.push(["setCustomVariable",2,"Version","<?php echo $version;?>","visit"]);
           _paq.push(["trackPageView"]);
           _paq.push(["enableLinkTracking"]);
         
