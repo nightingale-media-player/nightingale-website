@@ -85,6 +85,10 @@
         },
         {
             "title":"Added a firstrun and upgrades page"
+        },
+        {
+            "title":"Migrate to different update host",
+            "number":218
         }
     ],
     "openstage":
