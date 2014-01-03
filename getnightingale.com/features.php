@@ -72,7 +72,7 @@
                         <img src="../static.getnightingale.com/images/equalizer.png" class="columnimage" alt="Equalizer window with ten horizontal sliders set to different heights." data-l10n-id="features_equalizer_image">
                         <p class="column" data-l10n-id="features_equalizer_description">Adjust the frequency range of your music with the built-in 10-band equalizer.</p>
                     </section>
-                    <section class="column">
+                    <section class="column alt-full">
                         <h3 data-l10n-id="features_radio">Radiostreams</h3>
                         <p data-l10n-id="features_radio_description">For the internet radio fans: Nightingale can play m3u, pls and other streams. Just click on the link to the file and Nightingale will start playing the Stream.</p>
                     </section>

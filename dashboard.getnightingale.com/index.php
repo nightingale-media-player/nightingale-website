@@ -83,7 +83,7 @@
                     <h2>Version</h2>
                     <img src="http://humanoids.be/stats/?module=API&method=ImageGraph.get&idSite=3&apiModule=CustomVariables&apiAction=getCustomVariables&language=en&token_auth=506ec0949c33349acc434455dd7e9e75&period=day&date=<?php echo date('Y-m-d',strtotime('-1 month')); ?>,today&flat=1&filter_pattern_recursive=Version*&width=703"  class="twocolumnimage">
                 </section>
-                <section class="column">
+                <section class="column alt-full">
                     <h1>Services Status</h1>
                     <button onclick="refresh(statusDashboard);">Refresh</button>
                     <div id="crowd-dashboard-status-list" class="plainlist">
