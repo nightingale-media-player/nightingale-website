@@ -46,7 +46,7 @@
                         <li><a href="http://addons.getnightingale.com" data-l10n-id="add-ons">Add-ons</a></li>
                         <li><a href="http://forum.getnightingale.com" data-l10n-id="forum">Forum</a></li>
                         <li><a href="http://wiki.getnightingale.com" data-l10n-id="wiki">Wiki</a></li>
-                        <li><a href="http://developers.getnightingale.com" data-l10n-id="developers">Developers</a></li>
+                        <!-- nonono. <li><a href="http://developers.getnightingale.com" data-l10n-id="developers">Developers</a></li> -->
                     </ul>
                 </nav>
                 <figure id="headerlogo" role="banner">
