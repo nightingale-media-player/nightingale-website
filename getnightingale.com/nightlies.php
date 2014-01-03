@@ -26,6 +26,7 @@
     $download['ubuntu']['arch'] = getArch();
     $download['ubuntu']['package'] = 'PPA';
     $download['ubuntu']['popup'] = true;
+    $download['ubuntu']['popupPackageName'] = 'nightingale';
     
     $download['linux32']['url'] = '';
     $download['linux32']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
@@ -81,7 +82,7 @@
                     <li data-l10n-id="ubuntu_firstStep">Open a terminal window</li>
                     <li><span data-l10n-id="ubuntu_secondStep_pre">Type</span> <code>sudo add-apt-repository ppa:nightingaleteam/nightingale-release</code> <span data-l10n-id="ubuntu_secondStep_post"></span></li>
                     <li><span data-l10n-id="ubuntu_thirdStep_pre">Then</span> <code>sudo apt-get update</code> <span data-l10n-id="ubuntu_thirdStep_post"></span></span></li>
-                    <li><span data-l10n-id="ubuntu_fourthStep_pre">And finally</span> <code>sudo apt-get install nightingale</code> <span data-l10n-id="ubuntu_fourthStep_post"></span></li>
+                    <li><span data-l10n-id="ubuntu_fourthStep_pre">And finally</span> <code id="ubuntuInstallCode" data-l10n-id="ubuntu_fourthStep_code" data-l10n-args='{"name":"nightingale"}'>sudo apt-get install nightingale</code> <span data-l10n-id="ubuntu_fourthStep_post"></span></li>
                 </ol>
             </section>
         </div>
@@ -114,7 +115,7 @@
                 <ul class="plainlist">
                     <?php foreach($download as $os => $properties) {
                             echo '
-                                <li '.($properties['popup'] ? 'data-popup':'data-url="'.$properties['url'].'"').' class="download split">
+                                <li '.($properties['popup'] ? 'data-popup data-popup-name="'.$properties['popupPackageName'].'"':'data-url="'.$properties['url'].'"').' class="download split">
                                     <img src="'.$properties['img'].'" alt="'.$properties['osname'].' Icon" data-hdpi> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
                                 </li>
                             ';
@@ -123,7 +124,7 @@
                 </ul>
                 <section class="clear bottom">
                     <h2 data-l10n-id="compile">Compile Nightingale</h2>
-                    <p data-l10n-id="compilingInstructions" data-l10n-args='{"tarball":"<?php echo $tarball;?>"}'>You can compile Nightingale for yourself. You will require our <a href="git://github.com/nightingale-media-player/nightingale-hacking.git">Source</a> and everything else is conviniently explained for each plattform in the <a href="http://wiki.getnightingale.com/doku.php?id=build">"Build" wiki article</a>.</p>
+                    <p data-l10n-id="compilingInstructions" data-l10n-args='{"tarball":"<?php echo $tarball;?>"}'>You can compile Nightingale for yourself. You will require our <a href="<?php echo $tarball; ?>">Source</a> and everything else is conviniently explained for each plattform in the <a href="http://wiki.getnightingale.com/doku.php?id=build">"Build" wiki article</a>.</p>
                 </section>
             </article>
         </div>

@@ -907,6 +907,7 @@ document.webL10n = (function(window, document, undefined) {
 
     // get the related l10n object
     var data = getL10nData(l10n.id, l10n.args);
+      console.log(data);
     if (!data) {
       consoleWarn('#' + l10n.id + ' is undefined.');
       return;

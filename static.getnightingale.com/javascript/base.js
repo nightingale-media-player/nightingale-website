@@ -88,7 +88,12 @@ function init() {
     if(download) {
         for(var i = 0; i < download.length; i++) {
             if(hasDataset?download[i].dataset.hasOwnProperty("popup"):download[i].attributes["data-popup"]) {
-                addEventListenerLegacy(download[i],"click",function() {
+                addEventListenerLegacy(download[i],"click",function(e) {
+                    document.getElementById("ubuntuInstallCode").dataset.l10nArgs = '{"name":"'+e.currentTarget.dataset.popupName+'"}';
+
+                    // update the contents
+                    document.webL10n.translate(document.getElementById("ubuntuInstallCode"));
+                    
                     show("overlay");
                     show("instructions");
                     addEventListenerLegacy(document.getElementById("overlay"),"click",hideOverlay);
