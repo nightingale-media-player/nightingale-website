@@ -35,12 +35,56 @@
     "changes":
     [
         {
-            "title":"one",
-            "number":1
+            "title":"Fix crash on Ubuntu 13.04",
+            "number":184
         },
         {
-            "title":"two",
-            "number":2
+            "title":"Improved localization for every locale"
+        },
+        {
+            "title":"'songbird' protocol replaced by 'ngale'",
+            "number":121
+        },
+        {
+            "title":"Remove newsletter from firstrun page"
+        },
+        {
+            "title":"Play count increment fixed",
+            "number":142
+        },
+        {
+            "title":"Remove duplicate preferences entry on linux",
+            "number":100
+        },
+        {
+            "title":"Allow add-ons to habve localized display panes titles",
+            "number":5
+        },
+        {
+            "title":"Update add-onst locales (mashTape, Last.fm, SHOUTcast)",
+            "number":204
+        },
+        {
+            "title":"Disable metrics everywhere"            
+        },
+        {
+            "title":"Removed misleading warning in Watch Folder settings",
+            "number":"219"
+        },
+        {
+            "title":"Fixed Last.fm extension scrobbling issue",
+            "number":222
+        },
+        {
+            "title":"Don't use GPU on Mac OS X",
+            "number":230
+        },
+        {
+            "title":"Fixed importing WMA files on Linux",
+            "number":194
+        },
+        {
+            "title":"Added a firstrun and upgrades page"
         }
     ],
     "openstage":

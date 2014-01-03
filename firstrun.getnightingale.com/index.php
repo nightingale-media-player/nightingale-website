@@ -59,7 +59,7 @@
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <h1 data-l10n-id="firstrun_title">Welcome to Nightingale!</h1>
-                <p data-l10n-id="firstrun_descriptionessage">You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm.</p>
+                <p data-l10n-id="firstrun_description">You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. Close this tab to access your library.</p>
                 <section class="column">
                     <h2 data-l10n-id="firstrun_recommendedAdd-ons">Recommended Add-ons</h2>
                     <ul class="plainlist"><?php
@@ -85,10 +85,10 @@ foreach($content->extensions as $extension) {
                     <!-- for more help visit the forum -->
                     <ul class="plainlist">
                         <li class="feature">
-                            <h3>Migrate your Songbird profile</h3>
+                            <h3>Migrate your old library</h3>
                             <figure>
                                 <img src="../static.getnightingale.com/images/songbirdtransition.png" alt="Songbird to Nightingale" data-hdpi>
-                                <figcaption>Nightingale isn\'t too diffeent from Songbird yet. You can easily migrate your Music, Videos, Playlists and Extensions from Songbird as described in <a href="http://wiki.getnightingale.com/doku.php?id=migrate_from_songbird">this article</a>.</figcaption>
+                                <figcaption>Nightingale supports migration from lots of players, including Songbird and iTunes. For step by step guides, check out <a href="http://wiki.getnightingale.com/doku.php?id=migration">this article</a>.</figcaption>
                             </figure>
                         </li>
                         <li class="feature">
@@ -104,7 +104,13 @@ foreach($content->extensions as $extension) {
                     {
                         $li = '';
                         foreach($content->changes as $change) {
-                            $li .= '<li><a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/'.$change->number.'">#'.$change->number.'</a> '.$change->title.'</li>
+                            if(isset($change->number)) {
+                                $gh = '<a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/'.$change->number.'">#'.$change->number.'</a> ';
+                            }
+                            else {
+                                $gh = '';
+                            }
+                            $li .= '<li>'.$gh.$change->title.'</li>
                             ';
                         }
                         echo '
