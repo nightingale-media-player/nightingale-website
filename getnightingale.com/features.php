@@ -46,13 +46,13 @@
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <h1 data-l10n-id="features_title">Nightingale Features</h1>
-                <p data-l10n-id="features_description">Nightingale is powered by <a href="">XULRunner</a> from Mozilla. XULRunner is a reliable base from Mozilla. Other applications like Thunderbird or Instantbird are also based on XULRunner. the media core of Nightingale uses GStreamer. It allows Nightingale to have a large feature set of playback customization as well as a large selection of supported file formats.</p>
+                <p data-l10n-id="features_description">Nightingale is powered by XULRunner from Mozilla. XULRunner is a reliable base from Mozilla. Other applications like Thunderbird or Instantbird are also based on XULRunner. the media core of Nightingale uses GStreamer. It allows Nightingale to have a large feature set of playback customization as well as a large selection of supported file formats.</p>
                 <section class="fullwidth">
                     <h2 data-l10n-id="features_playback">Playback</h2>
                     <section class="twocolumns">
                         <h3 data-l10n-id="features_audioFormat">Audio Formats</h3>
                         <img src="../static.getnightingale.com/images/controls.png" alt="Player controls" data-l10n-id="features_playerControls_image" class="columnimage">
-                        <p class="column" data-l10n-id="features_audioFormat_description">Thanks to GStreamer Nighitngale can play various different file formats. Including MP3, WAV, AAC, FLAC and many more. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
+                        <p class="column" data-l10n-id="features_audioFormat_description">Thanks to GStreamer Nighitngale can play various different file formats. Including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr>, <abbr title="Advanced Audio Coding">AAC</abbr>, <abbr title="Free Lossless Audio Codec">FLAC</abbr> and many more. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
                     </section>
                     <section class="column omega">
                         <h3 data-l10n-id="features_native">Native GStreamer</h3>
@@ -115,9 +115,9 @@
                         <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"Last.fm"}'>Install Last.fm</a>
                     </section>
                     <section class="column bottom">
-                        <h3 data-l10n-id="features_shoutCast">ShoutCast Integration</h3>
-                        <p data-l10n-id="features_shoutCast_description">All your favorite ShoutCast streams just a click away in Nightingale.</p>
-                        <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"ShoutCast"}'>Install ShoutCast</a>
+                        <h3 data-l10n-id="features_shoutCast">SHOUTcast Integration</h3>
+                        <p data-l10n-id="features_shoutCast_description">All your favorite SHOUTcast streams just a click away in Nightingale.</p>
+                        <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"SHOUTcast"}'>Install SHOUTcast</a>
                     </section>
                 </section>
                 <!-- Miniplayer, iTunes import, cross platform, 100% CRASH FREE xoxoxox -->
