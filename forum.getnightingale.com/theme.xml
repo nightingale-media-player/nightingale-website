@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Freak v24" version="1608">
+<theme name="Freak v24" version="1612">
 	<properties>
 		<templateset><![CDATA[28]]></templateset>
 		<editortheme><![CDATA[default]]></editortheme>
@@ -9,83 +9,7 @@
 		<borderwidth><![CDATA[0]]></borderwidth>
 	</properties>
 	<stylesheets>
-			<stylesheet name="css3.css" version="1608"><![CDATA[
-html{ overflow-y: scroll;}
-tr td.trow1:first-child,
-tr td.trow2:first-child,
-tr td.trow_shaded:first-child {
-	border-left: 0;
-}
-
-tr td.trow1:last-child,
-tr td.trow2:last-child,
-tr td.trow_shaded:last-child {
-	border-right: 0;
-}
-
-.tborder {
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border-radius: 7px;
-}
-
-.thead,
-.rounded_top {
-	-moz-border-radius-topleft: 6px;
-	-moz-border-radius-topright: 6px;
-	-webkit-border-top-left-radius: 6px;
-	-webkit-border-top-right-radius: 6px;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
-}
-
-.tfoot,
-.rounded_bottom {
-	-moz-border-radius-bottomleft: 6px;
-	-moz-border-radius-bottomright: 6px;
-	-webkit-border-bottom-left-radius: 6px;
-	-webkit-border-bottom-right-radius: 6px;
-	border-bottom-left-radius: 6px;
-	border-bottom-right-radius: 6px;
-}
-
-input.textbox,
-select,
-textarea,
-.editor_control_bar,
-fieldset,
-.popup_menu {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-}
-
-.popup_menu .popup_item_container:first-child .popup_item {
-	-moz-border-radius-topleft: 4px;
-	-moz-border-radius-topright: 4px;
-	-webkit-border-top-left-radius: 4px;
-	-webkit-border-top-right-radius: 4px;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;	
-}
-
-.popup_menu .popup_item_container:last-child .popup_item {
-	-moz-border-radius-bottomleft: 4px;
-	-moz-border-radius-bottomright: 4px;
-	-webkit-border-bottom-left-radius: 4px;
-	-webkit-border-bottom-right-radius: 4px;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-}
-
-.pagination a {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-}
-		]]>
-		</stylesheet>
-		<stylesheet name="global.css" version="1608"><![CDATA[
+		<stylesheet name="global.css" version="1612"><![CDATA[
 body {
 	background-color: #fff;
 	background-image: url('//static.getnightingale.com/img/gradent.png');
@@ -1072,7 +996,87 @@ form #message {
 
 		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1608"><![CDATA[.star_rating,
+		<stylesheet name="css3.css" version="1612"><![CDATA[
+html{ overflow-y: scroll;}
+tr td.trow1:first-child,
+tr td.trow2:first-child,
+tr td.trow_shaded:first-child {
+	border-left: 0;
+}
+
+tr td.trow1:last-child,
+tr td.trow2:last-child,
+tr td.trow_shaded:last-child {
+	border-right: 0;
+}
+
+.tborder {
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+}
+
+.thead,
+.rounded_top {
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.tfoot,
+.rounded_bottom {
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+input.textbox,
+select,
+textarea,
+.editor_control_bar,
+fieldset,
+.popup_menu {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.popup_menu .popup_item_container:first-child .popup_item {
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;	
+}
+
+.popup_menu .popup_item_container:last-child .popup_item {
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.pagination a {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1612"><![CDATA[.star_rating,
 .star_rating li a:hover,
 .star_rating .current_rating {
 	background: url(images/1/star_rating.gif) left -1000px repeat-x;
@@ -1228,20 +1232,21 @@ td .star_rating {
 		</tr>
 	</tbody>
 </table>]]></template>
-		<template name="footer_languageselect" version="1600"><![CDATA[<div class="language">
+		<template name="footer_languageselect" version="1612"><![CDATA[<div class="language">
 <form method="{$lang_redirect_url['form_method']}" action="{$lang_redirect_url['location']}" id="lang_select">
-	{$lang_redirect_url['form_html']}
-	<select name="language" onchange="MyBB.changeLanguage();">
-		<optgroup label="{$lang->select_language}">
-			{$lang_options}
-		</optgroup>
-	</select>
-	{$gobutton}
-</form>
+		{$lang_redirect_url['form_html']}
+		<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+		<select name="language" onchange="MyBB.changeLanguage();">
+			<optgroup label="{$lang->select_language}">
+				{$lang_options}
+			</optgroup>
+		</select>
+		{$gobutton}
+	</form>
 </div>]]></template>
 		<template name="nav_sep" version="1600"><![CDATA[&rsaquo;]]></template>
 		<template name="nav_sep_active" version="1600"><![CDATA[<br /><img src="{$theme['imgdir']}/nav_bit.gif" alt="" />]]></template>
-		<template name="showthread" version="1600"><![CDATA[<html>
+		<template name="showthread" version="1612"><![CDATA[<html>
 <head>
 <title>{$thread['subject']}</title>
 {$headerinclude}
@@ -1250,7 +1255,7 @@ td .star_rating {
 	var quickdelete_confirm = "{$lang->quickdelete_confirm}";
 // -->
 </script>
-<script type="text/javascript" src="jscripts/thread.js?ver=1400"></script>
+<script type="text/javascript" src="jscripts/thread.js?ver=1603"></script>
 </head>
 <body>
 	{$header}
@@ -1274,6 +1279,7 @@ td .star_rating {
 				</div>
 			</td>
 		</tr>
+		{$classic_header}
 	</table>
 	<div id="posts">
 		{$posts}
@@ -1303,7 +1309,7 @@ td .star_rating {
 		<ul class="thread_tools">
 			<li class="printable"><a href="printthread.php?tid={$tid}">{$lang->view_printable}</a></li>
 			<li class="sendthread"><a href="sendthread.php?tid={$tid}">{$lang->send_thread}</a></li>
-			<li class="subscription_{$add_remove_subscription}"><a href="usercp2.php?action={$add_remove_subscription}subscription&amp;tid={$tid}">{$add_remove_subscription_text}</a></li>
+			<li class="subscription_{$add_remove_subscription}"><a href="usercp2.php?action={$add_remove_subscription}subscription&amp;tid={$tid}&amp;my_post_key={$mybb->post_code}">{$add_remove_subscription_text}</a></li>
 		</ul>
 	</div>
 
@@ -1316,7 +1322,7 @@ td .star_rating {
 	{$footer}
 </body>
 </html>]]></template>
-		<template name="header_welcomeblock_member_admin" version="1600"><![CDATA[<li><a href="{$mybb->settings['bburl']}/{$config['admin_dir']}/index.php" class="admincp">{$lang->welcome_admin}</a></li>]]></template>
+		<template name="header_welcomeblock_member_admin" version="1612"><![CDATA[<li><a href="{$mybb->settings['bburl']}/{$config['admin_dir']}/index.php" class="admincp">{$lang->welcome_admin}</a></li>]]></template>
 		<template name="header_welcomeblock_member_moderator" version="1600"><![CDATA[<li><a href="{$mybb->settings['bburl']}/modcp.php" class="modcp">{$lang->welcome_modcp}</a></li>]]></template>
 		<template name="footer" version="1600"><![CDATA[<div id="debug"><debugstuff></div>
 	</div>
@@ -1408,7 +1414,7 @@ td .star_rating {
 <!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE -->{$task_image}<!-- End task image code -->
 {$auto_dst_detection}
 </div>]]></template>
-		<template name="header" version="1600"><![CDATA[<div id="container">
+		<template name="header" version="1609"><![CDATA[<div id="container">
 		<a name="top" id="top"></a>
 		<div id="header">
 			<!-- Use this as header -->
@@ -1451,10 +1457,11 @@ td .star_rating {
 				{$pending_joinrequests}
 				<navigation>
 			{$board_messages}
+
 				<br />]]></template>
-		<template name="header_welcomeblock_guest" version="1600"><![CDATA[<script type="text/javascript">
+		<template name="header_welcomeblock_guest" version="1612"><![CDATA[<script type="text/javascript">
 <!--
-	lang.username = "{$lang->login_username}";
+	lang.username = "{$login_username}";
 	lang.password = "{$lang->login_password}";
 	lang.login = "{$lang->login}";
 	lang.lost_password = "<a href=\"{$mybb->settings['bburl']}/member.php?action=lostpw\" class=\"lost_password\">{$lang->lost_password}<\/a>";
@@ -1462,8 +1469,9 @@ td .star_rating {
 	lang.remember_me = "{$lang->remember_me}";
 // -->
 </script>
+		<span class="welcome" id="quick_login">{$lang->welcome_guest} <a href="{$mybb->settings['bburl']}/member.php?action=login" onclick="MyBB.quickLogin(); return false;" class="login">{$lang->welcome_login}</a> <a href="{$mybb->settings['bburl']}/member.php?action=register" class="register">{$lang->welcome_register}</a></span>
+
 <!-- Continuation of div(class="upper") as opened in the header template -->
-	<span class="welcome" id="quick_login">{$lang->welcome_guest} <a href="{$mybb->settings['bburl']}/member.php?action=login" onclick="MyBB.quickLogin(); return false;" class="login">{$lang->welcome_login}</a> <a href="{$mybb->settings['bburl']}/member.php?action=register" class="register">{$lang->welcome_register}</a></span>
 	</div>
 </div>]]></template>
 		<template name="header_welcomeblock_member" version="1600"><![CDATA[<!-- Continuation of div(class="upper") as opened in the header template -->
@@ -1674,8 +1682,7 @@ td .star_rating {
 {$footer}
 </body>
 </html>]]></template>
-		<template name="headerinclude" version="1000"><![CDATA[
-<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+		<template name="headerinclude" version="1612"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
 
 <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
