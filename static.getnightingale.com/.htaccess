@@ -1,3 +1,5 @@
+Header set Access-Control-Allow-Origin "*"
+
 # BEGIN Turn ETags Off
 FileETag None
 # END Turn ETags Off
