@@ -5,7 +5,7 @@
  * Sass helper functions for doing maths such as converting units.
  *//*!
  * Font definitions.
- */@font-face{font-family:"ngale icons";src:url('static.getnightingale.com/fonts/fontello.eot?1387737292');src:url('static.getnightingale.com/fonts/fontello.eot?#iefix') format('embedded-opentype'),url('static.getnightingale.com/fonts/fontello.woff?1387737292') format('woff'),url('static.getnightingale.com/fonts/fontello.ttf?1387737292') format('truetype'),url('static.getnightingale.com/fonts/fontello.svg?1387737292#fontello') format('svg');font-weight:normal;font-style:normal}/*!
+ */@font-face{font-family:"ngale icons";src:url('../fonts/fontello.eot?1387737292');src:url('../fonts/fontello.eot?#iefix') format('embedded-opentype'),url('../fonts/fontello.woff?1387737292') format('woff'),url('../fonts/fontello.ttf?1387737292') format('truetype'),url('../fonts/fontello.svg?1387737292#fontello') format('svg');font-weight:normal;font-style:normal}/*!
  * Susy grid definitions.
  *//*!
  * Color definitions
