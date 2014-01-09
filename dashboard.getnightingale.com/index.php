@@ -12,8 +12,8 @@
         
         <link rel="stylesheet" type="text/css" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
-            <link rel="stylesheet" href="css/legacy-ie.css">
-            <script src="javascript/html5shiv.js"></script>
+            <link rel="stylesheet" href="../static.getnightingale.com/css/legacy-ie.css">
+            <script src="../static.getnightingale.com/javascript/html5shiv.js"></script>
         <![endif]-->
         
         <!-- l10n -->
@@ -64,7 +64,7 @@
                         <li><a href="http://addons.getnightingale.com" data-l10n-id="add-ons">Add-ons</a></li>
                         <li><a href="http://forum.getnightingale.com" data-l10n-id="forum">Forum</a></li>
                         <li><a href="http://wiki.getnightingale.com" data-l10n-id="wiki">Wiki</a></li>
-                        <!-- no. <li><a href="http://developers.getnightingale.com" data-l10n-id="developers">Developers</a></li>-->
+                        <li><a href="http://developer.getnightingale.com" data-l10n-id="developers">Developers</a></li>
                     </ul>
                 </nav>
                 <figure id="headerlogo" role="banner">
@@ -79,15 +79,25 @@
                 <section class="twocolumns">
                     <h1>Statistics</h1>
                     <h2>Installations &amp; Upgrades</h2>
-                    <img src="http://humanoids.be/stats/?module=API&method=ImageGraph.get&idSite=3&apiModule=CustomVariables&apiAction=getCustomVariables&language=en&token_auth=506ec0949c33349acc434455dd7e9e75&period=day&date=<?php echo date('Y-m-d',strtotime('-1 month')); ?>,today&flat=1&filter_pattern_recursive=Type*&width=703"  class="twocolumnimage">
+                    <img src="get_image.php?var=Type"  class="twocolumnimage piwik-image">
                     <h2>Version</h2>
-                    <img src="http://humanoids.be/stats/?module=API&method=ImageGraph.get&idSite=3&apiModule=CustomVariables&apiAction=getCustomVariables&language=en&token_auth=506ec0949c33349acc434455dd7e9e75&period=day&date=<?php echo date('Y-m-d',strtotime('-1 month')); ?>,today&flat=1&filter_pattern_recursive=Version*&width=703"  class="twocolumnimage">
+                    <img src="get_image.php?var=Version"  class="twocolumnimage piwik-image">
                 </section>
-                <section class="column alt-full">
+                <section class="column omega">
                     <h1>Services Status</h1>
                     <button onclick="refresh(statusDashboard);">Refresh</button>
                     <div id="crowd-dashboard-status-list" class="plainlist">
                     </div>
+                </section>
+                <section class="column">
+                    <h1>Other Analytics</h1>
+                    <ul>
+                        <li><a href="https://www.facebook.com/getnightingale?sk=insights">Facebook Insights</a></li>
+                        <li><a href="https://github.com/nightingale-media-player/nightingale-hacking/graphs/traffic">nightingale-hacking Repository Stats</a></li>
+                        <li><a href="http://sourceforge.net/projects/ngale/files/stats/timeline">Sourceforge Download Stats</a></li>
+                        <li><a href="http://humanoids.be/thinkup">ThinkUp Social Anayltics</a></li>
+                        <li><a href="http://stats.getnightingale.com">Piwik Analytics</a></li>
+                    </ul>
                 </section>
             </article>
         </div>

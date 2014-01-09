@@ -15,8 +15,8 @@
         
         <link type="text/css" rel="stylesheet" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
-            <link rel="stylesheet" href="css/legacy-ie.css">
-            <script src="javascript/html5shiv.js"></script>
+            <link rel="stylesheet" href="../static.getnightingale.com/css/legacy-ie.css">
+            <script src="../static.getnightingale.com/javascript/html5shiv.js"></script>
         <![endif]-->
         
         <!-- l10n -->

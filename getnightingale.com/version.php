@@ -39,7 +39,7 @@
     $download['debian']['package'] = '.deb';
     $download['debian']['popup'] = false;
     
-    $download['arch']['url'] = 'https://aur.archlinux.org/packages/ni/nightingale-git/nightingale-git.tar.gz';
+    $download['arch']['url'] = 'https://aur.archlinux.org/packages.php?ID=52721';
     $download['arch']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
     $download['arch']['osname'] = 'Archlinux';
     $download['arch']['arch'] = 32;

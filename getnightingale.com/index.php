@@ -35,8 +35,8 @@
         
         <link type="text/css" rel="stylesheet" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
-            <link rel="stylesheet" href="css/legacy-ie.css">
-            <script src="javascript/html5shiv.js"></script>
+            <link rel="stylesheet" href="../static.getnightingale.com/css/legacy-ie.css">
+            <script src="../static.getnightingale.com/javascript/html5shiv.js"></script>
         <![endif]-->
         
         <!-- l10n -->
@@ -52,7 +52,7 @@
                     <li data-l10n-id="ubuntu_firstStep">Open a terminal window</li>
                     <li><span data-l10n-id="ubuntu_secondStep_pre">Type</span> <code>sudo add-apt-repository ppa:nightingaleteam/nightingale-release</code> <span data-l10n-id="ubuntu_secondStep_post"></span></li>
                     <li><span data-l10n-id="ubuntu_thirdStep_pre">Then</span> <code>sudo apt-get update</code> <span data-l10n-id="ubuntu_thirdStep_post"></span></span></li>
-                    <li><span data-l10n-id="ubuntu_fourthStep_pre">And finally</span> <code>sudo apt-get install nightingale</code> <span data-l10n-id="ubuntu_fourthStep_post"></span></li>
+                    <li><span data-l10n-id="ubuntu_fourthStep_pre">And finally</span> <code id="ubuntuInstallCode" data-l10n-id="ubuntu_fourthStep_code" data-l10n-args='{"name":"nightingale"}'>sudo apt-get install nightingale</code> <span data-l10n-id="ubuntu_fourthStep_post"></span></li>
                 </ol>
             </section>
         </div>
@@ -68,7 +68,7 @@
                         <li><a href="http://addons.getnightingale.com" data-l10n-id="add-ons">Add-ons</a></li>
                         <li><a href="http://forum.getnightingale.com" data-l10n-id="forum">Forum</a></li>
                         <li><a href="http://wiki.getnightingale.com" data-l10n-id="wiki">Wiki</a></li>
-                        <li><a href="http://developers.getnightingale.com" data-l10n-id="developers">Developers</a></li>
+                        <li><a href="http://developer.getnightingale.com" data-l10n-id="developers">Developers</a></li>
                     </ul>
                 </nav>
                 <figure id="headerlogo" role="banner">
@@ -82,11 +82,12 @@
             <article id="main" class="container" role="main">
                 <div id="contentleft" class="twocolumns">
                     <div id="screenshots">
-                        <img src="http://lorempixel.com/702/300" class="twocolumnimage">
+                        <iframe width="702" height="395" src="//www.youtube.com/embed/9Na3CqM6bRg" frameborder="0" allowfullscreen></iframe>
+                        <!--<img src="http://lorempixel.com/702/300" class="twocolumnimage">-->
                         <div class="relativecenterwrapper">
                             <div class="realtivecenter">
-                                <button id="downloadbutton" class="download" <?php  if($download[$osstring]['popup']) echo 'data-popup'; 
-                                                                                    else echo 'data-url="'.$download[$osstring]['url'].'"'; ?>>
+                                <button id="downloadbutton" class="download" <?php  echo ($download[$osstring]['popup'] ? 'data-popup data-popup-name="'.$download[$osstring]['popupPackageName'].'"':
+                                                                                    'data-url="'.$download[$osstring]['url'].'"'); ?>>
                                     <img src="<?php echo $download[$osstring]['img']; ?>"
                                          alt="<?php echo $download[$osstring]['osname']; ?> Icon"
                                          data-l10n-id="main_downloadButton_image"
@@ -118,15 +119,15 @@
                     <h2 data-l10n-id="main_asideHeading">Why Nightingale?</h2>
                     <figure class="feature">
                         <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="main_firstFeature_image">
-                        <figcaption data-l10n-id="main_firstFeature">Wide variety of supported media formats including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, Ogg, <abbr title="Free Lossless Audio Codec">FLAC</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr> and many more.</figcaption>
+                        <figcaption data-l10n-id="main_firstFeature">Wide variety of supported media formats including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, Ogg, <abbr title="Free Lossless Audio Codec">FLAC</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr> and many more. <!-- link to features page --></figcaption>
                     </figure>
                     <figure class="feature">
                         <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="main_secondFeature_image">
-                        <figcaption data-l10n-id="main_secondFeature">Highly customizable user interface due to hundreds of themes and add-ons.</figcaption>
+                        <figcaption data-l10n-id="main_secondFeature">Highly customizable user interface due to hundreds of themes and add-ons. <!-- link to addons.getnightingale.com --></figcaption>
                     </figure>
                     <figure class="feature">
                         <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="main_thirdFeature_image">
-                        <figcaption data-l10n-id="main_thirdFeature">Support by an active and very ambitious community.</figcaption>
+                        <figcaption data-l10n-id="main_thirdFeature">Slick and easy to understand design. the interface stays out of your way while still enabling easy management of big libraries. <!-- link to screenshots --></figcaption>
                     </figure>
                 </aside>
             </article>
@@ -142,7 +143,7 @@
                     </div>
                     <p data-l10n-id="footer_info" data-l10n-args='{"license":"GNU General Public License v2 (GPL v2)"}'>Nightingale is free!<br>
                        It is an Open Source projcet release under the terms of the GNU General Public License v2 (GPL v2).<br>
-                       For more details, please read the <a href="">license information</a>.
+                       For more details, please read the <a href="http://wiki.getnightingale.com/doku.php?id=licensing">license information</a>.
                    </p>
                    <p>
                        <b data-l10n-id="footer_social">Follow us!</b><br>
@@ -164,7 +165,7 @@
                 <nav class="footerlinks">
                     <b data-l10n-id="footer_contribute">Contribute</b>
                     <ul>
-                        <li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki" data-l10n-id="footer_developerCenter">Developer's Center</a></li>
+                        <li><a href="http://wiki.getnightingale.com/doku.php?id=developer_center" title="Documentation and Wiki" data-l10n-id="footer_developerCenter">Developer's Center</a></li>
                         <li><a href="http://wiki.getnightingale.com/doku.php?id=ngale-locales" title="Translate Nightingale" data-l10n-id="footer_translate">Translate Nightingale</a></li>
                         <li><a href="https://github.com/nightingale-media-player" title="Source Code on GitHub" data-l10n-id="footer_source">Source Code</a></li>
                         <li><a href="https://github.com/nightingale-media-player/nightingale-addons/issues/" title="Nightingale Issues on GitHub" data-l10n-id="footer_bugs">Report a Bug</a></li>
@@ -176,7 +177,8 @@
                     <ul>
                         <li><a href="http://getnightingale.com/download.php" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
                         <li><a href="http://getnightingale.com/features.php" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
-                        <li><a href="http://getnightingale.com/nightlies.php" title="Nightingale Nightlies" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="http://getnightingale.com/nightlies.php" title="Nightingale Nightliy Builds" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="http://getnightingale.com/branding.php" title="Nightingale Logo and Screenshots" data-l10n-id="footer_branding">Branding</a></li>
                     </ul>
                 </nav>
             </footer>

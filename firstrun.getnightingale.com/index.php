@@ -25,8 +25,8 @@
         
         <link rel="stylesheet" type="text/css" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
-            <link rel="stylesheet" href="css/legacy-ie.css">
-            <script src="javascript/html5shiv.js"></script>
+            <link rel="stylesheet" href="../static.getnightingale.com/css/legacy-ie.css">
+            <script src="../static.getnightingale.com/javascript/html5shiv.js"></script>
         <![endif]-->
         
         <!-- l10n -->
@@ -46,7 +46,7 @@
                         <li><a href="http://addons.getnightingale.com" data-l10n-id="add-ons">Add-ons</a></li>
                         <li><a href="http://forum.getnightingale.com" data-l10n-id="forum">Forum</a></li>
                         <li><a href="http://wiki.getnightingale.com" data-l10n-id="wiki">Wiki</a></li>
-                        <!-- nonono. <li><a href="http://developers.getnightingale.com" data-l10n-id="developers">Developers</a></li> -->
+                        <li><a href="http://developer.getnightingale.com" data-l10n-id="developers">Developers</a></li>
                     </ul>
                 </nav>
                 <figure id="headerlogo" role="banner">
