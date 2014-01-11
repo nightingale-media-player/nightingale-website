@@ -4,7 +4,7 @@
     {
         preg_match('/Songbird\/([1-9\.]+)/', $_SERVER['HTTP_USER_AGENT'], $matches);
         $version = $matches[1];
-        $content = json_decode(file_get_contents($version.'.json'));
+        $content = json_decode(file_get_contents('version-info/'.$version.'.json'));
     }
     else
     {

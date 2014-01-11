@@ -1,6 +1,6 @@
 <?php
-    if(file_exists($_GET['version'].'.json'))
-        $content = json_decode(file_get_contents($_GET['version'].'.json'));
+    if(file_exists('version-info/'.$_GET['version'].'.json'))
+        $content = json_decode(file_get_contents('version-info/'.$_GET['version'].'.json'));
 ?>
 <!DOCTYPE html>
 <html>
