@@ -1,0 +1,117 @@
+{
+    "extensions":
+    [
+        {
+            "name":"SoundCloud",
+            "url":"http://addon-files.getnightingale.com/xpis/soundcloud-1.0.3-201303280131.xpi",
+            "image":"http://static.getnightingale.com/images/soundcloud.png",
+            "description":"Integrates SoundCloud into Nightingale",
+            "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=soundcloud.png",
+            "id":"soundcloud@songbirdnest.com"
+        },
+        {
+            "name":"MLyrics",
+            "url":"https://github.com/FreeleX/MLyrics/raw/master/MLyrics-stable.xpi",
+            "image":"http://static.getnightingale.com/images/mlyrics.png",
+            "description":"Lyrics viewer and editor in the right side pane",
+            "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=mlyrics.png",
+            "id":"{6039188e-d135-11df-bcc9-c7e1ded72085}"
+        },
+        {
+            "name":"SHOUTCast",
+            "url":"",
+            "image":"http://static.getnightingale.com/images/shoutcast.png",
+            "description":"Directory of SHOUTcast Internet radio streams",
+            "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_shoutcast.png",
+            "id":"shoutcast-radio@getnightingale.com"
+        },
+        {
+            "name":"Last.fm",
+            "url":"",
+            "image":"http://static.getnightingale.com/images/lastfm.png",
+            "description":"Publish your playback history to Last.fm and listen to Last.fm Radio",
+            "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_lastfm.png",
+            "id":"audioscrobbler@getnightingale.com"
+        },
+        {
+            "name":"mashTape",
+            "url":"",
+            "image":"http://static.getnightingale.com/images/mashtape.png",
+            "description":"Like your favourite old school mix tape, mix and mash up various web sources for your library enhancing pleasure",
+            "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mashtape.png",
+            "id":"mashTape@getnightingale.com"
+        }
+    ],
+    "changes":
+    [
+        {
+            "title":"Fix crash on Ubuntu 13.04",
+            "number":184
+        },
+        {
+            "title":"Improved localization for every locale"
+        },
+        {
+            "title":"'songbird' protocol replaced by 'ngale'",
+            "number":121
+        },
+        {
+            "title":"Remove newsletter from firstrun page"
+        },
+        {
+            "title":"Play count increment fixed",
+            "number":142
+        },
+        {
+            "title":"Remove duplicate preferences entry on linux",
+            "number":100
+        },
+        {
+            "title":"Allow add-ons to habve localized display panes titles",
+            "number":5
+        },
+        {
+            "title":"Update add-onst locales (mashTape, Last.fm, SHOUTcast)",
+            "number":204
+        },
+        {
+            "title":"Disable metrics everywhere"            
+        },
+        {
+            "title":"Removed misleading warning in Watch Folder settings",
+            "number":"219"
+        },
+        {
+            "title":"Fixed Last.fm extension scrobbling issue",
+            "number":222
+        },
+        {
+            "title":"Don't use GPU on Mac OS X",
+            "number":230
+        },
+        {
+            "title":"Fixed importing WMA files on Linux",
+            "number":194
+        },
+        {
+            "title":"Added a firstrun and upgrades page"
+        },
+        {
+            "title":"Migrate to different update host",
+            "number":218
+        }
+    ],
+    "openstage":
+    {
+        "artist":"Test",
+        "picture":"",
+        "bio":"asf",
+        "cover":"",
+        "album":"1",
+        "tracks":
+        [
+            "one",
+            "two"
+        ]
+    }
+}

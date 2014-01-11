@@ -1,0 +1,53 @@
+{
+    "extensions":
+    [
+        {
+            "name":"MLyrics",
+            "url":"https://github.com/FreeleX/MLyrics/raw/master/MLyrics-stable.xpi",
+            "image":"http://static.getnightingale.com/images/mlyrics.png",
+            "description":"Lyrics viewer and editor in the right side pan",
+            "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=mlyrics.png",
+            "id":"{6039188e-d135-11df-bcc9-c7e1ded72085}"
+        },
+        {
+            "name":"SHOUTCast",
+            "url":"http://addon-files.getnightingale.com/xpis/shoutcast-radio-1.0.7.2223.xpi",
+            "image":"http://static.getnightingale.com/images/shoutcast.png",
+            "description":"Directory of SHOUTcast Internet radio streams",
+            "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_shoutcast.png",
+            "id":"shoutcast-radio@songbirdnest.com"
+        },
+        {
+            "name":"Last.fm",
+            "url":"http://addon-files.getnightingale.com/xpis/audioscrobbler-1.0.7.2223.xpi",
+            "image":"http://static.getnightingale.com/images/lastfm.png",
+            "description":"Publish your playback history to Last.fm and listen to Last.fm Radio",
+            "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_lastfm.png",
+            "id":"audioscrobbler@songbirdnest.com"
+        },
+        {
+            "name":"mashTape",
+            "url":"http://addon-files.getnightingale.com/xpis/mashtape-1.1.8.2223.xpi",
+            "image":"http://static.getnightingale.com/images/mashtape.png",
+            "description":"Like your favourite old school mix tape, mix and mash up various web sources for your library enhancing pleasure",
+            "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mashtape.png",
+            "id":"mashTape@songbirdnest.com"
+        }
+    ],
+    "changes":
+    [
+    ],
+    "openstage":
+    {
+        "artist":"Test",
+        "picture":"",
+        "bio":"asf",
+        "cover":"",
+        "album":"1",
+        "tracks":
+        [
+            "one",
+            "two"
+        ]
+    }
+}
