@@ -1,0 +1,3 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^release-notes/([1-9\.]+)$ /release-notes.php?version=$1
