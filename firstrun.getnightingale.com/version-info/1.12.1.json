@@ -99,6 +99,13 @@
         {
             "title":"Migrate to different update host",
             "number":218
+        },
+        {
+            "title":"Fixed updating on Linux",
+            "number":179
+        },
+        {
+            "title":"Fixed mashTape's video tab"
         }
     ],
     "openstage":

@@ -6,10 +6,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link type="text/css" rel="stylesheet" media="screen" href="chrome://songbird-web/content/html.css" />
+        <link type="text/css" rel="stylesheet" media="screen" href="chrome://songbird-web/content/html.css" >
     </head>
     <body class="darkest">
-        <h1>Nightingale <?php echo $_GET['version']; ?> Release Notes</h1>
+        <h2>Nightingale <?php echo $_GET['version']; ?> Release Notes</h2>
         <?php
         if(isset($content)) {
             $list = '<ul>';
@@ -17,10 +17,10 @@
                 $list .= '<li>'.$change->title.'</li>
                 ';
             }
-            echo $list.'</ul>';
+            echo $list.'</ul>',PHP_EOL;
         }
         else {
-            echo "<p>Sorry, we found no release notes for this version</p>";
+            echo "<p>Sorry, we found no release notes for this version</p>",PHP_EOL;
         }
         ?>
     </body>
