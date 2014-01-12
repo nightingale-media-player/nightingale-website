@@ -56,9 +56,9 @@
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <h1 data-l10n-id="firstrun_title">Welcome to Nightingale!</h1>
-                <p data-l10n-id="firstrun_description">You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. Close this tab to access your library.</p>
+                <p data-l10n-id="firstrun_description">You have just started the best music player for the first time! We are proud to bring you the unique combination of a web browser and a media player in one program. Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand it's functionality. Close this tab to access your library.</p>
                 <section class="column">
-                    <h2 data-l10n-id="firstrun_recommendedAdd-ons">Recommended Add-ons</h2>
+                    <h2 data-l10n-id="firstrun_recommendedAdd-ons">Reccommended Add-ons</h2>
                     <ul class="plainlist"><?php
 foreach($content->extensions as $extension) {
     echo '<li class="feature">
@@ -85,14 +85,14 @@ foreach($content->extensions as $extension) {
                             <h3>Migrate your old library</h3>
                             <figure>
                                 <img src="http://static.getnightingale.com/images/songbirdtransition.png" alt="Songbird to Nightingale" data-hdpi>
-                                <figcaption>Nightingale supports migration from lots of players, including Songbird and iTunes. For step by step guides, check out <a href="http://wiki.getnightingale.com/doku.php?id=migration">this article</a>.</figcaption>
+                                <figcaption>Nightingale supports migration from many players, including Songbird and iTunes. For step by step guides, check out <a href="http://wiki.getnightingale.com/doku.php?id=migration">this article</a>.</figcaption>
                             </figure>
                         </li>
                         <li class="feature">
                             <h3>Follow our Blog for Updates!</h3>
                             <figure>
                                 <img src="http://static.getnightingale.com/images/social.png" alt="twitter, Facebook and Google+ Logos">
-                                <figcaption>Always want to know the latest news of the project? Subscribe to our <a href="http://blog.getnightingale.com">blog</a> or follow us on <a href="http://twitter.com/getnightingale">Twitter</a>, <a href="http://plus.google.com/+Getnightingale">Google+</a> or <a href="http://facebook.com/getnightingale">Facebook</a>.</figcaption>
+                                <figcaption>Want to keep up with the latest news from the project? Subscribe to our <a href="http://blog.getnightingale.com">blog</a> or follow us on <a href="http://twitter.com/getnightingale">Twitter</a>, <a href="http://plus.google.com/+Getnightingale">Google+</a> or <a href="http://facebook.com/getnightingale">Facebook</a>.</figcaption>
                             </figure>
                         </li>
                     </ul>';
@@ -168,7 +168,7 @@ foreach($content->extensions as $extension) {
                         </select>
                     </div>
                     <p data-l10n-id="footer_info" data-l10n-args='{"license":"GNU General Public License v2 (GPL v2)"}'>Nightingale is free!<br>
-                       It is an Open Source projcet release under the terms of the GNU General Public License v2 (GPL v2).<br>
+                       Nightingale is an open source projcet released under the terms of the GNU General Public License v2 (GPL v2).<br>
                        For more details, please read the <a href="">license information</a>.
                    </p>
                    <p>
