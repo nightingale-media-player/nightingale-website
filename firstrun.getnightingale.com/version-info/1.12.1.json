@@ -11,7 +11,7 @@
         },
         {
             "name":"MLyrics",
-            "url":"https://github.com/FreeleX/MLyrics/raw/master/MLyrics-stable.xpi",
+            "url":"http://addon-files.getnightingale.com/xpis/MLyrics-1.3.5.xpi",
             "image":"http://static.getnightingale.com/images/mlyrics.png",
             "description":"Lyrics viewer and editor in the right side pane",
             "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=mlyrics.png",
@@ -19,7 +19,7 @@
         },
         {
             "name":"SHOUTCast",
-            "url":"",
+            "url":"http://addon-files.getnightingale.com/xpis/shoutcast-radio-1.0.10.2454.xpi",
             "image":"http://static.getnightingale.com/images/shoutcast.png",
             "description":"Directory of SHOUTcast Internet radio streams",
             "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_shoutcast.png",
@@ -27,7 +27,7 @@
         },
         {
             "name":"Last.fm",
-            "url":"",
+            "url":"http://addon-files.getnightingale.com/xpis/audioscrobbler-1.0.11.2454.xpi",
             "image":"http://static.getnightingale.com/images/lastfm.png",
             "description":"Publish your playback history to Last.fm and listen to Last.fm Radio",
             "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_lastfm.png",
@@ -35,7 +35,7 @@
         },
         {
             "name":"mashTape",
-            "url":"",
+            "url":"http://addon-files.getnightingale.com/xpis/mashTape-1.1.12.2454.xpi",
             "image":"http://static.getnightingale.com/images/mashtape.png",
             "description":"Like your favourite old school mix tape, mix and mash up various web sources for your library enhancing pleasure",
             "icon":"http://wiki.getnightingale.com/lib/exe/fetch.php?media=addon_mashtape.png",

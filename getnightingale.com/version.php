@@ -12,17 +12,17 @@ $which = $_GET['os'];
 
 // I know, doing this with a DB would be more fun. But this is enought.
 
-$version = "1.12"; // actual version number
+$version = "1.12.1"; // current version number
 
 // Installer / download URLs
-$urls[0] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_linux-i686.tar.bz2/download"; // Linux_32 URL
-$urls[1] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_linux-x86_64.tar.bz2/download"; // Linux_64 URL
-$urls[7] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_ubuntu-i686.tar.bz2/download"; // Linux_32 gnome URL
-$urls[8] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_ubuntu-x86_64.tar.bz2/download"; // Linux_64 gnome URL
+$urls[0] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_linux-i686.tar.bz2/download"; // Linux_32 URL
+$urls[1] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_linux-x86_64.tar.bz2/download"; // Linux_64 URL
+$urls[7] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_ubuntu-i686.tar.bz2/download"; // Linux_32 gnome URL
+$urls[8] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_ubuntu-x86_64.tar.bz2/download"; // Linux_64 gnome URL
 $urls[5] = "ppa:nightingaleteam/nightingale-release"; // Ubuntu PPA
 $urls[6] = "https://aur.archlinux.org/packages.php?ID=52721"; //Archlinux
-$urls[2] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_windows-i686.exe/download"; // Windows_32 URL
-$urls[3] = "http://sourceforge.net/projects/ngale/files/1.12.0-Release/Nightingale_1.12-2432_macosx-i686.dmg/download"; // MAC_32 URL
+$urls[2] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_windows-i686.exe/download"; // Windows_32 URL
+$urls[3] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_macosx-i686.dmg/download"; // MAC_32 URL
 $urls[4] = "http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.12"; // Tarball URL
 
 // Screenshot URLs, please use images in the dimension of 623x466px (thats a resized 4:3 screenshot)
