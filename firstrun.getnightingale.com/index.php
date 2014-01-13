@@ -56,7 +56,7 @@
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <h1 data-l10n-id="firstrun_title">Welcome to Nightingale!</h1>
-                <p data-l10n-id="firstrun_description">You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one programm. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. Close this tab to access your library.</p>
+                <p data-l10n-id="firstrun_description">You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one program. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. Close this tab to access your library.</p>
                 <section class="column">
                     <h2 data-l10n-id="firstrun_recommendedAdd-ons">Recommended Add-ons</h2>
                     <ul class="plainlist"><?php
