@@ -23,7 +23,7 @@ $urls[5] = "ppa:nightingaleteam/nightingale-release"; // Ubuntu PPA
 $urls[6] = "https://aur.archlinux.org/packages.php?ID=52721"; //Archlinux
 $urls[2] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_windows-i686.exe/download"; // Windows_32 URL
 $urls[3] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_macosx-i686.dmg/download"; // MAC_32 URL
-$urls[4] = "http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.12"; // Tarball URL
+$urls[4] = "http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.12.1"; // Tarball URL
 
 // Screenshot URLs, please use images in the dimension of 623x466px (thats a resized 4:3 screenshot)
 $images[0] = "http://static.getnightingale.com/img/linux-screenshot.png"; // Linuxscreenshot
