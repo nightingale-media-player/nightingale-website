@@ -38,6 +38,9 @@
             <script src="http://static.getnightingale.com/javascript/html5shiv.js"></script>
         <![endif]-->
         
+        <!-- l10n -->
+        <script type="text/javascript" src="http://static.getnightingale.com/javascript/l10n.js"></script>
+        <link rel="prefetch" type="application/l10n" href="http://static.getnightingale.com/l10n/locales.ini" >
         <script type="text/javascript" src="http://static.getnightingale.com/javascript/base.js"></script>
         
     </head>
@@ -109,7 +112,7 @@ foreach($content->extensions as $extension) {
                             <h3 data-l10n-id="firstrun_gettingStarted_sync_title">Sync your Music Player</h3>
                             <figure>
                                 <img src="http://static.getnightingale.com/images/sync.png" alt="Nightingale Folder Sync" data-l10n-id="firstrun_gettingStarted_sync_image">
-                                <figcaption data-l10n-id="firstrun_gettingStarted_sync_description">Keep your computer\'s library in sync with you Music Player, be it a mobile phone or an mp3 player. The interface is confusing to you? Nightingale doesn\'t detect your device? Visit <a href="chrome://foldersync/content/manual/en/index.htm"> this page</a> for help.</figcaption>
+                                <figcaption data-l10n-id="firstrun_gettingStarted_sync_description">Keep your computer\'s library in sync with your Music Player, be it a mobile phone or an mp3 player. The interface is confusing to you? Nightingale doesn\'t detect your device? Open the manual from the Synchronization view for help.</figcaption>
                             </figure>
                         </li>
                     </ul>';
@@ -185,7 +188,7 @@ foreach($content->extensions as $extension) {
                         </select>
                     </div>
                     <p data-l10n-id="footer_info" data-l10n-args='{"license":"GNU General Public License v2 (GPL v2)"}'>Nightingale is free!<br>
-                       It is an Open Source projcet release under the terms of the GNU General Public License v2 (GPL v2).<br>
+                       It is an Open Source project released under the terms of the GNU General Public License v2 (GPL v2).<br>
                        For more details, please read the <a href="">license information</a>.
                    </p>
                    <p>
