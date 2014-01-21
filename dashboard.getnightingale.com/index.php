@@ -16,25 +16,30 @@
             <script src="http://static.getnightingale.com/javascript/html5shiv.js"></script>
         <![endif]-->
         
-        <script type="text/javascript" src="http://static.getnightingale.com/javascript/base.js"></script>
+        <!-- scripts -->
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/d3.v3.min.js"></script>
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/statGraphs.js"></script>
+        
+        <!-- l10n -->
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/l10n.js"></script>
+        <link rel="prefetch" type="application/l10n" href="../static.getnightingale.com/l10n/locales.ini" >
         
         <!-- status dashboard scripts -->
-        <script type="text/javascript" src="http://static.getnightingale.com/javascript/crowd-dashboard.js"></script>
+        <script type="text/javascript" src="../static.getnightingale.com/javascript/crowd-dashboard.js"></script>
         <script type="text/javascript">
             "use strict";
 
             var statusDashboard;
-            window.onload = function() {
-                // call the default onload
-                init();
-                
+            
+            window.onload = function() {                
                 function loadDataForDashboard(fileURL,dashboard) {
                     var xhr = new XMLHttpRequest();
                     xhr.onreadystatechange = function() {
                         if( xhr.readyState == 4 && xhr.status != 0 && xhr.status < 400 )
-                            dashboard.setServers(JSON.parse(xhr.response));
+                            dashboard.servers = JSON.parse(xhr.response);
                         else
-                            dashboard.setServers([]);
+                            dashboard.servers = [];
                     };
 
                     xhr.open('GET',fileURL);
@@ -42,13 +47,102 @@
                 }
 
                 statusDashboard = new Dashboard();
+                statusDashboard.loadingString = 'Checking Statuses...';
                 loadDataForDashboard("http://static.getnightingale.com/javascript/servers.json",statusDashboard);
+                
+                d3.json('http://dashboard.getnightingale.com/get_json.php?type=osDistribution', function(error, data) {
+                    if(!error) {
+                        var svg = d3.select("#osPie");
+                        
+                        setupPie(svg);
+                        drawPie(svg,data,'label');
+                    }
+                });
+                d3.json('http://dashboard.getnightingale.com/get_json.php?type=versionInfo', function(error, data) {
+                    if(!error) {
+                        var svg = d3.select("#installPie");
+                        
+                        setupPie(svg);
+                        drawPie(svg,data.versionPie,'name');
+                        d3.select("#totalCount").datum(data).text(countText);
+                    }
+                });
+                
+                d3.json('http://dashboard.getnightingale.com/get_json.php?type=versionGraph', function(error, data){
+                    if(!error) {
+                        var svg = d3.select("#versionGraph");
+                        
+                        setupLineGraph(svg);
+                        drawLineGraph(svg,sortVersionGraphData(data));
+                    }
+                });
+                d3.json('http://dashboard.getnightingale.com/get_json.php?type=installsGraph', function(error, data){
+                    if(!error) {
+                        var svg = d3.select("#installsGraph");
+                        
+                        setupLineGraph(svg);
+                        drawLineGraph(svg,sortInstallsGraphData(data));
+                    }
+                });
+                
+                window.setInterval(refresh,'180000');
+                
+                // make sure the language gets adjusted everywhere when it changes
+                addEventListenerLegacy(document, "localized", function() {
+                    statusDashboard.loadingString = document.webL10n.get('dashboard_status_loading',null,'Checking Statuses...');
+                    statusDashboard.locationConnector = ' '+document.webL10n.get('dashboard_status_locationConnector',null,'in')+' ';
+                    refresh();
+                }, false);
             };
-
-            function refresh(dashboard) {
-                dashboard.checkServers();
+            
+            function refresh() {
+                statusDashboard.checkServers();
+                
+                d3.json('http://dashboard.getnightingale.com/get_json.php?type=osDistribution&lang='+document.webL10n.getLanguage(), function(error, data) {
+                    if(!error)
+                        drawPie(d3.select("#osPie"),data,'label');
+                });
+                d3.json('http://dashboard.getnightingale.com/get_json.php?type=versionInfo&lang='+document.webL10n.getLanguage(), function(error, data) {
+                    if(!error) {
+                        drawPie(d3.select("#installPie"),data.versionPie,'name');
+                        d3.select("#totalCount").datum(data).text(countText);
+                    }
+                });
+                d3.json('http://dashboard.getnightingale.com/get_json.php?type=versionGraph&lang='+document.webL10n.getLanguage(), function(error, data){
+                    if(!error)
+                        drawLineGraph(d3.select("#versionGraph"),sortVersionGraphData(data));
+                });
+                d3.json('http://dashboard.getnightingale.com/get_json.php?type=installsGraph&lang='+document.webL10n.getLanguage(), function(error, data){
+                    if(!error)
+                        drawLineGraph(d3.select("#installsGraph"),sortInstallsGraphData(data));
+                });
             }
-        </script>        
+        </script>
+        <style>
+            .linegraph .axis path,
+            .linegraph .axis line {
+                fill: none;
+                stroke: #000;
+                shape-rendering: crispEdges;
+            }
+            
+            .linegraph .line {
+                fill: none;
+                stroke-width: 1.5px;
+            }
+            
+            .linegraph {
+                max-width: 703px;
+                width: 100%;
+                height: 320px;
+            }
+            
+            .piegraph {
+                max-width: 240px;
+                width: 100%;
+                height: 240px;
+            }
+        </style>
     </head>
     <body>
         <div id="ngalemainheadwrapper" class="wrapper">
@@ -74,26 +168,29 @@
         <div class="wrapper" id="wrapper">
             <article id="main" class="container" role="main">
                 <section class="twocolumns">
-                    <h1>Statistics</h1>
-                    <h2>Installations &amp; Upgrades</h2>
-                    <img src="get_image.php?var=Type"  class="twocolumnimage piwik-image">
-                    <h2>Version</h2>
-                    <img src="get_image.php?var=Version"  class="twocolumnimage piwik-image">
+                    <h1 data-l10n-id="dashboard_stats_title">Statistics</h1>
+                    <h2 data-l10n-id="dashboard_stats_installs_title">Installations &amp; Upgrades</h2>
+                    <svg id="installsGraph" class="linegraph"></svg>
+                    <h2 data-l10n-id="dashboard_stats_version_title">Version</h2>
+                    <svg id="versionGraph" class="linegraph"></svg>
+                    <h2 data-l10n-id="dashboard_stats_current_title">Current Version</h2>
+                    <svg id="osPie" class="piegraph"></svg>
+                    <svg id="installPie" class="piegraph"></svg>
+                    <p id="totalCount" data-l10n-id="dashboard_stats_current_loading">Loading Total Profiles Count...</p>
                 </section>
                 <section class="column omega">
-                    <h1>Services Status</h1>
-                    <button onclick="refresh(statusDashboard);">Refresh</button>
+                    <h1 data-l10n-id="dashboard_status_title">Services Status</h1>
                     <div id="crowd-dashboard-status-list" class="plainlist">
                     </div>
                 </section>
                 <section class="column">
-                    <h1>Other Analytics</h1>
+                    <h1 data-l10n-id="dashboard_other_title">Other Analytics</h1>
                     <ul>
-                        <li><a href="https://www.facebook.com/getnightingale?sk=insights">Facebook Insights</a></li>
-                        <li><a href="https://github.com/nightingale-media-player/nightingale-hacking/graphs/traffic">nightingale-hacking Repository Stats</a></li>
-                        <li><a href="http://sourceforge.net/projects/ngale/files/stats/timeline">Sourceforge Download Stats</a></li>
-                        <li><a href="http://humanoids.be/thinkup">ThinkUp Social Anayltics</a></li>
-                        <li><a href="http://stats.getnightingale.com">Piwik Analytics</a></li>
+                        <li><a href="https://www.facebook.com/getnightingale?sk=insights" data-l10n-id="dashboard_other_facebook">Facebook Insights</a></li>
+                        <li><a href="https://github.com/nightingale-media-player/nightingale-hacking/graphs/traffic" data-l10n-id="dashboard_other_github">nightingale-hacking Repository Stats</a></li>
+                        <li><a href="http://sourceforge.net/projects/ngale/files/stats/timeline" data-l10n-id="dashboard_other_sourceforge">Sourceforge Download Stats</a></li>
+                        <li><a href="http://humanoids.be/thinkup" data-l10n-id="dashboard_other_thinkup">ThinkUp Social Anayltics</a></li>
+                        <li><a href="http://stats.getnightingale.com" data-l10n-id="dashboard_other_piwik">Piwik Website Visitor Statistics</a></li>
                     </ul>
                 </section>
             </article>

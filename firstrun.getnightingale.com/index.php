@@ -1,10 +1,19 @@
 <?php
     $version;
-    if(preg_match('/Songbird\//', $_SERVER['HTTP_USER_AGENT']))
+    $isNightingale = preg_match('/(Songbird|Nightingale)\/([0-9\.ab]+)/', $_SERVER['HTTP_USER_AGENT'], $matches);
+    $version = $matches[2];
+    if($isNightingale)
     {
-        preg_match('/Songbird\/([1-9\.]+)/', $_SERVER['HTTP_USER_AGENT'], $matches);
-        $version = $matches[1];
-        $content = json_decode(file_get_contents('version-info/'.$version.'.json'));
+        if(file_exists('version-info/'.$version.'.json'))
+            $content = json_decode(file_get_contents('version-info/'.$version.'.json'));
+        else {
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, 'http://getnightingale.com/version.php?as=num');
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $currentVersion = curl_exec($ch);
+            curl_close($ch);
+            $content = json_decode(file_get_contents('version-info/'.$currentVersion.'.json'));   
+        }
     }
     else
     {
@@ -61,11 +70,12 @@
                     <h2 data-l10n-id="firstrun_recommendedAdd-ons">Recommended Add-ons</h2>
                     <ul class="plainlist"><?php
 foreach($content->extensions as $extension) {
+    $extensionBaseId = 'firstrun_recommendedAdd-ons_'.$extension->name.'_';
     echo '<li class="feature">
-            <h3>'.$extension->name.' <a data-l10n-id="firstrun_recommendedAdd-ons_install" href="'.$extension->url.'" class="normalize">install</a></h3>
+            <h3 data-l10n-id="'.$extensionBaseId.'title">'.$extension->name.'</h3><a data-l10n-id="firstrun_recommendedAdd-ons_install" href="'.$extension->url.'">install</a>
             <figure>
-                <img src="'.$extension->image.'" alt="'.$extension->name.' Preview" data-hdpi>
-                <figcaption>'.$extension->description.'</figcaption>
+                <img src="'.$extension->image.'" alt="'.$extension->name.' Preview" data-hdpi data-l10n-id="firstrun_recommendedAdd-ons_image" data-l10n-args="{\"name\":\"'.$extension->name.'\"">
+                <figcaption data-l10n-id="'.$extensionBaseId.'description">'.$extension->description.'</figcaption>
             </figure>
         </li>';
 }
@@ -82,17 +92,24 @@ foreach($content->extensions as $extension) {
                     <!-- for more help visit the forum -->
                     <ul class="plainlist">
                         <li class="feature">
-                            <h3>Migrate your old library</h3>
+                            <h3 data-l10n-id="firstrun_gettingStarted_migration_title">Migrate your old library</h3>
                             <figure>
-                                <img src="http://static.getnightingale.com/images/songbirdtransition.png" alt="Songbird to Nightingale" data-hdpi>
-                                <figcaption>Nightingale supports migration from lots of players, including Songbird and iTunes. For step by step guides, check out <a href="http://wiki.getnightingale.com/doku.php?id=migration">this article</a>.</figcaption>
+                                <img src="http://static.getnightingale.com/images/songbirdtransition.png" alt="Songbird to Nightingale" data-hdpi data-l10n-id="firstrun_gettingStarted_migration_image">
+                                <figcaption data-l10n-id="firstrun_gettingStarted_migration_description">Nightingale supports migration from lots of players, including Songbird and iTunes. For step by step guides, check out <a href="http://wiki.getnightingale.com/doku.php?id=migration" title="Migration">this article</a>.</figcaption>
                             </figure>
                         </li>
                         <li class="feature">
-                            <h3>Follow our Blog for Updates!</h3>
+                            <h3 data-l10n-id="firstrun_gettingStarted_updates_title">Follow our Blog for Updates!</h3>
                             <figure>
-                                <img src="http://static.getnightingale.com/images/social.png" alt="twitter, Facebook and Google+ Logos">
-                                <figcaption>Always want to know the latest news of the project? Subscribe to our <a href="http://blog.getnightingale.com">blog</a> or follow us on <a href="http://twitter.com/getnightingale">Twitter</a>, <a href="http://plus.google.com/+Getnightingale">Google+</a> or <a href="http://facebook.com/getnightingale">Facebook</a>.</figcaption>
+                                <img src="http://static.getnightingale.com/images/social.png" alt="Twitter, Facebook and Google+ Logos" data-l10n-id="firstrun_gettingStarted_updates_image">
+                                <figcaption data-l10n-id="firstrun_gettingStarted_updates_description">Always want to know the latest news of the project? Subscribe to our <a href="http://blog.getnightingale.com">blog</a> or follow us on <a href="http://twitter.com/getnightingale">Twitter</a>, <a href="http://plus.google.com/+Getnightingale">Google+</a> or <a href="http://facebook.com/getnightingale">Facebook</a>.</figcaption>
+                            </figure>
+                        </li>
+                        <li class="feature">
+                            <h3 data-l10n-id="firstrun_gettingStarted_sync_title">Sync your Music Player</h3>
+                            <figure>
+                                <img src="http://static.getnightingale.com/images/sync.png" alt="Nightingale Folder Sync" data-l10n-id="firstrun_gettingStarted_sync_image">
+                                <figcaption data-l10n-id="firstrun_gettingStarted_sync_description">Keep your computer\'s library in sync with you Music Player, be it a mobile phone or an mp3 player. The interface is confusing to you? Nightingale doesn\'t detect your device? Visit <a href="chrome://foldersync/content/manual/en/index.htm"> this page</a> for help.</figcaption>
                             </figure>
                         </li>
                     </ul>';
@@ -122,7 +139,7 @@ foreach($content->extensions as $extension) {
                 <section class="column omega">
                 <?php
                     if(!array_key_exists('openstage',$_GET))
-                        echo '<h2 data-l10n-id="firstrunSoon">Coming Soon!</h2>';
+                        echo '<h2 data-l10n-id="firstrun_os_soon">Coming Soon!</h2>';
                     else {
                         $tracks = '';
                         foreach($content->openstage->tracks as $track) {
@@ -133,7 +150,7 @@ foreach($content->extensions as $extension) {
                     <!--Project Open Stage
                          For more information visit http://wiki.getnightingale.com/some.php?get=kitchen:open_stage -->
 
-                    <h2 data-l10n-id="firstrunArtist">Featured Artist</h2>
+                    <h2 data-l10n-id="firstrun_os_artist">Featured Artist</h2>
                     <ul class="plainlist">
                         <li class="feature">
                             <h3>'.$content->openstage->artist.'</h3>
@@ -149,7 +166,7 @@ foreach($content->extensions as $extension) {
                                     '.$tracks.'</ol></figcaption>
                             </figure>
                         </li><li class="feature">
-                            <h3 data-l10n-id="firstrunDiscoverArtists">Discover more Artists</h3>
+                            <h3 data-l10n-id="firstrun_os_discoverArtists">Discover more Artists</h3>
                             <p>Artists of previous releases. Maybe a list of the last few or just a link to some sort of history page.</p>
                         </li>
                     </ul>';

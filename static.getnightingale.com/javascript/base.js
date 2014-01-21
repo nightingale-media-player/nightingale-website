@@ -31,6 +31,15 @@ function removeEventListenerLegacy(obj, evt, func) {
     }
 }
 
+function containsLanguage(options, lang) {
+    for(var o = 0; o < options.length; o++) {
+        if(options.item(o).value === lang) {
+            return true;
+        }
+    }
+    return false;
+}
+
 function hideOverlay() {
     hide("overlay");
     hide("instructions");
@@ -39,9 +48,41 @@ function hideOverlay() {
         removeEventListenerLegacy(document.getElementById("instructions"),"click",hideOverlay);
 }
 
+function initl10n() {
+    if(!selectLoaded) {
+        var l10n = document.webL10n;
+        
+        // add the languages to the dropdown
+        var langs = l10n.getLanguages(),
+            select = document.getElementById('l10nselect'), n;
+        for(var l = 0;l<langs.length;l++) {
+            if(typeof l !== 'function' && !containsLanguage(select.options,langs[l])) {
+                n = document.createElement("option");
+                n.text = l10n.get(langs[l]+'Name');
+                n.value = langs[l];
+                select.appendChild(n);
+            }
+        }
+        
+        // set current language
+        select.value = l10n.getLanguage(); // not working with IE<9
+        
+        // chane document language when selection is changed
+        select.onchange = function() {
+            l10n.setLanguage(this.value);
+        };
+        
+        selectLoaded = true;
+    }
+}
+
+var selectLoaded = false;
+
+addEventListenerLegacy(document, "localized", function() {initl10n();}, false);
+
 window.onload = init;
 
-function init() {  
+function init() {
     addEventListenerLegacy(document.getElementById("expandngalenav"),"click",toggleNav);
     
     //lazyload hiDPI images
