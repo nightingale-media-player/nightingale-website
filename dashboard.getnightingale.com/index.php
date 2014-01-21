@@ -17,16 +17,16 @@
         <![endif]-->
         
         <!-- scripts -->
-        <script type="text/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
-        <script type="text/javascript" src="../static.getnightingale.com/javascript/d3.v3.min.js"></script>
-        <script type="text/javascript" src="../static.getnightingale.com/javascript/statGraphs.js"></script>
+        <script type="text/javascript" src="http://static.getnightingale.com/javascript/base.js"></script>
+        <script type="text/javascript" src="http://static.getnightingale.com/javascript/d3.v3.min.js"></script>
+        <script type="text/javascript" src="http://static.getnightingale.com/javascript/statGraphs.js"></script>
         
         <!-- l10n -->
-        <script type="text/javascript" src="../static.getnightingale.com/javascript/l10n.js"></script>
-        <link rel="prefetch" type="application/l10n" href="../static.getnightingale.com/l10n/locales.ini" >
+        <script type="text/javascript" src="http://static.getnightingale.com/javascript/l10n.js"></script>
+        <link rel="prefetch" type="application/l10n" href="http://static.getnightingale.com/l10n/locales.ini" >
         
         <!-- status dashboard scripts -->
-        <script type="text/javascript" src="../static.getnightingale.com/javascript/crowd-dashboard.js"></script>
+        <script type="text/javascript" src="http://static.getnightingale.com/javascript/crowd-dashboard.js"></script>
         <script type="text/javascript">
             "use strict";
 
