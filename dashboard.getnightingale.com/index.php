@@ -118,31 +118,6 @@
                 });
             }
         </script>
-        <style>
-            .linegraph .axis path,
-            .linegraph .axis line {
-                fill: none;
-                stroke: #000;
-                shape-rendering: crispEdges;
-            }
-            
-            .linegraph .line {
-                fill: none;
-                stroke-width: 1.5px;
-            }
-            
-            .linegraph {
-                max-width: 703px;
-                width: 100%;
-                height: 320px;
-            }
-            
-            .piegraph {
-                max-width: 240px;
-                width: 100%;
-                height: 240px;
-            }
-        </style>
     </head>
     <body>
         <div id="ngalemainheadwrapper" class="wrapper">
