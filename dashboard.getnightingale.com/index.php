@@ -181,7 +181,7 @@
                     </div>
                     <p data-l10n-id="footer_info" data-l10n-args='{"license":"GNU General Public License v2 (GPL v2)"}'>Nightingale is free!<br>
                        It is an Open Source project released under the terms of the GNU General Public License v2 (GPL v2).<br>
-                       For more details, please read the <a href="">license information</a>.
+                       For more details, please read the <a href="http://wiki.getnightingale.com/doku.php?id=licensing">license information</a>.
                    </p>
                    <p>
                        <b data-l10n-id="footer_social">Follow us!</b><br>
