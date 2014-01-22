@@ -120,14 +120,14 @@ foreach($content->extensions as $extension) {
                     else
                     {
                         $li = '';
-                        foreach($content->changes as $change) {
+                        foreach($content->changes as $i => $change) {
                             if(isset($change->number)) {
                                 $gh = '<a href="http://github.com/nightingale-media-player/nightingale-hacking/issues/'.$change->number.'">#'.$change->number.'</a> ';
                             }
                             else {
                                 $gh = '';
                             }
-                            $li .= '<li>'.$gh.$change->title.'</li>
+                            $li .= '<li data-l10n-id="releasenotes_'.$i.'">'.$gh.$change->title.'</li>
                             ';
                         }
                         echo '
