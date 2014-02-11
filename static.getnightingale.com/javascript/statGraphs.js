@@ -80,7 +80,8 @@ function drawLineGraph(svg, data) {
     
     var xAxis = d3.svg.axis()
         .scale(x)
-        .orient("bottom");
+        .orient("bottom")
+        .ticks(d3.time.week);
     
     var yAxis = d3.svg.axis()
         .scale(y)
