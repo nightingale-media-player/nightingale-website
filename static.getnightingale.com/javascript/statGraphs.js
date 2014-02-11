@@ -156,13 +156,14 @@ function sortVersionGraphData(data) {
 }
     
 function sortInstallsGraphData(data) {
-    var datasets = ["installs","updates"], dates = [], graphData = [];
+    var datasets = ["installs","updates","downloads"], dates = [], graphData = [];
     
     dates = d3.keys(data.installs).map(function(date) {return parseDate(date);});
     
     var entries = {};
-    entries.installs = d3.entries(data.installs),
+    entries.installs = d3.entries(data.installs);
     entries.updates  = d3.entries(data.updates);
+    entries.downloads= d3.entries(data.downloads);
     
     graphData = datasets.map(function(set) {
        return {

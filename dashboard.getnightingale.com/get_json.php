@@ -22,6 +22,8 @@ function getURL($type, $version = 0) {
     switch($type) {
         case 'installs': 
             return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getUniqueVisitors&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=day&date='.date('Y-m-d',strtotime('-1 month')).',today&format=JSON&segment=customVariableValue1==install';
+        case 'downloads':
+            return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getVisits&idSite=2&language='.$lang.'&token_auth='.$token.'&period=day&date='.date('Y-m-d',strtotime('-1 month')).',today&format=JSON&segment=visitConvertedGoalId==1';
         case 'infiniteInstalls':
             return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getUniqueVisitors&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=day&date=2014-01-12,today&format=JSON&segment=customVariableValue1==install;customVariableValue2=='.$version;
         case 'updates':
@@ -85,6 +87,7 @@ function getData($url) {
         case 'installsGraph':
             $return->installs = getData(getURL('installs'));
             $return->updates = getData(getURL('updates'));
+            $return->downloads = getData(getURL('downloads'));
             echo json_encode($return);
             break;
         default:
