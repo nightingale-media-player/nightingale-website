@@ -18,20 +18,22 @@ function getVersion() {
 
 function getURL($type, $version = 0) {
     global $siteId, $token;
+    $monthAgo = date('Y-m-d',strtotime('-1 month'));
+    
     
     switch($type) {
         case 'installs': 
-            return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getUniqueVisitors&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=day&date='.date('Y-m-d',strtotime('-1 month')).',today&format=JSON&segment=customVariableValue1==install';
+            return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getUniqueVisitors&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=day&date='.$monthAgo.',today&format=JSON&segment=customVariableValue1==install';
         case 'downloads':
-            return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getVisits&idSite=2&language='.$lang.'&token_auth='.$token.'&period=day&date='.date('Y-m-d',strtotime('-1 month')).',today&format=JSON&segment=visitConvertedGoalId==1';
+            return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getVisits&idSite=2&language='.$lang.'&token_auth='.$token.'&period=day&date='.$monthAgo.',today&format=JSON&segment=visitConvertedGoalId==1';
         case 'infiniteInstalls':
             return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getUniqueVisitors&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=day&date=2014-01-12,today&format=JSON&segment=customVariableValue1==install;customVariableValue2=='.$version;
         case 'updates':
-            return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getUniqueVisitors&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=day&date='.date('Y-m-d',strtotime('-1month')).',today&format=JSON&segment=customVariableValue1==upgrade';
+            return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getUniqueVisitors&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=day&date='.$monthAgo.',today&format=JSON&segment=customVariableValue1==upgrade';
         case 'infiniteUpdates':
             return 'http://stats.getnightingale.com/?module=API&method=VisitsSummary.getUniqueVisitors&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=day&date=2014-01-12,today&format=JSON&segment=customVariableValue1==upgrade;customVariableValue2=='.$version;
         case 'versionGraph':
-            return 'http://stats.getnightingale.com/?module=API&method=CustomVariables.getCustomVariables&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=day&date=2014-01-12,today&flat=1&format=JSON&filter_pattern_recursive=Version*';
+            return 'http://stats.getnightingale.com/?module=API&method=CustomVariables.getCustomVariables&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=day&date='.$monthAgo.',today&flat=1&format=JSON&filter_pattern_recursive=Version*';
         case 'osDistribution':
             return 'http://stats.getnightingale.com/?module=API&method=UserSettings.getOSFamily&idSite='.$siteId.'&language='.$lang.'&token_auth='.$token.'&period=range&date=2014-01-12,today&format=JSON&segment=customVariableValue2=='.getVersion();
         default:
