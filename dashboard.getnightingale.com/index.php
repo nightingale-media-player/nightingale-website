@@ -130,7 +130,7 @@
                         <li><a href="http://addons.getnightingale.com" data-l10n-id="add-ons">Add-ons</a></li>
                         <li><a href="http://forum.getnightingale.com" data-l10n-id="forum">Forum</a></li>
                         <li><a href="http://wiki.getnightingale.com" data-l10n-id="wiki">Wiki</a></li>
-                        <!-- no. <li><a href="http://developers.getnightingale.com" data-l10n-id="developers">Developers</a></li>-->
+                        <!-- no. <li><a href="http://developer.getnightingale.com" data-l10n-id="developers">Developers</a></li>-->
                     </ul>
                 </nav>
                 <figure id="headerlogo" role="banner">
@@ -161,7 +161,7 @@
                 <section class="column omega">
                     <h1 data-l10n-id="dashboard_unitTests_title">Unit Tests</h1>
                     <a href="https://travis-ci.org/nightingale-media-player/nightingale-hacking" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
-                        <img src="https://travis-ci.org/nightingale-media-player/nightingale-hacking.png?branch=sb-trunk-oldxul">
+                        <img src="https://travis-ci.org/nightingale-media-player/nightingale-hacking.png?branch=sb-trunk-oldxul" height="18">
                     </a>
                 </section>
                 <section class="column">

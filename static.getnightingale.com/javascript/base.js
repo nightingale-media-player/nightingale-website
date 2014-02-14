@@ -78,9 +78,9 @@ function initl10n() {
 
 var selectLoaded = false;
 
-addEventListenerLegacy(document, "localized", function() {initl10n();}, false);
+addEventListenerLegacy(document, "localized", initl10n, false);
 
-window.onload = init;
+addEventListenerLegacy(window, 'load', init, false);
 
 function init() {
     addEventListenerLegacy(document.getElementById("expandngalenav"),"click",toggleNav);
