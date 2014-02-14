@@ -153,10 +153,16 @@
                     <svg id="installPie" class="piegraph"></svg>
                     <p id="totalCount" data-l10n-id="dashboard_stats_current_loading">Loading Total Profiles Count...</p>
                 </section>
-                <section class="column omega">
+                <section class="column alt-full omega">
                     <h1 data-l10n-id="dashboard_status_title">Services Status</h1>
                     <div id="crowd-dashboard-status-list" class="plainlist">
                     </div>
+                </section>
+                <section class="column omega">
+                    <h1 data-l10n-id="dashboard_unitTests_title">Unit Tests</h1>
+                    <a href="https://travis-ci.org/nightingale-media-player/nightingale-hacking" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
+                        <img src="https://travis-ci.org/nightingale-media-player/nightingale-hacking.png?branch=sb-trunk-oldxul">
+                    </a>
                 </section>
                 <section class="column">
                     <h1 data-l10n-id="dashboard_other_title">Other Analytics</h1>
