@@ -17,7 +17,8 @@
             {
                 "name":"IRC Logbot 'SNAILBot'",
                 "url":"http://irclogs.jackgrigg.com/irc.mozilla.org/nightingale",
-                "location":"USA"
+                "location":"USA",
+                "timeout":7000
             },
             {
                 "name":"Git Repository",
@@ -33,7 +34,8 @@
             {
                 "name":"OpenGrok Codesearch",
                 "url":"http://src.getnightingale.com",
-                "location":"Saint-Nazaire, France"
+                "location":"Saint-Nazaire, France",
+                "timeout":7000
             }
         ]
     },
@@ -45,12 +47,14 @@
             {
                 "name":"Linux i686",
                 "url":"http://flc.turmel.info/ngale",
-                "location":"Fontenay le Comte, France"
+                "location":"Fontenay le Comte, France",
+                "timeout":7000
             },
             {
                 "name":"Linux x86_64",
                 "url":"http://nzf.turmel.info/ngale",
-                "location":"Saint Nazaire, France"
+                "location":"Saint Nazaire, France",
+                "timeout":7000
             },
             {
                 "name":"Windows",

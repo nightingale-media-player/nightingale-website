@@ -1,28 +1,21 @@
 /**
  *  Crowd Dashboard Javascript
- *  Created by Martin Giger in 2013
+ *  Created by Martin Giger in 2014
  *  Licensed under GPLv2
  *  Visit the GitHub project: http://freaktechnik.github.io/Crowd-Dashboard
- *  Version 1.1
+ *  Version 1.2.0
  *  
  *  Credits for the status ping image hack idea to (even tough this might not be the original source): http://jsfiddle.net/Maslow/GSSCD/
  */
- 
+
+(function(global) {
 "use strict";
 
-Dashboard.prototype.totalCount = 0;
-Dashboard.prototype.readyCount = -1;
-Dashboard.prototype.locationConnector = " in ";
-Dashboard.prototype.locationURL = "http://maps.google.com/?q=";
-Dashboard.prototype.loadingString = "Loading...";
-Dashboard.prototype.supportedEvents = ['ready', 'empty'];
-Dashboard.prototype.passiveMode = false;
-
 /*
-// Cinstructor
+// Constructor
    constructs the dashboard, checks the servers if a server array is passed. The second argument allows the Dashboard to be output to a specific element.
 */
-function Dashboard(servers, passive, elementId) {
+global.Dashboard = function(servers, passive, elementId) {
     if( servers ) {
         this.servers = servers;
 
@@ -117,6 +110,14 @@ function Dashboard(servers, passive, elementId) {
     });
 }
 
+Dashboard.prototype.totalCount = 0;
+Dashboard.prototype.readyCount = -1;
+Dashboard.prototype.locationConnector = " in ";
+Dashboard.prototype.locationURL = "http://maps.google.com/?q=";
+Dashboard.prototype.loadingString = "Loading...";
+Dashboard.prototype.supportedEvents = ['ready', 'empty'];
+Dashboard.prototype.passiveMode = false;
+
 /*
 // Methods
 */
@@ -141,12 +142,13 @@ Dashboard.prototype.checkServer = function(pageObj) {
     if(pageObj.hasOwnProperty("hasStatusAPI") && pageObj.hasStatusAPI)
         getStatusAPI(pageObj.url, this.addServerToList, pageObj.statusAPI);
     else
-        getStatus(pageObj.url, this.addServerToList);
+        getStatus(pageObj.url, this.addServerToList, pageObj.timeout);
 
     var that = this;
-    function getStatus(url, callback) {
-        var img = new Image();
-        var done = false;
+    function getStatus(url, callback, timeout) {
+        timeout = timeout | 5000;
+        var img = new Image(),
+            done = false;
 
         img.onload = function() {
             callback.call( that, url, true );
@@ -161,7 +163,7 @@ Dashboard.prototype.checkServer = function(pageObj) {
         setTimeout(function() {
             if(!done)
                 callback.call( that, url, false );
-        }, 5000);
+        }, timeout);
 
         var rand = (url.indexOf('?')!=-1?'&':'?')+'timestamp='+Date.now();
         img.src = url+rand;
@@ -188,6 +190,7 @@ Dashboard.prototype.checkServer = function(pageObj) {
         window[funcName] = function(response) {
             document.body.removeChild(script);
             callback.call( that, url, response[statusAPI.propertyName] != statusAPI.downValue );
+            delete window[funcName];
         }
             
         script.src = statusAPI.url;
@@ -326,4 +329,4 @@ Dashboard.prototype.dispatchEvent = function(d_eventObject) {
         });
     }
 };
- 
+}(this));
