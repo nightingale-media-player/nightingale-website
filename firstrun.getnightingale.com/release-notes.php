@@ -9,7 +9,7 @@
         <link type="text/css" rel="stylesheet" media="screen" href="chrome://songbird-web/content/html.css" >
         
         <script type="text/javascript" src="http://static.getnightingale.com/javascript/l10n.js"></script>
-        <link rel="prefetch" type="application/l10n" href="http://static.getnightingale.com/l10n/locales.ini" >
+        <link rel="prefetch" type="application/l10n" href="http://static.getnightingale.com/l10n/locales<?php echo $_GET['version']; ?>.ini" >
     </head>
     <body class="darkest">
         <h2 data-l10n-id="releasenotes_title" data-l10n-args='{"version":"<?php echo $_GET['version']; ?>"}'>Nightingale <?php echo $_GET['version']; ?> Release Notes</h2>
@@ -17,7 +17,7 @@
         if(isset($content)) {
             $list = '<ul>';
             foreach($content->changes as $i => $change) {
-                $list .= '<li data-l10n-id="releasenotes_'$i.'">'.$change->title.'</li>
+                $list .= '<li data-l10n-id="releasenotes_'.$i.'">'.$change->title.'</li>
                 ';
             }
             echo $list.'</ul>',PHP_EOL;

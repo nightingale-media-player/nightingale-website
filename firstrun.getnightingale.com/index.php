@@ -40,7 +40,7 @@
         
         <!-- l10n -->
         <script type="text/javascript" src="http://static.getnightingale.com/javascript/l10n.js"></script>
-        <link rel="prefetch" type="application/l10n" href="http://static.getnightingale.com/l10n/locales.ini" >
+        <link rel="prefetch" type="application/l10n" href="http://static.getnightingale.com/l10n/locales<?php echo $version; ?>.ini" >
         <script type="text/javascript" src="http://static.getnightingale.com/javascript/base.js"></script>
         
     </head>

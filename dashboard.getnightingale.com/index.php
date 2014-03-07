@@ -160,9 +160,15 @@
                 </section>
                 <section class="column omega">
                     <h1 data-l10n-id="dashboard_unitTests_title">Unit Tests</h1>
-                    <a href="https://travis-ci.org/nightingale-media-player/nightingale-hacking" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
+                    <ul>
+                        <li><span data-l10n-id="dashboard_unitTests_ngh">nightingale-hacking</span>: <a href="https://travis-ci.org/nightingale-media-player/nightingale-hacking" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
                         <img src="https://travis-ci.org/nightingale-media-player/nightingale-hacking.png?branch=sb-trunk-oldxul" height="18">
-                    </a>
+                    </a></li>
+                        <li><span data-l10n-id="dashboard_unitTests_ngd">nightingale-deps</span>: <a href="https://travis-ci.org/nightingale-media-player/nightingale-deps" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
+                        <img src="https://travis-ci.org/nightingale-media-player/nightingale-hacking.png?branch=sb-trunk-oldxul" height="18">
+                    </a></li>
+                    </ul>
+                    
                 </section>
                 <section class="column">
                     <h1 data-l10n-id="dashboard_other_title">Other Analytics</h1>
