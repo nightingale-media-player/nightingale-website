@@ -161,11 +161,14 @@
                 <section class="column omega">
                     <h1 data-l10n-id="dashboard_unitTests_title">Unit Tests</h1>
                     <ul>
-                        <li><span data-l10n-id="dashboard_unitTests_ngh">nightingale-hacking</span>: <a href="https://travis-ci.org/nightingale-media-player/nightingale-hacking" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
+                        <li><span data-l10n-id="dashboard_unitTests_ngh" data-l10n-args='{"branch":"XULR 1.9.*"}'>nightingale-hacking (XULR 1.9.*)</span>: <a href="https://travis-ci.org/nightingale-media-player/nightingale-hacking" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
                         <img src="https://travis-ci.org/nightingale-media-player/nightingale-hacking.png?branch=sb-trunk-oldxul" height="18">
                     </a></li>
+                    <li><span data-l10n-id="dashboard_unitTests_ngh" data-l10n-args='{"branch":"XULR 9+"}'>nightingale-hacking (XULR 9+)</span>: <a href="https://travis-ci.org/nightingale-media-player/nightingale-hacking" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
+                        <img src="https://travis-ci.org/nightingale-media-player/nightingale-hacking.png?branch=master-xul-9.0.1" height="18">
+                    </a></li>
                         <li><span data-l10n-id="dashboard_unitTests_ngd">nightingale-deps</span>: <a href="https://travis-ci.org/nightingale-media-player/nightingale-deps" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
-                        <img src="https://travis-ci.org/nightingale-media-player/nightingale-hacking.png?branch=sb-trunk-oldxul" height="18">
+                        <img src="https://travis-ci.org/nightingale-media-player/nightingale-deps.png?branch=xul-9.0.1" height="18">
                     </a></li>
                     </ul>
                     
