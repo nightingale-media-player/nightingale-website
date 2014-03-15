@@ -48,6 +48,7 @@
 
                 statusDashboard = new Dashboard();
                 statusDashboard.loadingString = 'Checking Statuses...';
+                statusDashboard.locationURL = 'http://openstreetmap.org/?query=';
                 loadDataForDashboard("http://static.getnightingale.com/javascript/servers.json",statusDashboard);
                 
                 d3.json('http://dashboard.getnightingale.com/get_json.php?type=osDistribution', function(error, data) {
