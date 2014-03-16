@@ -3,7 +3,7 @@
  *  Created by Martin Giger in 2014
  *  Licensed under GPLv2
  *  Visit the GitHub project: http://freaktechnik.github.io/Crowd-Dashboard
- *  Version 1.2.0
+ *  Version 1.3.0
  *  
  *  Credits for the status ping image hack idea to (even tough this might not be the original source): http://jsfiddle.net/Maslow/GSSCD/
  */
@@ -66,10 +66,24 @@ global.Dashboard = function(servers, passive, elementId) {
             }
     });
 
+    Object.defineProperty(this, 'onitemready', {
+        get: function() {
+                return function(event) {
+                    if(event && event.type == "itemready")
+                        that.dispatchEvent(event);
+                };
+            },
+        set: function(fn) {
+                that.addEventListener('itemready',fn);
+            }
+    });
+
     var pServers = new Array();
     Object.defineProperty(this, 'servers', {
         set: function(servers) {
                 if( typeof servers == "object" && servers.length > 0 ) {
+                    that.clearLists();
+
                     pServers = servers;
                     that.totalCount = 0;
                     pServers.forEach(function(serverList) {
@@ -79,6 +93,9 @@ global.Dashboard = function(servers, passive, elementId) {
                     // check if the lists actually contained pages
                     if( that.totalCount > 0 ) {
                         that.checkServers();
+
+                        if(!that.passiveMode)
+                            that.printLists();
                     }
                     else
                     {
@@ -115,7 +132,7 @@ Dashboard.prototype.readyCount = -1;
 Dashboard.prototype.locationConnector = " in ";
 Dashboard.prototype.locationURL = "http://maps.google.com/?q=";
 Dashboard.prototype.loadingString = "Loading...";
-Dashboard.prototype.supportedEvents = ['ready', 'empty'];
+Dashboard.prototype.supportedEvents = ['ready', 'empty', 'itemready'];
 Dashboard.prototype.passiveMode = false;
 
 /*
@@ -124,10 +141,6 @@ Dashboard.prototype.passiveMode = false;
 
 // checks the status of all servers.
 Dashboard.prototype.checkServers = function() {
-    // not too nice way to do it, but it does the job
-    if(!this.passiveMode)
-        document.getElementById(this.targetNodeId).innerHTML = this.loadingString;
-
     this.readyCount = 0;
 
     this.servers.forEach(function(serverList) {
@@ -198,7 +211,7 @@ Dashboard.prototype.checkServer = function(pageObj) {
     }
 };
 
-// adds a server to the internal status list and initiates markup generation when all servers have been checked
+// adds a server to the internal status list and updates markup of the server's list item
 Dashboard.prototype.addServerToList = function( url, online ) {
     // make this more efficient. This is currently fully iterating through two dimensions of an array.
     
@@ -208,15 +221,16 @@ Dashboard.prototype.addServerToList = function( url, online ) {
         if(this.readyCount == -1)
             this.readyCount = 0;
         this.readyCount++;
-    
+
+        var itemReadyEvent = new CustomEvent('itemready', {'cancelable':true,'detail':server});
+        this.onitemready(itemReadyEvent);
+        if(!itemReadyEvent.defaultPrevented && !this.passiveMode) {
+            this.setListItemStatus(server);
+        }
+
         if(this.isReady()) {
             var e = new CustomEvent('ready',{'cancelable':true,'detail':{'length':this.totalCount}});
             this.onready(e);
-
-            if(!e.defaultPrevented && !this.passiveMode) {
-                document.getElementById(this.targetNodeId).innerHTML = '';
-                this.createLists();
-            }
         }
     }
 };
@@ -255,21 +269,32 @@ Dashboard.prototype.clear = function() {
     this.eventListeners = {};
 };
 
+Dashboard.prototype.clearLists = function() {
+    // not too nice way to do it, but it does the job
+    if(!this.passiveMode)
+        document.getElementById(this.targetNodeId).innerHTML = this.loadingString;
+};
+
 // outputs the markup list
-Dashboard.prototype.createLists = function() {
+Dashboard.prototype.printLists = function() {
     var root = document.getElementById(this.targetNodeId);
     var heading, list, item, link;
+
+    // clear root node
+    root.innerHTML = '';
+
     this.servers.forEach(function(serverList) {
         heading = document.createElement('h2');
         heading.classList.add('dashboard-title');
         heading.appendChild(document.createTextNode(serverList.name));
 
         list = document.createElement('ul');
-        list.classList.add('dashboard-list')
+        list.classList.add('dashboard-list');
+
         if(serverList.withLocations)
             list.classList.add('dashboard-with-locations');
 
-        serverList.pages.forEach(function(page) {
+        serverList.pages.forEach(function(page,i) {
             item = document.createElement('li');
 
             link = document.createElement('a');
@@ -286,13 +311,27 @@ Dashboard.prototype.createLists = function() {
                 item.appendChild(link);
             }
 
-            item.classList.add(page.online?'online':'offline');
+            item.id = 'dashboard-item-'+window.btoa(encodeURI(page.url)).replace(/[\/=]./,'');
 
             list.appendChild(item);
         }, this);
         root.appendChild(heading);
         root.appendChild(list);
     }, this);
+};
+
+// Updates a server's list item status (online/offline)
+Dashboard.prototype.setListItemStatus = function(server) {
+    var listItem = document.getElementById('dashboard-item-'+window.btoa(encodeURI(server.url)).replace(/[\/=]./,''));
+
+    if(server.online && !listItem.classList.contains('online')) {
+        listItem.classList.add('online');
+        listItem.classList.remove('offline');
+    }
+    else if(!server.online && !listItem.classList.contains('offline')) {
+        listItem.classList.add('offline');
+        listItem.classList.remove('online');
+    }
 };
 
 /**
