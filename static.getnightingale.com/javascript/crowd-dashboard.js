@@ -183,7 +183,8 @@ Dashboard.prototype.checkServer = function(pageObj) {
     }
     
     function getStatusAPI(url, callback, statusAPI) {
-        var urlObj = {"host":url.match(/:\/\/([a-z0-9\.:].*)/)[1]};
+        var urlObj = {"host":url.match(/:\/\/([a-z0-9\.:].*)/)[1]},
+            nestedProperty = false;
     
         statusAPI = statusAPI || {};
 
@@ -192,9 +193,14 @@ Dashboard.prototype.checkServer = function(pageObj) {
         statusAPI.propertyName = statusAPI.propertyName || "status";
         statusAPI.downValue = statusAPI.downValue || "major";
         
+        if(statusAPI.propertyName.indexOf(".") != -1) {
+            nestedProperty = true;
+            statusAPI.propertyName = statusAPI.propertyName.split(".");
+        }
+        
         // timestamp to avoid caching
         var rand = (statusAPI.url.indexOf('?')!=-1?'&':'?')+'timestamp='+Date.now(),
-            funcName = 'processStatusAPI' + window.btoa(encodeURI(urlObj.host+rand)).replace(/[\/=]./,'');
+            funcName = 'processStatusAPI' + jsizeURL(urlObj.host+rand);
         
         statusAPI.url += rand + '&callback=' + funcName;
         
@@ -202,7 +208,20 @@ Dashboard.prototype.checkServer = function(pageObj) {
 
         window[funcName] = function(response) {
             document.body.removeChild(script);
-            callback.call( that, url, response[statusAPI.propertyName] != statusAPI.downValue );
+
+            var responseVal, result;
+            if(nestedProperty) {
+                responseVal = response;
+                statusAPI.propertyName.forEach(function(value) {
+                    responseVal = responseVal[value];
+                });
+            }
+            else {
+                responseVal = response[statusAPI.propertyName];
+            }
+
+            result = statusAPI.upValue != null ? responseVal == statusAPI.upValue : responseVal != statusAPI.downValue;
+            callback.call( that, url, result );
             delete window[funcName];
         }
             
@@ -311,7 +330,7 @@ Dashboard.prototype.printLists = function() {
                 item.appendChild(link);
             }
 
-            item.id = 'dashboard-item-'+window.btoa(encodeURI(page.url)).replace(/[\/=]./,'');
+            item.id = 'dashboard-item-'+jsizeURL(page.url);
 
             list.appendChild(item);
         }, this);
@@ -322,7 +341,7 @@ Dashboard.prototype.printLists = function() {
 
 // Updates a server's list item status (online/offline)
 Dashboard.prototype.setListItemStatus = function(server) {
-    var listItem = document.getElementById('dashboard-item-'+window.btoa(encodeURI(server.url)).replace(/[\/=]./,''));
+    var listItem = document.getElementById('dashboard-item-'+jsizeURL(server.url));
 
     if(server.online && !listItem.classList.contains('online')) {
         listItem.classList.add('online');
@@ -368,4 +387,9 @@ Dashboard.prototype.dispatchEvent = function(d_eventObject) {
         });
     }
 };
+
+function jsizeURL(url) {
+    return window.btoa(encodeURI(url)).replace(/[\/=]+/g,'');
+}
+
 }(this));

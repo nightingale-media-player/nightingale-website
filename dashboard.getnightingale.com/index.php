@@ -30,7 +30,7 @@
         <script type="text/javascript">
             "use strict";
 
-            var statusDashboard;
+            var statusDashboard, travisStatus;
             
             window.onload = function() {                
                 function loadDataForDashboard(fileURL,dashboard) {
@@ -50,6 +50,11 @@
                 statusDashboard.loadingString = 'Checking Statuses...';
                 statusDashboard.locationURL = 'http://openstreetmap.org/?query=';
                 loadDataForDashboard("http://static.getnightingale.com/javascript/servers.json",statusDashboard);
+
+                travisStatus = new Dashboard();
+                travisStatus.loadingString = statusDashboard.loadingString;
+                travisStatus.targetNodeId = "travis-build-status-list";
+                loadDataForDashboard("http://static.getnightingale.com/javascript/travis.json",travisStatus);
                 
                 d3.json('http://dashboard.getnightingale.com/get_json.php?type=osDistribution', function(error, data) {
                     if(!error) {
@@ -91,6 +96,7 @@
                 // make sure the language gets adjusted everywhere when it changes
                 addEventListenerLegacy(document, "localized", function() {
                     statusDashboard.loadingString = document.webL10n.get('dashboard_status_loading',null,'Checking Statuses...');
+                    travisStatus.loadingString = statusDashboard.loadingString;
                     statusDashboard.locationConnector = ' '+document.webL10n.get('dashboard_status_locationConnector',null,'in')+' ';
                     refresh();
                 }, false);
@@ -98,6 +104,7 @@
             
             function refresh() {
                 statusDashboard.checkServers();
+                travisStatus.checkServers();
                 
                 d3.json('http://dashboard.getnightingale.com/get_json.php?type=osDistribution&lang='+document.webL10n.getLanguage(), function(error, data) {
                     if(!error)
@@ -161,18 +168,8 @@
                 </section>
                 <section class="column omega">
                     <h1 data-l10n-id="dashboard_unitTests_title">Unit Tests</h1>
-                    <ul>
-                        <li><span data-l10n-id="dashboard_unitTests_ngh" data-l10n-args='{"branch":"XULR 1.9.*"}'>nightingale-hacking (XULR 1.9.*)</span>: <a href="https://travis-ci.org/nightingale-media-player/nightingale-hacking" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
-                        <img src="https://travis-ci.org/nightingale-media-player/nightingale-hacking.png?branch=sb-trunk-oldxul" height="18">
-                    </a></li>
-                    <li><span data-l10n-id="dashboard_unitTests_ngh" data-l10n-args='{"branch":"XULR 9+"}'>nightingale-hacking (XULR 9+)</span>: <a href="https://travis-ci.org/nightingale-media-player/nightingale-hacking" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
-                        <img src="https://travis-ci.org/nightingale-media-player/nightingale-hacking.png?branch=master-xul-9.0.1" height="18">
-                    </a></li>
-                        <li><span data-l10n-id="dashboard_unitTests_ngd">nightingale-deps</span>: <a href="https://travis-ci.org/nightingale-media-player/nightingale-deps" title="Travis CI Buildinfo" data-l10n-id="dashboard_unitTests_link">
-                        <img src="https://travis-ci.org/nightingale-media-player/nightingale-deps.png?branch=xul-9.0.1" height="18">
-                    </a></li>
-                    </ul>
-                    
+                    <div id="travis-build-status-list" class="plainlist">
+                    </div>                    
                 </section>
                 <section class="column">
                     <h1 data-l10n-id="dashboard_other_title">Other Analytics</h1>
