@@ -190,10 +190,10 @@ Dashboard.prototype.checkServer = function(pageObj) {
         // set default values
         statusAPI.url = statusAPI.url || 'https://status.' + urlObj.host + '/api/status.json';
         statusAPI.propertyName = statusAPI.propertyName || "status";
-        statusAPI.nestedProperty = false
+        statusAPI.nestedProperty = statusAPI.nestedProperty | false;
         statusAPI.downValue = statusAPI.downValue || "major";
         
-        if(statusAPI.propertyName.indexOf(".") != -1) {
+        if(statusAPI.propertyName.indexOf(".") != -1 && !statusAPI.nestedProperty) {
             statusAPI.nestedProperty = true;
             statusAPI.propertyName = statusAPI.propertyName.split(".");
         }
