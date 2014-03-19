@@ -12,7 +12,11 @@
                 {
                     "url": "https://api.travis-ci.org/repos/615066/branches/sb-trunk-oldxul.json",
                     "propertyName": "branch.state",
-                    "upValue": "passed"
+                    "upValue": [
+                        "passed",
+                        "created",
+                        "started"
+                    ]
                 }
             },
             {
@@ -23,7 +27,11 @@
                 {
                     "url": "https://api.travis-ci.org/repos/615066/branches/master-xul-9.0.1.json",
                     "propertyName": "branch.state",
-                    "upValue": "passed"
+                    "upValue": [
+                        "passed",
+                        "created",
+                        "started"
+                    ]
                 }
             },
             {
@@ -34,7 +42,11 @@
                 {
                     "url": "https://api.travis-ci.org/repos/615068/branches/xul-9.0.1.json",
                     "propertyName": "branch.state",
-                    "upValue": "passed"
+                    "upValue": [
+                        "passed",
+                        "created",
+                        "started"
+                    ]
                 }
             }
         ]

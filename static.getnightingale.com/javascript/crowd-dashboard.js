@@ -218,7 +218,24 @@ Dashboard.prototype.checkServer = function(pageObj) {
                 responseVal = response[statusAPI.propertyName];
             }
 
-            result = statusAPI.upValue != null ? responseVal == statusAPI.upValue : responseVal != statusAPI.downValue;
+            if(statusAPI.upValue != null) {
+                if(typeof statusAPI.upValue == "string")
+                    result = statusAOI.upValue == responseVal;
+                else
+                    result = statusAPI.upValue.some(function(item) {
+                        return item == responseVal;
+                    });
+            }
+            else
+            {
+                if(typeof statusAPI.downValue == "string")
+                    result = statusAPI.downValue != responseVal;
+                else
+                    result = statusAPI.downValue.some(function(item) {
+                        return item != responseVal;
+                    });
+            }
+
             callback.call( that, url, result );
             delete window[funcName];
         }
