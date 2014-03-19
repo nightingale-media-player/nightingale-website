@@ -184,17 +184,17 @@ Dashboard.prototype.checkServer = function(pageObj) {
     
     function getStatusAPI(url, callback, statusAPI) {
         var urlObj = {"host":url.match(/:\/\/([a-z0-9\.:].*)/)[1]},
-            nestedProperty = false;
     
         statusAPI = statusAPI || {};
 
         // set default values
         statusAPI.url = statusAPI.url || 'https://status.' + urlObj.host + '/api/status.json';
         statusAPI.propertyName = statusAPI.propertyName || "status";
+        statusAPI.nestedProperty = false
         statusAPI.downValue = statusAPI.downValue || "major";
         
         if(statusAPI.propertyName.indexOf(".") != -1) {
-            nestedProperty = true;
+            statusAPI.nestedProperty = true;
             statusAPI.propertyName = statusAPI.propertyName.split(".");
         }
         
@@ -210,7 +210,7 @@ Dashboard.prototype.checkServer = function(pageObj) {
             document.body.removeChild(script);
 
             var responseVal, result;
-            if(nestedProperty) {
+            if(statusAPI.nestedProperty) {
                 responseVal = response;
                 statusAPI.propertyName.forEach(function(value) {
                     responseVal = responseVal[value];
