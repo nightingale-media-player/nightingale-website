@@ -202,8 +202,6 @@ Dashboard.prototype.checkServer = function(pageObj) {
         var rand = (statusAPI.url.indexOf('?')!=-1?'&':'?')+'timestamp='+Date.now(),
             funcName = 'processStatusAPI' + jsizeURL(urlObj.host+rand);
         
-        statusAPI.url += rand + '&callback=' + funcName;
-        
         var script = document.createElement("script");
 
         window[funcName] = function(response) {
@@ -225,7 +223,7 @@ Dashboard.prototype.checkServer = function(pageObj) {
             delete window[funcName];
         }
             
-        script.src = statusAPI.url;
+        script.src = statusAPI.url + rand + '&callback=' + funcName;
         document.body.appendChild(script);
     }
 };
