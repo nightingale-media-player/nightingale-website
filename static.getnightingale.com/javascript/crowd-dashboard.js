@@ -153,7 +153,8 @@ StatusCheck.prototype.JSONRequest = function(callback, that) {
     
     var xhr = new XMLHttpRequest(),
         rand = (this.statusAPI.url.indexOf('?')!=-1?'&':'?')+'timestamp='+Date.now(),
-        thut = this;
+        thut = this,
+        response;
 
     xhr.timeout = this.timeout;
     xhr.onreadystatechange = function() {
@@ -162,9 +163,11 @@ StatusCheck.prototype.JSONRequest = function(callback, that) {
                 if(!JSON) {
                     throw new Error("Can't parse JSON");
                 }
-                xhr.response = JSON.parse(xhr.response);
+                response = JSON.parse(xhr.response);
             }
-            thut.parseJSONResponse(xhr.response, callback, that);
+            else
+                response = xhr.response;
+            thut.parseJSONResponse(response, callback, that);
         }
     };
     xhr.ontimeout = function() {

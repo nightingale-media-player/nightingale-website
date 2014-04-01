@@ -7,7 +7,7 @@
             {
                 "name": "nightingale-hacking (sb-trunk-oldxul)",
                 "url": "https://travis-ci.org/nightingale-media-player/nightingale-hacking/",
-                "hasStatusAPI": true,
+                "type":"JSON",
                 "statusAPI":
                 {
                     "url": "https://api.travis-ci.org/repos/615066/branches/sb-trunk-oldxul.json",
@@ -22,7 +22,7 @@
             {
                 "name": "nightingale-hacking (master-xul-9.0.1)",
                 "url": "https://travis-ci.org/nightingale-media-player/nightingale-hacking/builds",
-                "hasStatusAPI": true,
+                "type":"JSON",
                 "statusAPI":
                 {
                     "url": "https://api.travis-ci.org/repos/615066/branches/master-xul-9.0.1.json",
@@ -37,7 +37,7 @@
             {
                 "name": "nightingale-deps",
                 "url": "https://travis-ci.org/nightingale-media-player/nightingale-deps/",
-                "hasStatusAPI": true,
+                "type":"JSON",
                 "statusAPI":
                 {
                     "url": "https://api.travis-ci.org/repos/615068/branches/xul-9.0.1.json",
