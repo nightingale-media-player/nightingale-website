@@ -9,7 +9,6 @@ if (!defined('DOKU_INC')) die();
 
 <!-- ********** FOOTER ********** -->
 <div id="dokuwiki__footer"><div class="pad">
-    <?php tpl_license(''); // license text ?>
 
     <div class="buttons">
         <a href="http://www.php.net" title="Powered by PHP" <?php echo $target?>><img
