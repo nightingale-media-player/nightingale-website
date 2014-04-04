@@ -16,6 +16,7 @@ if (!defined('DOKU_INC')) die();
         <ul class="a11y skip">
             <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content']; ?></a></li>
         </ul>
+
     </div>
 
     <div class="tools group">
@@ -25,7 +26,7 @@ if (!defined('DOKU_INC')) die();
                 <h3 class="a11y"><?php echo $lang['user_tools']; ?></h3>
                 <ul>
                     <?php
-                        if ($_SERVER['REMOTE_USER']) {
+                        if (!empty($_SERVER['REMOTE_USER'])) {
                             echo '<li class="user">';
                             tpl_userinfo(); /* 'Logged in as ...' */
                             echo '</li>';

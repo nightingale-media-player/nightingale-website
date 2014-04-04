@@ -55,7 +55,7 @@
                         <li><a href="http://addons.getnightingale.com" data-l10n-id="add-ons">Add-ons</a></li>
                         <li><a href="http://forum.getnightingale.com" data-l10n-id="forum">Forum</a></li>
                         <li><a href="http://wiki.getnightingale.com" data-l10n-id="wiki">Wiki</a></li>
-                        <!-- nonono. <li><a href="http://developers.getnightingale.com" data-l10n-id="developers">Developers</a></li> -->
+                        <li><a href="http://developer.getnightingale.com" data-l10n-id="developers">Developers</a></li>
                     </ul>
                 </nav>
                 <figure id="headerlogo" role="banner">
@@ -212,7 +212,7 @@ foreach($content->extensions as $extension) {
                     <b data-l10n-id="footer_contribute">Contribute</b>
                     <ul>
                         <li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki" data-l10n-id="footer_developerCenter">Developer's Center</a></li>
-                        <li><a href="http://wiki.getnightingale.com/doku.php?id=ngale-locales" title="Translate Nightingale" data-l10n-id="footer_translate">Translate Nightingale</a></li>
+                        <li><a href="http://wiki.getnightingale.com/doku.php?id=localization" title="Translate Nightingale" data-l10n-id="footer_translate">Translate Nightingale</a></li>
                         <li><a href="https://github.com/nightingale-media-player" title="Source Code on GitHub" data-l10n-id="footer_source">Source Code</a></li>
                         <li><a href="https://github.com/nightingale-media-player/nightingale-addons/issues/" title="Nightingale Issues on GitHub" data-l10n-id="footer_bugs">Report a Bug</a></li>
                         <!--<li><a href="http://getnightingale.com/donate" title="Donate to Nightingale" data-l10n-id="footer_donate">Donate</a></li>-->
