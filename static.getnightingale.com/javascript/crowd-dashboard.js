@@ -262,11 +262,7 @@ global.Dashboard = function(servers, passive, elementId) {
             }
     });
 
-<<<<<<< HEAD
-    var pServers = new Array();
-=======
     var pServers = servers || new Array();
->>>>>>> c06e1e324d6642b712e72e6d53f20a900b2464d2
     Object.defineProperty(this, 'servers', {
         set: function(servers) {
                 if( typeof servers == "object" && servers.length > 0 ) {
@@ -377,15 +373,7 @@ global.Dashboard = function(servers, passive, elementId) {
 
 Dashboard.prototype.totalCount = 0;
 Dashboard.prototype.readyCount = -1;
-<<<<<<< HEAD
-Dashboard.prototype.locationConnector = " in ";
-Dashboard.prototype.locationURL = "http://maps.google.com/?q=";
-Dashboard.prototype.loadingString = "Loading...";
 Dashboard.prototype.supportedEvents = ['ready', 'empty', 'itemready'];
-Dashboard.prototype.passiveMode = false;
-=======
-Dashboard.prototype.supportedEvents = ['ready', 'empty', 'itemready'];
->>>>>>> c06e1e324d6642b712e72e6d53f20a900b2464d2
 
 /*
 // Methods
@@ -512,27 +500,6 @@ Dashboard.prototype.clearLists = function() {
 
 // outputs the markup list
 Dashboard.prototype.printLists = function() {
-<<<<<<< HEAD
-    var root = document.getElementById(this.targetNodeId);
-    var heading, list, item, link;
-
-    // clear root node
-    root.innerHTML = '';
-
-    this.servers.forEach(function(serverList) {
-        heading = document.createElement('h2');
-        heading.classList.add('dashboard-title');
-        heading.appendChild(document.createTextNode(serverList.name));
-
-        list = document.createElement('ul');
-        list.classList.add('dashboard-list');
-
-        if(serverList.withLocations)
-            list.classList.add('dashboard-with-locations');
-
-        serverList.pages.forEach(function(page,i) {
-            item = document.createElement('li');
-=======
     if( this.servers.length == 0 ) {
         this.clearLists();
     }
@@ -547,7 +514,6 @@ Dashboard.prototype.printLists = function() {
             heading = document.createElement('h2');
             heading.classList.add('dashboard-title');
             heading.appendChild(document.createTextNode(serverList.name));
->>>>>>> c06e1e324d6642b712e72e6d53f20a900b2464d2
 
             list = document.createElement('ul');
             list.classList.add('dashboard-list');
@@ -563,9 +529,6 @@ Dashboard.prototype.printLists = function() {
                 link.appendChild(document.createTextNode(page.name));
                 item.appendChild(link);
 
-<<<<<<< HEAD
-            item.id = 'dashboard-item-'+window.btoa(encodeURI(page.url)).replace(/[\/=]./,'');
-=======
                 if(serverList.withLocations) {
                     item.appendChild(document.createTextNode(this.locationConnector));
                     link = document.createElement('a');
@@ -577,7 +540,6 @@ Dashboard.prototype.printLists = function() {
 
                 if(page.ready)
                     item.classList.add(page.online?"online":"offline");
->>>>>>> c06e1e324d6642b712e72e6d53f20a900b2464d2
 
                 item.id = 'dashboard-item-'+jsizeURL(page.url);
 
@@ -605,20 +567,6 @@ Dashboard.prototype.setListItemStatus = function(server) {
             listItem.classList.add('offline');
             listItem.classList.remove('online');
         }
-    }
-};
-
-// Updates a server's list item status (online/offline)
-Dashboard.prototype.setListItemStatus = function(server) {
-    var listItem = document.getElementById('dashboard-item-'+window.btoa(encodeURI(server.url)).replace(/[\/=]./,''));
-
-    if(server.online && !listItem.classList.contains('online')) {
-        listItem.classList.add('online');
-        listItem.classList.remove('offline');
-    }
-    else if(!server.online && !listItem.classList.contains('offline')) {
-        listItem.classList.add('offline');
-        listItem.classList.remove('online');
     }
 };
 
