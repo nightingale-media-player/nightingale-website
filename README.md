@@ -35,9 +35,9 @@ This project is licensed under the GPL v2 (see LICENSE)
 
 The whole website consists of
  * front-page for downloads ([getnightingale.com folder](getnightingale.com/))
- * myBB theme (forum.getnightingale.com folder)
- * WordPress theme (blog.getnightingale.com folder)
- * DokuWiki theme (wiki.getnightingale.com folder)
+ * myBB theme ([forum.getnightingale.com](forum.getnightingale.com/) folder)
+ * WordPress theme ([blog.getnightingale.com](blog.getnightingale.com/) folder)
+ * DokuWiki theme ([wiki.getnightingale.com](wiki.getnightingale.com/) folder)
  * firstrun page ([firstrun.getnightingale.com folder](firtstrun.getnightingale.com/))
  * assets like scripts, styles and images ([static.getnightingale.com folder](static.getnightingale.com/))
  * SCSS source ([compass folder](compass/))
