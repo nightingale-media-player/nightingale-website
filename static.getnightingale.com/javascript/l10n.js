@@ -1176,4 +1176,3 @@ document.webL10n = (function(window, document, undefined) {
 if (window._ === undefined) {
   var _ = document.webL10n.get;
 }
-

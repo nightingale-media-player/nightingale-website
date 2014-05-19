@@ -1,0 +1,408 @@
+/*!
+ * Screen styles.
+ */
+ 
+@media screen {
+
+    /* Layout */
+    html {
+        background-color: #333333;
+        
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    
+    body {
+        overflow-x: hidden;
+        
+        article {
+            padding-left: $gutter-width;
+            padding-right: $gutter-width;
+        }
+    }
+    
+    #ngalemainheadwrapper, #ngalemainfooterwrapper {
+        @include background-image(linear-gradient(#414141,#333333));
+    }
+    
+    .container {
+        max-width: $allcolumns;
+        margin: 0 auto;
+    }
+
+    /* ----------------------------------------------------------------------------
+       Nav
+       --------------------------------------------------------------------------*/
+    #ngalemainheadwrapper header nav li {
+        a:hover {
+            border-bottom: .4em solid white;
+        }
+
+        :link,:visited {
+            color: white;
+        }
+    }
+
+    #expandngalenav {
+        background: none;
+        border: none;
+        color: white;
+        font-size: $base-font-size;
+        width: 100%;
+    }
+    
+    /* ----------------------------------------------------------------------------
+       Main content
+       --------------------------------------------------------------------------*/
+    
+    #downloadbutton:active  {
+        background-color: #343434;
+        @include background-image(linear-gradient(#343434,#444444));
+    }
+    
+    #wrapper {
+        background: white;
+        
+        a {
+            &:link,&:hover,&:visited,&:active {
+                color: $orange;
+            }
+        }
+    }
+    
+    /* ----------------------------------------------------------------------------
+       Ubunut ppa overlay
+       --------------------------------------------------------------------------*/
+    #overlay {
+        background: rgba(0,0,0,0.7);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 1002;
+        top: 0;
+        left: 0;
+    }
+    
+    #instructions {
+        margin-top: 5em + 2*$sidebar-item-height;
+        position: absolute;
+        width: 100%;
+        z-index: 1003;
+        pointer-events: none;
+        
+        section {
+            pointer-events: auto;
+            background-color: white;
+            max-width: 4*$column-width+$gutter-width;
+            padding: $base-line-height $gutter-width;
+            @include border-radius(.3em);
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        ol {
+            list-style-type: decimal;
+        }
+    }
+
+    /* ----------------------------------------------------------------------------
+       Footer
+       --------------------------------------------------------------------------*/
+    
+    #ngalemainfooterwrapper footer {
+        color: white;
+        
+        :link,:visited {
+            color: white;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #f0f0f0;
+            text-decoration: underline;
+        }
+        
+        .socialicon:hover {
+            color: white;
+        }
+    }
+    
+    
+    /* ----------------------------------------------------------------------------
+       Responsive enhancments
+       --------------------------------------------------------------------------*/
+    
+    
+    @include at-breakpoint($twocolumns) {
+        #description {
+            @include column-width(2*$column-width);
+            @include column-count(2);
+            @include column-gap($gutter-width);
+        }
+        
+        #main p {
+            @include column-gap($gutter-width);
+            @include column-width(2*$column-width);
+        }
+        
+        .download {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        .feature {
+            @include span-columns(2,2);
+        
+            img {
+                @include span-columns(1,2);
+                width: columns(1,2);
+            }
+        }
+        
+        .columnimage {
+            width: 2*$column-width+$gutter-width;
+            margin-right: $gutter-width;
+        }
+        
+        .column p, .twocolumns p {
+            margin-top: 0;
+        }
+        
+        .twocolumnimage {
+            width: 4*$column-width+3*$gutter-width;
+        }
+    }
+    
+    @include at-breakpoint($allcolumns 6) {
+        .container {
+          @include container();
+        }
+        
+        #main>p {
+            @include column-count(3);
+            @include span-columns(6);
+        }
+        
+        .split {
+            @include span-columns(3);
+            @include nth-omega(2n);
+        }
+        
+        .feature {
+            @include omega();
+        }
+        
+        #ngalemainfooterwrapper .footerlinks {
+            @include span-columns(1);
+            @include nth-omega(3n+1);
+        }
+        
+        #footerinfo {
+            @include span-columns(3);
+        }
+                
+        .column {
+            @include span-columns(2);
+        }
+        
+        .column.omega, .twocolumns.omega, .omega, .column:last-child {
+            @include omega();
+        }
+        
+        .twocolumns {
+            @include span-columns(4);
+            
+            p {
+                @include column-count(2);
+            }
+        }
+        
+        .twocolumns .column {
+            @include span-columns(2 omega,4);
+        }
+    }
+    
+    @include at-breakpoint($twocolumns 4 $allcolumns) {
+        .container {
+          @include container();
+        }
+        
+        .twocolumns {
+            @include span-columns(4 omega);
+            
+            p {
+                @include column-count(2);
+            }
+        }
+        
+        #contentleft {
+            margin-right: 0;
+        }
+        
+        .column.alt-full {
+            @include span-columns(4);
+            margin-top: $base-line-height;
+                
+            .feature {
+                @include span-columns(2);
+                @include nth-omega(2n-1);
+            }
+            
+            &>p {
+                @include column-count(2);
+                @include span-columns(4);
+            }
+        }
+        
+        .split {
+            @include span-columns(2);
+            @include nth-omega(2n);
+        }
+
+        .column {
+            @include span-columns(2);
+        }
+        .column.omega, .twocolumns.omega, .omega, .column:nth-child(2n) {
+            @include omega();
+        }
+
+        .footerlinks {
+            @include span-columns(1);
+            margin-bottom: $footer-line-height;
+        }
+        #footerinfo {
+            @include span-columns(3);
+        }
+        
+        .twocolumns .column {
+            @include span-columns(2 omega,4);
+            
+        }
+    }
+    
+    @include at-breakpoint(1 $twocolumns) {        
+        #main aside {
+            margin-top: $base-line-height;
+            float: none;
+            width: 100%;
+        }
+    
+        #contentleft {
+            margin-right: 0;
+        }
+        
+        #ngalemainfooterwrapper .container {
+            padding-left: $gutter-width;
+            padding-right: $gutter-width;
+            
+            .footerlinks {
+                float: left;
+                margin-top: $base-line-height;
+                
+                &:last-child {
+                    margin-bottom: $footer-line-height;
+                }
+            }
+        }
+        
+        .column {
+            width: 100%;
+        }
+    }
+    
+    // centered nav for narrower styles. Under breakpoint to be adjusted
+    @include at-breakpoint ($allcolumns $onecolumn) {
+        #ngalemainheadwrapper header {
+            padding-bottom: 5em;
+            nav {
+                text-align: center;
+                float: none;
+                 ul {
+                    margin-left: 0;
+                    display: inline-block;
+                }
+                
+                li {
+                    :link,:visited {
+                        border-top: .5rem solid transparent;
+                    }
+                    a:hover {
+                        border-top: .5rem solid white;
+                        border-bottom: none;
+                    }
+                    &.current a:link,&.current a:visited {
+                        border-top: .5rem solid #b55029;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+        
+        
+        #headerlogo {
+            width: 90%;
+            left: 5%;
+        }
+    }
+    
+    
+    // rollout nav for mobiles and no moar tab. Set upper breakpoint to lower of the centered style
+    @include at-breakpoint(1 $onecolumn) {
+        #ngalemainheadwrapper header {
+            padding-bottom: 13%;
+            height: initial;
+            nav {
+                width: 100%;
+                text-align: center;
+                float: none;
+                position: static;
+                height: initial;
+                
+                ul {
+                    border-top: .1em dotted white;
+                    height: initial;
+                    margin-left: 0;
+                    @include hidden();
+                }
+                li {
+                    float: none;
+                    width: 100%;
+                    font-size: $base-font-size;
+                    height: initial;
+                    
+                    :link,:visited {
+                        font-size: $base-font-size;
+                        line-height: 2*$base-line-height;
+                        text-shadow: none;
+                    }
+                    a:hover {
+                        border-bottom: none;
+                        border-left: .4em solid white;
+                        padding-left: 0;
+                    }
+                    &.current a:link,&.current a:visited {
+                        border-bottom: none;
+                        border-left: .4em solid $orange;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        
+        #expandngalenav {
+            display: block;
+            visibility: visible;
+        }
+        
+        #headerlogo {
+            width: 100%;
+            left: 0;
+            
+            .tab {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+}

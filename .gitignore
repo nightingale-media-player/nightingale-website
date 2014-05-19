@@ -2,12 +2,6 @@
 *.psd
 *.ai
 
-# Don't commit OS-specific files
-Thumbs.db
-desktop.ini
-.DS_Store
-.directory
-
 # No VIM swap files
 *.swp
 
@@ -17,3 +11,26 @@ desktop.ini
 # No Komodo project files
 *.komodoproject
 .komodotools
+
+# Local config
+compass/config.rb
+compass/config-production.rb
+
+# Automatically generated files
+.sass-cache
+*.css
+~swp
+*.log
+*.bkp
+.directory
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.Trash
+Icon?
+Thumbs.db
+desktop.ini
+*.sublime-project
+*.sublime-workspace

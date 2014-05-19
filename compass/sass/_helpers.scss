@@ -1,0 +1,49 @@
+/*!
+ * Useful CSS helper classes.
+ * 
+ * Customized and stripped down version of the HTML5 Boilerplate main CSS (h5bp.com | MIT License)
+ * Big thanks to all original authors.
+ */
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+.hidden {
+    @include hidden();
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+.visuallyhidden {
+    @include visuallyhidden();
+}
+
+// Extends the .visuallyhidden class to allow the element to be focusable
+// when navigated to via the keyboard: h5bp.com/p
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+// Hide visually and from screenreaders, but maintain layout
+.invisible {
+    visibility: hidden;
+}
+
+// Clear preceding floats
+.clear {
+    clear: both;
+}
+
+// Clearfix: contain floats
+.clearfix {
+    @include pie-clearfix();
+}
+
+// Destyle lists
+.plainlist, .plainlist li {
+    list-style-type: none;
+    margin: 0;
+}

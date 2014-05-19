@@ -83,6 +83,33 @@ addEventListenerLegacy(document, "localized", initl10n, false);
 addEventListenerLegacy(window, 'load', init, false);
 
 function init() {
+    var download = document.getElementsByClassName('download'),
+        hasDataset = document.dataset;
+    if(download) {
+        for(var i = 0; i < download.length; i++) {
+            if(hasDataset?download[i].dataset.hasOwnProperty("popup"):download[i].attributes["data-popup"]) {
+                addEventListenerLegacy(download[i],"click",function(e) {
+                    document.getElementById("ubuntuInstallCode").dataset.l10nArgs = '{"name":"'+e.currentTarget.dataset.popupName+'"}';
+
+                    // update the contents
+                    document.webL10n.translate(document.getElementById("ubuntuInstallCode"));
+                    
+                    show("overlay");
+                    show("instructions");
+                    addEventListenerLegacy(document.getElementById("overlay"),"click",hideOverlay);
+                    if(!('pointerEvents' in document.body.style))
+                        addEventListenerLegacy(document.getElementById("instructions"),"click",hideOverlay);
+                });
+            }
+            else {
+                addEventListenerLegacy(download[i],"click",function(e) {
+                    console.log(e.currentTarget.dataset.url);
+                    document.location = hasDataset?e.currentTarget.dataset.url:e.currentTarget.attributes['data-url'].value;
+                });
+            }
+        }
+    }
+
     addEventListenerLegacy(document.getElementById("expandngalenav"),"click",toggleNav);
     
     //lazyload hiDPI images

@@ -1,0 +1,25 @@
+/*!
+ * General layout mixins.
+ */
+
+/**
+ * Completely hide an element, also for screen readers.
+ */
+@mixin hidden() {
+    display: none;
+    visibility: hidden;
+}
+
+/**
+ * Visually hide an element, but still make it accessible to screen readers.
+ */
+@mixin visuallyhidden() {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

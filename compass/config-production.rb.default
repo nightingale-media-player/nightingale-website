@@ -1,0 +1,21 @@
+# Require any additional compass plugins here.
+require "susy"
+require "animate"
+
+# Set the paths accordingly to your production environment:
+http_path        = "getnightingale.com/"
+static_path      = "static.getnightingale.com/"
+http_images_path = static_path + "images"
+http_fonts_path  = static_path + "fonts"
+css_dir          = "../static.getnightingale.com/css"
+images_dir       = "../static.getnightingale.com/images"
+fonts_dir        = "../static.getnightingale.com/fonts"
+javascripts_dir  = "../static.getnightingale.com/javascript"
+sass_dir         = "sass"
+
+# You can select your preferred output style here (can be overridden via the command line):
+output_style = :compressed
+environment  = :production
+
+# To enable relative paths to assets via compass helper functions. Uncomment:
+relative_assets = true

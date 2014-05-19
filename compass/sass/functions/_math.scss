@@ -1,0 +1,30 @@
+/*!
+ * Sass helper functions for doing maths such as converting units.
+ */
+
+
+/**
+ * Convert px values to em values.
+ * This function returns a real em value, not a unitless number with
+ * the string "em" appended.
+ * 
+ * @pxvalue     the pixel value to convert
+ * @base        the base pixel value (defaults to $base-font-size)
+ * @return      em value
+ */
+@function px2em($pxvalue, $base: $base-font-size) {
+    @return ($pxvalue / $base) * 1em;
+}
+
+/**
+ * Convert em values to px values.
+ * This function returns a real px value, not a unitless number with
+ * the string "px" appended.
+ * 
+ * @emvalue     the em value to convert
+ * @base        the base pixel value (defaults to $base-font-size)
+ * @return      px value
+ */
+@function em2px($emvalue, $base: $base-font-size) {
+    @return ($emvalue / 1em) * $base;
+}
