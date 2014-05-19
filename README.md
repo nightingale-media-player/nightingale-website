@@ -1,3 +1,7 @@
+# Nightingale Project Website Source
+
+Web templates and apps for the Nightingale website. Make sure to put your stuff in the appropriate directories!
+
 This version of the Nightingale Website is based on Mockups and the Boilerplate from Manko10.
 
 ## Requirements

@@ -1,4 +1,0 @@
-/*!
- * CSS fixes for Legacy IE browsers (IE lte 8) to be included via Conditional Comments.
- * Partially based on the H5BP main.css and normalize.css (h5bp.com | MIT License).
- */audio,canvas,video{*display:inline;*zoom:1}code,kbd,pre,samp{_font-family:'courier new', monospace}q{quotes:none}legend{*margin-left:-7px}button,input,select,textarea{*vertical-align:middle}button,input[type="button"],input[type="reset"],input[type="submit"]{*overflow:visible}input[type="checkbox"],input[type="radio"]{*height:13px;*width:13px}.clearfix{*zoom:1}
