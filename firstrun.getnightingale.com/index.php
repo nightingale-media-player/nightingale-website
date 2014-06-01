@@ -221,10 +221,10 @@ foreach($content->extensions as $extension) {
                 <nav class="footerlinks">
                     <b data-l10n-id="footer_ressources">Ressources</b>
                     <ul>
-                        <li><a href="//getnightingale.com/download.php" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
-                        <li><a href="//getnightingale.com/features.php" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
-                        <li><a href="//getnightingale.com/nightlies.php" title="Nightingale Nightliy Builds" data-l10n-id="footer_nightlies">Nightlies</a></li>
-                        <li><a href="//getnightingale.com/branding.php" title="Nightingale Logo and Screenshots" data-l10n-id="footer_branding">Branding</a></li>
+                        <li><a href="//getnightingale.com/download" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
+                        <li><a href="//getnightingale.com/features" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
+                        <li><a href="//getnightingale.com/nightlies" title="Nightingale Nightliy Builds" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="//getnightingale.com/branding" title="Nightingale Logo and Screenshots" data-l10n-id="footer_branding">Branding</a></li>
                     </ul>
                 </nav>
             </footer>

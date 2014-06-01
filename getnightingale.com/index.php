@@ -106,7 +106,7 @@
                                 </button>
                                 <?php
                                     if($osstring!='unknown')
-                                        echo '<br><a href="download.php" id="moredownloadslink" data-l10n-id="main_otherPlattforms">Other platforms and architectures</a>'; 
+                                        echo '<br><a href="download" id="moredownloadslink" data-l10n-id="main_otherPlattforms">Other platforms and architectures</a>'; 
                                 ?>
                             </div>
                         </div>
@@ -119,7 +119,7 @@
                     <h2 data-l10n-id="main_asideHeading">Why Nightingale?</h2>
                     <figure class="feature">
                         <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="main_firstFeature_image">
-                        <figcaption data-l10n-id="main_firstFeature">Wide variety of supported media formats including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, Ogg, <abbr title="Free Lossless Audio Codec">FLAC</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr> and <a href="features.php#audio_formats">many more</a>.</figcaption>
+                        <figcaption data-l10n-id="main_firstFeature">Wide variety of supported media formats including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, Ogg, <abbr title="Free Lossless Audio Codec">FLAC</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr> and <a href="features#audio_formats">many more</a>.</figcaption>
                     </figure>
                     <figure class="feature">
                         <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="main_secondFeature_image">
@@ -166,7 +166,7 @@
                     <b data-l10n-id="footer_contribute">Contribute</b>
                     <ul>
                         <li><a href="//wiki.getnightingale.com/doku.php?id=developer_center" title="Documentation and Wiki" data-l10n-id="footer_developerCenter">Developer's Center</a></li>
-                        <li><a href="//wiki.getnightingale.com/doku.php?id=ngale-locales" title="Translate Nightingale" data-l10n-id="footer_translate">Translate Nightingale</a></li>
+                        <li><a href="//wiki.getnightingale.com/doku.php?id=localization" title="Translate Nightingale" data-l10n-id="footer_translate">Translate Nightingale</a></li>
                         <li><a href="https://github.com/nightingale-media-player" title="Source Code on GitHub" data-l10n-id="footer_source">Source Code</a></li>
                         <li><a href="https://github.com/nightingale-media-player/nightingale-addons/issues/" title="Nightingale Issues on GitHub" data-l10n-id="footer_bugs">Report a Bug</a></li>
                         <!--<li><a href="//getnightingale.com/donate" title="Donate to Nightingale" data-l10n-id="footer_donate">Donate</a></li>-->
@@ -175,10 +175,10 @@
                 <nav class="footerlinks">
                     <b data-l10n-id="footer_ressources">Ressources</b>
                     <ul>
-                        <li><a href="//getnightingale.com/download.php" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
-                        <li><a href="//getnightingale.com/features.php" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
-                        <li><a href="//getnightingale.com/nightlies.php" title="Nightingale Nightliy Builds" data-l10n-id="footer_nightlies">Nightlies</a></li>
-                        <li><a href="//getnightingale.com/branding.php" title="Nightingale Logo and Screenshots" data-l10n-id="footer_branding">Branding</a></li>
+                        <li><a href="//getnightingale.com/download" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
+                        <li><a href="//getnightingale.com/features" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
+                        <li><a href="//getnightingale.com/nightlies" title="Nightingale Nightliy Builds" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="//getnightingale.com/branding" title="Nightingale Logo and Screenshots" data-l10n-id="footer_branding">Branding</a></li>
                     </ul>
                 </nav>
             </footer>
