@@ -70,10 +70,10 @@ body>.wrapper {
 
 #tabshadow {
     z-index: 0;
-    @include single-box-shadow(#292929,0,0,.4em,.1em);
+    @include single-box-shadow(0,0,.4em,.1em,$shadow);
     
     &::before,&::after {
-        @include single-box-shadow(#292929,0,0,.4em,.1em);
+        @include single-box-shadow(0,0,.4em,.1em,$shadow);
     }
 }
 
@@ -102,8 +102,8 @@ body>.wrapper {
                 font-size: 1.25em;
                 line-height: 4em;
                 text-decoration: none;
-                text-shadow: .08em .08em .25em black;
-                text-shadow: .1rem .1rem .3rem black;
+                text-shadow: .08em .08em .25em $shadow;
+                text-shadow: .1rem .1rem .3rem $shadow;
                 display: block;
                 @include box-sizing(border-box);
             }
@@ -125,7 +125,7 @@ body>.wrapper {
    --------------------------------------------------------------------------*/
 
 #wrapper {
-    @include single-box-shadow(#292929,0,0,.4em,.1em);
+    @include single-box-shadow(0,0,.4em,.1em,$shadow);
     
     padding-top: 4*$base-line-height;
     padding-bottom: $base-line-height;
@@ -181,7 +181,7 @@ body>.wrapper {
     @include border-radius(3px);
     background-color: #444444;
     @include background-image(linear-gradient(#444444,#343434));
-    @include single-box-shadow(#fff,0,0,1em,.1em);
+    @include single-box-shadow(0,0,1em,.1em,#fff);
     min-height: 4.5em;
     padding: 0 1.25em;
     
@@ -249,6 +249,10 @@ h3+p,h2+p,h1+p {
     height: 2*$base-line-height;
     
     cursor: pointer;
+    
+    a:link {
+        text-decoration: none;
+    }
     
     &:hover .os {
         text-decoration: underline;

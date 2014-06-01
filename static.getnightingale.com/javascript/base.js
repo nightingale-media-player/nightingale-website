@@ -89,6 +89,7 @@ function init() {
         for(var i = 0; i < download.length; i++) {
             if(hasDataset?download[i].dataset.hasOwnProperty("popup"):download[i].attributes["data-popup"]) {
                 addEventListenerLegacy(download[i],"click",function(e) {
+                    e.preventDefault();
                     document.getElementById("ubuntuInstallCode").dataset.l10nArgs = '{"name":"'+e.currentTarget.dataset.popupName+'"}';
 
                     // update the contents
@@ -99,12 +100,6 @@ function init() {
                     addEventListenerLegacy(document.getElementById("overlay"),"click",hideOverlay);
                     if(!('pointerEvents' in document.body.style))
                         addEventListenerLegacy(document.getElementById("instructions"),"click",hideOverlay);
-                });
-            }
-            else {
-                addEventListenerLegacy(download[i],"click",function(e) {
-                    console.log(e.currentTarget.dataset.url);
-                    document.location = hasDataset?e.currentTarget.dataset.url:e.currentTarget.attributes['data-url'].value;
                 });
             }
         }

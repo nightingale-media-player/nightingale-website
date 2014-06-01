@@ -10,7 +10,8 @@ The boilerplate has a number of system requirements. You need:
 
 * [Sass](http://sass-lang.com/) (of course)
 * [Compass](http://compass-style.org/) (self-explanatory)
-* [Susy](http://susy.oddbird.net/)
+* [Susy](http://susy.oddbird.net/) (grid)
+* [Breakpoint](http://breakpoint-sass.com/) (nice breakpoints)
 
 ## Used Libraries
 

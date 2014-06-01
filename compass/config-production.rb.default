@@ -1,6 +1,7 @@
 # Require any additional compass plugins here.
 require "susy"
 require "animate"
+require "breakpoint"
 
 # Set the paths accordingly to your production environment:
 http_path        = "getnightingale.com/"
