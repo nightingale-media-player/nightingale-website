@@ -1,4 +1,4 @@
-SetEnvIf Origin "^(.*\.?getnightingale\.com)$" ORIGIN_SUB_DOMAIN=$1
+SetEnvIf Origin "^([a-z0-9\-]*\.?getnightingale\.com)$" ORIGIN_SUB_DOMAIN=$1
 Header set Access-Control-Allow-Origin "%{ORIGIN_SUB_DOMAIN}e" env=ORIGIN_SUB_DOMAIN
 
 # BEGIN Turn ETags Off
