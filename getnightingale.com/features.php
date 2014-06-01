@@ -46,13 +46,14 @@
         <div class="wrapper" id="wrapper">
             <main id="main" class="container">
                 <h1 data-l10n-id="features_title">Nightingale Features</h1>
-                <p data-l10n-id="features_description">Nightingale is powered by XULRunner from Mozilla. XULRunner is a reliable base from Mozilla. Other applications like Thunderbird or Instantbird are also based on XULRunner. the media core of Nightingale uses GStreamer. It allows Nightingale to have a large feature set of playback customization as well as a large selection of supported file formats.</p>
+                <p data-l10n-id="features_description">Nightingale is powered by XULRunner from Mozilla. XULRunner is a reliable base from Mozilla. Other applications like Thunderbird or Instantbird are also based on XULRunner. The media core of Nightingale uses GStreamer, which allows Nightingale to have a large feature set of playback customization as well as a large selection of supported file formats.</p>
                 <section class="fullwidth">
                     <h2 data-l10n-id="features_playback">Playback</h2>
                     <section class="twocolumns">
-                        <h3 data-l10n-id="features_audioFormat">Audio Formats</h3>
+                        <a name="audio_formats"></a>
+                        <h3 data-l10n-id="features_audioFormat" >Audio Formats</h3>
                         <img src="../static.getnightingale.com/images/controls.png" alt="Player controls" data-l10n-id="features_playerControls_image" class="columnimage">
-                        <p class="column" data-l10n-id="features_audioFormat_description">Thanks to GStreamer Nighitngale can play various different file formats. Including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr>, <abbr title="Advanced Audio Coding">AAC</abbr>, <abbr title="Free Lossless Audio Codec">FLAC</abbr> and many more. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
+                        <p class="column" data-l10n-id="features_audioFormat_description">Thanks to GStreamer Nighitngale can play various different file formats. Including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr>, <abbr title="Advanced Audio Coding">AAC</abbr>, <abbr title="Free Lossless Audio Codec">FLAC</abbr> and <a href="http://wiki.getnightingale.com/doku.php?id=audio_codec_support" title="Full Audio Codec support list">many more</a>. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
                     </section>
                     <section class="column omega">
                         <h3 data-l10n-id="features_native">Native GStreamer</h3>
@@ -60,7 +61,7 @@
                     </section>
                     <section class="column">
                         <h3 data-l10n-id="features_videoPlayback">Video Playback</h3>
-                        <p data-l10n-id="features_videoPlayback_description">Apart from playing audio, Nightingale also masters the playback of common video formats. This makes Nightingale the hub for all your local media files.
+                        <p data-l10n-id="features_videoPlayback_description">Apart from playing audio, Nightingale also masters the playback of <a href="http://wiki.getnightingale.com/doku.php?id=video_codec_support" title="Detailed list of supported video formats">video formats</a>. This makes Nightingale the hub for all your local media files.
                     </section>
                     <section class="twocolumns omega">
                         <h3 data-l10n-id="features_playlists">Playlists</h3>

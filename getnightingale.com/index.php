@@ -33,7 +33,7 @@
         <!-- styles -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link type="text/css" rel="stylesheet" href="//static.getnightingale.com/css/style.css">
+        <link type="text/css" rel="stylesheet" href="../static.getnightingale.com/css/style.css">
         <!--[if lt IE 9]>
             <link rel="stylesheet" href="../static.getnightingale.com/css/legacy-ie.css">
             <script src="../static.getnightingale.com/javascript/html5shiv.js"></script>
@@ -119,11 +119,11 @@
                     <h2 data-l10n-id="main_asideHeading">Why Nightingale?</h2>
                     <figure class="feature">
                         <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="main_firstFeature_image">
-                        <figcaption data-l10n-id="main_firstFeature">Wide variety of supported media formats including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, Ogg, <abbr title="Free Lossless Audio Codec">FLAC</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr> and many more. <!-- link to features page --></figcaption>
+                        <figcaption data-l10n-id="main_firstFeature">Wide variety of supported media formats including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, Ogg, <abbr title="Free Lossless Audio Codec">FLAC</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr> and <a href="features.php#audio_formats">many more</a>.</figcaption>
                     </figure>
                     <figure class="feature">
                         <img src="http://lorempixel.com/404/404" alt="" data-l10n-id="main_secondFeature_image">
-                        <figcaption data-l10n-id="main_secondFeature">Highly customizable user interface due to hundreds of themes and add-ons. <!-- link to addons.getnightingale.com --></figcaption>
+                        <figcaption data-l10n-id="main_secondFeature">Highly customizable user interface due to hundreds of <a href="//addons.getnightingale.com">themes and add-ons</a>.</figcaption>
                     </figure>
                     <figure class="feature">
                         <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="main_thirdFeature_image">
