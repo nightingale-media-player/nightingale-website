@@ -64,7 +64,7 @@
                 <p data-l10n-id="downloads_description" data-l10n-args='{"version":"<?php echo $version; ?> "}'>Nightingale <?php echo $version; ?> is available for multiple platforms. If yours isn't in the list, this doesn't mean, Nightingale isn't available for it. If you compiled Nightingale for an Operating System not listed below, let us know in the <a href="http://forum.getnightingale.com">forum</a>!</p>
                 <ul class="plainlist">
                     <?php foreach($download as $os => $properties) {
-                            if($os == 'unknown') // exclude the default option...
+                            if($os == $UNKNOWN) // exclude the default option...
                                 continue;
                             echo '
                                 <li '.($properties['popup'] ? 'data-popup data-popup-name="'.$properties['popupPackageName'].'"':'data-url="'.$properties['url'].'"').' class="download split">

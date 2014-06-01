@@ -1,6 +1,6 @@
 <?php
     $version = '1.12';
-    
+    $UNKNOWN = 'unknown';
     
     $download['windows']['url'] = ''; // download url
     $download['windows']['img'] = '../static.getnightingale.com/images/wine.png'; // symbolicon
@@ -23,14 +23,6 @@
     $download['ubuntu']['package'] = 'PPA';
     $download['ubuntu']['popup'] = true;
     $download['ubuntu']['popupPackageName'] = 'nightingale';
-
-    $download['ubuntu-nounity']['url'] = '';
-    $download['ubuntu-nounity']['img'] = '../static.getnightingale.com/images/start-here-ubuntuoriginal.png';
-    $download['ubuntu-nounity']['osname'] = 'Ubuntu without Unity';
-    $download['ubuntu-nounity']['arch'] = getArch();
-    $download['ubuntu-nounity']['package'] = 'PPA';
-    $download['ubuntu-nounity']['popup'] = true;
-    $download['ubuntu-nounity']['popupPackageName'] = 'nightingale-nounity';
     
     $download['debian']['url'] = '';
     $download['debian']['img'] = '../static.getnightingale.com/images/application-x-deb.png';
@@ -67,12 +59,12 @@
     $download['linux64']['package'] = '.tar.bz2';
     $download['linux64']['popup'] = false;
     
-    $download['unknown']['url'] = '/download.php';
-    $download['unknown']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
-    $download['unknown']['osname'] = 'Unknown';
-    $download['unknown']['arch'] = 'unknown';
-    $download['unknown']['package'] = '';
-    $download['unknown']['popup'] = false;
+    $download[$UNKNOWN]['url'] = '/download.php';
+    $download[$UNKNOWN]['img'] = '../static.getnightingale.com/images/package-x-generic.png';
+    $download[$UNKNOWN]['osname'] = 'Unknown';
+    $download[$UNKNOWN]['arch'] = 'unknown';
+    $download[$UNKNOWN]['package'] = '';
+    $download[$UNKNOWN]['popup'] = false;
     
     $tarball = 'http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.12';
     
