@@ -1,4 +1,5 @@
 <?php
+$failed = false;
 if (!($_COOKIE["nightingale_installed"] == "yes")) {
   if ($_POST['have'] == yes) {
 	  if ( setcookie("nightingale_installed", 'yes', time()+315360000, "/", "getnightingale.com", false, true)) {
@@ -6,7 +7,7 @@ if (!($_COOKIE["nightingale_installed"] == "yes")) {
 		header('Location:index.php?url='.$_POST['url']);
 	  }
       else {
-		echo "failed";
+		$failed = true;
 	  }
   }
 }
@@ -15,7 +16,10 @@ if (!($_COOKIE["nightingale_installed"] == "yes")) {
 <html>
 <head>
 <?php
-if ($_COOKIE["nightingale_installed"] == "yes") {
+if($failed) {
+    echo "<title data-l10n-id='launch_failed'>Failed to launch Nightingale</title>";
+}
+else if ($_COOKIE["nightingale_installed"] == "yes") {
   echo	"
   <title data-l10n-id='launch_inprogress'>Launching Nightingale...</title>
 	<script type='text/javascript'>
@@ -52,7 +56,10 @@ if ($_COOKIE["nightingale_installed"] == "yes") {
 </head>
 
 <?php
-if ($_COOKIE["nightingale_installed"] == "yes") {
+if($failed) {
+    echo "<body><h1 data-l10n-id='launch_failed'>Failed to launch Nightingale</h1></body>";
+}
+else if ($_COOKIE["nightingale_installed"] == "yes") {
   echo	"
   <body id='launch' onload='nightingaleOpen(false)'>
 	<div id='wrap'>
