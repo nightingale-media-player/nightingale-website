@@ -79,7 +79,7 @@
             </header>
         </div>
         <div class="wrapper" id="wrapper">
-            <article id="main" class="container" role="main">
+            <main id="main" class="container">
                 <div id="contentleft" class="twocolumns">
                     <div id="screenshots">
                         <iframe width="702" height="395" src="//www.youtube.com/embed/9Na3CqM6bRg" frameborder="0" allowfullscreen></iframe>
@@ -130,7 +130,7 @@
                         <figcaption data-l10n-id="main_thirdFeature">Slick and easy to understand design. the interface stays out of your way while still enabling easy management of big libraries. <!-- link to screenshots --></figcaption>
                     </figure>
                 </aside>
-            </article>
+            </main>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
             <footer class="container">

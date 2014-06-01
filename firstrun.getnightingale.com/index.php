@@ -66,7 +66,7 @@
             </header>
         </div>
         <div class="wrapper" id="wrapper">
-            <article id="main" class="container" role="main">
+            <main id="main" class="container">
                 <h1 data-l10n-id="firstrun_title">Welcome to Nightingale!</h1>
                 <p data-l10n-id="firstrun_description">You have just started the best music player for the first time. We are proud to bring you the unique combination of a web browser and a media player in one program. Further Nightingale allows you to install Feathers, which let you tweak the appearance, while Add-ons expand the functionality of the programm. Close this tab to access your library.</p>
                 <section class="column">
@@ -176,7 +176,7 @@ foreach($content->extensions as $extension) {
                     }
                 ?>
                 </section>
-            </article>
+            </main>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
             <footer class="container">
@@ -222,8 +222,9 @@ foreach($content->extensions as $extension) {
                     <b data-l10n-id="footer_ressources">Ressources</b>
                     <ul>
                         <li><a href="//getnightingale.com/download.php" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
-                        <!--<li><a href="//getnightingale.com/features.php" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
-                        <li><a href="//getnightingale.com/nightlies.php" title="Nightingale Nightlies" data-l10n-id="footer_nightlies">Nightlies</a></li>-->
+                        <li><a href="//getnightingale.com/features.php" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
+                        <li><a href="//getnightingale.com/nightlies.php" title="Nightingale Nightliy Builds" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="//getnightingale.com/branding.php" title="Nightingale Logo and Screenshots" data-l10n-id="footer_branding">Branding</a></li>
                     </ul>
                 </nav>
             </footer>

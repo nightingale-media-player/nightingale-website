@@ -150,7 +150,7 @@
             </header>
         </div>
         <div class="wrapper" id="wrapper">
-            <article id="main" class="container" role="main">
+            <main id="main" class="container">
                 <section class="twocolumns"
                     <h1 data-l10n-id="dashboard_stats_title">Statistics</h1>
                     <h2 data-l10n-id="dashboard_stats_installs_title">Installations &amp; Upgrades</h2>
@@ -170,7 +170,7 @@
                 <section class="column omega">
                     <h1 data-l10n-id="dashboard_unitTests_title">Unit Tests</h1>
                     <div id="travis-build-status-list" class="plainlist">
-                    </div>                    
+                    </div>
                 </section>
                 <section class="column">
                     <h1 data-l10n-id="dashboard_other_title">Other Analytics</h1>
@@ -182,7 +182,7 @@
                         <li><a href="//stats.getnightingale.com" data-l10n-id="dashboard_other_piwik">Piwik Website Visitor Statistics</a></li>
                     </ul>
                 </section>
-            </article>
+            </main>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
             <footer class="container">
@@ -229,7 +229,8 @@
                     <ul>
                         <li><a href="//getnightingale.com/download.php" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
                         <li><a href="//getnightingale.com/features.php" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
-                        <li><a href="//getnightingale.com/nightlies.php" title="Nightingale Nightlies" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="//getnightingale.com/nightlies.php" title="Nightingale Nightliy Builds" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="//getnightingale.com/branding.php" title="Nightingale Logo and Screenshots" data-l10n-id="footer_branding">Branding</a></li>
                     </ul>
                 </nav>
             </footer>

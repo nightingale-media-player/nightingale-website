@@ -44,7 +44,7 @@
             </header>
         </div>
         <div class="wrapper" id="wrapper">
-            <article id="main" class="container" role="main">
+            <main id="main" class="container">
                 <h1 data-l10n-id="features_title">Nightingale Features</h1>
                 <p data-l10n-id="features_description">Nightingale is powered by XULRunner from Mozilla. XULRunner is a reliable base from Mozilla. Other applications like Thunderbird or Instantbird are also based on XULRunner. the media core of Nightingale uses GStreamer. It allows Nightingale to have a large feature set of playback customization as well as a large selection of supported file formats.</p>
                 <section class="fullwidth">
@@ -121,7 +121,7 @@
                     </section>
                 </section>
                 <!-- Miniplayer, iTunes import, cross platform, 100% CRASH FREE xoxoxox -->
-            </article>
+            </main>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
             <footer class="container">
@@ -166,9 +166,10 @@
                 <nav class="footerlinks">
                     <b data-l10n-id="footer_ressources">Ressources</b>
                     <ul>
-                        <li><a href="http://getnightingale.com/download.php" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
-                        <li><a href="http://getnightingale.com/features.php" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
-                        <li><a href="http://getnightingale.com/nightlies.php" title="Nightingale Nightlies" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="//getnightingale.com/download.php" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
+                        <li><a href="//getnightingale.com/features.php" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
+                        <li><a href="//getnightingale.com/nightlies.php" title="Nightingale Nightliy Builds" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="//getnightingale.com/branding.php" title="Nightingale Logo and Screenshots" data-l10n-id="footer_branding">Branding</a></li>
                     </ul>
                 </nav>
             </footer>

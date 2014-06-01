@@ -109,7 +109,7 @@
             </header>
         </div>
         <div class="wrapper" id="wrapper">
-            <article id="main" class="container" role="main">
+            <main id="main" class="container">
                 <h1 data-l10n-id="nightlies_title">Nightingale Nightlies</h1>
                 <p data-l10n-id="nightlies_description">We automatically build the latest version of our source. Since those are development versions, we don't take any liability for possible damage. If you run into an issue, please <a href="https://github.com/nightingale-media-player/nightingale-addons/issues/">report it</a> to us! We don't have a Nightly update channel, so the version you download here will only upgrade to the next major release.</p>
                 <ul class="plainlist">
@@ -126,7 +126,7 @@
                     <h2 data-l10n-id="compile">Compile Nightingale</h2>
                     <p data-l10n-id="compilingInstructions" data-l10n-args='{"tarball":"<?php echo $tarball;?>"}'>You can compile Nightingale for yourself. You will require our <a href="<?php echo $tarball; ?>">Source</a> and everything else is conviniently explained for each plattform in the <a href="http://wiki.getnightingale.com/doku.php?id=build">"Build" wiki article</a>.</p>
                 </section>
-            </article>
+            </main>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
             <footer class="container">
@@ -171,9 +171,10 @@
                 <nav class="footerlinks">
                     <b data-l10n-id="footer_ressources">Ressources</b>
                     <ul>
-                        <li><a href="http://getnightingale.com/download.php" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
-                        <li><a href="http://getnightingale.com/features.php" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
-                        <li><a href="http://getnightingale.com/nightlies.php" title="Nightingale Nightlies" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="//getnightingale.com/download.php" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
+                        <li><a href="//getnightingale.com/features.php" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
+                        <li><a href="//getnightingale.com/nightlies.php" title="Nightingale Nightliy Builds" data-l10n-id="footer_nightlies">Nightlies</a></li>
+                        <li><a href="//getnightingale.com/branding.php" title="Nightingale Logo and Screenshots" data-l10n-id="footer_branding">Branding</a></li>
                     </ul>
                 </nav>
             </footer>
