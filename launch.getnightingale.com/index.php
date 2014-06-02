@@ -22,15 +22,15 @@ if($failed) {
 else if ($_COOKIE["nightingale_installed"] == "yes") {
   echo	"
   <title data-l10n-id='launch_inprogress'>Launching Nightingale...</title>
-	<script type='application/javascript' src='javascript/launch.js'></script>  ";
+	<script type='application/javascript' src='//static.getnightingale.com/javascript/launch.js'></script>  ";
   }
   else {
     echo "<title data-l10n-id='launch_question'>Got Nightingale?</title>";
   }
 ?>
-	<link rel='stylesheet' type='text/css' href='css/launch.css' />
+	<link rel='stylesheet' type='text/css' href='//static.getnightingale.com/css/launch.css' />
     
-    <script type="text/javascript" src="//static.getnightingale.com/javascript/l10n.js"></script>
+    <script type="application/javascript" src="//static.getnightingale.com/javascript/l10n.js"></script>
     <link rel="prefetch" type="application/l10n" href="//static.getnightingale.com/l10n/locales.ini">
 </head>
 
@@ -49,7 +49,7 @@ else if ($_COOKIE["nightingale_installed"] == "yes") {
 		<p class='link'>
 			<a href='ngale:open?url=".$_GET['url']."'>ngale:open?url=".htmlspecialchars($_GET['url'])."</a>
 		</p>
-		<img src='images/launch.png' />
+		<img src='//static.getnightingale.com/images/launch.png' />
 		<div id='options'>
 			<form action='http://getnightingale.com/' method='GET'>
 				<input type='submit' value='Download Nightingale' data-l10n-id='launch_download'/>
@@ -70,7 +70,7 @@ else if ($_COOKIE["nightingale_installed"] == "yes") {
         <p class='link'>
           <a href='ngale:open?url=".$_GET['url']."'>ngale:open?url=".htmlspecialchars($_GET['url'])."</a>
         </p>
-        <img src='images/detect.png' />
+        <img src='//static.getnightingale.com/images/detect.png' />
         <div id='options'>
           <form action='http://" . $_SERVER["HTTP_HOST"].$_SERVER["SCRIPT_NAME"] . "' method='POST'>
             <input type='hidden' name='have' value='yes' />

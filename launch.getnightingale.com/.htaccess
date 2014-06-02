@@ -5,5 +5,5 @@ Options -Indexes
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
     Header set X-Frame-Options DENY
-    Header set Content-Security-Policy "frame-src 'none'; script-src 'self' http://*.getnightingale.com; form-action 'self' http://getnightingale.com; img-src 'self'; style-src 'self'; default-src 'http://static.getnightingale.com'; frame-ancestors 'none'"
+    Header set Content-Security-Policy "frame-src 'none'; form-action 'self' http://getnightingale.com; default-src 'http://static.getnightingale.com'; frame-ancestors 'none'"
 </IfModule>
