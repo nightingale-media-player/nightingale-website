@@ -1,10 +1,20 @@
 <?php
 $failed = false;
-if (!($_COOKIE["nightingale_installed"] == "yes")) {
+$url = '';
+
+// Check for XSS and stuff
+if(filter_var($_REQUEST['url'], FILTER_VALIDATE_URL)) {
+    $url = filter_var($_REQUEST['url'], FILTER_SANITIZE_URL);
+}
+else if($_REQUEST['url']) {
+    $failed = true;
+}
+
+if (!($_COOKIE["nightingale_installed"] == "yes") && !$failed) {
   if ($_POST['have'] == yes) {
 	  if ( setcookie("nightingale_installed", 'yes', time()+315360000, "/", "getnightingale.com", false, true)) {
 	  //if (setcookie("nightingale_installed", $value, time()+315360000)) {
-		header('Location:index.php?url='.$_POST['url']);
+		header('Location:index.php?url='.$url);
 	  }
       else {
 		$failed = true;
@@ -47,7 +57,7 @@ else if ($_COOKIE["nightingale_installed"] == "yes") {
 			Launching Nightingale...
 		</p>
 		<p class='link'>
-			<a href='ngale:open?url=".$_GET['url']."'>ngale:open?url=".htmlspecialchars($_GET['url'])."</a>
+			<a href='ngale:open?url=".$url."'>ngale:open?url=".htmlspecialchars($url)."</a>
 		</p>
 		<img src='//static.getnightingale.com/images/launch.png' />
 		<div id='options'>
@@ -68,14 +78,14 @@ else if ($_COOKIE["nightingale_installed"] == "yes") {
           Nightingale has not yet been detected.
         </p>
         <p class='link'>
-          <a href='ngale:open?url=".$_GET['url']."'>ngale:open?url=".htmlspecialchars($_GET['url'])."</a>
+          <a href='ngale:open?url=".$url."'>ngale:open?url=".htmlspecialchars($url)."</a>
         </p>
         <img src='//static.getnightingale.com/images/detect.png' />
         <div id='options'>
           <form action='http://" . $_SERVER["HTTP_HOST"].$_SERVER["SCRIPT_NAME"] . "' method='POST'>
             <input type='hidden' name='have' value='yes' />
-            <input type='hidden' name='url' value='".$_GET['url']."' />
-            <input type='submit' value='I have Nightingale'".($_GET['url']==''?" disabled='true'":'')." data-l10n-id='launch_yes'/>
+            <input type='hidden' name='url' value='".$url."' />
+            <input type='submit' value='I have Nightingale'".($url==''?" disabled='true'":'')." data-l10n-id='launch_yes'/>
           </form>
           <form action='http://getnightingale.com/' method='GET'>
             <input type='submit' value='Download Nightingale' data-l10n-id='launch_download'/>
@@ -85,5 +95,4 @@ else if ($_COOKIE["nightingale_installed"] == "yes") {
     </body>";
   }
 ?>
-
 </html>

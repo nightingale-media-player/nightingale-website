@@ -1,5 +1,5 @@
 function nightingaleOpen(stay) {
-    var gotourl = window.location.search.match(/^\?[a-z=&]*url=([a-zA-Z1-9%\-_\/:\.\?=]+)&?.*$/)[1];
+    var gotourl = window.location.search.match(/^\?[a-z=&]*url=([^&]+)&?.*$/)[1];
     if(gotourl) {
         setTimeout(function() {
             window.location.href = 'ngale:open?url='+gotourl;
