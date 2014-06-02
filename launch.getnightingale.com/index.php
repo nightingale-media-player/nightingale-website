@@ -25,18 +25,19 @@ if (!($_COOKIE["nightingale_installed"] == "yes") && !$failed) {
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
 <?php
 if($failed) {
-    echo "<title data-l10n-id='launch_failed'>Failed to launch Nightingale</title>";
+    echo "    <title data-l10n-id='launch_failed'>Failed to launch Nightingale</title>";
 }
 else if ($_COOKIE["nightingale_installed"] == "yes") {
   echo	"
   <title data-l10n-id='launch_inprogress'>Launching Nightingale...</title>
-	<script type='application/javascript' src='//static.getnightingale.com/javascript/launch.js'></script>  ";
-  }
-  else {
-    echo "<title data-l10n-id='launch_question'>Got Nightingale?</title>";
-  }
+  <script type='application/javascript' src='//static.getnightingale.com/javascript/launch.js'></script>",PHP_EOL;
+}
+else {
+    echo "    <title data-l10n-id='launch_question'>Got Nightingale?</title>";
+}
 ?>
 	<link rel='stylesheet' type='text/css' href='//static.getnightingale.com/css/launch.css' />
     
