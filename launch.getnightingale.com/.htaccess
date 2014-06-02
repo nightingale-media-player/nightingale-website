@@ -1,1 +1,9 @@
 Options -Indexes
+
+# ----------------------------------------------------------------------
+# Prevent framing and XSS
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set X-Frame-Options DENY
+    Header set Content-Security-Policy "frame-src 'none'; script-src 'self' http://*.getnightingale.com; form-action http://getnightingale.com; img-src 'self'; style-src 'self'; default-src 'http://static.getnightingale.com'; frame-ancestors 'none'"
+</IfModule>

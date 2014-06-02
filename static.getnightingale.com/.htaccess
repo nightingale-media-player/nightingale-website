@@ -1,17 +1,132 @@
-SetEnvIf Origin "^([a-z0-9\-]*\.?getnightingale\.com)$" ORIGIN_SUB_DOMAIN=$1
-Header set Access-Control-Allow-Origin "%{ORIGIN_SUB_DOMAIN}e" env=ORIGIN_SUB_DOMAIN
+# ----------------------------------------------------------------------
+# Based on the Contao CMS (contao.org)
+# and H5BP (h5bp.com) .htaccess templates
+# 
+# H5BP is licensed under the MIT License (opensource.org/licenses/MIT)
+# Contao is licensed under the LGPL (gnu.org/licenses/lgpl-3.0.html)
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # ----------------------------------------------------------------------
+    # CORS
+    # ----------------------------------------------------------------------
+    SetEnvIf Origin "^([a-z0-9\-]*\.?getnightingale\.com)$" ORIGIN_SUB_DOMAIN=$1
+    Header set Access-Control-Allow-Origin "%{ORIGIN_SUB_DOMAIN}" env=ORIGIN_SUB_DOMAIN
+
+    # ----------------------------------------------------------------------
+    # Prevent framing
+    # ----------------------------------------------------------------------
+    Header set X-Frame-Options "ALLOW-FROM %{ORIGIN_SUB_DOMAIN}" env=ORIGIN_SUB_DOMAIN
+    Header set Content-Security-Policy "frame-ancestors http://*.getnightingale.com http://getnightingale.com"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Better website experience for IE users
+# ----------------------------------------------------------------------
+
+# Force the latest IE version, in various cases when it may fall back to IE7 mode
+# github.com/rails/rails/commit/123eb25#commitcomment-118920
+# Use ChromeFrame if it's installed for a better experience for the poor IE folk
+# 
+# Will not work on fCGI scripts
+<IfModule mod_headers.c>
+    Header set X-UA-Compatible "IE=Edge,chrome=1"
+    <FilesMatch "\.(appcache|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svg|svgz|ttf|vcf|webm|webp|woff|xml|xpi)$">
+        Header unset X-UA-Compatible
+    </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Proper MIME type for all files
+# ----------------------------------------------------------------------
+
+<IfModule mod_mime.c>
+    # JavaScript
+    # Normalize to standard type (it's sniffed in IE anyways)
+    # tools.ietf.org/html/rfc4329#section-7.2
+    AddType application/javascript                 js jsonp
+    AddType application/json                       json
+    
+    # Audio
+    AddType audio/mp4                              m4a f4a f4b
+    AddType audio/ogg                              oga ogg
+    
+    # Video
+    AddType video/mp4                              mp4 m4v f4v f4p
+    AddType video/ogg                              ogv
+    AddType video/webm                             webm
+    AddType video/x-flv                            flv
+    
+    # SVG
+    # Required for svg webfonts on iPad
+    # twitter.com/FontSquirrel/status/14855840545
+    AddType image/svg+xml                          svg svgz
+    AddEncoding gzip                               svgz
+    
+    # Webfonts
+    AddType application/vnd.ms-fontobject          eot
+    AddType application/x-font-ttf                 ttf ttc
+    AddType application/x-font-woff                woff
+    AddType font/opentype                          otf
+    
+    # Assorted types
+    AddType application/octet-stream               safariextz
+    AddType application/x-chrome-extension         crx
+    AddType application/x-opera-extension          oex
+    AddType application/x-shockwave-flash          swf
+    AddType application/x-web-app-manifest+json    webapp
+    AddType application/x-xpinstall                xpi
+    AddType application/xml                        rss atom xml rdf
+    AddType image/webp                             webp
+    AddType image/x-icon                           ico
+    AddType text/cache-manifest                    appcache manifest
+    AddType text/vtt                               vtt
+    AddType text/x-component                       htc
+    AddType text/x-vcard                           vcf
+    
+    AddType application/l10n                       ini
+    AddType application/l10n                       properties
+</IfModule>
+
 
 # BEGIN Turn ETags Off
 FileETag None
 # END Turn ETags Off
 
-<ifModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
-</ifModule>
+# ----------------------------------------------------------------------
+# Gzip compression
+# ----------------------------------------------------------------------
 
-<ifModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
-</ifModule>
+<IfModule mod_deflate.c>
+    # Force deflate for mangled headers developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+      
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE application/atom+xml \
+                                      application/javascript \
+                                      application/x-javascript \
+                                      application/json \
+                                      application/rss+xml \
+                                      application/vnd.ms-fontobject \
+                                      application/x-font-ttf \
+                                      application/xhtml+xml \
+                                      application/xml \
+                                      font/opentype \
+                                      image/svg+xml \
+                                      image/x-icon \
+                                      text/css \
+                                      text/html \
+                                      text/plain \
+                                      text/x-component \
+                                      text/xml \
+                                      text/javascript \
+                                      application/l10n \
+    </IfModule>
+</IfModule>
 
 # BEGIN Expire headers
 <ifModule mod_expires.c>
@@ -48,4 +163,30 @@ FileETag None
 </ifModule>
 # END Cache-Control Headers
 
+# ----------------------------------------------------------------------
+# UTF-8 encoding
+# ----------------------------------------------------------------------
+
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset utf-8
+
+# Force UTF-8 for a number of file formats
+AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
+
+# ----------------------------------------------------------------------
+# No folder overviews
+# ----------------------------------------------------------------------
 Options -Indexes
+
+# ----------------------------------------------------------------------
+# Further header adjustments
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>    
+    # Add a Vary Accept-Encoding header for the compressed resources. If you
+    # modify the file types above, make sure to change them here accordingly.
+    # developer.yahoo.com/performance/rules.html#gzip
+    <FilesMatch "\.(js|css|xml|gz)$">
+        Header append Vary Accept-Encoding
+    </FilesMatch>
+</IfModule>

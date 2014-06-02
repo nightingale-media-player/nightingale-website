@@ -4,3 +4,79 @@ RewriteRule ^release-notes/([0-9\.]+)$ /release-notes.php?version=$1
 RewriteRule ^bundles/Nightingale/([0-9\.]+)/firstrun\.xml$ /bundles.php?version=$1
 
 Options -Indexes
+
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "frame-src 'none'; script-src 'self' 'unsafe-inline' http://*.getnightingale.com; connect-src http://*.getnightingale.com; default-src http://static.getnightingale.com"
+</IfModule>
+
+<IfModule mod_mime.c>
+    # JavaScript
+    # Normalize to standard type (it's sniffed in IE anyways)
+    # tools.ietf.org/html/rfc4329#section-7.2
+    AddType application/json                       json
+    AddType image/x-icon                           ico
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Gzip compression
+# ----------------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+    # Force deflate for mangled headers developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+      
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE application/atom+xml \
+                                      application/json \
+                                      application/rss+xml \
+                                      application/xhtml+xml \
+                                      application/xml \
+                                      text/css \
+                                      text/html \
+                                      text/plain \
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Expires headers (for better cache control)
+# ----------------------------------------------------------------------
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+    
+    ExpiresByType text/cache-manifest                 "access plus 0 seconds"
+    ExpiresByType text/html                           "access plus 0 seconds"
+    ExpiresByType text/xml                            "access plus 0 seconds"
+    ExpiresByType application/xml                     "access plus 0 seconds"
+    ExpiresByType application/json                    "access plus 0 seconds"
+    ExpiresByType application/rss+xml                 "access plus 1 hour"
+    ExpiresByType application/atom+xml                "access plus 1 hour"
+    ExpiresByType image/x-icon "access plus 2592000 seconds"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# ETag removal
+# ----------------------------------------------------------------------
+
+# FileETag None is not enough for every server.
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+
+# Since we're sending far-future expires, we don't need ETags for static content.
+# developer.yahoo.com/performance/rules.html#etags
+FileETag None
+
+# ----------------------------------------------------------------------
+# A little more security
+# ----------------------------------------------------------------------
+
+# Prevent access to template files
+<FilesMatch "\.(tpl|html5|xhtml)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

@@ -13,7 +13,6 @@
     Header set Content-Security-Policy "frame-src http://youtube.com; script-src 'self' 'unsafe-inline' http://*.getnightingale.com; connect-src http://*.getnightingale.com; default-src http://static.getnightingale.com; frame-ancestors 'none'"
 </IfModule>
 
-
 <IfModule mod_mime.c>
     AddType image/x-icon                           ico
 </IfModule>

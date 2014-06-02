@@ -40,8 +40,8 @@
         <![endif]-->
         
         <!-- l10n -->
-        <script type="text/javascript" src="//static.getnightingale.com/javascript/l10n.js"></script>
-        <script type="text/javascript" src="//static.getnightingale.com/javascript/base.js"></script>
+        <script type="application/javascript" src="//static.getnightingale.com/javascript/l10n.js"></script>
+        <script type="application/javascript" src="//static.getnightingale.com/javascript/base.js"></script>
         <link rel="prefetch" type="application/l10n" href="//static.getnightingale.com/l10n/locales.ini">
         
     </head> 
@@ -184,7 +184,7 @@
             </footer>
         </div>
           <!-- Piwik -->
-        <script type="text/javascript">
+        <script type="application/javascript">
           var _paq = _paq || [];
           _paq.push(["trackPageView"]);
           _paq.push(["enableLinkTracking"]);
@@ -193,7 +193,7 @@
             var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.getnightingale.com/";
             _paq.push(["setTrackerUrl", u+"piwik.php"]);
             _paq.push(["setSiteId", "2"]);
-            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="application/javascript";
             g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
           })();
         </script>

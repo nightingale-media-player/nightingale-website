@@ -54,7 +54,7 @@ function getData($url) {
 // main code
 
     header("Content-Type: application/json");
-    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Origin: http://dashboard.getnightingale.com");
 
     switch($_GET['type']) {
         case 'versionInfo':

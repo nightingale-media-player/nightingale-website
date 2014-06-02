@@ -1,1 +1,8 @@
-Header set Access-Control-Allow-Origin "*"
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    # ----------------------------------------------------------------------
+    # Allow framing
+    # ----------------------------------------------------------------------
+    Header unset X-Frame-Options
+    Header unset Content-Security-Policy
+</IfModule>

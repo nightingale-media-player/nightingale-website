@@ -70,8 +70,8 @@
         <![endif]-->
         
         <!-- l10n -->
-        <script type="text/javascript" src="../static.getnightingale.com/javascript/l10n.js"></script>
-        <script type="text/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
+        <script type="application/javascript" src="../static.getnightingale.com/javascript/l10n.js"></script>
+        <script type="application/javascript" src="../static.getnightingale.com/javascript/base.js"></script>
         <link rel="prefetch" type="application/l10n" href="../static.getnightingale.com/l10n/locales.ini" >
         
     </head>

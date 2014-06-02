@@ -22,28 +22,7 @@ if($failed) {
 else if ($_COOKIE["nightingale_installed"] == "yes") {
   echo	"
   <title data-l10n-id='launch_inprogress'>Launching Nightingale...</title>
-	<script type='text/javascript'>
-		function nightingaleOpen(stay) {
-			var gotourl = ".$_GET['url'].";
-			if(gotourl!='') {
-				var url = 'ngale:open?url='+gotourl;
-				setTimeout(function() {
-					window.location.href = url;
-					if (!stay) {
-						if (window.history.length < 2))
-							setTimeout('window.close()', 100);
-						else {
-							setTimeout('window.history.back()', 100);
-						}
-					}
-					return true;
-				}, 1);
-			}
-			else {
-				setTimeout('window.close()', 100);
-			}
-		}
-	</script>  ";
+	<script type='application/javascript' src='javascript/launch.js'></script>  ";
   }
   else {
     echo "<title data-l10n-id='launch_question'>Got Nightingale?</title>";
@@ -61,7 +40,7 @@ if($failed) {
 }
 else if ($_COOKIE["nightingale_installed"] == "yes") {
   echo	"
-  <body id='launch' onload='nightingaleOpen(false)'>
+  <body id='launch'>
 	<div id='wrap'>
 		<h1 data-l10n-id='launch_wait'>One Moment Please</h1>
 		<p class='note' data-l10n-id='launch_inprogress'>

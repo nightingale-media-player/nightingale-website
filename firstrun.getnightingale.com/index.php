@@ -39,9 +39,9 @@
         <![endif]-->
         
         <!-- l10n -->
-        <script type="text/javascript" src="//static.getnightingale.com/javascript/l10n.js"></script>
+        <script type="application/javascript" src="//static.getnightingale.com/javascript/l10n.js"></script>
         <link rel="prefetch" type="application/l10n" href="//static.getnightingale.com/l10n/locales<?php echo $version; ?>.ini" >
-        <script type="text/javascript" src="//static.getnightingale.com/javascript/base.js"></script>
+        <script type="application/javascript" src="//static.getnightingale.com/javascript/base.js"></script>
         
     </head>
     <body>
@@ -230,7 +230,7 @@ foreach($content->extensions as $extension) {
             </footer>
         </div>
         <!-- Piwik -->
-        <script type="text/javascript">
+        <script type="application/javascript">
           var _paq = _paq || [];
           _paq.push(["setCustomVariable",1,"Type","<?php echo $_GET['type'];?>","visit"]);
           _paq.push(["setCustomVariable",2,"Version","<?php echo $version;?>","visit"]);
