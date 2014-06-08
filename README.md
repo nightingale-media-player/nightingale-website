@@ -30,7 +30,7 @@ The Website is based on a few different existing projects:
  * [freaktechnik](https://github.com/freaktechnik)
 
 ## Licensing
-This project is licensed under the GPL v2 (see LICENSE)
+This project is licensed under the GPL v2 (see [LICENSE](LICENSE))
 
 ## Contents
 

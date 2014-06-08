@@ -7,8 +7,12 @@ $sidebar-item-height: 5*px2em($base-line-height);
 /* -------------------------------------------------------------------------*/
 /* Layout */
 
-body>.wrapper {
-    width: 100%;
+body {
+    color: $text-color;
+    background-color: $content-bg;
+    .wrapper {
+        width: 100%;
+    }
 }
 
 /* ----------------------------------------------------------------------------
@@ -95,7 +99,7 @@ body>.wrapper {
             @include box-sizing(border-box);
 
             :link,:visited {
-                color: black;
+                color: $text-color;
                 height: 100%;
                 padding-left: .4em;
                 padding-right: .4em;
@@ -129,7 +133,6 @@ body>.wrapper {
     
     padding-top: 4*$base-line-height;
     padding-bottom: $base-line-height;
-    //margin-bottom: $base-line-height;
     
     position: relative;
     z-index: 1;
@@ -176,11 +179,11 @@ body>.wrapper {
 
 #downloadbutton {
     text-align: right;
-    color: white;
-    border: 2px solid #343434;
+    color: $light-text;
+    border: 2px solid $download-start;
     @include border-radius(3px);
-    background-color: #444444;
-    @include background-image(linear-gradient(#444444,#343434));
+    background-color: $download-end;
+    @include background-image(linear-gradient($download-end,$download-start));
     @include single-box-shadow(0,0,1em,.1em,#fff);
     min-height: 4.5em;
     padding: 0 1.25em;
@@ -259,7 +262,7 @@ h3+p,h2+p,h1+p {
     }
     
     .package {
-        color: grey;
+        color: $grey-teyt;
     }
     
     img {
@@ -338,14 +341,14 @@ h3+p,h2+p,h1+p {
     
     .offline {
         background-color: rgb(239, 66, 66);
-        color: white;
+        color: $light-text;
 
         a {
             &:link, &:visited {
-                color: white;
+                color: $light-text;
             }
             &:hover {
-                color: rgb(240, 240, 240);
+                color: $footer-text-hover;
             }
         }
     }

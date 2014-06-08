@@ -6,7 +6,7 @@
 
     /* Layout */
     html {
-        background-color: #333333;
+        background-color: $dark-grey;
         
         min-height: 100%;
         overflow-x: hidden;
@@ -23,7 +23,7 @@
     }
     
     #ngalemainheadwrapper, #ngalemainfooterwrapper {
-        @include background-image(linear-gradient(#414141,#333333));
+        @include background-image(linear-gradient($darkish-grey, $dark-grey));
     }
     
     .container {
@@ -36,18 +36,18 @@
        --------------------------------------------------------------------------*/
     #ngalemainheadwrapper header nav li {
         a:hover {
-            border-bottom: .4em solid white;
+            border-bottom: .4em solid $light-text;
         }
 
         :link,:visited {
-            color: white;
+            color: $light-text;
         }
     }
 
     #expandngalenav {
         background: none;
         border: none;
-        color: white;
+        color: $light-text;
         font-size: $base-font-size;
         width: 100%;
     }
@@ -57,12 +57,13 @@
        --------------------------------------------------------------------------*/
     
     #downloadbutton:active  {
-        background-color: #343434;
-        @include background-image(linear-gradient(#343434,#444444));
+        background-color: $download-start;
+        @include background-image(linear-gradient($download-start,$download-end));
     }
     
     #wrapper {
-        background: white;
+        background: $content-bg;
+        color: $text-color;
         
         a {
             &:link,&:hover,&:visited,&:active {
@@ -93,7 +94,8 @@
         
         section {
             pointer-events: auto;
-            background-color: white;
+            background-color: $content-bg;
+            color: $text-color;
             max-width: 4*$column-width+$gutter-width;
             padding: $base-line-height $gutter-width;
             @include border-radius(.3em);
@@ -111,20 +113,20 @@
        --------------------------------------------------------------------------*/
     
     #ngalemainfooterwrapper footer {
-        color: white;
+        color: $footer-text;
         
         :link,:visited {
-            color: white;
+            color: $footer-text;
             text-decoration: none;
         }
         
         a:hover {
-            color: #f0f0f0;
+            color: $footer-text-hover;
             text-decoration: underline;
         }
         
         .socialicon:hover {
-            color: white;
+            color: $footer-text;
         }
     }
     
@@ -156,7 +158,6 @@
         
             img {
                 @include span(1 of 2);
-                //width: column-width(1 of 2);
             }
         }
         
