@@ -10,7 +10,7 @@ $sidebar-item-height: 5*px2em($base-line-height);
 body {
     color: $text-color;
     background-color: $content-bg;
-    .wrapper {
+    & > .wrapper {
         width: 100%;
     }
 }
