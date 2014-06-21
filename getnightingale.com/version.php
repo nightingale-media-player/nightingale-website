@@ -1,5 +1,5 @@
 <?php
-    $version = '1.12';
+    $version = '1.12.2';
     $UNKNOWN = 'unknown';
     
     $download['windows']['url'] = ''; // download url
@@ -66,7 +66,7 @@
     $download[$UNKNOWN]['package'] = '';
     $download[$UNKNOWN]['popup'] = false;
     
-    $tarball = 'http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.12';
+    $tarball = 'http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.12.2';
     
     function getArch() {
         $arch = 32;

@@ -1,3 +1,100 @@
+"use strict";
+
+var statusDashboard, travisStatus;
+
+window.onload = function() {
+    function loadDataForDashboard(fileURL,dashboard) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if( xhr.readyState == 4 && xhr.status != 0 && xhr.status < 400 )
+                dashboard.servers = JSON.parse(xhr.response);
+            else
+                dashboard.servers = [];
+        };
+
+        xhr.open('GET',fileURL);
+        xhr.send();
+    }
+
+    statusDashboard = new Dashboard();
+    statusDashboard.setListAttributes(null, 'Checking Statuses...', '//openstreetmap.org/?query=');
+    loadDataForDashboard("//static.getnightingale.com/javascript/servers.json",statusDashboard);
+
+    travisStatus = new Dashboard();
+    travisStatus.loadingString = statusDashboard.loadingString;
+    travisStatus.targetNodeId = "travis-build-status-list";
+    loadDataForDashboard("//static.getnightingale.com/javascript/travis.json",travisStatus);
+
+    d3.json('//dashboard.getnightingale.com/get_json.php?type=osDistribution', function(error, data) {
+        if(!error) {
+            var svg = d3.select("#osPie");
+
+            setupPie(svg);
+            drawPie(svg,data,'label');
+        }
+    });
+    d3.json('//dashboard.getnightingale.com/get_json.php?type=versionInfo', function(error, data) {
+        if(!error) {
+            var svg = d3.select("#installPie");
+
+            setupPie(svg);
+            drawPie(svg,data.versionPie,'name');
+            d3.select("#totalCount").datum(data).text(countText);
+        }
+    });
+
+    d3.json('//dashboard.getnightingale.com/get_json.php?type=versionGraph', function(error, data){
+        if(!error) {
+            var svg = d3.select("#versionGraph");
+
+            setupLineGraph(svg);
+            drawLineGraph(svg,sortVersionGraphData(data));
+        }
+    });
+    d3.json('//dashboard.getnightingale.com/get_json.php?type=installsGraph', function(error, data){
+        if(!error) {
+            var svg = d3.select("#installsGraph");
+
+            setupLineGraph(svg);
+            drawLineGraph(svg,sortInstallsGraphData(data));
+        }
+    });
+
+    window.setInterval(refresh,'180000');
+
+    // make sure the language gets adjusted everywhere when it changes
+    addEventListenerLegacy(document, "localized", function() {
+        statusDashboard.loadingString = document.webL10n.get('dashboard_status_loading',null,'Checking Statuses...');
+        travisStatus.loadingString = statusDashboard.loadingString;
+        statusDashboard.locationConnector = ' '+document.webL10n.get('dashboard_status_locationConnector',null,'in')+' ';
+        refresh();
+    }, false);
+};
+
+function refresh() {
+    statusDashboard.checkServers();
+    travisStatus.checkServers();
+
+    d3.json('//dashboard.getnightingale.com/get_json.php?type=osDistribution&lang='+document.webL10n.getLanguage(), function(error, data) {
+        if(!error)
+            drawPie(d3.select("#osPie"),data,'label');
+    });
+    d3.json('//dashboard.getnightingale.com/get_json.php?type=versionInfo&lang='+document.webL10n.getLanguage(), function(error, data) {
+        if(!error) {
+            drawPie(d3.select("#installPie"),data.versionPie,'name');
+            d3.select("#totalCount").datum(data).text(countText);
+        }
+    });
+    d3.json('//dashboard.getnightingale.com/get_json.php?type=versionGraph&lang='+document.webL10n.getLanguage(), function(error, data){
+        if(!error)
+            drawLineGraph(d3.select("#versionGraph"),sortVersionGraphData(data));
+    });
+    d3.json('//dashboard.getnightingale.com/get_json.php?type=installsGraph&lang='+document.webL10n.getLanguage(), function(error, data){
+        if(!error)
+            drawLineGraph(d3.select("#installsGraph"),sortInstallsGraphData(data));
+    });
+}
+
 // graph drawing functions for dashboard
 // requires d3
 

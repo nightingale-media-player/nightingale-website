@@ -71,7 +71,7 @@
                     <section class="twocolumns">
                         <h3 data-l10n-id="features_equalizer">Equalizer</h3>
                         <img src="../static.getnightingale.com/images/equalizer.png" class="columnimage" alt="Equalizer window with ten horizontal sliders set to different heights." data-l10n-id="features_equalizer_image">
-                        <p class="column" data-l10n-id="features_equalizer_description">Adjust the frequency range of your music with the built-in 10-band equalizer.</p>
+                        <p class="column" data-l10n-id="features_equalizer_description">Adjust the sound of your music with the built-in 10-band equalizer. Nightingale comes with a set of presets to which you can easily add your own ones or overwrite existing ones.</p>
                     </section>
                     <section class="column alt-full">
                         <h3 data-l10n-id="features_radio">Radiostreams</h3>
@@ -87,22 +87,33 @@
                     <section class="twocolumns omega">
                         <h3 data-l10n-id="features_tabs">Tabbed Browsing</h3>
                         <img src="../static.getnightingale.com/images/tabstrip.png" class="twocolumnimage" alt="Tabstrip with various titles, mostly related to Nightingale and parts of the navigationbar, including forward and backwards buttons." data-l10n-id="features_tabs_image">
-                        <p data-l10n-id="features_tabs_description">By default you can only see one tab, the Library tab. However you can open an unlimited amount of other tabs to browse the web. Thanks to Gecko being integrated into XULRunner Nightingale has builtin a full featured browser.</p>
+                        <p data-l10n-id="features_tabs_description">By default you can only see one tab, the Library tab. However you can open an unlimited amount of other tabs to browse the web. Thanks to Gecko being integrated into XULRunner Nightingale has built-in a full featured browser.</p>
                     </section>
                 </section>
                 <section class="fullwidth">
                     <h2 data-l10n-id="features_sync">Synchronization</h2>
-                    <p data-l10n-id="features_sync_description">You can synchronize any storage device with Nightingale.</p>
+                    <section class="twocolumns">
+                        <h3 data-l10n-id="features_devicesync">Device Sync</h3>
+                        <p data-l10n-id="features_devicesync_description">You can synchronize any storage device with Nightingale's library or a custom playlist. It's only one way sync, so an export of the selected playlist to a folder.</p>
+                    </section>
+                    <secion class="column alt-full">
+                        <h3 data-l10n-id="features_itunes">iTunes Import/Export</h3>
+                        <p data-l10n-id="features_itunes_description">Easily import your iTunes library into Nightingale. If you need iTunes to sync your iOS device, you can also automatically sync your iTunes and Nightingale libraries. The import and export includes traditional playlists but not smart playlists.</p>
+                    </secion>
                 </section>
                 <section class="fullwidth">
                     <h2 data-l10n-id="features_customization">Customization</h2>
-                    <section class="twocolumns">
+                    <section class="column">
+                        <h3 data-l110n-id="features_layout">Variable Interface</h3>
+                        <p data-l10n-id="features_layout_description">Nightingale has two main view modes: the full version and a mini player mode. Additionally in the full view mode you can hide and show parts of the interface to your liking.</p>
+                    </section>
+                    <section class="column">
                         <h3 data-l10n-id="features_feathers">Feathers</h3>
-                        <p data-l10n-id="features_feathers_description">You don't like the default look of Nightingale? No problem! The builtin Theme system allows you to quickly completely change the layout. Themes are called Feathers - well - because Nightingale is a bird.</p>
+                        <p data-l10n-id="features_feathers_description">You don't like the default look of Nightingale? No problem! The built-in Theme system allows you to quickly completely change the layout. Themes are called Feathers - well - because Nightingale is a bird.</p>
                     </section>
                     <section class="column omega">
                         <h3 data-l10n-id="features_add-ons">Add-ons</h3>
-                        <p data-l10n-id="features_add-ons_description">Similiar to Firefox, Nightingale also supports Add-ons. Extensions add new features to Nightingale or enhance existing ones. There is a big community creating extensions for Nightingale.</p>
+                        <p data-l10n-id="features_add-ons_description">Similar to Firefox, Nightingale also supports Add-ons. Extensions add new features to Nightingale or enhance existing ones. There is a big community creating extensions for Nightingale.</p>
                     </section>
                     
                     <section class="column">
@@ -112,68 +123,19 @@
                     </section>
                     <section class="column">
                         <h3 data-l10n-id="features_lastFm">Last.fm Scrobbling</h3>
-                        <p data-l10n-id="features_lastFm_description">Scrobble the songs you are listening to last.fm - from within Nightingale.</p>
+                        <p data-l10n-id="features_lastFm_description">Scrobble the songs you are listening to Last.fm - from within Nightingale.</p>
                         <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"Last.fm"}'>Install Last.fm</a>
                     </section>
-                    <section class="column bottom">
+                    <!--replacement?<section class="column bottom">
                         <h3 data-l10n-id="features_shoutCast">SHOUTcast Integration</h3>
                         <p data-l10n-id="features_shoutCast_description">All your favorite SHOUTcast streams just a click away in Nightingale.</p>
                         <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"SHOUTcast"}'>Install SHOUTcast</a>
-                    </section>
+                    </section>-->
                 </section>
-                <!-- Miniplayer, iTunes import, cross platform, 100% CRASH FREE xoxoxox -->
             </main>
         </div>
         <div class="wrapper" id="ngalemainfooterwrapper">
-            <footer class="container">
-                <section id="footerinfo" role="contentinfo">
-                    <div id="leftfooter">
-                        <img id="footergale" alt="white outlined nightingale project logo" src="../static.getnightingale.com/images/footergale.png" data-hdpi>
-                        <select id="l10nselect">
-                            <option selected value="en">English</option>
-                        </select>
-                    </div>
-                    <p data-l10n-id="footer_info" data-l10n-args='{"license":"GNU General Public License v2 (GPL v2)"}'>Nightingale is free!<br>
-                       It is an Open Source projcet release under the terms of the GNU General Public License v2 (GPL v2).<br>
-                       For more details, please read the <a href="">license information</a>.
-                   </p>
-                   <p>
-                       <b data-l10n-id="footer_social">Follow us!</b><br>
-                       <a href="http://www.facebook.com/getnightingale" title="Nightingale on Facebook" class="socialicon" rel="me">f</a>&nbsp;
-                       <a href="https://plus.google.com/+Getnightingale" title="Nightingale on Google+" class="socialicon" rel="me">g</a>&nbsp;
-                       <a href="http://twitter.com/getnightingale" title="Nightingale on Twitter" class="socialicon" rel="me">t</a>
-                   </p>
-                </section>
-                <nav class="footerlinks">
-                    <b data-l10n-id="footer_support">Support</b>
-                    <ul>
-                        <li><a href="http://forum.getnightingale.com" title="Nightingale Forum" data-l10n-id="footer_forum">Community Forum</a></li>
-                        <li><a href="http://blog.getnightingale.com" title="Development Blog" data-l10n-id="footer_blog">Official Blog</a></li>
-                        <li><a href="http://addons.getnightingale.com" title="Add-ons for Nightingale" data-l10n-id="footer_add-ons">Add-ons</a></li>
-                        <li><a href="http://wiki.getnightingale.com" title="Nightingale Wiki" data-l10n-id="footer_wiki">Wiki</a></li>
-                        <li><a href="http://forum.getnightingale.com/forum-13.html" title="Help" id="forumhelplink" data-l10n-id="footer_helpForum">Help Forum</a></li>
-                    </ul>
-                </nav>
-                <nav class="footerlinks">
-                    <b data-l10n-id="footer_contribute">Contribute</b>
-                    <ul>
-                        <li><a href="http://wiki.getnightingale.com" title="Documentation and Wiki" data-l10n-id="footer_developerCenter">Developer's Center</a></li>
-                        <li><a href="http://wiki.getnightingale.com/doku.php?id=localization" title="Translate Nightingale" data-l10n-id="footer_translate">Translate Nightingale</a></li>
-                        <li><a href="https://github.com/nightingale-media-player" title="Source Code on GitHub" data-l10n-id="footer_source">Source Code</a></li>
-                        <li><a href="https://github.com/nightingale-media-player/nightingale-addons/issues/" title="Nightingale Issues on GitHub" data-l10n-id="footer_bugs">Report a Bug</a></li>
-                        <!--<li><a href="http://getnightingale.com/donate" title="Donate to Nightingale" data-l10n-id="footer_donate">Donate</a></li>-->
-                    </ul>
-                </nav>
-                <nav class="footerlinks">
-                    <b data-l10n-id="footer_ressources">Ressources</b>
-                    <ul>
-                        <li><a href="//getnightingale.com/download" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
-                        <li><a href="//getnightingale.com/features" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>
-                        <li><a href="//getnightingale.com/nightlies" title="Nightingale Nightliy Builds" data-l10n-id="footer_nightlies">Nightlies</a></li>
-                        <li><a href="//getnightingale.com/branding" title="Nightingale Logo and Screenshots" data-l10n-id="footer_branding">Branding</a></li>
-                    </ul>
-                </nav>
-            </footer>
+            <?php include "../static.getnightingale.com/php/footer.php"; ?>
         </div>
     </body>
 </html>
