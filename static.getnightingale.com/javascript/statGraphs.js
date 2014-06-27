@@ -16,13 +16,13 @@ window.onload = function() {
         xhr.send();
     }
 
-    statusDashboard = new Dashboard();
-    statusDashboard.setListAttributes(null, 'Checking Statuses...', '//openstreetmap.org/?query=');
+    statusDashboard = new Dashboard(null, { loadingString:'Checking Statuses...',
+                                            locationURL: '//openstreetmap.org/?query='});
     loadDataForDashboard("//static.getnightingale.com/javascript/servers.json",statusDashboard);
-
-    travisStatus = new Dashboard();
-    travisStatus.loadingString = statusDashboard.loadingString;
-    travisStatus.targetNodeId = "travis-build-status-list";
+    
+    travisStatus = new Dashboard(null, { loadingString:'Checking Statuses...',
+                                         locationURL: '//openstreetmap.org/?query=',
+                                         targetNodeId: 'travis-build-status-list'});
     loadDataForDashboard("//static.getnightingale.com/javascript/travis.json",travisStatus);
 
     d3.json('//dashboard.getnightingale.com/get_json.php?type=osDistribution', function(error, data) {

@@ -3,7 +3,7 @@
  *  Created by Martin Giger in 2014
  *  Licensed under GPLv2
  *  Visit the GitHub project: http://freaktechnik.github.io/Crowd-Dashboard
- *  Version 1.3.0
+ *  Version 1.4.0
  *  
  *  Credits for the status ping image hack idea to (even tough this might not be the original source): http://jsfiddle.net/Maslow/GSSCD/
  */
@@ -28,12 +28,12 @@ StatusCheck.prototype.type = StatusCheck.CORS_WORKAROUND;
 function StatusCheck(url, type, options) {
     this.url = url;
 
-    if(type != null && typeof type == "number") {
+    if(type && typeof type == "number") {
         this.type = type;
-        if(options != null) {
+        if(options) {
             switch(type) {
                 case StatusCheck.JSON:
-                    this.timeout = options.timeout;
+                    this.timeout = options.timeout || this.timeout;
                 case StatusCheck.JSONP:
                     this.statusAPI = options;
                     break;
@@ -44,7 +44,7 @@ function StatusCheck(url, type, options) {
     }
 
     if(type == StatusCheck.JSONP || type == StatusCheck.JSON) {
-        if(options == null) {
+        if(!options) {
             this.statusAPI.url = 'https://status.' + this.url.match(/:\/\/([a-z0-9\.:].*)/)[1] + '/api/status.json';
         }
 
@@ -52,7 +52,7 @@ function StatusCheck(url, type, options) {
             this.statusAPI.downValue = "major";
         }
     
-        if(!this.statusAPI.nestedProperty && this.statusAPI.propertyName.indexOf(".") != -1) {
+        if(!this.statusAPI.nestedProperty && this.statusAPI.propertyName.indexOf(".") > -1) {
             this.statusAPI.nestedProperty = true;
             this.statusAPI.propertyName = this.statusAPI.propertyName.split(".");
         }            
@@ -76,28 +76,29 @@ StatusCheck.prototype.getStatus = function(callback, that) {
 };
 
 StatusCheck.prototype.workaroundRequest = function(callback, that) {
-    if(!Image) {
+    if(!global.Image) {
         throw new Error("No Image object in the global scope. Cannot perform CORS workaround status pings");
     }
-    var img = new Image(),
-        done = false;
+    var img = new global.Image(),
+        done = false,
+        url = this.url;
 
     img.onload = function() {
-        callback.call( that, this.url, true );
+        callback.call( that, url, true );
         done=true;
     };
     img.onerror = function(e) {
         //x-origin/no image
-        callback.call( that, this.url, true );
+        callback.call( that, url, true );
         done=true;
     };
 
     setTimeout(function() {
         if(!done)
-            callback.call( that, this.url, false );
+            callback.call( that, url, false );
     }, this.timeout);
 
-    var rand = (this.url.indexOf('?')!=-1?'&':'?')+'timestamp='+Date.now();
+    var rand = (this.url.indexOf('?')>-1?'&':'?')+'timestamp='+Date.now();
     img.src = this.url+rand;
 };
 
@@ -113,12 +114,12 @@ StatusCheck.prototype.JSONPRequest = function(callback, that) {
     var script = global.document.createElement("script");
 
     var thut = this;
-    global[funcName] = function(response) {
+    this[funcName] = function(response) {
         global.document.body.removeChild(script);
 
         thut.parseJSONResponse(response, callback, that);
 
-        delete global[funcName];
+        delete thut[funcName];
     }
         
     script.src = this.statusAPI.url + rand + '&callback=' + funcName;
@@ -126,11 +127,11 @@ StatusCheck.prototype.JSONPRequest = function(callback, that) {
 };
 
 StatusCheck.prototype.XHRequest = function(callback, that) {
-    if(!XMLHttpRequest) {
+    if(!global.XMLHttpRequest) {
         throw new Error("Can't make a request as the XHR object is not available");
     }
     
-    var xhr = new XMLHttpRequest(),
+    var xhr = new global.XMLHttpRequest(),
         rand = (this.url.indexOf('?')!=-1?'&':'?')+'timestamp='+Date.now(),
         url = this.url;
 
@@ -147,11 +148,11 @@ StatusCheck.prototype.XHRequest = function(callback, that) {
 };
 
 StatusCheck.prototype.JSONRequest = function(callback, that) {
-    if(!XMLHttpRequest) {
+    if(!global.XMLHttpRequest) {
         throw new Error("Can't make a request as the XHR object is not available");
     }
     
-    var xhr = new XMLHttpRequest(),
+    var xhr = new global.XMLHttpRequest(),
         rand = (this.statusAPI.url.indexOf('?')!=-1?'&':'?')+'timestamp='+Date.now(),
         thut = this,
         response;
@@ -214,7 +215,7 @@ StatusCheck.prototype.parseJSONResponse = function(response, callback, that) {
 // Constructor
    constructs the dashboard, checks the servers if a server array is passed. The second argument allows the Dashboard to be output to a specific element.
 */
-global.Dashboard = function(servers, passive, elementId) {
+global.Dashboard = function(servers, options) {
     // Events setup
     this.eventListeners = new Object();
 
@@ -292,10 +293,10 @@ global.Dashboard = function(servers, passive, elementId) {
             }
     });
 
-    var pElementId = elementId || "crowd-dashboard-status-list";
+    var pElementId = options.targetNodeId || "crowd-dashboard-status-list";
     Object.defineProperty(this, 'targetNodeId', {
         set: function(val) {
-                if( typeof val == "string" ) {
+                if( typeof val == "string" && val.length > 0 ) {
                     pElementId = val;
                     if(!that.passiveMode)
                         that.printLists();
@@ -306,7 +307,7 @@ global.Dashboard = function(servers, passive, elementId) {
             }
     });
 
-    var locationConnector = " in ";
+    var locationConnector = options.locationConnector || " in ";
     Object.defineProperty(this, 'locationConnector', {
         set: function(val) {
                 if( typeof val == "string" ) {
@@ -320,7 +321,7 @@ global.Dashboard = function(servers, passive, elementId) {
             }
     });
 
-    var locationURL = "http://maps.google.com/?q=";
+    var locationURL = options.locationURL || "http://maps.google.com/?q=";
     Object.defineProperty(this, 'locationURL', {
         set: function(val) {
                 if( typeof val == "string" ) {
@@ -334,7 +335,7 @@ global.Dashboard = function(servers, passive, elementId) {
             }
     });
 
-    var loadingString = "Loading...";
+    var loadingString = options.loadingString || "Loading...";
     Object.defineProperty(this, 'loadingString', {
         set: function(val) {
                 if( typeof val == "string" ) {
@@ -348,7 +349,7 @@ global.Dashboard = function(servers, passive, elementId) {
             }
     });
 
-    var passiveMode = passive || global.document == null;
+    var passiveMode = options.passiveMode || global.document == null;
     Object.defineProperty(this, 'passiveMode', {
         set: function(val) {
                 if( typeof val == "boolean" && passiveMode != val ) {
@@ -383,7 +384,7 @@ Dashboard.prototype.setListAttributes = function(id, connector, url) {
     // the whole point of this method is to change multiple properties of the
     // list without updating the DOM multiple times.
     var prevVal = this.passiveMode;
-    this.passiveMode = false;
+    this.passiveMode = true;
 
     if(id != null)
         this.targetNodeId = id;
@@ -413,7 +414,10 @@ Dashboard.prototype.checkServer = function(pageObj) {
     pageObj.ready = false;
 
     pageObj.type = pageObj.type || "workaround";
-    var options = pageObj.type == "workaround" || pageObj.type == "request" ? pageObj.timeout : pageObj.statusAPI;
+    var canHaveStatusAPI = pageObj.type != "workaround" && pageObj.type != "request";
+    var options = !canHaveStatusAPI ? pageObj.timeout : pageObj.statusAPI;
+    if(canHaveStatusAPI && pageObj.hasOwnProperty("timeout"))
+        options.timeout = pageObj.timeout;
     var statusObj = new StatusCheck( pageObj.url, this.getStatusCheckType(pageObj.type), options);
 
     statusObj.getStatus(this.addServerToList, this);
@@ -458,15 +462,16 @@ Dashboard.prototype.addServerToList = function( url, online ) {
     }
 };
 
-// make this more efficient than O(n*n)
 Dashboard.prototype.getServerByURL = function(url) {
-    var servObj= false;
+    var servObj = false;
 
-    this.servers.forEach(function(serverList) {
-        serverList.pages.forEach(function(server) {
+    this.servers.some(function(serverList) {
+        return serverList.pages.some(function(server) {
             if(server.url == url) {
                 servObj = server;
-            }            
+                return true;
+            }
+            return false;
         }, this);
     }, this);
 
