@@ -46,13 +46,13 @@
         [
             {
                 "name":"Linux i686",
-                "url":"http://flc.turmel.info/ngale",
+                "url":"http://flc.turmel.info/ngale/",
                 "location":"Fontenay le Comte, France",
                 "timeout":7000
             },
             {
                 "name":"Linux x86_64",
-                "url":"http://nzf.turmel.info/ngale",
+                "url":"http://nzf.turmel.info/ngale/",
                 "location":"Saint Nazaire, France",
                 "timeout":7000
             },
