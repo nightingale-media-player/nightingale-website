@@ -46,13 +46,13 @@
                     xhr.send();
                 }
 
-                statusDashboard = new Dashboard();
-                statusDashboard.setListAttributes(null, 'Checking Statuses...', 'http://openstreetmap.org/?query=');
+                statusDashboard = new Dashboard(null, { loadingString: "Checking Statuses...",
+                                                        locationURL: "//openstreetmap.org/?query="});
                 loadDataForDashboard("http://static.getnightingale.com/javascript/servers.json",statusDashboard);
 
-                travisStatus = new Dashboard();
-                travisStatus.loadingString = statusDashboard.loadingString;
-                travisStatus.targetNodeId = "travis-build-status-list";
+                travisStatus = new Dashboard(null, { loadingString: "Checking Statuses...",
+                                                     locationURL: "//openstreetmap.org/?query=",
+                                                     targetNodeId:"travis-build-status-list"});
                 loadDataForDashboard("http://static.getnightingale.com/javascript/travis.json",travisStatus);
                 
                 d3.json('http://dashboard.getnightingale.com/get_json.php?type=osDistribution', function(error, data) {
