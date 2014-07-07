@@ -54,7 +54,8 @@
                 "name":"Linux x86_64",
                 "url":"http://nzf.turmel.info/ngale/",
                 "location":"Saint Nazaire, France",
-                "timeout":7000
+                "timeout":7000,
+                "type":"request"
             },
             {
                 "name":"Windows",
