@@ -38,7 +38,7 @@
         </ul>
     </nav>
     <nav class="footerlinks">
-        <b data-l10n-id="footer_ressources">Ressources</b>
+        <b data-l10n-id="footer_resources">Resources</b>
         <ul>
             <li><a href="//getnightingale.com/download" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
             <li><a href="//getnightingale.com/features" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>

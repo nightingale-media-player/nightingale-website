@@ -67,7 +67,7 @@
             "number":100
         },
         {
-            "title":"Allow add-ons to habve localized display panes titles",
+            "title":"Allow add-ons to have localized display panes titles",
             "number":5
         },
         {
@@ -121,4 +121,4 @@
             "two"
         ]
     }
-}
+}

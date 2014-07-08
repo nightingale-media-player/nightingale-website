@@ -61,7 +61,7 @@
         <div class="wrapper" id="wrapper">
             <main id="main" class="container">
                 <h1 data-l10n-id="downloads_title">Download Nightingale</h1>
-                <p data-l10n-id="downloads_description" data-l10n-args='{"version":"<?php echo $version; ?> "}'>Nightingale <?php echo $version; ?> is available for multiple platforms. If yours isn't in the list, this doesn't mean, Nightingale isn't available for it. If you compiled Nightingale for an Operating System not listed below, let us know in the <a href="http://forum.getnightingale.com">forum</a>!</p>
+                <p data-l10n-id="downloads_description" data-l10n-args='{"version":"<?php echo $version; ?> "}'>Nightingale <?php echo $version; ?> is available for multiple platforms. If yours isn't in the list, this doesn't mean, Nightingale isn't available for it. If you compiled Nightingale for an operating system not listed below, let us know in the <a href="http://forum.getnightingale.com">forum</a>!</p>
                 <ul class="plainlist">
                     <?php foreach($download as $os => $properties) {
                             if($os == $UNKNOWN) // exclude the default option...
