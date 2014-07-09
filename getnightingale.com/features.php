@@ -77,6 +77,9 @@
                         <h3 data-l10n-id="features_radio">Radiostreams</h3>
                         <p data-l10n-id="features_radio_description">For the internet radio fans: Nightingale can play m3u, pls and other streams. Just click on the link to the file and Nightingale will start playing the Stream.</p>
                     </section>
+                    <section column">
+                        <h3 data-l10-n-id="features_queue">Play Queue</h3>
+                        <p data-l10n-id="features_queue_description">Line up tracks to the integrated play queue in the right side pane from any view.</p>
                 </section>
                 <section class="fullwidth">
                     <h2 data-l10n-id="features_browser">Integrated Browser</h2>
