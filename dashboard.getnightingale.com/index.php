@@ -4,25 +4,10 @@
         <meta charset="utf-8">
         <!-- meta info -->
         <title data-l10n-id="dashboard_title">Nightingale Dashboard</title>
-        <meta name="description" content="Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1"> 
-        
-        <!-- styles -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="//static.getnightingale.com/css/style.css">
-        <!--[if lt IE 9]>
-            <link rel="stylesheet" href="//static.getnightingale.com/css/legacy-ie.css">
-            <script src="//static.getnightingale.com/javascript/html5shiv.js"></script>
-        <![endif]-->
-        
+        <?php include "../static.getnightingale.com/php/head.php"; ?>
         <!-- scripts -->
-        <script type="application/javascript" src="//static.getnightingale.com/javascript/base.js"></script>
         <script type="application/javascript" src="//static.getnightingale.com/javascript/d3.v3.min.js"></script>
         <script type="application/javascript" src="//static.getnightingale.com/javascript/statGraphs.js"></script>
-        
-        <!-- l10n -->
-        <script type="application/javascript" src="//static.getnightingale.com/javascript/l10n.js"></script>
-        <link rel="prefetch" type="application/l10n" href="//static.getnightingale.com/l10n/locales.ini" >
         
         <!-- status dashboard scripts -->
         <script type="application/javascript" src="//static.getnightingale.com/javascript/crowd-dashboard.js"></script>

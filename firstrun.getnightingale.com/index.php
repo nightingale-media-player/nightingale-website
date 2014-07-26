@@ -26,23 +26,7 @@
         <!-- meta info -->
         <meta charset="utf-8">
         <title data-l10n-id="firstrun_title">Welcome to Nightingale!</title>
-        <meta name="description" content="Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1"> 
-        
-        <!-- styles -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" type="text/css" href="//static.getnightingale.com/css/style.css">
-        <!--[if lt IE 9]>
-            <link rel="stylesheet" href="//static.getnightingale.com/css/legacy-ie.css">
-            <script src="//static.getnightingale.com/javascript/html5shiv.js"></script>
-        <![endif]-->
-        
-        <!-- l10n -->
-        <script type="application/javascript" src="//static.getnightingale.com/javascript/l10n.js"></script>
-        <link rel="prefetch" type="application/l10n" href="//static.getnightingale.com/l10n/locales<?php echo $version; ?>.ini" >
-        <script type="application/javascript" src="//static.getnightingale.com/javascript/base.js"></script>
-        
+        <?php include "../static.getnightingale.com/php/head.php"; ?>
     </head>
     <body>
         <div id="ngalemainheadwrapper" class="wrapper">
