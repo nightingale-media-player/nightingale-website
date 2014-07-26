@@ -44,7 +44,7 @@
                         <h3 data-l10n-id="features_radio">Radiostreams</h3>
                         <p data-l10n-id="features_radio_description">For the internet radio fans: Nightingale can play m3u, pls and other streams. Just click on the link to the file and Nightingale will start playing the Stream.</p>
                     </section>
-                    <section column">
+                    <section class="column">
                         <h3 data-l10-n-id="features_queue">Play Queue</h3>
                         <p data-l10n-id="features_queue_description">Line up tracks to the integrated play queue in the right side pane from any view.</p>
                 </section>
@@ -107,5 +107,20 @@
         <div class="wrapper" id="ngalemainfooterwrapper">
             <?php include "../static.getnightingale.com/php/footer.php"; ?>
         </div>
+        <!-- Piwik -->
+        <script type="application/javascript">
+          var _paq = _paq || [];
+          _paq.push(["trackPageView"]);
+          _paq.push(["enableLinkTracking"]);
+
+          (function() {
+            var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.getnightingale.com/";
+            _paq.push(["setTrackerUrl", u+"piwik.php"]);
+            _paq.push(["setSiteId", "2"]);
+            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="application/javascript";
+            g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+          })();
+        </script>
+        <!-- End Piwik Code -->
     </body>
 </html>
