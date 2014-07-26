@@ -96,11 +96,11 @@
                         <p data-l10n-id="features_lastFm_description">Scrobble the songs you are listening to Last.fm - from within Nightingale.</p>
                         <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"Last.fm"}'>Install Last.fm</a>
                     </section>
-                    <!--replacement?<section class="column bottom">
+                    <section class="column bottom">
                         <h3 data-l10n-id="features_shoutCast">SHOUTcast Integration</h3>
                         <p data-l10n-id="features_shoutCast_description">All your favorite SHOUTcast streams just a click away in Nightingale.</p>
                         <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"SHOUTcast"}'>Install SHOUTcast</a>
-                    </section>-->
+                    </section>
                 </section>
             </main>
         </div>
