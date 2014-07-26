@@ -89,6 +89,9 @@ function init() {
         for(var i = 0; i < download.length; i++) {
             if(hasDataset?download[i].dataset.hasOwnProperty("popup"):download[i].attributes["data-popup"]) {
                 addEventListenerLegacy(download[i],"click",function(e) {
+                    if(_paq) {
+                        _paq.push(['trackEvent', 'Download', 'overlay']);
+                    }
                     e.preventDefault();
                     document.getElementById("ubuntuInstallCode").dataset.l10nArgs = '{"name":"'+e.currentTarget.dataset.popupName+'"}';
 
@@ -102,6 +105,20 @@ function init() {
                         addEventListenerLegacy(document.getElementById("instructions"),"click",hideOverlay);
                 });
             }
+            else {
+                addEventListenerLegacy(download[i],"click",function(e) {
+                    if(_paq) {
+                        _paq.push(['trackEvent', 'Download', e.currentTarget.dataset.url]);
+                    }
+                    
+                    window.open(e.currentTarget.dataset.url);
+                }
+                );
+            }
+        }
+        
+        if(_paq) {
+             _paq.push(['setDownloadClasses', "piwik_download"]);
         }
     }
 
@@ -109,9 +126,10 @@ function init() {
     
     //lazyload hiDPI images
     if(window.devicePixelRatio && window.devicePixelRatio > 1.3) {
+        _paq.push(['track', 'Menu', 'Freedom'])
         var imgs = document.getElementsByTagName("img");
         for(var i = 0; i < imgs.length; i++) {
-            if( imgs[i].src && imgs[i].dataset.hasOwnProperty("hdpi") && !imgs[i].src.match(/-hidpi/i)) {
+            if(imgs[i].src && imgs[i].dataset.hasOwnProperty("hdpi") && !imgs[i].src.match(/-hidpi/i)) {
                 imgs[i].src = imgs[i].src.replace(/(?!-hidpi)\.(png|jpg)$/i, function(str) {
                     return "-hidpi"+str;
                 });

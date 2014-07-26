@@ -83,7 +83,7 @@
                     <?php foreach($download as $os => $properties) {
                             echo '
                                 <li '.($properties['popup'] ? 'data-popup data-popup-name="'.$properties['popupPackageName'].'"':'data-url="'.$properties['url'].'"').' class="download split">
-                                    <a href="'.($properties['popup'] ? '#'.$properties['popupPackageName'].'"':$properties['url']).'" title="Download Nightingale for '.$properties['osname'].'" data-l10n-id="downloads_item_link" data-l10n-args=\'{"os":"'.$properties['osname'].'"}\'>
+                                    <a class="piwik_download" href="'.($properties['popup'] ? '#'.$properties['popupPackageName'].'"':$properties['url']).'" title="Download Nightingale for '.$properties['osname'].'" data-l10n-id="downloads_item_link" data-l10n-args=\'{"os":"'.$properties['osname'].'"}\'>
                                         <img src="'.$properties['img'].'" alt="'.$properties['osname'].' Icon" data-hdpi> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
                                     </a>
                                 </li>
@@ -100,5 +100,20 @@
         <div class="wrapper" id="ngalemainfooterwrapper">
             <?php include "../static.getnightingale.com/php/footer.php"; ?>
         </div>
+        <!-- Piwik -->
+        <script type="application/javascript">
+          var _paq = _paq || [];
+          _paq.push(["trackPageView"]);
+          _paq.push(["enableLinkTracking"]);
+
+          (function() {
+            var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.getnightingale.com/";
+            _paq.push(["setTrackerUrl", u+"piwik.php"]);
+            _paq.push(["setSiteId", "2"]);
+            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="application/javascript";
+            g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+          })();
+        </script>
+        <!-- End Piwik Code -->
     </body>
 </html>

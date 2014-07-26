@@ -55,8 +55,7 @@
                         <!--<img src="http://lorempixel.com/702/300" class="twocolumnimage">-->
                         <div class="relativecenterwrapper">
                             <div class="realtivecenter">
-                                <button id="downloadbutton" class="download" <?php  echo ($download[$osstring]['popup'] ? 'data-popup data-popup-name="'.$download[$osstring]['popupPackageName'].'"':
-                                                                                    'data-url="'.$download[$osstring]['url'].'"'); ?>>
+                                <button id="downloadbutton" class="download" <?php  echo ($download[$osstring]['popup'] ? 'data-popup data-popup-name="'.$download[$osstring]['popupPackageName'].'"':'data-url="'.$download[$osstring]['url'].'"'); ?>>
                                     <img src="<?php echo $download[$osstring]['img']; ?>"
                                          alt="<?php echo $download[$osstring]['osname']; ?> Icon"
                                          data-l10n-id="main_downloadButton_image"
