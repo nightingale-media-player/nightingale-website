@@ -34,7 +34,7 @@
             <li><a href="//wiki.getnightingale.com/doku.php?id=localization" title="Translate Nightingale" data-l10n-id="footer_translate">Translate Nightingale</a></li>
             <li><a href="https://github.com/nightingale-media-player" title="Source Code on GitHub" data-l10n-id="footer_source">Source Code</a></li>
             <li><a href="https://github.com/nightingale-media-player/nightingale-addons/issues/" title="Nightingale Issues on GitHub" data-l10n-id="footer_bugs">Report a Bug</a></li>
-            <!--<li><a href="//getnightingale.com/donate" title="Donate to Nightingale" data-l10n-id="footer_donate">Donate</a></li>-->
+            <li><a href="//getnightingale.com/donate" title="Donate to Nightingale" data-l10n-id="footer_donate">Donate</a></li>
         </ul>
     </nav>
     <nav class="footerlinks">

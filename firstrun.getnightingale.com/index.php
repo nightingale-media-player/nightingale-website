@@ -46,24 +46,8 @@
     </head>
     <body>
         <div id="ngalemainheadwrapper" class="wrapper">
-            <header class="container">
-                <nav role="navigation">
-                    <button class="mobilenav" id="expandngalenav" data-l10n-id="menu">Menu</button>
-                    <ul id="ngalenavlist">
-                        <li><a href="//getnightingale.com" data-l10n-id="home">Home</a></li>
-                        <li><a href="//blog.getnightingale.com" data-l10n-id="blog">Blog</a></li>
-                        <li><a href="//addons.getnightingale.com" data-l10n-id="add-ons">Add-ons</a></li>
-                        <li><a href="//forum.getnightingale.com" data-l10n-id="forum">Forum</a></li>
-                        <li><a href="//wiki.getnightingale.com" data-l10n-id="wiki">Wiki</a></li>
-                        <li><a href="//developer.getnightingale.com" data-l10n-id="developers">Developers</a></li>
-                    </ul>
-                </nav>
-                <figure id="headerlogo" role="banner">
-                    <div id="tabshadow" class="tab"></div>
-                    <div id="birdtab" class="tab"></div>
-                    <img src="//static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo" data-hdpi>
-                </figure>
-            </header>
+            <div id="ngalemainheadwrapper" class="wrapper">
+            <?php include "../static.getnightingale.com/php/header.php"; ?>
         </div>
         <div class="wrapper" id="wrapper">
             <main id="main" class="container">
