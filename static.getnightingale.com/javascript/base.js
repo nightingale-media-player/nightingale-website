@@ -112,6 +112,7 @@ function init() {
                     }
                     
                     window.open(e.currentTarget.dataset.url);
+                    e.preventDefault();
                 }
                 );
             }

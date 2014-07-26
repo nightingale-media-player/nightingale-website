@@ -27,7 +27,14 @@
     $download['ubuntu']['package'] = 'PPA';
     $download['ubuntu']['popup'] = true;
     $download['ubuntu']['popupPackageName'] = 'nightingale';
-    
+        
+    $download['arch']['url'] = 'https://aur.archlinux.org/packages/nightingale-git/';
+    $download['arch']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
+    $download['arch']['osname'] = 'Archlinux';
+    $download['arch']['arch'] = 32;
+    $download['arch']['package'] = 'PKGBUILD';
+    $download['arch']['popup'] = false;
+
     $download['linux32']['url'] = '';
     $download['linux32']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
     $download['linux32']['osname'] = 'Linux';
