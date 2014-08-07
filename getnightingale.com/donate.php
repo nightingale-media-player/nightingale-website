@@ -20,7 +20,7 @@
                                 var element = document.createElement("li"),
                                     link = document.createElement("a");
                                 link.appendChild(document.createTextNode(result[i].title + " ["+ result[i].bounty_total + "$]"));
-                                link.href = "https://www.boutnysource.com/issues/" + result[i].slug;
+                                link.href = "https://www.bountysource.com/issues/" + result[i].slug;
                                 element.appendChild(link);
                                 list.appendChild(element);
                             }
