@@ -54,7 +54,7 @@
                 </ul>
                 <section class="clear">
                     <h2 data-l10n-title="donate_bounty">Put a Bounty on an Issue</h2>
-                    <p data-l10n-id="dounate_bounty_description">Alternatively you can put a bounty directly on an existing issue. Visit the <a href="https://www.bountysource.com/trackers/230233-nightingale-media-player-nightingale-hacking">issues list</a> on Bountysource to choose the issue you want to back. A few examples of bugs that already have a bounty on them:</p>
+                    <p data-l10n-id="donate_bounty_description">Alternatively you can put a bounty directly on an existing issue. Visit the <a href="https://www.bountysource.com/trackers/230233-nightingale-media-player-nightingale-hacking">issues list</a> on Bountysource to choose the issue you want to back. A few examples of bugs with a bounty:</p>
                     <ul id="issueslist">
                     </ul>
                 </section>
