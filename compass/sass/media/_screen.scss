@@ -35,12 +35,10 @@
        Nav
        --------------------------------------------------------------------------*/
     #ngalemainheadwrapper header nav li {
-        a:hover {
-            border-bottom: .4em solid $light-text;
-        }
-
-        :link,:visited {
-            color: $light-text;
+        a {
+            @include link-colors($light-text);
+            &:hover {
+                border-bottom: .4em solid $light-text;
         }
     }
 
@@ -66,8 +64,7 @@
         color: $text-color;
         
         a {
-            &:link,&:hover,&:visited,&:active {
-                color: $orange;
+            @link-colors($orange);
             }
         }
     }
@@ -115,14 +112,12 @@
     #ngalemainfooterwrapper footer {
         color: $footer-text;
         
-        :link,:visited {
-            color: $footer-text;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            color: $footer-text-hover;
-            text-decoration: underline;
+        a {
+            @include link-colors($footer-text,
+                                 $footer-text-hover,
+                                 $footer-text-hover,
+                                 $footer-text);
+            @include hover-link();
         }
         
         .socialicon:hover {
@@ -249,7 +244,7 @@
         
         .column.alt-full {
             @include span(4);
-            margin-top: $base-line-height;
+            @include margin-leader(1);
                 
             .feature {
                 @include span(2);
@@ -300,7 +295,7 @@
         }
         
         #main aside {
-            margin-top: $base-line-height;
+            @include margin-leader(1);
             float: none;
             width: 100%;
         }
@@ -315,7 +310,7 @@
             
             .footerlinks {
                 float: left;
-                margin-top: $base-line-height;
+                margin-top: $footer-line-height;
                 
                 &:last-child {
                     margin-bottom: $footer-line-height;

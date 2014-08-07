@@ -87,29 +87,35 @@ body {
 
     nav, nav ul {
         height: 100%;
-    }    
+    }
     nav {
         float: right;
         z-index: 2;
         position: relative;
-        
-        li {
-            float: left;
-            height: 100%;
-            @include box-sizing(border-box);
 
-            :link,:visited {
-                color: $text-color;
+        ul {
+            @include horizontal-list-container();
+
+            li {
+                @include horizontal-list-item(false);
                 height: 100%;
-                padding-left: .4em;
-                padding-right: .4em;
-                font-size: 1.25em;
-                line-height: 4em;
-                text-decoration: none;
-                text-shadow: .08em .08em .25em $shadow;
-                text-shadow: .1rem .1rem .3rem $shadow;
-                display: block;
                 @include box-sizing(border-box);
+
+                a {
+                    @include link-colors($text-color);
+                    &:link, &:visited {
+                        height: 100%;
+                        padding-left: .4em;
+                        padding-right: .4em;
+                        font-size: 1.25em;
+                        line-height: 4em;
+                        text-decoration: none;
+                        text-shadow: .08em .08em .25em $shadow;
+                        text-shadow: .1rem .1rem .3rem $shadow;
+                        display: block;
+                        @include box-sizing(border-box);
+                    }
+                }
             }
             
             &.current a:link,&.current a:visited {
@@ -131,8 +137,8 @@ body {
 #wrapper {
     @include single-box-shadow(0,0,.4em,.1em,$shadow);
     
-    padding-top: 4*$base-line-height;
-    padding-bottom: $base-line-height;
+    @include padding-leader(4);
+    @include padding-trailer(1);
     
     position: relative;
     z-index: 1;
@@ -155,7 +161,7 @@ body {
 #screenshots {
     // create a padding matching half of the download button
     padding-bottom: 2.25em + px2em($base-line-height);
-    margin-bottom: $base-line-height;
+    @include margin-trailer(1);
     position: relative;
     
     &>img {
@@ -244,11 +250,14 @@ h3+p,h2+p,h1+p {
 .split {
     max-width: 3*$column-width+2*$gutter-width;
     min-width: 45%;
-    float: left;
+}
+
+.downloadlist {
+    @include horizontal-list($gutter-width);
 }
 
 .download {    
-    padding: $base-line-height $gutter-width $base-line-height 0;
+    @include rhythm(false, 1, 1);
     height: 2*$base-line-height;
     
     cursor: pointer;
@@ -279,7 +288,7 @@ h3+p,h2+p,h1+p {
 #main aside {
     h2 {
         margin-top: 0;
-        margin-bottom: $base-line-height;
+        @include trailer(1, $h2-font-size);
     }
     
     .feature {
@@ -290,7 +299,7 @@ h3+p,h2+p,h1+p {
 
 .feature {
     &:not(:last-child) {
-        padding-bottom: $base-line-height;
+        @include padding-trailer(1);
     }
     
     img {            
@@ -344,12 +353,10 @@ h3+p,h2+p,h1+p {
         color: $light-text;
 
         a {
-            &:link, &:visited {
-                color: $light-text;
-            }
-            &:hover {
-                color: $footer-text-hover;
-            }
+            @include link-colors($light-text,
+                                 $footer-text-hover,
+                                 $footer-text-hover,
+                                 $light-text);
         }
     }
 }
@@ -364,16 +371,20 @@ h3+p,h2+p,h1+p {
 
 #ngalemainfooterwrapper footer {
     color: black;
-    padding-top: $base-line-height;
+    @include padding-trailer(1);
     overflow: hidden;
     
-    :link,:visited {
-        color: black;
-        text-decoration: none;
+    a {
+        @include hover-link();
+        @include link-colors(black, false, false, black);
     }
     
     ul {
        margin: 0; 
+    }
+
+    #socialicons {
+        +horizontal-list;
     }
     
     .socialicon {
@@ -382,6 +393,11 @@ h3+p,h2+p,h1+p {
         &:hover {
             text-decoration: none;
         }
+    }
+
+    h2 {
+        font-size: $footer-font-size;
+        margin-bottom: $footer-line-height;
     }
 }
 
@@ -408,14 +424,14 @@ h3+p,h2+p,h1+p {
     float: left;
     max-width: image-width("footergale.png");
     width: 100%;
-    
-    select {
-        margin-top: $footer-line-height;
-        font-size: $footer-font-size;
-        width: 100%;
-    }
 }
-   
+
+#l10nselect {
+    margin-top: $footer-line-height;
+    font-size: $footer-font-size;
+    width: 100%;
+}
+
 #footerinfo   p {
     margin-top: 0;
     font-size: $footer-font-size;

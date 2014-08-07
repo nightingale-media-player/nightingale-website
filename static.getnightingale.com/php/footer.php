@@ -2,23 +2,25 @@
     <section id="footerinfo" role="contentinfo">
         <div id="leftfooter">
             <img id="footergale" alt="white outlined nightingale project logo" src="../static.getnightingale.com/images/footergale.png" data-hdpi>
-            <select id="l10nselect">
-                <option selected value="en">English</option>
-            </select>
         </div>
         <p data-l10n-id="footer_info" data-l10n-args='{"license":"GNU General Public License v2 (GPL v2)"}'>Nightingale is free!<br>
-           It is an Open Source project released under the terms of the GNU General Public License v2 (GPL v2).<br>
-           For more details, please read the <a href="//wiki.getnightingale.com/doku.php?id=licensing">license information</a>.
-       </p>
-       <p>
-           <b data-l10n-id="footer_social">Follow us!</b><br>
-           <a href="//www.facebook.com/getnightingale" title="Nightingale on Facebook" class="socialicon" rel="me">f</a>&nbsp;
-           <a href="https://plus.google.com/+Getnightingale" title="Nightingale on Google+" class="socialicon" rel="me">g</a>&nbsp;
-           <a href="//twitter.com/getnightingale" title="Nightingale on Twitter" class="socialicon" rel="me">t</a>
-       </p>
+            It is an Open Source project released under the terms of the GNU General Public License v2 (GPL v2).<br>
+            For more details, please read the <a href="//wiki.getnightingale.com/doku.php?id=licensing">license information</a>.
+        </p>
+        <section>
+            <h2 data-l10n-id="footer_social">Follow us!</h2>
+            <ul id="socialicons" class="plainlist">
+                <li><a href="//www.facebook.com/getnightingale" title="Nightingale on Facebook" class="socialicon" rel="me">f</a></li>
+                <li><a href="https://plus.google.com/+Getnightingale" title="Nightingale on Google+" class="socialicon" rel="me">g</a></li>
+                <li><a href="//twitter.com/getnightingale" title="Nightingale on Twitter" class="socialicon" rel="me">t</a></li>
+            </ul>
+        </section>
+        <select id="l10nselect">
+            <option selected value="en">English</option>
+        </select>
     </section>
     <nav class="footerlinks">
-        <b data-l10n-id="footer_support">Support</b>
+        <h2 data-l10n-id="footer_support">Support</h2>
         <ul>
             <li><a href="//forum.getnightingale.com" title="Nightingale Forum" data-l10n-id="footer_forum">Community Forum</a></li>
             <li><a href="//blog.getnightingale.com" title="Development Blog" data-l10n-id="footer_blog">Official Blog</a></li>
@@ -28,7 +30,7 @@
         </ul>
     </nav>
     <nav class="footerlinks">
-        <b data-l10n-id="footer_contribute">Contribute</b>
+        <h2 data-l10n-id="footer_contribute">Contribute</h2>
         <ul>
             <li><a href="//wiki.getnightingale.com/doku.php?id=developer_center" title="Documentation and Wiki" data-l10n-id="footer_developerCenter">Developer's Center</a></li>
             <li><a href="//wiki.getnightingale.com/doku.php?id=localization" title="Translate Nightingale" data-l10n-id="footer_translate">Translate Nightingale</a></li>
@@ -38,7 +40,7 @@
         </ul>
     </nav>
     <nav class="footerlinks">
-        <b data-l10n-id="footer_resources">Resources</b>
+        <h2 data-l10n-id="footer_resources">Resources</h2>
         <ul>
             <li><a href="//getnightingale.com/download" title="Download Nightingale" data-l10n-id="footer_download">Download Nightingale</a></li>
             <li><a href="//getnightingale.com/features" title="Nightingale Features" data-l10n-id="footer_features">Features</a></li>

@@ -43,7 +43,7 @@
 }
 
 // Destyle lists
-.plainlist, .plainlist li {
-    list-style-type: none;
+.plainlist {
+    @include no-bullets;
     margin: 0;
 }

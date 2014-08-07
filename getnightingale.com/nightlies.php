@@ -86,7 +86,7 @@
             <main id="main" class="container">
                 <h1 data-l10n-id="nightlies_title">Nightingale Nightlies</h1>
                 <p data-l10n-id="nightlies_description">We automatically build the latest version of our source. Since those are development versions, we don't take any liability for possible damage. If you run into an issue, please <a href="https://github.com/nightingale-media-player/nightingale-addons/issues/">report it</a> to us! We don't have a Nightly update channel, so the version you download here will only upgrade to the next major release.</p>
-                <ul class="plainlist">
+                <ul class="plainlist downloadlist">
                     <?php foreach($download as $os => $properties) {
                             echo '
                                 <li '.($properties['popup'] ? 'data-popup data-popup-name="'.$properties['popupPackageName'].'"':'data-url="'.$properties['url'].'"').' class="download split">
