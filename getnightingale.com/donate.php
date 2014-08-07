@@ -13,17 +13,24 @@
                 bsr.setRequestHeader("Accept", "application/vnd.bountysource+json; version=2");
                 bsr.responseType = "json";
                 bsr.onreadystatechange = function(e) {
-                    if(bsr.readyState == 4 && bsr.status == 200) {
-                        var result = bsr.response;
-                        for(var i in result) {
-                            if(result[i].bounty_total != "0.0") {
-                                var element = document.createElement("li"),
-                                    link = document.createElement("a");
-                                link.appendChild(document.createTextNode(result[i].title + " ["+ result[i].bounty_total + "$]"));
-                                link.href = "https://www.bountysource.com/issues/" + result[i].slug;
-                                element.appendChild(link);
-                                list.appendChild(element);
+                    if(bsr.readyState == 4) {
+                        if(bsr.status == 200) {
+                            var result = bsr.response;
+                            for(var i in result) {
+                                if(result[i].bounty_total != "0.0") {
+                                    var element = document.createElement("li"),
+                                        link = document.createElement("a");
+                                    link.appendChild(document.createTextNode(result[i].title + " ["+ result[i].bounty_total + "$]"));
+                                    link.href = "https://www.bountysource.com/issues/" + result[i].slug;
+                                    element.appendChild(link);
+                                    list.appendChild(element);
+                                }
                             }
+                        }
+                        else {
+                            var element = document.createElement("li");
+                            element.appendChild(document.createTextNode("Error retrieving issues from Bountysource"));
+                            list.appendChild(element);
                         }
                     }
                 };
@@ -45,9 +52,9 @@
                     <li data-l10n-id="donate_paypal">PayPal</li>
                     <li data-l10n-id="donate_coinbase">Coinbase</li>
                 </ul>
-                <section class="clear bottom">
+                <section class="clear">
                     <h2 data-l10n-title="donate_bounty">Put a Bounty on an Issue</h2>
-                    <p data-l10n-id="dounate_bounty_description">Alternatively you can put a bounty directly on an existing issue. A few examples of bugs that already have a bounty on them:</p>
+                    <p data-l10n-id="dounate_bounty_description">Alternatively you can put a bounty directly on an existing issue. Visit the <a href="https://www.bountysource.com/trackers/230233-nightingale-media-player-nightingale-hacking">issues list</a> on Bountysource to choose the issue you want to back. A few examples of bugs that already have a bounty on them:</p>
                     <ul id="issueslist">
                     </ul>
                 </section>
