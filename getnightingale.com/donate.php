@@ -9,7 +9,7 @@
             addEventListenerLegacy(window, "load", function() {
                 var bsr = new XMLHttpRequest(),
                     list = document.getElementById("issueslist");
-                bsr.open("GET","https://api.bountysource.com/issues?tracker_id=230233&order=bounty&tracker_type=github&version=2&page=1&per_page=10&can_add_bounty=true", true);
+                bsr.open("GET","https://api.bountysource.com/issues?tracker_id=230233&order=bounty&tracker_type=github&page=1&per_page=10&can_add_bounty=true", true);
                 bsr.setRequestHeader("Accept", "application/vnd.bountysource+json; version=2");
                 bsr.responseType = "json";
                 bsr.onreadystatechange = function(e) {
