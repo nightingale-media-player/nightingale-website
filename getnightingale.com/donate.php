@@ -11,7 +11,7 @@
                     list = document.getElementById("issueslist");
                 bsr.open("GET","https://api.bountysource.com/issues?tracker_id=230233&order=bounty&tracker_type=github&version=2&page=1&per_page=10&can_add_bounty=true", true);
                 bsr.setRequestHeader("Accept", "application/vnd.bountysource+json; version=2");
-                bsr.onreadysetchange = function(e) {
+                bsr.onreadystatechange = function(e) {
                     if(bsr.readyState == 4 && bsr.status == 200) {
                         var result = bsr.response;
                         for(var i in result) {
