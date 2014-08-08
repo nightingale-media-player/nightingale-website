@@ -6,11 +6,11 @@
         <title data-l10n-id="dashboard_title">Nightingale Dashboard</title>
         <?php include "../static.getnightingale.com/php/head.php"; ?>
         <!-- scripts -->
-        <script type="application/javascript" src="//static.getnightingale.com/javascript/d3.v3.min.js"></script>
-        <script type="application/javascript" src="//static.getnightingale.com/javascript/statGraphs.js"></script>
+        <script type="application/javascript" src="<?php echo $protocol; ?>static.getnightingale.com/javascript/d3.v3.min.js"></script>
+        <script type="application/javascript" src="<?php echo $protocol; ?>static.getnightingale.com/javascript/statGraphs.js"></script>
         
         <!-- status dashboard scripts -->
-        <script type="application/javascript" src="//static.getnightingale.com/javascript/crowd-dashboard.js"></script>
+        <script type="application/javascript" src="<?php echo $protocol; ?>static.getnightingale.com/javascript/crowd-dashboard.js"></script>
     </head>
     <body>
         <div id="ngalemainheadwrapper" class="wrapper">

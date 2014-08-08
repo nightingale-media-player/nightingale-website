@@ -19,7 +19,7 @@
                     <section class="twocolumns">
                         <a name="audio_formats"></a>
                         <h3 data-l10n-id="features_audioFormat" >Audio Formats</h3>
-                        <img src="../static.getnightingale.com/images/controls.png" alt="Player controls" data-l10n-id="features_playerControls_image" class="columnimage">
+                        <img src="<?php echo $protocol; ?>static.getnightingale.com/images/controls.png" alt="Player controls" data-l10n-id="features_playerControls_image" class="columnimage">
                         <p class="column" data-l10n-id="features_audioFormat_description">Thanks to GStreamer Nighitngale can play various different file formats. Including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr>, <abbr title="Advanced Audio Coding">AAC</abbr>, <abbr title="Free Lossless Audio Codec">FLAC</abbr> and <a href="//wiki.getnightingale.com/doku.php?id=audio_codec_support" title="Full Audio Codec support list">many more</a>. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
                     </section>
                     <section class="column omega">
@@ -32,12 +32,12 @@
                     </section>
                     <section class="twocolumns omega">
                         <h3 data-l10n-id="features_playlists">Playlists</h3>
-                        <img src="../static.getnightingale.com/images/playlists.png" class="columnimage" alt="Smart playlist selector with multiple filter arguments." data-l10n-id="features_playlists_image">
+                        <img src="<?php echo $protocol; ?>static.getnightingale.com/images/playlists.png" class="columnimage" alt="Smart playlist selector with multiple filter arguments." data-l10n-id="features_playlists_image">
                         <p class="column" data-l10n-id="features_playlists_description">As every media player, Nightingale has playlists. However there are special playlists in Nightingale: Smart Playlists. They allow you to filter your Library based on any available tag with complex rulesets.
                     </section>
                     <section class="twocolumns">
                         <h3 data-l10n-id="features_equalizer">Equalizer</h3>
-                        <img src="../static.getnightingale.com/images/equalizer.png" class="columnimage" alt="Equalizer window with ten vertical sliders set to different heights." data-l10n-id="features_equalizer_image">
+                        <img src="<?php echo $protocol; ?>static.getnightingale.com/images/equalizer.png" class="columnimage" alt="Equalizer window with ten vertical sliders set to different heights." data-l10n-id="features_equalizer_image">
                         <p class="column" data-l10n-id="features_equalizer_description">Adjust the sound of your music with the built-in 10-band equalizer. Nightingale comes with a set of presets to which you can easily add your own ones or overwrite existing ones.</p>
                     </section>
                     <section class="column alt-full">
@@ -56,7 +56,7 @@
                     </section>
                     <section class="twocolumns omega">
                         <h3 data-l10n-id="features_tabs">Tabbed Browsing</h3>
-                        <img src="../static.getnightingale.com/images/tabstrip.png" class="twocolumnimage" alt="Tabstrip with various titles, mostly related to Nightingale and parts of the navigationbar, including forward and backwards buttons." data-l10n-id="features_tabs_image">
+                        <img src="<?php echo $protocol; ?>static.getnightingale.com/images/tabstrip.png" class="twocolumnimage" alt="Tabstrip with various titles, mostly related to Nightingale and parts of the navigationbar, including forward and backwards buttons." data-l10n-id="features_tabs_image">
                         <p data-l10n-id="features_tabs_description">By default you can only see one tab, the Library tab. However you can open an unlimited amount of other tabs to browse the web. Thanks to Gecko being integrated into XULRunner Nightingale has built-in a full featured browser.</p>
                     </section>
                 </section>

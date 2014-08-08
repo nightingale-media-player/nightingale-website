@@ -65,21 +65,21 @@ foreach($content->extensions as $extension) {
                         <li class="feature">
                             <h3 data-l10n-id="firstrun_gettingStarted_migration_title">Migrate your old library</h3>
                             <figure>
-                                <img src="//static.getnightingale.com/images/songbirdtransition.png" alt="Songbird to Nightingale" data-hdpi data-l10n-id="firstrun_gettingStarted_migration_image">
+                                <img src="'.$protocol.'static.getnightingale.com/images/songbirdtransition.png" alt="Songbird to Nightingale" data-hdpi data-l10n-id="firstrun_gettingStarted_migration_image">
                                 <figcaption data-l10n-id="firstrun_gettingStarted_migration_description">Nightingale supports migration from lots of players, including Songbird and iTunes. For step by step guides, check out <a href="//wiki.getnightingale.com/doku.php?id=migration" title="Migration">this article</a>.</figcaption>
                             </figure>
                         </li>
                         <li class="feature">
                             <h3 data-l10n-id="firstrun_gettingStarted_updates_title">Follow our Blog for Updates!</h3>
                             <figure>
-                                <img src="//static.getnightingale.com/images/social.png" alt="Twitter, Facebook and Google+ Logos" data-l10n-id="firstrun_gettingStarted_updates_image">
+                                <img src="'.$protocol.'static.getnightingale.com/images/social.png" alt="Twitter, Facebook and Google+ Logos" data-l10n-id="firstrun_gettingStarted_updates_image">
                                 <figcaption data-l10n-id="firstrun_gettingStarted_updates_description">Always want to know the latest news of the project? Subscribe to our <a href="//blog.getnightingale.com">blog</a> or follow us on <a href="https://twitter.com/getnightingale">Twitter</a>, <a href="https://plus.google.com/+Getnightingale">Google+</a> or <a href="https://facebook.com/getnightingale">Facebook</a>.</figcaption>
                             </figure>
                         </li>
                         <li class="feature">
                             <h3 data-l10n-id="firstrun_gettingStarted_sync_title">Sync your Music Player</h3>
                             <figure>
-                                <img src="//static.getnightingale.com/images/sync.png" alt="Nightingale Folder Sync" data-l10n-id="firstrun_gettingStarted_sync_image">
+                                <img src="'.$protocol.'static.getnightingale.com/images/sync.png" alt="Nightingale Folder Sync" data-l10n-id="firstrun_gettingStarted_sync_image">
                                 <figcaption data-l10n-id="firstrun_gettingStarted_sync_description">Keep your music player\'s library, be it a mobile phone or an mp3 player,in sync with your computer\'s. The interface is confusing to you? Nightingale doesn\'t detect your device? Open the manual from the Synchronization view for help.</figcaption>
                             </figure>
                         </li>

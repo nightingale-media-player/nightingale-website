@@ -1,27 +1,28 @@
-<?php    
+<?php
+    include_once "../static.getnightingale.com/php/env.php";
     $download['windowsInstaller']['url'] = ''; // download url
-    $download['windowsInstaller']['img'] = '../static.getnightingale.com/images/wine.png'; // symbolicon
+    $download['windowsInstaller']['img'] = $protocol.'static.getnightingale.com/images/wine.png'; // symbolicon
     $download['windowsInstaller']['osname'] = 'Windows Installer';
     $download['windowsInstaller']['arch'] = 32;
     $download['windowsInstaller']['package'] = '.exe'; // orange package info
     $download['windowsInstaller']['popup'] = false;
     
     $download['windows']['url'] = '';
-    $download['windows']['img'] = '../static.getnightingale.com/images/wine.png';
+    $download['windows']['img'] = $protocol.'static.getnightingale.com/images/wine.png';
     $download['windows']['osname'] = 'Windows';
     $download['windows']['arch'] = 32;
     $download['windows']['package'] = '.zip';
     $download['windows']['popup'] = false;
     
     $download['mac']['url'] = '';
-    $download['mac']['img'] = '../static.getnightingale.com/images/dmg.png';
+    $download['mac']['img'] = $protocol.'static.getnightingale.com/images/dmg.png';
     $download['mac']['osname'] = 'Mac OS X';
     $download['mac']['arch'] = 32;
     $download['mac']['package'] = '.dmg';
     $download['mac']['popup'] = false;
     
     $download['ubuntu']['url'] = '';
-    $download['ubuntu']['img'] = '../static.getnightingale.com/images/start-here-ubuntuoriginal.png';
+    $download['ubuntu']['img'] = $protocol.'static.getnightingale.com/images/start-here-ubuntuoriginal.png';
     $download['ubuntu']['osname'] = 'Ubuntu';
     $download['ubuntu']['arch'] = getArch();
     $download['ubuntu']['package'] = 'PPA';
@@ -29,21 +30,21 @@
     $download['ubuntu']['popupPackageName'] = 'nightingale';
         
     $download['arch']['url'] = 'https://aur.archlinux.org/packages/nightingale-git/';
-    $download['arch']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
+    $download['arch']['img'] = $protocol.'static.getnightingale.com/images/package-x-generic.png';
     $download['arch']['osname'] = 'Archlinux';
     $download['arch']['arch'] = 32;
     $download['arch']['package'] = 'PKGBUILD';
     $download['arch']['popup'] = false;
 
     $download['linux32']['url'] = '';
-    $download['linux32']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
+    $download['linux32']['img'] = $protocol.'static.getnightingale.com/images/package-x-generic.png';
     $download['linux32']['osname'] = 'Linux';
     $download['linux32']['arch'] = 32;
     $download['linux32']['package'] = '.tar.bz2';
     $download['linux32']['popup'] = false;
     
     $download['linux64']['url'] = '';
-    $download['linux64']['img'] = '../static.getnightingale.com/images/package-x-generic.png';
+    $download['linux64']['img'] = $protocol.'static.getnightingale.com/images/package-x-generic.png';
     $download['linux64']['osname'] = 'Linux';
     $download['linux64']['arch'] = 64;
     $download['linux64']['package'] = '.tar.bz2';

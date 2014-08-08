@@ -17,25 +17,25 @@
                     <h2 data-l10n-id="branding_logo">Logo</h2>
                     <section>
                         <p data-l10n-id="branding_logo_description">Please respect the special license of the Nightingale logo: <a href="//wiki.getnightingale.com/doku.php?id=licensing#logo">logo license</a>. The official Nightingale branding is tracked in the <a href="https://github.com/nightingale-media-player/nightingale-branding">nightingale-branding repository</a> on GitHub.</p>
-                        <a href="//static.getnightingale.com/images/downloads/logo_text.png">SVG</a> <a href="//static.getnightingale.com/images/downloads/logo_text_1000.png">PNG (1000x333)</a> <a href="//static.getnightingale.com/images/downloads/logo_text_500.png">PNG (500x167)</a> <a href="//static.getnightingale.com/images/downloads/logo_text_201.png">PNG (201x67)</a>
+                        <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/logo_text.png">SVG</a> <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/logo_text_1000.png">PNG (1000x333)</a> <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/logo_text_500.png">PNG (500x167)</a> <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/logo_text_201.png">PNG (201x67)</a>
                         <figure>
-                            <img src="../static.getnightingale.com/images/nightingale_official_text_outline_1064.png"><!-- logo with text -->
+                            <img src="<? echo $protocol; ?>static.getnightingale.com/images/nightingale_official_text_outline_1064.png"><!-- logo with text -->
                             <figcaption data-l10n-id="branding_logo_text_description">Logo with text</figcaption>
                         </figure>
                     </section>
                     <hr>
                     <section>
-                        <a href="//static.getnightingale.com/images/downloads/logo.svg">SVG</a> <a href="//static.getnightingale.com/images/downloads/logo_1000.png">PNG (1000x1000)</a> <a href="//static.getnightingale.com/images/downloads/logo_512.png">PNG (512x512)</a> <a href="//static.getnightingale.com/images/downloads/logo_256.png">PNG (256x256)</a> <a href="//static.getnightingale.com/images/downloads/logo_128.png">PNG (128x128)</a>
+                        <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/logo.svg">SVG</a> <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/logo_1000.png">PNG (1000x1000)</a> <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/logo_512.png">PNG (512x512)</a> <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/logo_256.png">PNG (256x256)</a> <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/logo_128.png">PNG (128x128)</a>
                         <figure>
-                            <img src="../static.getnightingale.com/images/downloads/logo_512.png"><!-- logo without text -->
+                            <img src="<? echo $protocol; ?>static.getnightingale.com/images/downloads/logo_512.png"><!-- logo without text -->
                             <figcaption data-l10n-id="branding_logo_figure_description">Logo without text</figcaption>
                         </figure>
                     </section>
                     <hr>
                     <section>
-                        <a href="//static.getnightingale.com/images/downloads/splash.bmp">BMP (490x245)</a> <a href="//static.getnightingale.com/images/downloads/splash.png">PNG (490x245)</a>
+                        <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/splash.bmp">BMP (490x245)</a> <a href="<? echo $protocol; ?>static.getnightingale.com/images/downloads/splash.png">PNG (490x245)</a>
                         <figure>
-                            <img src="../static.getnightingale.com/images/downloads/splash.png"><!-- splash screen -->
+                            <img src="<? echo $protocol; ?>static.getnightingale.com/images/downloads/splash.png"><!-- splash screen -->
                             <figcaption data-l10n-id="branding_splash_description">Windows splash screen</figcaption>
                         </figure>
                     </section>
