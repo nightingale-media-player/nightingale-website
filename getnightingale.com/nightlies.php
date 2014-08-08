@@ -1,18 +1,18 @@
 <?php
     include_once "../static.getnightingale.com/php/env.php";
-    $download['windowsInstaller']['url'] = ''; // download url
-    $download['windowsInstaller']['img'] = $protocol.'static.getnightingale.com/images/wine.png'; // symbolicon
-    $download['windowsInstaller']['osname'] = 'Windows Installer';
-    $download['windowsInstaller']['arch'] = 32;
-    $download['windowsInstaller']['package'] = '.exe'; // orange package info
-    $download['windowsInstaller']['popup'] = false;
-    
-    $download['windows']['url'] = '';
-    $download['windows']['img'] = $protocol.'static.getnightingale.com/images/wine.png';
-    $download['windows']['osname'] = 'Windows';
+    $download['windows']['url'] = ''; // download url
+    $download['windows']['img'] = $protocol.'static.getnightingale.com/images/wine.png'; // symbolicon
+    $download['windows']['osname'] = 'Windows Installer';
     $download['windows']['arch'] = 32;
-    $download['windows']['package'] = '.zip';
+    $download['windows']['package'] = '.exe'; // orange package info
     $download['windows']['popup'] = false;
+    
+    $download['windowspackage']['url'] = '';
+    $download['windowspackage']['img'] = $protocol.'static.getnightingale.com/images/wine.png';
+    $download['windowspackage']['osname'] = 'Windows';
+    $download['windowspackage']['arch'] = 32;
+    $download['windowspackage']['package'] = '.zip';
+    $download['windowspackage']['popup'] = false;
     
     $download['mac']['url'] = '';
     $download['mac']['img'] = $protocol.'static.getnightingale.com/images/dmg.png';
@@ -92,7 +92,7 @@
                             echo '
                                 <li '.($properties['popup'] ? 'data-popup data-popup-name="'.$properties['popupPackageName'].'"':'data-url="'.$properties['url'].'"').' class="download split">
                                     <a class="piwik_download" href="'.($properties['popup'] ? '#'.$properties['popupPackageName'].'"':$properties['url']).'" title="Download Nightingale for '.$properties['osname'].'" data-l10n-id="downloads_item_link" data-l10n-args=\'{"os":"'.$properties['osname'].'"}\'>
-                                        <img src="'.$properties['img'].'" alt="'.$properties['osname'].' Icon" data-hdpi> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package">'.$properties['package'].'</span>
+                                        <img src="'.$properties['img'].'" alt="'.$properties['osname'].' Icon" data-hdpi> <span class="os">'.$properties['osname'].' ('.$properties['arch'].'-bit)</span> <span class="package" data-l10n-id="downloads_'.$os.'_package">'.$properties['package'].'</span>
                                     </a>
                                 </li>
                             ';

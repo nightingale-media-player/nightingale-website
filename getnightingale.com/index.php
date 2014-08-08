@@ -64,7 +64,7 @@
                                     <div><b data-l10n-id="main_downloadButton_label">Download Nightingale</b><br>
                                         <small><?php 
                                             if($osstring!='unknown') {
-                                                echo $download[$osstring]['arch'].'-bit | '.$download[$osstring]['osname'].' '.$download[$osstring]['package'];
+                                                echo $download[$osstring]['arch'].'-bit | '.$download[$osstring]['osname'].' <span data-l10n-id="downloads_'.$os.'_package">'.$download[$osstring]['package'].'</span>';
                                             }
                                             else {
                                                 echo $download[$osstring]['osname'];
