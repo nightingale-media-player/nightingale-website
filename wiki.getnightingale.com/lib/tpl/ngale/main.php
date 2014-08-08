@@ -28,7 +28,7 @@ if (!defined('DOKU_INC')) die();
   </title>
   
   <!-- css -->
-  <link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
+  <link rel="stylesheet" href="http://static.getnightingale.com/css-old/general.css">
   
   <!-- favicon -->
   <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >

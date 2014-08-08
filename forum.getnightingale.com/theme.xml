@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Freak v24" version="1612">
+<theme name="Freak v30" version="1612">
 	<properties>
 		<templateset><![CDATA[28]]></templateset>
 		<editortheme><![CDATA[default]]></editortheme>
@@ -1685,7 +1685,7 @@ td .star_rating {
 		<template name="headerinclude" version="1612"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
 
-<link rel="stylesheet" href="http://static.getnightingale.com/css/general.css">
+<link rel="stylesheet" href="http://static.getnightingale.com/css-old/general.css">
 
 <!-- favicon -->
 <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="http://getnightingale.com/favicon.ico" >
