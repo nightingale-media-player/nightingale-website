@@ -1,13 +1,20 @@
 <?php
-    $version = '1.12.2';
+    $version = '1.13';
     $UNKNOWN = 'unknown';
     
     $download['windows']['url'] = ''; // download url
     $download['windows']['img'] = '../static.getnightingale.com/images/wine.png'; // symbolicon
     $download['windows']['osname'] = 'Windows';
     $download['windows']['arch'] = 32;
-    $download['windows']['package'] = '.exe'; // orange package info
+    $download['windows']['package'] = '.exe Installer'; // orange package info
     $download['windows']['popup'] = false;
+
+    $download['portablewindows']['url'] = '';
+    $download['portablewindows']['img'] = '../static.getnightingale.com/images/wine.png';
+    $download['portablewindows']['osname'] = 'Windows';
+    $download['portablewindows']['arch'] = 32;
+    $download['portablewindows']['package'] = 'Portable .exe';
+    $download['portablewindows']['popup'] = false;
     
     $download['mac']['url'] = '';
     $download['mac']['img'] = '../static.getnightingale.com/images/dmg.png';

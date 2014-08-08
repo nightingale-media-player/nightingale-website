@@ -252,7 +252,7 @@ h3+p,h2+p,h1+p {
     min-width: 45%;
 }
 
-.downloadlist {
+#downloadlist {
     @include horizontal-list($gutter-width);
 }
 
