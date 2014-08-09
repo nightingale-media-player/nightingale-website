@@ -389,10 +389,21 @@ h3+p,h2+p,h1+p {
    Footer
    --------------------------------------------------------------------------*/
 
-#ngalemainfooterwrapper footer {
-    color: black;
-    @include padding-trailer(1);
-    overflow: hidden;
+#ngalemainfooterwrapper {
+    footer {
+        color: black;
+        @include padding-trailer(1);
+        overflow: hidden;
+        
+        &>div, &>nav {
+            @include leader(1);
+            margin-right: $gutter-width;
+        
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
     
     a {
         @include hover-link();
@@ -419,15 +430,6 @@ h3+p,h2+p,h1+p {
         font-size: $footer-font-size;
         margin-bottom: $footer-line-height;
         margin-top: 0;
-    }
-    
-    &>div, &>nav {
-        @include leader(1);
-        margin-right: $gutter-width;
-        
-        &:last-child {
-            margin-right: 0;
-        }
     }
 }
 
@@ -456,6 +458,14 @@ h3+p,h2+p,h1+p {
 
 #leftfooter {
     width: $column-width;
+}
+
+#sociallinks {
+    h2 {
+        float: left;
+        margin-right: $gutter-width;
+        margin-bottom: 0;
+    }
 }
 
 #l10nselect {

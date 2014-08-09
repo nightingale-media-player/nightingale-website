@@ -275,7 +275,6 @@
 
         .footerlinks {
             @include span(1);
-            margin-bottom: $footer-line-height;
         }
         
         .twocolumns .column {

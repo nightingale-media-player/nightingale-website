@@ -8,7 +8,7 @@
             It is an Open Source project released under the terms of the GNU General Public License v2 (GPL v2).<br>
             For more details, please read the <a href="//wiki.getnightingale.com/doku.php?id=licensing">license information</a>.
         </p>
-        <section>
+        <section id="sociallinks">
             <h2 data-l10n-id="footer_social">Follow us!</h2>
             <ul id="socialicons" class="plainlist">
                 <li><a href="//www.facebook.com/getnightingale" title="Nightingale on Facebook" class="socialicon" rel="me">f</a></li>
