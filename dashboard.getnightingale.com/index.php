@@ -24,7 +24,7 @@
                     <svg id="installsGraph" class="linegraph"></svg>
                     <h2 data-l10n-id="dashboard_stats_version_title">Version</h2>
                     <svg id="versionGraph" class="linegraph"></svg>
-                    <section id="currentSection">
+                    <section class="bottom">
                         <h2 data-l10n-id="dashboard_stats_current_title">Current Version</h2>
                         <div class="clearfix">
                             <div class="column">

@@ -406,11 +406,7 @@ h3+p,h2+p,h1+p {
     height: 240px;
     margin: 0 auto;
     display: block;
-}
-
-#currentSection p {
-    @include leader(1);
-    margin-bottom: 0;
+    @include trailer(1);
 }
 
 /* ----------------------------------------------------------------------------
