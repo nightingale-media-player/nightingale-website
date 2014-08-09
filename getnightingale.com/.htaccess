@@ -6,7 +6,7 @@
     RewriteCond %{REQUEST_FILENAME} ^401 [OR]
     RewriteCond %{REQUEST_FILENAME} ^403 [OR]
     RewriteCond %{REQUEST_FILENAME} ^404 [OR]
-    RewriteCond %{REQUEST_FILENAME} ^410 [OR]
+    RewriteCond %{REQUEST_FILENAME} ^410
     RewriteRule ^([0-9]+)$ error.php?code=$1 [L]
 
     RewriteCond %{REQUEST_FILENAME} !-f
