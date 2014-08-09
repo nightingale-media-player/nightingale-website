@@ -22,7 +22,7 @@
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
     Header set X-Frame-Options DENY
-    #Header set Content-Security-Policy "frame-src http://youtube.com; script-src 'self' 'unsafe-inline' http://*.getnightingale.com; connect-src http://*.getnightingale.com https://api.bountysource.com; default-src http://static.getnightingale.com; frame-ancestors 'none'"
+    Header set Content-Security-Policy "frame-src http://youtube.com; script-src 'self' 'unsafe-inline' http://*.getnightingale.com; connect-src http://*.getnightingale.com https://api.bountysource.com; default-src http://static.getnightingale.com; frame-ancestors 'none'"
 </IfModule>
 
 
