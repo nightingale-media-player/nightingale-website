@@ -10,9 +10,16 @@ $sidebar-item-height: 5*px2em($base-line-height);
 body {
     color: $text-color;
     background-color: $content-bg;
+    
     & > .wrapper {
         width: 100%;
     }
+}
+
+.container {
+    max-width: 6*$column-width+5*$gutter-width;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* ----------------------------------------------------------------------------
@@ -156,7 +163,11 @@ body {
     max-width: $twocolumns - 2 * $gutter-width;
     margin-right: $gutter-width;
     display: inline-block;
-}    
+}
+
+#main aside {
+    float: right;
+}
 
 #screenshots {
     // create a padding matching half of the download button
@@ -221,6 +232,7 @@ body {
 
 .column {
     width: $onecolumn - 2 * $gutter-width;
+    float: left;
 }
 
 .column ol, .column ol>li {
@@ -399,19 +411,33 @@ h3+p,h2+p,h1+p {
     h2 {
         font-size: $footer-font-size;
         margin-bottom: $footer-line-height;
+        margin-top: 0;
+    }
+    
+    &>div, &>nav {
+        @include leader(1);
+        margin-right: $gutter-width;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+#footerinfo {
+    @include leader(1);
+    p, section {
+        font-size: $footer-font-size;
+        line-height: $footer-line-height;
     }
 }
 
 .footerlinks {
     font-size: $footer-font-size;
     line-height: $footer-line-height;
-    float: right;
-    width: $column-width;
-    
-    b {
-        margin-bottom: $footer-line-height;
-        display: block;
-    }
+    float: left;
+    max-width: $column-width*$footer-font-ratio;
+    width: 100%;
 }
 
 #footergale {
@@ -422,21 +448,11 @@ h3+p,h2+p,h1+p {
 }
 
 #leftfooter {
-    float: left;
-    max-width: image-width("footergale.png");
-    width: 100%;
+    width: $column-width;
 }
 
 #l10nselect {
     margin-top: $footer-line-height;
     font-size: $footer-font-size;
     width: 100%;
-}
-
-#footerinfo   p {
-    margin-top: 0;
-    font-size: $footer-font-size;
-    line-height: $footer-line-height;
-    margin-bottom: $footer-line-height;
-    margin-left: px2em(image-width("footergale.png")) + 2*$gutter-width;
 }

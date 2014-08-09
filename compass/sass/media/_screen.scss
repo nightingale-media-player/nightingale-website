@@ -34,12 +34,10 @@
     /* ----------------------------------------------------------------------------
        Nav
        --------------------------------------------------------------------------*/
-    #ngalemainheadwrapper header nav li {
-        a {
-            @include link-colors($light-text);
-            &:hover {
-                border-bottom: .4em solid $light-text;
-            }
+    #ngalemainheadwrapper header nav ul li a {
+        @include link-colors($light-text);
+        &:hover {
+            border-bottom: .4em solid $light-text;
         }
     }
 
@@ -195,13 +193,9 @@
         #ngalemainfooterwrapper .footerlinks {
             @include span(1);
             
-            &:nth-child(3n+1) {
+            &:nth-child(4n+1) {
                 @include omega;
             }
-        }
-        
-        #footerinfo {
-            @include span(3);
         }
                 
         .column {
@@ -222,6 +216,10 @@
         
         .twocolumns .column {
             @include span(last 2 of 4);
+        }
+        
+        #leftfooter {
+            @include span(1);
         }
     }
     
@@ -279,13 +277,14 @@
             @include span(1);
             margin-bottom: $footer-line-height;
         }
-        #footerinfo {
-            @include span(3);
-        }
         
         .twocolumns .column {
             @include span(last 2 of 4);
             
+        }
+        
+        #leftfooter {
+            @include span(1);
         }
     }
     
