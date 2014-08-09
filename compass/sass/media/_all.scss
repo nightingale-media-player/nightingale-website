@@ -266,6 +266,13 @@ h3+p,h2+p,h1+p {
 
 #downloadlist {
     @include horizontal-list($gutter-width);
+    // Make sure the list items don't get overflow: hidden
+    width: 100%;
+    
+    li:nth-child(2n+1) {
+        //the horizotnal-list mixin removes the padding of the first child on the left. We need that for every second one
+        padding-left: 0;
+    }
 }
 
 .download {

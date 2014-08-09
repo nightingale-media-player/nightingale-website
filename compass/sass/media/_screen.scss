@@ -141,11 +141,6 @@
             @include column-width(2*$column-width);
         }
         
-        .download {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        
         .feature {
             @include span(2 of 2);
         
@@ -165,6 +160,11 @@
         
         .twocolumnimage {
             width: 4*$column-width+3*$gutter-width;
+        }
+        
+        #downloadlist li {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
     
@@ -301,6 +301,11 @@
     
         #contentleft {
             margin-right: 0;
+        }
+        
+        #downloadlist li {
+            padding-left: 0;
+            padding-right: 0;
         }
         
         #ngalemainfooterwrapper .container {
