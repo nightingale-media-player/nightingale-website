@@ -45,7 +45,7 @@
         <div class="wrapper" id="wrapper">
             <main id="main" class="container">
                 <h1 data-l10n-title="donate_title">Donate to Nightingale</h1>
-                <p data-l10n-title="donate_description">We do not take any donations to run services, but to pay developers for their efforts. Using Bountysource we can assign money to an issue, which the developer gets paid as soon as the issue is fixed. If you don't know which bug to put a bounty on, you can donate to our <a href="https://www.bountysource.com/teams/nightingale">team on Bountysource</a> and we can then distribute the money accross issues. Bountysource only takes a fee when paying the money to the developer, see their <a href="https://www.bountysource.com/fees">fees information page</a>. You can back us on Bountysource with the following payment methods:</p>
+                <p data-l10n-title="donate_description">We do not take any donations to run services, but to pay developers for their efforts. Using Bountysource one can assign money to an issue, which the developer gets paid as soon as the issue is fixed. If you don't know which bug to put a bounty on, you can donate to our <a href="https://www.bountysource.com/teams/nightingale">team on Bountysource</a> and we can then distribute the money accross issues. Bountysource only takes a fee when paying the money to the developer, see their <a href="https://www.bountysource.com/fees">fees information page</a>. You can back us on Bountysource with the following payment methods:</p>
                 <ul>
                     <!-- add sample currencies each platform supports -->
                     <li data-l10-nid="donate_googlewallet">Google Wallet</li>

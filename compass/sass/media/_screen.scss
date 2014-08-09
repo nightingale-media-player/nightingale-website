@@ -290,6 +290,7 @@
     @include susy-breakpoint(max-width $twocolumns, 1) {
         .container {
             padding: 0 $gutter-width;
+            width: auto;
         }
         
         #main aside {
