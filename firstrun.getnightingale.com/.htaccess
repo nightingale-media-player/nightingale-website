@@ -6,7 +6,7 @@ RewriteRule ^bundles/Nightingale/([0-9\.]+)/firstrun\.xml$ /bundles.php?version=
 Options -Indexes
 
 <IfModule mod_headers.c>
-    Header set Content-Security-Policy "frame-src 'none'; script-src 'self' 'unsafe-inline' http://*.getnightingale.com; connect-src http://*.getnightingale.com; default-src http://static.getnightingale.com"
+    Header set Content-Security-Policy "frame-src 'none'; script-src 'self' 'unsafe-inline' http://*.getnightingale.com; connect-src http://*.getnightingale.com; style-src http://static.getnightingale.com chrome://songbird; default-src http://static.getnightingale.com"
 </IfModule>
 
 <IfModule mod_mime.c>
@@ -80,3 +80,13 @@ FileETag None
     Order allow,deny
     Deny from all
 </FilesMatch>
+
+# ----------------------------------------------------------------------
+# Custom Errors
+# ----------------------------------------------------------------------
+ErrorDocument 500 http://getnightingale.com/500
+ErrorDocument 400 http://getnightingale.com/400
+ErrorDocument 401 http://getnightingale.com/401
+ErrorDocument 403 http://getnightingale.com/403
+ErrorDocument 404 http://getnightingale.com/404
+ErrorDocument 410 http://getnightingale.com/410

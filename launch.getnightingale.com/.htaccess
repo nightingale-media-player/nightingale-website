@@ -7,3 +7,13 @@ Options -Indexes
     Header set X-Frame-Options DENY
     Header set Content-Security-Policy "frame-src 'none'; form-action 'self' http://getnightingale.com; default-src http://static.getnightingale.com; frame-ancestors 'none'"
 </IfModule>
+
+# ----------------------------------------------------------------------
+# Custom Errors
+# ----------------------------------------------------------------------
+ErrorDocument 500 http://getnightingale.com/500
+ErrorDocument 400 http://getnightingale.com/400
+ErrorDocument 401 http://getnightingale.com/401
+ErrorDocument 403 http://getnightingale.com/403
+ErrorDocument 404 http://getnightingale.com/404
+ErrorDocument 410 http://getnightingale.com/410

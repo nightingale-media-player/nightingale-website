@@ -190,3 +190,13 @@ Options -Indexes
         Header append Vary Accept-Encoding
     </FilesMatch>
 </IfModule>
+
+# ----------------------------------------------------------------------
+# Custom Errors
+# ----------------------------------------------------------------------
+ErrorDocument 500 http://getnightingale.com/500
+ErrorDocument 400 http://getnightingale.com/400
+ErrorDocument 401 http://getnightingale.com/401
+ErrorDocument 403 http://getnightingale.com/403
+ErrorDocument 404 http://getnightingale.com/404
+ErrorDocument 410 http://getnightingale.com/410

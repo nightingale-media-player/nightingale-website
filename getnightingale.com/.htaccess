@@ -1,8 +1,20 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    
+    RewriteCond %{REQUEST_FILENAME} ^500 [OR]
+    RewriteCond %{REQUEST_FILENAME} ^400 [OR]
+    RewriteCond %{REQUEST_FILENAME} ^401 [OR]
+    RewriteCond %{REQUEST_FILENAME} ^403 [OR]
+    RewriteCond %{REQUEST_FILENAME} ^404 [OR]
+    RewriteCond %{REQUEST_FILENAME} ^410 [OR]
+    RewriteRule ^([0-9]+)$ error.php?code=$1 [L]
 
     RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !^.*\.php$
     RewriteRule ^([a-z]+)$ $1.php [L]
+    
+    # Yeah, that's gone
+    RewriteRule ^all-versions.php$ all-versions.php [G]
 </IfModule>
 
 # ----------------------------------------------------------------------
@@ -10,7 +22,7 @@
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
     Header set X-Frame-Options DENY
-    Header set Content-Security-Policy "frame-src http://youtube.com; script-src 'self' 'unsafe-inline' http://*.getnightingale.com; connect-src http://*.getnightingale.com https://api.bountysource.com; default-src http://static.getnightingale.com; frame-ancestors 'none'"
+    #Header set Content-Security-Policy "frame-src http://youtube.com; script-src 'self' 'unsafe-inline' http://*.getnightingale.com; connect-src http://*.getnightingale.com https://api.bountysource.com; default-src http://static.getnightingale.com; frame-ancestors 'none'"
 </IfModule>
 
 
@@ -79,3 +91,13 @@ FileETag None
     Order allow,deny
     Deny from all
 </FilesMatch>
+
+# ----------------------------------------------------------------------
+# Custom Errors
+# ----------------------------------------------------------------------
+ErrorDocument 500 http://getnightingale.com/500
+ErrorDocument 400 http://getnightingale.com/400
+ErrorDocument 401 http://getnightingale.com/401
+ErrorDocument 403 http://getnightingale.com/403
+ErrorDocument 404 http://getnightingale.com/404
+ErrorDocument 410 http://getnightingale.com/410
