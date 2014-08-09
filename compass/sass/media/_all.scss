@@ -363,7 +363,7 @@ h3+p,h2+p,h1+p {
 /* ----------------------------------------------------------------------------
    Dashboard
    --------------------------------------------------------------------------*/
-#crowd-dashboard-status-list {
+.dashboard-list {
     &>ul {
         @extend .plainlist;
     }
@@ -381,8 +381,36 @@ h3+p,h2+p,h1+p {
     }
 }
 
-.piwik-image {
-    max-height: 290px;
+.linegraph {
+    max-width: 703px;
+    width: 100%;
+    height: 320px;
+    
+    .line {
+        fill: none;
+        stroke-width: 1.5px;
+    }
+    
+    .axis {
+        path, line {
+            fill: none;
+            stroke: black;
+            shape-rendering: crispedges;
+        }
+    }
+}
+
+.piegraph {
+    max-width: 240px;
+    width: 100%;
+    height: 240px;
+    margin: 0 auto;
+    display: block;
+}
+
+#currentSection p {
+    @include leader(1);
+    margin-bottom: 0;
 }
 
 /* ----------------------------------------------------------------------------

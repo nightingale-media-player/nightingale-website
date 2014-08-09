@@ -18,16 +18,24 @@
         </div>
         <div class="wrapper" id="wrapper">
             <main id="main" class="container">
-                <section class="twocolumns"
+                <section class="twocolumns">
                     <h1 data-l10n-id="dashboard_stats_title">Statistics</h1>
                     <h2 data-l10n-id="dashboard_stats_installs_title">Installations &amp; Upgrades</h2>
                     <svg id="installsGraph" class="linegraph"></svg>
                     <h2 data-l10n-id="dashboard_stats_version_title">Version</h2>
                     <svg id="versionGraph" class="linegraph"></svg>
-                    <h2 data-l10n-id="dashboard_stats_current_title">Current Version</h2>
-                    <svg id="osPie" class="piegraph"></svg>
-                    <svg id="installPie" class="piegraph"></svg>
-                    <p id="totalCount" data-l10n-id="dashboard_stats_current_loading">Loading Total Profiles Count...</p>
+                    <section id="currentSection">
+                        <h2 data-l10n-id="dashboard_stats_current_title">Current Version</h2>
+                        <div class="clearfix">
+                            <div class="column">
+                                <svg id="osPie" class="piegraph"></svg>
+                            </div>
+                            <div class="column">
+                                <svg id="installPie" class="piegraph"></svg>
+                            </div>
+                        </div>
+                        <p id="totalCount" data-l10n-id="dashboard_stats_current_loading">Loading Total Profiles Count...</p>
+                    </section>
                 </section>
                 <section class="column alt-full omega">
                     <h1 data-l10n-id="dashboard_status_title">Services Status</h1>

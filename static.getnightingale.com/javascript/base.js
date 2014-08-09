@@ -60,7 +60,7 @@ function initl10n() {
                 n = document.createElement("option");
                 n.text = l10n.get(langs[l]+'Name');
                 n.value = langs[l];
-                select.appendChild(n);%
+                select.appendChild(n);
             }
         }
         
@@ -76,20 +76,22 @@ function initl10n() {
     }
 }
 
-var selectLoaded = false;
+var selectLoaded = false,
+    hasPiwik = false;
 
 addEventListenerLegacy(document, "localized", initl10n, false);
 
 addEventListenerLegacy(window, 'load', init, false);
 
 function init() {
+    hasPiwik = window.hasOwnProperty("_paq");
     var download = document.getElementsByClassName('download'),
         hasDataset = document.dataset;
     if(download) {
         for(var i = 0; i < download.length; i++) {
             if(hasDataset?download[i].dataset.hasOwnProperty("popup"):download[i].attributes["data-popup"]) {
                 addEventListenerLegacy(download[i],"click",function(e) {
-                    if(_paq) {
+                    if(hasPiwik) {
                         _paq.push(['trackEvent', 'Download', 'overlay']);
                     }
                     e.preventDefault();
@@ -107,7 +109,7 @@ function init() {
             }
             else {
                 addEventListenerLegacy(download[i],"click",function(e) {
-                    if(_paq) {
+                    if(hasPiwik) {
                         _paq.push(['trackEvent', 'Download', e.currentTarget.dataset.url]);
                     }
                     
@@ -118,7 +120,7 @@ function init() {
             }
         }
         
-        if(_paq) {
+        if(hasPiwik) {
              _paq.push(['setDownloadClasses', "piwik_download"]);
         }
     }
@@ -127,7 +129,7 @@ function init() {
     
     //lazyload hiDPI images
     if(window.devicePixelRatio && window.devicePixelRatio > 1.3) {
-        if(_paq) _paq.push(['track', 'HiDPI', 'Yes'])
+        if(hasPiwik) _paq.push(['track', 'HiDPI', 'Yes'])
         var imgs = document.getElementsByTagName("img");
         for(var i = 0; i < imgs.length; i++) {
             if(imgs[i].src && imgs[i].dataset.hasOwnProperty("hdpi") && !imgs[i].src.match(/-hidpi/i)) {
