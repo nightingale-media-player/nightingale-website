@@ -256,8 +256,9 @@ h3+p,h2+p,h1+p {
     @include horizontal-list($gutter-width);
 }
 
-.download {    
-    @include rhythm(false, 1, 1);
+.download {
+    @include padding-leader(1);
+    @include padding-trailer(1);
     height: 2*$base-line-height;
     
     cursor: pointer;
@@ -271,7 +272,7 @@ h3+p,h2+p,h1+p {
     }
     
     .package {
-        color: $grey-teyt;
+        color: $grey-text;
     }
     
     img {
@@ -384,7 +385,7 @@ h3+p,h2+p,h1+p {
     }
 
     #socialicons {
-        +horizontal-list;
+        @include horizontal-list();
     }
     
     .socialicon {

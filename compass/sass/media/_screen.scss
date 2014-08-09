@@ -39,6 +39,7 @@
             @include link-colors($light-text);
             &:hover {
                 border-bottom: .4em solid $light-text;
+            }
         }
     }
 
@@ -64,8 +65,7 @@
         color: $text-color;
         
         a {
-            @link-colors($orange);
-            }
+            @include link-colors($orange);
         }
     }
     

@@ -44,6 +44,6 @@
 
 // Destyle lists
 .plainlist {
-    @include no-bullets;
-    margin: 0;
+    @include no-bullets();
+    @include reset-box-model();
 }
