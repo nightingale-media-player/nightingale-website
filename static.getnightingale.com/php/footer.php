@@ -11,9 +11,9 @@
         <section id="sociallinks">
             <h2 data-l10n-id="footer_social">Follow us!</h2>
             <ul id="socialicons" class="plainlist">
-                <li><a href="//www.facebook.com/getnightingale" title="Nightingale on Facebook" class="socialicon" rel="me">f</a></li>
-                <li><a href="https://plus.google.com/+Getnightingale" title="Nightingale on Google+" class="socialicon" rel="me">g</a></li>
-                <li><a href="//twitter.com/getnightingale" title="Nightingale on Twitter" class="socialicon" rel="me">t</a></li>
+                <li><a href="//www.facebook.com/getnightingale" title="Nightingale on Facebook" class="socialicon" data-l10n-id="footer_social_facebook" rel="me">f</a></li>
+                <li><a href="https://plus.google.com/+Getnightingale" title="Nightingale on Google+" class="socialicon" data-l10n-id="footer_social_gplus" rel="me">g</a></li>
+                <li><a href="//twitter.com/getnightingale" title="Follow Nightingale on Twitter" class="socialicon" data-l10n-id="footer_social_twitter" brel="me">t</a></li>
             </ul>
         </section>
         <select id="l10nselect">
