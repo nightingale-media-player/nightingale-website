@@ -1,3 +1,4 @@
+<?php include_once "../static.getnightingale.com/php/env.php"; ?>
 <header class="container">
     <nav role="navigation">
         <button class="mobilenav" id="expandngalenav" data-l10n-id="menu">Menu</button>
@@ -13,6 +14,6 @@
     <figure id="headerlogo" role="banner">
         <div id="tabshadow" class="tab"></div>
         <div id="birdtab" class="tab"></div>
-        <img src="../static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo" data-hdpi>
+        <img src="<!php echo $prototcol; ?>static.getnightingale.com/images/nightingale_official_text_outline.png" alt="Nightingale - The tune of life, the tune of yours" data-l10n-id="headerlogo" data-hdpi>
     </figure>
 </header>
