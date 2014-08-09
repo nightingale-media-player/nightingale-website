@@ -1,12 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
-    RewriteCond %{REQUEST_FILENAME} ^500 [OR]
-    RewriteCond %{REQUEST_FILENAME} ^400 [OR]
-    RewriteCond %{REQUEST_FILENAME} ^401 [OR]
-    RewriteCond %{REQUEST_FILENAME} ^403 [OR]
-    RewriteCond %{REQUEST_FILENAME} ^404 [OR]
-    RewriteCond %{REQUEST_FILENAME} ^410
     RewriteRule ^([0-9]+)$ error.php?code=$1 [L]
 
     RewriteCond %{REQUEST_FILENAME} !-f
