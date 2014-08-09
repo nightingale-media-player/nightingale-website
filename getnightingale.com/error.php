@@ -27,12 +27,12 @@
                         case "403":
                             echo "<p data-l10n-id='error_403'>Cannot return content for this request.</p>";
                             break;
-                        case "404":
-                            echo "<p data-l10n-id='error_404'>The requested resource is not yet available or not found.</p>";
-                            break;
                         case "410":
-                        default:
                             echo "<p data-l10n-id='error_410'>We've removed this page, an appropriate replacement is probably available somewhere else.";
+                            break;
+                        case "404":
+                        default:
+                            echo "<p data-l10n-id='error_404'>The requested resource is not yet available or not found.</p>";
                     }
                 ?>
             </main>
