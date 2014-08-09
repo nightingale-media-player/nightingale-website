@@ -43,10 +43,10 @@
 foreach($content->extensions as $extension) {
     $extensionBaseId = 'firstrun_recommendedAdd-ons_'.$extension->name.'_';
     echo '<li class="feature">
-            <h3 data-l10n-id="'.$extensionBaseId.'title">'.$extension->name.'</h3><a data-l10n-id="firstrun_recommendedAdd-ons_install" href="'.$extension->url.'">install</a>
+            <h3 data-l10n-id="'.$extensionBaseId.'title">'.$extension->name.'</h3>
             <figure>
-                <img src="'.$extension->image.'" alt="'.$extension->name.' Preview" data-hdpi data-l10n-id="firstrun_recommendedAdd-ons_image" data-l10n-args="{\"name\":\"'.$extension->name.'\"">
-                <figcaption data-l10n-id="'.$extensionBaseId.'description">'.$extension->description.'</figcaption>
+                <img src="'.$extension->image.'" alt="'.$extension->name.' Preview" data-hdpi data-l10n-id="firstrun_recommendedAdd-ons_image" data-l10n-args="{\"name\":\"'.$extension->name.'\"}">
+                <figcaption data-l10n-id="'.$extensionBaseId.'description">'.$extension->description.'<br><a data-l10n-id="installAdd-on" data-l10n-args="{\"name\":\"'.$extension->name.'\"}" href="'.$extension->url.'">Install '.$extension->name.'</a></figcaption>
             </figure>
         </li>';
 }
