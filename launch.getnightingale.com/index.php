@@ -39,10 +39,14 @@ else {
     echo "    <title data-l10n-id='launch_question'>Got Nightingale?</title>";
 }
 ?>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <link type="image/vnd.microsoft.icon" size="32x32" rel="icon" href="favicon.ico">
+
 	<link rel='stylesheet' type='text/css' href='//static.getnightingale.com/css/launch.css' />
-    
-    <script type="application/javascript" src="//static.getnightingale.com/javascript/l10n.js"></script>
-    <link rel="prefetch" type="application/l10n" href="//static.getnightingale.com/l10n/locales.ini">
+
+  <script type="application/javascript" src="//static.getnightingale.com/javascript/l10n.js"></script>
+  <link rel="prefetch" type="application/l10n" href="//static.getnightingale.com/l10n/locales.ini">
 </head>
 
 <?php
