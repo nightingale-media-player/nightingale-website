@@ -27,12 +27,12 @@
                     <section class="bottom">
                         <h2 data-l10n-id="dashboard_stats_current_title">Current Version</h2>
                         <div class="clearfix">
-                            <div class="column">
+                            <figure class="column">
                                 <svg id="osPie" class="piegraph"></svg>
-                            </div>
-                            <div class="column">
+                            </figure>
+                            <figure class="column">
                                 <svg id="installPie" class="piegraph"></svg>
-                            </div>
+                            </figure>
                         </div>
                         <p id="totalCount" data-l10n-id="dashboard_stats_current_loading">Loading Total Profiles Count...</p>
                     </section>
