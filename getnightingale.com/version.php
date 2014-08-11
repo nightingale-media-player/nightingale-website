@@ -74,7 +74,7 @@
     $download[$UNKNOWN]['package'] = '';
     $download[$UNKNOWN]['popup'] = false;
     
-    $tarball = 'http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.12.2';
+    $tarball = 'https://github.com/nightingale-media-player/nightingale-hacking/archive/nightingale-1.12.2.tar.gz';
     
     function getArch() {
         $arch = 32;
