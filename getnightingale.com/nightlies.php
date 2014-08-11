@@ -74,7 +74,7 @@
                     <li data-l10n-id="ubuntu_firstStep">Open a terminal window</li>
                     <li><span data-l10n-id="ubuntu_secondStep_pre">Type</span> <code>sudo add-apt-repository ppa:nightingaleteam/nightingale-nightly</code> <span data-l10n-id="ubuntu_secondStep_post"></span></li>
                     <li><span data-l10n-id="ubuntu_thirdStep_pre">Then</span> <code>sudo apt-get update</code> <span data-l10n-id="ubuntu_thirdStep_post"></span></span></li>
-                    <li><span data-l10n-id="ubuntu_fourthStep_pre">And finally</span> <code id="ubuntuInstallCode" data-l10n-id="ubuntu_fourthStep_code" data-l10n-args='{"name":"nightingale"}'>sudo apt-get install nightingale</code> <span data-l10n-id="ubuntu_fourthStep_post"></span></li>
+                    <li><span data-l10n-id="ubuntu_fourthStep_pre">And finally</span> <a href="apt://nightingale"><code id="ubuntuInstallCode" data-l10n-id="ubuntu_fourthStep_code" data-l10n-args='{"name":"nightingale"}'>sudo apt-get install nightingale</code></a> <span data-l10n-id="ubuntu_fourthStep_post"></span></li>
                 </ol>
             </section>
         </div>
