@@ -1,7 +1,7 @@
 <?php include_once "../static.getnightingale.com/php/env.php"; ?>
 <footer class="container">
     <div id="leftfooter">
-            <img id="footergale" alt="white outlined nightingale project logo" src="<? echo $protocol; ?>static.getnightingale.com/images/footergale.png" data-hdpi>
+            <img id="footergale" alt="white outlined nightingale project logo" src="<?php echo $protocol; ?>static.getnightingale.com/images/footergale.png" data-hdpi>
     </div>
     <section class="column" id="footerinfo" role="contentinfo">
         <p data-l10n-id="footer_info" data-l10n-args='{"license":"GNU General Public License v2 (GPL v2)","url":"//wiki.getnightingale.com/doku.php?id=licensing"}'>Nightingale is free!<br>
