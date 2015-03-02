@@ -1,0 +1,47 @@
+/* Web Team */
+    Designer: Janek Bevendorff (Manko10/phoerious)
+    From: Germany
+
+    Main Developer: Martin Giger (freaktechnik)
+    Twitter: @freaktechnik
+    From: Switzerland
+
+    Hosting: Matt Parnell (ilikenwf)
+    Contact: ilikenwf@getnightingale.com
+    From: USA
+
+/* Translators */
+    de Translator: Martin Giger (freaktechnik)
+
+    es-MX Translators: Manuel (manueljrs)
+    Twitter: @manueljrs
+    From: México
+
+    fr Translator: Antoine Turmel (GeekShadow)
+    Twitter: @AntoineTurmel
+    From: Saint-Nazaire, France
+
+    hr Translator: gogo
+
+    nn-NO Translator: Bjørn I. Svindseth (bjorni)
+    Twitter: @NORprogramvare
+    From: Norway 
+
+    pt-BR Translator: Erik Chebdi Tegon (erikch)
+    From: Rio de Janeiro, Brasil
+
+    uk Translator: dyedfox
+
+/* Used Projects created by Others */
+    SASS (http://sass-lang.com)
+    Compass (http://compass-style.org)
+    Sassy (http://susy.oddbird.net)
+    Breakpoint (http://breakpoint-sass.com)
+    WebL10n.js (http://fabi1cazenave.github.com/webL10n)
+    
+/* Site */
+    Last update: never
+    Languages: en, de, fr, pt-BR
+    Doctype: HTML5
+    IDE: Brackets, Scratch, Notepad++
+
