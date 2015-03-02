@@ -1,0 +1,41 @@
+{
+  "name": "Nightingale",
+  "description": "A media player based on Gecko/XULRunner and GStreamer",
+  "repository": {
+    "url": "https://github.com/nightingale-media-player/nightingale-hacking",
+    "license": "GPL-2",
+    "type": "git",
+    "tests": "https://travis-ci.org/nightingale-media-player/nightingale-hacking",
+    "clone": "https://github.com/nightingale-media-player/nightingale-hacking.git"  
+  },
+  "participate": {
+    "home": "http://wiki.getnightingale.com/doku.php?id=contribute",
+    "docs": "http://developer.getnightingale.com",
+    "irc": "irc://irc.mozilla.org/#nightingale",
+    "irc-contacts": [
+      "ilikenwf",
+      "johnmurrayvi",
+      "freaktechnik",
+      "GeekShadow",
+    ]
+  },
+  "bugs": {
+    "list": "https://github.com/nightingale-media-player/nightingale-hacking/issues",
+    "report": "https://github.com/nightingale-media-player/nightingale-hacking/issues/new"
+  },
+  "urls": {
+    "prod": "http://sourceforge.net/projects/ngale/",
+    "dev": "http://sourceforge.net/projects/ngale/files/trunk-Nightlies/"
+  },
+  "keywords": [
+    "media",
+    "player",
+    "music",
+    "video",
+    "xulrunner",
+    "gstreamer",
+    "js",
+    "C++"
+  ]
+}
+
