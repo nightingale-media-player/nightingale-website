@@ -16,10 +16,19 @@
 	background: #414141;
 	border-bottom-color: #333333;
 }
+.tborder {
+    border: 1px solid #B55029;
+}
 
 #l10nselect {
     color: #000 !important;
-}    
+}
+.container img {
+    max-height: 100%;
+}
+blockquote {
+    font-size: 13px;
+}
 		]]>
 		</stylesheet>
 		<stylesheet name="global.css" version="1800"><![CDATA[@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
@@ -60,10 +69,6 @@ a:active {
 
 .topmenu {
 	background: #fff;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
 	z-index: 9;
 	border-bottom: 1px solid #ccc;
 	padding: 0;
@@ -73,14 +78,6 @@ a:active {
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 	
 	color: #0d0d0d;
-}
-
-@media(max-height:300px) {
-    	.topmenu {
-          	position: absolute;
-}
-
-
 }
 
 .topmenu #user_panel {
