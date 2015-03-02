@@ -28,6 +28,21 @@
         <meta charset="utf-8">
         <title>Nightingale - The tune of life, the tune of yours</title>
         <?php include "../static.getnightingale.com/php/head.php"; ?>
+        <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Nightingale",
+          "applicationCategory": "Entertanment",
+          "applicationSubCategory": "Media Player",
+          "featureList": "http://getnightingale.com/features",
+          "operatingSystem": "Windows Vista, Windows 7, OSX 10.6, Linux",
+          "processorRequirements": "x86, amd64, x86_64",
+          "releaseNotes": "http://firstrun.getnightingale.com/release-notes/<?php echo $version ?>",
+          "softwareVersion": "<?php echo $version ?>",
+          "license": "https://www.gnu.org/licenses/gpl-2.0.html"
+        }
+        </script>
     </head> 
     <body>
         <div id="instructions">
