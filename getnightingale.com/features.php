@@ -17,18 +17,17 @@
                 <section class="fullwidth">
                     <h2 data-l10n-id="features_playback">Playback</h2>
                     <section class="twocolumns">
-                        <a name="audio_formats"></a>
-                        <h3 data-l10n-id="features_audioFormat" >Audio Formats</h3>
-                        <img src="<?php echo $protocol; ?>static.getnightingale.com/images/controls.png" alt="Player controls" data-l10n-id="features_playerControls_image" class="columnimage">
-                        <p class="column" data-l10n-id="features_audioFormat_description">Thanks to GStreamer Nighitngale can play various different file formats. Including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr>, <abbr title="Advanced Audio Coding">AAC</abbr>, <abbr title="Free Lossless Audio Codec">FLAC</abbr> and <a href="//wiki.getnightingale.com/doku.php?id=audio_codec_support" title="Full Audio Codec support list">many more</a>. Thanks to the GStreamer integration, it's super easy to add GStreamer modules to expand the list even more.</p>
+                        <h3 data-l10n-id="features_videoPlayback">Video Playback</h3>
+                        <img src="<?php echo $protocol; ?>static.getnightingale.com/images/video.png" alt="Video window playing Big Buck Bunny with controls showing" data-l10n-id="freatures_videoPlayback_image" class="columnimage">
+                        <p class="column" data-l10n-id="features_videoPlayback_description">Apart from playing audio, Nightingale also masters the playback of a variety of <a href="//wiki.getnightingale.com/doku.php?id=video_codec_support" title="Detailed list of supported video formats">video formats</a>. This makes Nightingale the hub for all your local media files.
                     </section>
                     <section class="column omega">
-                        <h3 data-l10n-id="features_native">Native GStreamer</h3>
-                        <p data-l10n-id="features_native_description">On Linux systems Nightingale uses the GStreamer of the system. This slims down our package size and enhances compatibility with different distributions.</p>
+                        <h3 data-l10n-id="features_audioFormat" id="audio_formats">Audio Formats</h3>
+                        <p data-l10n-id="features_audioFormat_description">Thanks to GStreamer Nighitngale can play various different file formats. Including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr>, <abbr title="Advanced Audio Coding">AAC</abbr>, <abbr title="Free Lossless Audio Codec">FLAC</abbr> and <a href="//wiki.getnightingale.com/doku.php?id=audio_codec_support" title="Full Audio Codec support list">many more</a>. Thanks to the GStreamer integration, it's super easy to add GStreamer modules and expand the list even more.</p>
                     </section>
                     <section class="column">
-                        <h3 data-l10n-id="features_videoPlayback">Video Playback</h3>
-                        <p data-l10n-id="features_videoPlayback_description">Apart from playing audio, Nightingale also masters the playback of <a href="//wiki.getnightingale.com/doku.php?id=video_codec_support" title="Detailed list of supported video formats">video formats</a>. This makes Nightingale the hub for all your local media files.
+                        <h3 data-l10n-id="features_native">Native GStreamer</h3>
+                        <p data-l10n-id="features_native_description">On Linux systems Nightingale uses the GStreamer of the system. This slims down our package size and enhances compatibility with different distributions.</p>
                     </section>
                     <section class="twocolumns omega">
                         <h3 data-l10n-id="features_playlists">Playlists</h3>
@@ -47,6 +46,10 @@
                     <section class="column">
                         <h3 data-l10-n-id="features_queue">Play Queue</h3>
                         <p data-l10n-id="features_queue_description">Line up tracks to the integrated play queue in the right side pane from any view.</p>
+                    </section>
+                    <section class="column omega">
+                        <img src="<?php echo $protocol; ?>static.getnightingale.com/images/controls.png" alt="Player controls" data-l10n-id="features_playerControls_image" class="columnimage">
+                    </section>
                 </section>
                 <section class="fullwidth">
                     <h2 data-l10n-id="features_browser">Integrated Browser</h2>
@@ -64,7 +67,8 @@
                     <h2 data-l10n-id="features_sync">Synchronization</h2>
                     <section class="twocolumns">
                         <h3 data-l10n-id="features_devicesync">Device Sync</h3>
-                        <p data-l10n-id="features_devicesync_description">You can synchronize any storage device with Nightingale's library or a custom playlist. It's only one way sync, so an export of the selected playlist to a folder.</p>
+                        <img src="<?php echo $protocol; ?>static.getnightingale.com/images/sync-hidpi.png" class="columnimage" alt="Nightingale Folder Sync" data-l10n-id="firstrun_gettingStarted_sync_image">
+                        <p class="column" data-l10n-id="features_devicesync_description">You can synchronize any storage device with Nightingale's library or a custom playlist. It's only one way sync, so an export of the selected playlist to a folder.</p>
                     </section>
                     <secion class="column alt-full">
                         <h3 data-l10n-id="features_itunes">iTunes Import/Export</h3>
@@ -86,20 +90,35 @@
                         <p data-l10n-id="features_add-ons_description">Similar to Firefox, Nightingale also supports Add-ons. Extensions add new features to Nightingale or enhance existing ones. There is a big community creating extensions for Nightingale.</p>
                     </section>
                     
-                    <section class="column">
+                    <section class="feature column">
                         <h3 data-l10n-id="features_soundCloud">SoundCloud Integration</h3>
-                        <p data-l10n-id="feautures_soundCloud_description">You can optionally install an extension to neatly integrate SoundCloud into Nightingale.</p>
-                        <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"SoundCloud"}'>Install SoundCloud</a>
+                        <figure>
+                            <img src="<?php echo $protocol; ?>static.getnightingale.com/images/soundcloud.png" data-hdpi>
+                            <figcaption>
+                                <p data-l10n-id="feautures_soundCloud_description">You can optionally install an extension to neatly integrate SoundCloud into Nightingale.</p>
+                                <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"SoundCloud"}'>Install SoundCloud</a>
+                            </figcaption>
+                        </figure>
                     </section>
-                    <section class="column">
+                    <section class="feature column">
                         <h3 data-l10n-id="features_lastFm">Last.fm Scrobbling</h3>
-                        <p data-l10n-id="features_lastFm_description">Scrobble the songs you are listening to Last.fm - from within Nightingale.</p>
-                        <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"Last.fm"}'>Install Last.fm</a>
+                        <figure>
+                            <img src="<?php echo $protocol; ?>static.getnightingale.com/images/lastfm.png" data-hdpi>
+                            <figcaption>
+                                <p data-l10n-id="features_lastFm_description">Scrobble the songs you are listening to Last.fm - from within Nightingale.</p>
+                                <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"Last.fm"}'>Install Last.fm</a>
+                            </figcaption>
+                        </figure>
                     </section>
-                    <section class="column">
+                    <section class="feature column">
                         <h3 data-l10n-id="features_shoutCast">SHOUTcast Integration</h3>
-                        <p data-l10n-id="features_shoutCast_description">All your favorite SHOUTcast streams just a click away in Nightingale.</p>
-                        <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"SHOUTcast"}'>Install SHOUTcast</a>
+                        <figure>
+                            <img src="<?php echo $protocol; ?>static.getnightingale.com/images/shoutcast.png" data-hdpi>
+                            <figcaption>
+                                <p data-l10n-id="features_shoutCast_description">All your favorite SHOUTcast streams just a click away in Nightingale.</p>
+                                <a href="INSTALL" data-l10n-id="installAddOn" data-l10n-args='{"name":"SHOUTcast"}'>Install SHOUTcast</a>
+                            </figcaption>
+                        </figure>
                     </section>
                 </section>
             </main>

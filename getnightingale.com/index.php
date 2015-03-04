@@ -110,7 +110,7 @@
                     </figure>
                     <figure class="feature">
                         <img src="http://lorempixel.com/401/401" alt="" data-l10n-id="main_thirdFeature_image">
-                        <figcaption data-l10n-id="main_thirdFeature">Slick and easy to understand design. the interface stays out of your way while still enabling easy management of big libraries. <!-- link to screenshots --></figcaption>
+                        <figcaption data-l10n-id="main_thirdFeature">Slick and easy to understand design. The interface stays out of your way while still enabling easy management of big libraries. <!-- link to screenshots --></figcaption>
                     </figure>
                 </aside>
             </main>
