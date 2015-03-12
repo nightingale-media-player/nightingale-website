@@ -32,7 +32,7 @@
                     <section class="twocolumns omega">
                         <h3 data-l10n-id="features_playlists">Playlists</h3>
                         <img src="<?php echo $protocol; ?>static.getnightingale.com/images/playlists.png" class="columnimage" alt="Smart playlist selector with multiple filter arguments." data-l10n-id="features_playlists_image">
-                        <p class="column" data-l10n-id="features_playlists_description">As every media player, Nightingale has playlists. However there are special playlists in Nightingale: Smart Playlists. They allow you to filter your Library based on any available tag with complex rulesets.
+                        <p class="column" data-l10n-id="features_playlists_description">As every media player, Nightingale has playlists. However there are special playlists in Nightingale: Smart Playlists. They allow you to filter your Library based on any available tag with complex rulesets. To keep all the playlists organized, you can put playlists into folders.
                     </section>
                     <section class="twocolumns">
                         <h3 data-l10n-id="features_equalizer">Equalizer</h3>
