@@ -19,7 +19,7 @@ window.onload = function() {
     statusDashboard = new Dashboard(null, { loadingString:'Checking Statuses...',
                                             locationURL: '//openstreetmap.org/?query='});
     loadDataForDashboard("//static.getnightingale.com/javascript/servers.json",statusDashboard);
-    
+
     travisStatus = new Dashboard(null, { loadingString:'Checking Statuses...',
                                          locationURL: '//openstreetmap.org/?query=',
                                          targetNodeId: 'travis-build-status-list'});
@@ -103,7 +103,7 @@ var radius = 120;
 
 var pie = d3.layout.pie()
     .value(function(d,i) {
-        return d.nb_visits; 
+        return d.nb_visits;
     })
     .sort(null);
 
@@ -131,31 +131,33 @@ function setupPie(svg) {
         .attr("transform", "translate(" + radius + "," + radius + ")");
 }
 
-function drawPie(svg, data, labelAttr) {                
+function drawPie(svg, data, labelAttr) {
     var g = svg.select("g").selectAll(".arc")
-        .data(pie(data))
-        .enter().append("g")
-            .attr("class","arc");
-    
-    
-    g.append("path")
+        .data(pie(data));
+
+    var a = g.enter().append("g").attr("class","arc");
+    a.append("path");
+    a.append("text").style("text-anchor", "middle");
+    g.exit().remove();
+
+
+    g.select("path")
         .attr("fill", function(d,i) { return color(i);})
         .attr("d", arc);
-    
-    g.append("text")
-        .style("text-anchor", "middle")
+
+    g.select("text")
         .attr("transform", function(d) {return "translate(" +arc.centroid(d) +")";})
         .text(function(d) { return d.data[labelAttr] + " ("+Math.round(50*Math.abs(d.endAngle-d.startAngle)/Math.PI)+"%)";});
 }
 
-function setupLineGraph(svg) {                    
+function setupLineGraph(svg) {
     svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    
+
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")");
-        
+
     svg.append("g")
         .attr("class", "y axis")
         .attr("transform","translate("+(width)+",0)")
@@ -168,63 +170,61 @@ function setupLineGraph(svg) {
 
 function drawLineGraph(svg, data) {
     var {datasets, dates, graphData} = data;
-    
+
     var x = d3.time.scale()
         .range([0, width]);
 
     var y = d3.scale.linear()
         .range([height, 0]);
-    
+
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient("bottom")
         .ticks(d3.time.week);
-    
+
     var yAxis = d3.svg.axis()
         .scale(y)
         .orient("right");
-    
+
     var line = d3.svg.line()
         .interpolate("basis")
         .x(function(d) { return x(d.date); })
         .y(function(d) { return y(d.visits); });
-    
+
     x.domain(d3.extent(dates,function(d) { return d;}));
     y.domain([0, d3.max(graphData, function(d) { return d3.max(d.values, function(v){ return v.visits; }); })]);
-    
+
     var col = d3.scale.category10();
     col.domain(datasets);
-    
+
     svg.select(".x.axis").call(xAxis);
     svg.select(".y.axis").call(yAxis);
-    
-    var lines = svg.selectAll(".dataset")
-        .data(graphData)
-        .enter().append("g")
-            .attr("class","dataset");
-    
-    lines.append("path")
-        .attr("class", "line")
-        .attr("d", function(d) { return line(d.values);})
-        .style("stroke", function(d) { return col(d.dataset);});
-    
-    // legend
-    var legend = svg.selectAll(".legendEntries")
-        .data(datasets)
-        .enter().append("g")
-            .attr("class","legendEntries");
-    
 
-    legend.append("svg:rect")
+    var lines = svg.selectAll(".dataset")
+        .data(graphData);
+
+    lines.enter().append("g").attr("class","dataset").append("path").attr("class", "line");
+    lines.exit().remove();
+
+    lines.select("path")
+        .attr("d", function(d) { return line(d.values);})
+        .style("stroke", function(d) { return col(d.dataset);})
+
+    // legend
+    var legend = svg.selectAll(".legendEntries").data(datasets);
+
+    var newLegends = legend.enter().append("g").attr("class","legendEntries");
+    newLegends.append("svg:rect").attr("x", 0).attr("height", 12).attr("width", 12);
+    newLegends.append("svg:text").attr("x", 15);
+
+    legend.select("rect")
         .attr("fill",function(d) {return col(d);})
-        .attr("x", 0)
-        .attr("y",function(d,i) { return margin.top + (i-1) * 17 + 5;} )
-        .attr("height",12)
-        .attr("width",12);
-    legend.append("svg:text")
-        .attr("x", 15)
+        .attr("y",function(d,i) { return margin.top + (i-1) * 17 + 5;} );
+    legend.select("text")
         .attr("y", function(d,i) {return margin.top + i * 17;})
         .text(function(d) {return d;});
+
+    legend.exit().remove();
 }
 
 function sortVersionGraphData(data) {
@@ -235,11 +235,11 @@ function sortVersionGraphData(data) {
         data[date].forEach(function(deta) {
             if(versions.indexOf(deta.label) == -1)
                 versions.push(deta.label);
-            
+
             sortedData[sortedData.length-1][deta.label] = deta.nb_visits;
         });
     }
-    
+
     var graphData = versions.map(function(version) {
        return {
            dataset: version,
@@ -248,20 +248,20 @@ function sortVersionGraphData(data) {
            })
        };
     });
-    
+
     return {datasets:versions, dates:dates, graphData:graphData};
 }
-    
+
 function sortInstallsGraphData(data) {
     var datasets = ["installs","updates","downloads"], dates = [], graphData = [];
-    
+
     dates = d3.keys(data.installs).map(function(date) {return parseDate(date);});
-    
+
     var entries = {};
     entries.installs = d3.entries(data.installs);
     entries.updates  = d3.entries(data.updates);
     entries.downloads= d3.entries(data.downloads);
-    
+
     graphData = datasets.map(function(set) {
        return {
            dataset: set,
@@ -270,6 +270,6 @@ function sortInstallsGraphData(data) {
            })
        };
     });
-    
+
     return {datasets:datasets, dates:dates, graphData:graphData};
 }
