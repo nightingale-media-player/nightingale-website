@@ -1,6 +1,6 @@
-<?php    
+<?php
     include('version.php');
-    
+
     function getOS() {
         $os = 'unknown';
         if(preg_match('/windows/i', $_SERVER['HTTP_USER_AGENT']))
@@ -15,10 +15,10 @@
             $os = 'arch';
         elseif(preg_match('/linux/i', $_SERVER['HTTP_USER_AGENT']))
             $os = 'linux'.getArch();
-            
+
         return $os;
     }
-    
+
     $osstring = getOS();
 ?>
 <!DOCTYPE html>
@@ -28,22 +28,46 @@
         <meta charset="utf-8">
         <title>Nightingale - The tune of life, the tune of yours</title>
         <?php include "../static.getnightingale.com/php/head.php"; ?>
+
+        <!-- structured data -->
         <script type="application/ld+json">
         {
           "@context": "http://schema.org",
-          "@type": "SoftwareApplication",
+          "@type": "WebSite",
+          "about": {
+              "@type": "SoftwareApplication",
+              "name": "Nightingale",
+              "applicationCategory": "Entertanment",
+              "applicationSubCategory": "Media Player",
+              "featureList": "http://getnightingale.com/features",
+              "operatingSystem": "Windows Vista, Windows 7, OSX 10.6, Linux",
+              "processorRequirements": "x86, amd64, x86_64",
+              "releaseNotes": "http://firstrun.getnightingale.com/release-notes/<?php echo $version ?>",
+              "softwareVersion": "<?php echo $version ?>",
+              "license": "https://www.gnu.org/licenses/gpl-2.0.html",
+              "offers": {
+                "@type": "Offer",
+                "price": "0.00 USD"
+              }
+          },
           "name": "Nightingale",
-          "applicationCategory": "Entertanment",
-          "applicationSubCategory": "Media Player",
-          "featureList": "http://getnightingale.com/features",
-          "operatingSystem": "Windows Vista, Windows 7, OSX 10.6, Linux",
-          "processorRequirements": "x86, amd64, x86_64",
-          "releaseNotes": "http://firstrun.getnightingale.com/release-notes/<?php echo $version ?>",
-          "softwareVersion": "<?php echo $version ?>",
-          "license": "https://www.gnu.org/licenses/gpl-2.0.html"
+          "alternateName": "Nightingale Media Player",
+          "url": "http://getnightingale.com",
+          "isFamilyFriendly": true,
+          "author": {
+            "@type": "Organization",
+            "name": "Nightingale Media Player Community",
+            "url": "http://getnightingale.com",
+            "logo": "http://static.getnightingale.com/images/nightingale_official_text_outline.png"
+            "sameAs": [
+                "https://twitter.com/getnightingale",
+                "https://facebook.com/getnightingale",
+                "https://plus.google.com/+Getnightingale"
+            ]
+          }
         }
         </script>
-    </head> 
+    </head>
     <body>
         <div id="instructions">
             <section>
@@ -77,7 +101,7 @@
                                          data-l10n-args='{"osName":"<?php echo $download[$osstring]['osname']; ?>"}'
                                          data-hdpi>
                                     <div><b data-l10n-id="main_downloadButton_label">Download Nightingale</b><br>
-                                        <small><?php 
+                                        <small><?php
                                             if($osstring!='unknown') {
                                                 echo $download[$osstring]['arch'].'-bit | '.$download[$osstring]['osname'].' <span data-l10n-id="downloads_'.$os.'_package">'.$download[$osstring]['package'].'</span>';
                                             }
@@ -89,7 +113,7 @@
                                 </button>
                                 <?php
                                     if($osstring!='unknown')
-                                        echo '<br><a href="download" id="moredownloadslink" data-l10n-id="main_otherPlattforms">Other platforms and architectures</a>'; 
+                                        echo '<br><a href="download" id="moredownloadslink" data-l10n-id="main_otherPlattforms">Other platforms and architectures</a>';
                                 ?>
                             </div>
                         </div>

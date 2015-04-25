@@ -1,4 +1,4 @@
-<?php    
+<?php
     include('version.php');
 ?>
 <!DOCTYPE html>
@@ -8,6 +8,29 @@
         <meta charset="utf-8">
         <title data-l10n-id="downloads_title">Download Nightingale</title>
         <?php include "../static.getnightingale.com/php/head.php"; ?>
+
+        <!-- structured data -->
+        <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "name": "Nightingale",
+          "alternateName": "Nightingale Media Player",
+          "url": "http://getnightingale.com",
+          "isFamilyFriendly": true,
+          "author": {
+            "@type": "Organization",
+            "name": "Nightingale Media Player Community",
+            "url": "http://getnightingale.com",
+            "logo": "http://static.getnightingale.com/images/nightingale_official_text_outline.png",
+            "sameAs": [
+                "https://twitter.com/getnightingale",
+                "https://facebook.com/getnightingale",
+                "https://plus.google.com/+Getnightingale"
+            ]
+          }
+        }
+        </script>
     </head>
     <body>
         <div id="instructions">

@@ -5,6 +5,29 @@
         <meta charset="utf-8">
         <title data-l10n-id="features_title">Nightingale Features</title>
         <?php include "../static.getnightingale.com/php/head.php"; ?>
+
+        <!-- structured data -->
+        <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "name": "Nightingale",
+          "alternateName": "Nightingale Media Player",
+          "url": "http://getnightingale.com",
+          "isFamilyFriendly": true,
+          "author": {
+            "@type": "Organization",
+            "name": "Nightingale Media Player Community",
+            "url": "http://getnightingale.com",
+            "logo": "http://static.getnightingale.com/images/nightingale_official_text_outline.png",
+            "sameAs": [
+                "https://twitter.com/getnightingale",
+                "https://facebook.com/getnightingale",
+                "https://plus.google.com/+Getnightingale"
+            ]
+          }
+        }
+        </script>
     </head>
     <body>
         <div id="ngalemainheadwrapper" class="wrapper">
@@ -89,7 +112,7 @@
                         <h3 data-l10n-id="features_add-ons">Add-ons</h3>
                         <p data-l10n-id="features_add-ons_description">Similar to Firefox, Nightingale also supports Add-ons. Extensions add new features to Nightingale or enhance existing ones. There is a big community creating extensions for Nightingale.</p>
                     </section>
-                    
+
                     <section class="feature column">
                         <h3 data-l10n-id="features_soundCloud">SoundCloud Integration</h3>
                         <figure>
