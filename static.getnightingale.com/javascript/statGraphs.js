@@ -2,7 +2,7 @@
 
 var statusDashboard, travisStatus;
 
-window.onload = function() {
+addEventListenerLegacy(window, "load", function() {
     function loadDataForDashboard(fileURL,dashboard) {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -69,7 +69,12 @@ window.onload = function() {
         statusDashboard.locationConnector = ' '+document.webL10n.get('dashboard_status_locationConnector',null,'in')+' ';
         refresh();
     }, false);
-};
+}, false);
+
+addEventListenerLegacy(window, "resize", function() {
+    updateWidth();
+    refresh();
+}, false);
 
 function refresh() {
     statusDashboard.checkServers();
@@ -116,6 +121,14 @@ var margin = {top: 20, right: 50, bottom: 30, left: 50},
     width = 703 - margin.left - margin.right,
     height = 320 - margin.top - margin.bottom;
 
+function updateWidth() {
+    width = 703 - margin.left - margin.right;
+    if(width > window.innerWidth - margin.left - margin.right)
+        width = window.innerWidth - margin.left - margin.right;
+}
+
+updateWidth();
+
 var parseDate = d3.time.format("%Y-%m-%d").parse;
 
 function countText(d) {
@@ -160,7 +173,7 @@ function setupLineGraph(svg) {
 
     svg.append("g")
         .attr("class", "y axis")
-        .attr("transform","translate("+(width)+",0)")
+        .attr("transform","translate("+width+",0)")
         .append("text")
             .attr("transform", "rotate(-90)")
             .attr("y", -6)
@@ -198,7 +211,7 @@ function drawLineGraph(svg, data) {
     col.domain(datasets);
 
     svg.select(".x.axis").call(xAxis);
-    svg.select(".y.axis").call(yAxis);
+    svg.select(".y.axis").attr("transform", "translate("+width+", 0)").call(yAxis);
 
     var lines = svg.selectAll(".dataset")
         .data(graphData);
