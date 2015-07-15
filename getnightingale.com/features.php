@@ -46,11 +46,11 @@
                     </section>
                     <section class="column omega">
                         <h3 data-l10n-id="features_audioFormat" id="audio_formats">Audio Formats</h3>
-                        <p data-l10n-id="features_audioFormat_description">Thanks to GStreamer Nighitngale can play various different file formats. Including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr>, <abbr title="Advanced Audio Coding">AAC</abbr>, <abbr title="Free Lossless Audio Codec">FLAC</abbr> and <a href="//wiki.getnightingale.com/doku.php?id=audio_codec_support" title="Full Audio Codec support list">many more</a>. Thanks to the GStreamer integration, it's super easy to add GStreamer modules and expand the list even more.</p>
+                        <p data-l10n-id="features_audioFormat_description">Thanks to GStreamer, Nighitngale can play various different file formats, including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr>, <abbr title="Advanced Audio Coding">AAC</abbr>, <abbr title="Free Lossless Audio Codec">FLAC</abbr> and <a href="//wiki.getnightingale.com/doku.php?id=audio_codec_support" title="Full Audio Codec support list">many more</a>. Thanks to the GStreamer integration, it's super easy to add GStreamer modules and expand the list even more.</p>
                     </section>
                     <section class="column">
                         <h3 data-l10n-id="features_native">Native GStreamer</h3>
-                        <p data-l10n-id="features_native_description">On Linux systems Nightingale uses the GStreamer of the system. This slims down our package size and enhances compatibility with different distributions.</p>
+                        <p data-l10n-id="features_native_description">On Linux systems Nightingale uses the system's GStreamer. This slims down our package size and enhances compatibility with different distributions.</p>
                     </section>
                     <section class="twocolumns omega">
                         <h3 data-l10n-id="features_playlists">Playlists</h3>
@@ -82,8 +82,8 @@
                     </section>
                     <section class="twocolumns omega">
                         <h3 data-l10n-id="features_tabs">Tabbed Browsing</h3>
-                        <img src="<?php echo $protocol; ?>static.getnightingale.com/images/tabstrip.png" class="twocolumnimage" alt="Tabstrip with various titles, mostly related to Nightingale and parts of the navigationbar, including forward and backwards buttons." data-l10n-id="features_tabs_image">
-                        <p data-l10n-id="features_tabs_description">By default you can only see one tab, the Library tab. However you can open an unlimited amount of other tabs to browse the web. Thanks to Gecko being integrated into XULRunner Nightingale has built-in a full featured browser.</p>
+                        <img src="<?php echo $protocol; ?>static.getnightingale.com/images/tabstrip.png" class="twocolumnimage" alt="Tabstrip with various titles, mostly related to Nightingale and parts of the navigation bar, including forward and backwards buttons." data-l10n-id="features_tabs_image">
+                        <p data-l10n-id="features_tabs_description">By default you can only see one tab, the Library tab. However you can open an unlimited amount of other tabs to browse the web. Thanks to Gecko being integrated into XULRunner, Nightingale has built-in a full featured browser.</p>
                     </section>
                 </section>
                 <section class="fullwidth">
@@ -95,7 +95,7 @@
                     </section>
                     <secion class="column alt-full">
                         <h3 data-l10n-id="features_itunes">iTunes Import/Export</h3>
-                        <p data-l10n-id="features_itunes_description">Easily import your iTunes library into Nightingale. If you need iTunes to sync your iOS device, you can also automatically sync your iTunes and Nightingale libraries. The import and export includes traditional playlists but not smart playlists.</p>
+                        <p data-l10n-id="features_itunes_description">Easily import your iTunes library into Nightingale. If you need iTunes to sync your iOS device, you can also automatically sync your iTunes and Nightingale libraries. The import and export includes traditional playlists, but not smart playlists.</p>
                     </secion>
                 </section>
                 <section class="fullwidth">
