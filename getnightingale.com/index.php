@@ -103,7 +103,7 @@
                                     <div><b data-l10n-id="main_downloadButton_label">Download Nightingale</b><br>
                                         <small><?php
                                             if($osstring!='unknown') {
-                                                echo $download[$osstring]['arch'].'-bit | '.$download[$osstring]['osname'].' <span data-l10n-id="downloads_'.$os.'_package">'.$download[$osstring]['package'].'</span>';
+                                                echo $download[$osstring]['arch'].'-bit | '.$download[$osstring]['osname'].' <span data-l10n-id="downloads_'.$osstring.'_package">'.$download[$osstring]['package'].'</span>';
                                             }
                                             else {
                                                 echo $download[$osstring]['osname'];
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <aside class="column alt-full">
-                    <h2 data-l10n-id="main_asideHeading">Why Nightingale?</h2>
+                    <h2 data-l10n-id="main_aside_title">Why Nightingale?</h2>
                     <figure class="feature">
                         <img src="http://lorempixel.com/400/400" alt="" data-l10n-id="main_firstFeature_image">
                         <figcaption data-l10n-id="main_firstFeature">Wide variety of supported media formats including <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr>, Ogg, <abbr title="Free Lossless Audio Codec">FLAC</abbr>, <abbr title="Waveform Audio File Format">WAV</abbr> and <a href="features#audio_formats">many more</a>.</figcaption>
