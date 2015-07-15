@@ -1,0 +1,12 @@
+[main]
+host = http://beta.babelzilla.org
+
+[ng-w.mainproperties]
+source_file = static.getnightingale.com/l10n/en/main.properties
+source_lang = en-US
+file_filter = static.getnightingale.com/l10n/<lang>/main.properties
+
+[ng-w.1121properties]
+source_file = static.getnightingale.com/l10n/en/1.12.1.properties
+source_lang = en-US
+file_filter = static.getnightingale.com/l10n/<lang>/1.12.1.properties
