@@ -79,7 +79,7 @@ else if ($_COOKIE["nightingale_installed"] == "yes") {
         <div id='wrap'>
           <h1 data-l10n-id='launch_question'>Got Nightingale?</h1>
           <p class='note' data-l10n-id='launch_nogale'>
-          You tried to open the following link in Nightingale but
+          You tried to open the following link in Nightingale, but
           Nightingale has not yet been detected.
         </p>
         <p class='link'>

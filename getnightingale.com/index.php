@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     <div id="description" data-l10n-id="main_description">
-                        Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.
+                        Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, an equalizer, Last.fm integration, a customizeable look and hundreds of add-ons. Nightingale has it all.
                     </div>
                 </div>
                 <aside class="column alt-full">
