@@ -6,7 +6,7 @@
     <section class="column" id="footerinfo" role="contentinfo">
         <p data-l10n-id="footer_info" data-l10n-args='{"license":"GNU General Public License v2 (GPL v2)","url":"//wiki.getnightingale.com/doku.php?id=licensing"}'>Nightingale is free!<br>
             It is an Open Source project released under the terms of the GNU General Public License v2 (GPL v2).<br>
-            For more details, please read the <a href="//wiki.getnightingale.com/doku.php?id=licensing" rel="license">license information</a>.
+            For more details, please read the <a href="//wiki.getnightingale.com/doku.php?id=licensing" rel="license">license information</a>. <a href="//getnigtingale.com/jslicense" rel="jslicense">JavaScript license information</a>
         </p>
         <section id="sociallinks">
             <h2 data-l10n-id="footer_social">Follow us!</h2>

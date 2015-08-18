@@ -1,4 +1,6 @@
 <?php include_once "../static.getnightingale.com/php/env.php"; ?>
+        <link rel="license" href="https://www.gnu.org/licenses/gpl-2.0.html">
+
         <meta name="description" content="Nightingale is a community support project for the powerful media player Songbird. It is developed by a proud community and we are equally proud to bring you the most extensible and feature-rich media experience. Freaturing smart playlists, equalizer, Last.fm integration, customizeable look and hundreds of add-ons. Nightingale has it all.">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <link type="text/plain" rel="author" href="http://getnightingale.com/humans.txt">

@@ -3,7 +3,7 @@
     <nav role="navigation">
         <button class="mobilenav" id="expandngalenav" data-l10n-id="menu">Menu</button>
         <ul id="ngalenavlist">
-            <li><a <?php if($current=="main") echo 'class="current" '; ?>href="http://getnightingale.com" data-l10n-id="home">Home</a></li>
+            <li><a <?php if($current=="main") echo 'class="current" '; ?>href="http://getnightingale.com" data-l10n-id="home" rel="home">Home</a></li>
             <li><a href="http://blog.getnightingale.com" data-l10n-id="blog">Blog</a></li>
             <li><a href="http://addons.getnightingale.com" data-l10n-id="add-ons">Add-ons</a></li>
             <li><a href="http://forum.getnightingale.com" data-l10n-id="forum">Forum</a></li>
