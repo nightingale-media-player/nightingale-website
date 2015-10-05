@@ -10,19 +10,19 @@ $which = $_GET['os'];
 // | Please insert the URLS here. |
 // --------------------------------
 
-// I know, doing this with a DB would be more fun. But this is enought.
+// I know, doing this with a DB would be more fun. But this is enough.
 
 $version = "1.12.1"; // current version number
 
 // Installer / download URLs
-$urls[0] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_linux-i686.tar.bz2/download"; // Linux_32 URL
-$urls[1] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_linux-x86_64.tar.bz2/download"; // Linux_64 URL
-$urls[7] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_ubuntu-i686.tar.bz2/download"; // Linux_32 gnome URL
-$urls[8] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_ubuntu-x86_64.tar.bz2/download"; // Linux_64 gnome URL
+$urls[0] = "https://github.com/nightingale-media-player/nightingale-hacking/releases/download/nightingale-1.12.1/Nightingale_1.12.1-2454_linux-i686.tar.bz2"; // Linux_32 URL
+$urls[1] = "https://github.com/nightingale-media-player/nightingale-hacking/releases/download/nightingale-1.12.1/Nightingale_1.12.1-2454_linux-x86_64.tar.bz2"; // Linux_64 URL
+$urls[7] = "https://github.com/nightingale-media-player/nightingale-hacking/releases/download/nightingale-1.12.1/Nightingale_1.12.1-2454_ubuntu-i686.tar.bz2"; // Linux_32 gnome URL
+$urls[8] = "https://github.com/nightingale-media-player/nightingale-hacking/releases/download/nightingale-1.12.1/Nightingale_1.12.1-2454_ubuntu-x86_64.tar.bz2"; // Linux_64 gnome URL
 $urls[5] = "ppa:nightingaleteam/nightingale-release"; // Ubuntu PPA
-$urls[6] = "https://aur.archlinux.org/packages.php?ID=52721"; //Archlinux
-$urls[2] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_windows-i686.exe/download"; // Windows_32 URL
-$urls[3] = "http://sourceforge.net/projects/ngale/files/1.12.1-Release/Nightingale_1.12.1-2454_macosx-i686.dmg/download"; // MAC_32 URL
+$urls[6] = "https://aur.archlinux.org/packages/nightingale-git"; //Archlinux
+$urls[2] = "https://github.com/nightingale-media-player/nightingale-hacking/releases/download/nightingale-1.12.1/Nightingale_1.12.1-2454_windows-i686.exe"; // Windows_32 URL
+$urls[3] = "https://github.com/nightingale-media-player/nightingale-hacking/releases/download/nightingale-1.12.1/Nightingale_1.12.1-2454_macosx-i686.dmg"; // MAC_32 URL
 $urls[4] = "http://github.com/nightingale-media-player/nightingale-hacking/tarball/nightingale-1.12.1"; // Tarball URL
 
 // Screenshot URLs, please use images in the dimension of 623x466px (thats a resized 4:3 screenshot)
