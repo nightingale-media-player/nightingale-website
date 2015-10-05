@@ -84,7 +84,7 @@ addEventListenerLegacy(document, "localized", initl10n, false);
 addEventListenerLegacy(window, 'load', init, false);
 
 function init() {
-    hasPiwik = window.hasOwnProperty("_paq");
+    hasPiwik = "_paq" in window;
     var download = document.getElementsByClassName('download'),
         hasDataset = document.dataset;
     if(download) {
