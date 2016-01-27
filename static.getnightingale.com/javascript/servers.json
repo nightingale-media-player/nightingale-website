@@ -21,15 +21,10 @@
                 "timeout":7000
             },
             {
-                "name":"Git Repository",
+                "name":"Downloads & Repository",
                 "url":"http://github.com",
                 "location":"USA",
                 "hasStatusAPI":true
-            },
-            {
-                "name":"Sourceforge Downloads",
-                "url":"http://sourceforge.net",
-                "location":"USA"
             },
             {
                 "name":"OpenGrok Codesearch",

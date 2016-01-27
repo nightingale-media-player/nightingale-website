@@ -52,7 +52,6 @@
                     <ul>
                         <li><a href="https://www.facebook.com/getnightingale?sk=insights" data-l10n-id="dashboard_other_facebook">Facebook Insights</a></li>
                         <li><a href="https://github.com/nightingale-media-player/nightingale-hacking/graphs/traffic" data-l10n-id="dashboard_other_github">nightingale-hacking Repository Stats</a></li>
-                        <li><a href="//sourceforge.net/projects/ngale/files/stats/timeline" data-l10n-id="dashboard_other_sourceforge">Sourceforge Download Stats</a></li>
                         <li><a href="//humanoids.be/thinkup" data-l10n-id="dashboard_other_thinkup">ThinkUp Social Anayltics</a></li>
                         <li><a href="//stats.getnightingale.com" data-l10n-id="dashboard_other_piwik">Piwik Website Visitor Statistics</a></li>
                     </ul>
