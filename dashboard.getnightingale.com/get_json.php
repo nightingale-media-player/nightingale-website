@@ -67,6 +67,7 @@ function getData($url) {
             foreach($data as $val) {
                 $num += $val;
             }
+            $inst = new stdClass;
             $inst->name = "install";
             $inst->nb_visits = $num;
 
@@ -79,6 +80,7 @@ function getData($url) {
             foreach($data as $val) {
                 $num += $val;
             }
+            $obj = new stdClass;
             $obj->name = "update";
             $obj->nb_visits = $num;
 
